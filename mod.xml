@@ -1,0 +1,27 @@
+<? xml version="1.0" ?>
+<Mod>
+    <Id>com-surak-stronghold</Id> 
+    <Name>Stronghold</Name> 
+
+    <Category>Level</Category>
+
+    <Thumbnail>Data/Images/stronghold/thumb.jpg</Thumbnail>
+    <PreviewImage>Data/Images/stronghold/thumb.jpg</PreviewImage>
+
+    <Description>October 2020 Jam</Description>
+    <Version>0.0.1</Version>
+    <Author>Surak</Author>
+    <Tag>Scripting</Tag>
+    <Tag>Level</Tag>
+    <Tag>Oct2020Jam</Tag>
+
+    <SupportedVersion>*</SupportedVersion>
+    <NeedsRestart>false</NeedsRestart>
+
+    <ModDependency>
+       <Id>com-surak-timed-execution</Id>
+       <Version>0.13.0</Version> 
+    </ModDependency>
+
+    <Level title="Stronghold" thumbnail="UI/mainmenu/images/stronghold.png">stronghold.xml</Level>
+</Mod>
