@@ -1,3 +1,5 @@
+#include "stronghold/common.as"
+
 funcdef void CLOSE_FRIEND_CALLBACK(MovementObject@);
 
 class FriendController {
@@ -10,17 +12,6 @@ class FriendController {
             MovementObject@ _char = ReadCharacterID(close_friends[i]);
             _callback(_char);
         }
-    }
-
-    private int FindPlayerID(){
-        int num = GetNumCharacters();
-        for(int i = 0; i < num; ++i){
-            MovementObject@ char = ReadCharacter(i);
-            if(char.controlled){
-                return char.GetID();
-            }
-        }
-        return -1;
     }
 
     private array<int> FindCloseFriends(int _player_id, float _radius){

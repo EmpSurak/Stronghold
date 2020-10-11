@@ -1,13 +1,15 @@
 #include "timed_execution/timed_execution.as"
 #include "timed_execution/on_input_pressed_job.as"
+#include "timed_execution/on_input_down_job.as"
 #include "stronghold/friend_controller.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
+#include "stronghold/common.as"
 
 TimedExecution timer;
 FriendController friend_controller;
 
 float current_time = 0.0f;
-const float _yell_distance = 100.0f;
+const float _yell_distance = 20.0f;
 
 void Init(string level_name){
     timer.Add(OnInputPressedJob(0, "r", function(){
@@ -29,9 +31,7 @@ void Init(string level_name){
 
     timer.Add(OnInputPressedJob(0, "f", function(){
         friend_controller.Execute(_yell_distance, function(_char){
-            int player_id = FindPlayerID();
-            MovementObject@ player_char = ReadCharacterID(player_id);
-
+            MovementObject@ player_char = FindPlayer();
             NavigateToTarget(_char, player_char.position);
         });
         return true;
@@ -54,6 +54,12 @@ void Init(string level_name){
             _char.Execute("escort_id = " + player_id + ";");
             _char.Execute("SetGoal(_escort);");
         });
+        return true;
+    }));
+
+    timer.Add(OnInputDownJob(0, "x", function(){
+        MovementObject@ player_char = FindPlayer();
+        DebugDrawWireSphere(player_char.position, _yell_distance, vec3(1.0f), _delete_on_update);
         return true;
     }));
 
@@ -86,16 +92,4 @@ void NavigateToTarget(MovementObject@ _char, vec3 _target){
         // FIXME: job has to be cleaned up when target gets a new goal before this one is reached
         _char.Execute("ResetMind();");
     }));
-}
-
-// FIXME: duplicated function
-int FindPlayerID(){
-    int num = GetNumCharacters();
-    for(int i = 0; i < num; ++i){
-        MovementObject@ char = ReadCharacter(i);
-        if(char.controlled){
-            return char.GetID();
-        }
-    }
-    return -1;
 }
