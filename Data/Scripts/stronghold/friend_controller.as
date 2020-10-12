@@ -1,9 +1,17 @@
+#include "timed_execution/timed_execution.as"
 #include "stronghold/common.as"
 
 funcdef void CLOSE_FRIEND_CALLBACK(MovementObject@);
 
 class FriendController {
+    private TimedExecution@ timer;
+    private float yell_distance = 20.0f;
+
     FriendController(){}
+
+    FriendController(TimedExecution@ _timer){
+        @timer = @_timer;
+    }
 
     void Execute(float _radius, CLOSE_FRIEND_CALLBACK @_callback){
         int player_id = FindPlayerID();
@@ -12,6 +20,31 @@ class FriendController {
             MovementObject@ _char = ReadCharacterID(close_friends[i]);
             _callback(_char);
         }
+    }
+
+    void NavigateToTarget(MovementObject@ _char, vec3 _target){
+        _char.Execute("nav_target.x = " + _target.x + ";");
+        _char.Execute("nav_target.y = " + _target.y + ";");
+        _char.Execute("nav_target.z = " + _target.z + ";");
+        _char.Execute("SetGoal(_navigate);");
+
+        timer.Add(NavDestinationJob(_char.GetID(), _target, function(_char, _target){
+            // FIXME: job has to be cleaned up when target gets a new goal before this one is reached
+            _char.Execute("ResetMind();");
+        }));
+    }
+
+    void ShowYellDistance(){
+        MovementObject@ player_char = FindPlayer();
+        DebugDrawWireSphere(player_char.position, yell_distance, vec3(1.0f), _delete_on_update);
+    }
+
+    float GetYellDistance(){
+        return yell_distance;
+    }
+
+    void SetYellDistance(float _yell_distance){
+        yell_distance = _yell_distance;
     }
 
     private array<int> FindCloseFriends(int _player_id, float _radius){

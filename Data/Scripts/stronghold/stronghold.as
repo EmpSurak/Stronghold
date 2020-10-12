@@ -6,23 +6,21 @@
 #include "stronghold/common.as"
 
 TimedExecution timer;
-FriendController friend_controller;
+FriendController friend_controller(timer);
 
 float current_time = 0.0f;
-const float _yell_distance = 20.0f;
 
 void Init(string level_name){
     timer.Add(OnInputPressedJob(0, "r", function(){
-        friend_controller.Execute(_yell_distance, function(_char){
+        friend_controller.Execute(friend_controller.GetYellDistance(), function(_char){
             _char.Execute("p_aggression = 1.0f;");
             _char.Execute("p_ground_aggression = 1.0f;");
-            _char.Execute("ResetMind();");
         });
         return true;
     }));
 
     timer.Add(OnInputPressedJob(0, "t", function(){
-        friend_controller.Execute(_yell_distance, function(_char){
+        friend_controller.Execute(friend_controller.GetYellDistance(), function(_char){
             _char.Execute("p_aggression = 0.1f;");
             _char.Execute("p_ground_aggression = 0.1f;");
         });
@@ -30,26 +28,25 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputPressedJob(0, "f", function(){
-        friend_controller.Execute(_yell_distance, function(_char){
+        friend_controller.Execute(friend_controller.GetYellDistance(), function(_char){
             MovementObject@ player_char = FindPlayer();
-            NavigateToTarget(_char, player_char.position);
+            friend_controller.NavigateToTarget(_char, player_char.position);
         });
         return true;
     }));
 
     timer.Add(OnInputPressedJob(0, "g", function(){
-        friend_controller.Execute(_yell_distance, function(_char){
-			vec3 facing = camera.GetFacing();
-			vec3 end = vec3(facing.x, max(-0.9, min(0.5f, facing.y)), facing.z) * 50.0f;
-			vec3 hit = col.GetRayCollision(camera.GetPos(), camera.GetPos() + end);
-
-            NavigateToTarget(_char, hit);
+        friend_controller.Execute(friend_controller.GetYellDistance(), function(_char){
+            vec3 facing = camera.GetFacing();
+            vec3 end = vec3(facing.x, max(-0.9, min(0.5f, facing.y)), facing.z) * 50.0f;
+            vec3 hit = col.GetRayCollision(camera.GetPos(), camera.GetPos() + end);
+            friend_controller.NavigateToTarget(_char, hit);
         });
         return true;
     }));
 
     timer.Add(OnInputPressedJob(0, "h", function(){
-        friend_controller.Execute(_yell_distance, function(_char){
+        friend_controller.Execute(friend_controller.GetYellDistance(), function(_char){
             int player_id = FindPlayerID();
             _char.Execute("escort_id = " + player_id + ";");
             _char.Execute("SetGoal(_escort);");
@@ -58,8 +55,7 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputDownJob(0, "x", function(){
-        MovementObject@ player_char = FindPlayer();
-        DebugDrawWireSphere(player_char.position, _yell_distance, vec3(1.0f), _delete_on_update);
+        friend_controller.ShowYellDistance();
         return true;
     }));
 
@@ -82,14 +78,3 @@ void ReceiveMessage(string msg){
     timer.AddLevelEvent(msg);
 }
 
-void NavigateToTarget(MovementObject@ _char, vec3 _target){
-    _char.Execute("nav_target.x = " + _target.x + ";");
-    _char.Execute("nav_target.y = " + _target.y + ";");
-    _char.Execute("nav_target.z = " + _target.z + ";");
-    _char.Execute("SetGoal(_navigate);");
-
-    timer.Add(NavDestinationJob(_char.GetID(), _target, function(_char, _target){
-        // FIXME: job has to be cleaned up when target gets a new goal before this one is reached
-        _char.Execute("ResetMind();");
-    }));
-}
