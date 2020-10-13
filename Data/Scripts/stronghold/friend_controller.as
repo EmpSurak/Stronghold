@@ -59,6 +59,8 @@ class FriendController {
     void Yell(int char_id, string type){
         MovementObject@ char = ReadCharacterID(char_id);
         char.Execute("this_mo.PlaySoundGroupVoice(\"" + type + "\", 0.0f);");
+        string pos_str = "vec3(" + char.position.x + ", " + char.position.y + ", " + char.position.z + ")";
+        char.Execute("AISound(" + pos_str + ", " + yell_distance + ", _sound_type_loud_foley);");
     }
 
     void ShowYellDistance(){

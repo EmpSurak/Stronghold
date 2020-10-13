@@ -107,8 +107,6 @@ void Init(string level_name){
         friend_controller.SetYellDistance(40.0f);
         return true;
     }));
-
-    // TODO: inform enemies when yelling?
 }
 
 void Update(int is_paused){
