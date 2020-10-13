@@ -38,9 +38,10 @@ class NavDestinationJob : BasicJobInterface {
         }
         MovementObject @player_char = ReadCharacterID(player_id);
 
-        // TODO: remove heigth from vectors
+        vec3 target_norm(target.x, 0.0f, target.z);
+        vec3 player_pos_norm(player_char.position.x, 0.0f, player_char.position.z);
 
-        bool is_close = distance(target, player_char.position) < _trigger_distance;
+        bool is_close = distance(target_norm, player_pos_norm) < _trigger_distance;
         if(is_close){
             return true;
         }
