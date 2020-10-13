@@ -1,5 +1,6 @@
 #include "timed_execution/timed_execution.as"
 #include "stronghold/timed_execution/delayed_friend_controller_job.as"
+#include "stronghold/command_job_storage.as"
 #include "stronghold/common.as"
 
 funcdef void CLOSE_FRIEND_CALLBACK(MovementObject@);
@@ -14,6 +15,7 @@ const string _max_delay_label = "Max. Command Delay";
 class FriendController {
     private TimedExecution@ timer;
     private float yell_distance = 10.0f;
+    private CommandJobStorage command_job_storage;
 
     FriendController(){}
 
@@ -49,9 +51,7 @@ class FriendController {
         _char.Execute("nav_target.z = " + _target.z + ";");
         _char.Execute("SetGoal(_navigate);");
 
-        timer.Add(NavDestinationJob(_char.GetID(), _target, function(_char, _target){
-            // FIXME: job has to be cleaned up when target gets a new goal before this one is reached;
-            //        I could also add a timeout in case the goal is never reached
+        timer.Add(NavDestinationJob(_char.GetID(), _target, command_job_storage, function(_char, _target){
             _char.Execute("ResetMind();");
         }));
     }
