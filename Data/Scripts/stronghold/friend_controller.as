@@ -1,14 +1,19 @@
 #include "timed_execution/timed_execution.as"
+#include "stronghold/timed_execution/delayed_friend_controller_job.as"
 #include "stronghold/common.as"
 
 funcdef void CLOSE_FRIEND_CALLBACK(MovementObject@);
 
 const float _min_yell_distance = 2.0f;
-const float _max_yell_distance = 50.0f;
+const float _max_yell_distance = 40.0f;
+const float _min_delay_default = 0.1f;
+const float _max_delay_default = 1.0f;
+const string _min_delay_label = "Min. Command Delay";
+const string _max_delay_label = "Max. Command Delay";
 
 class FriendController {
     private TimedExecution@ timer;
-    private float yell_distance = 20.0f;
+    private float yell_distance = 10.0f;
 
     FriendController(){}
 
@@ -20,8 +25,21 @@ class FriendController {
         int player_id = FindPlayerID();
         array<int> close_friends = FindCloseFriends(player_id);
         for(uint i = 0; i < close_friends.length(); ++i){
-            MovementObject@ _char = ReadCharacterID(close_friends[i]);
-            _callback(_char);
+            Object@ char_obj = ReadObjectFromID(close_friends[i]);
+            ScriptParams @char_params = char_obj.GetScriptParams();
+
+            float min_delay = _min_delay_default;
+            if(char_params.HasParam(_min_delay_label)){
+                min_delay = char_params.GetFloat(_min_delay_label);
+            }
+
+            float max_delay = _max_delay_default;
+            if(char_params.HasParam(_min_delay_label)){
+                min_delay = char_params.GetFloat(_min_delay_label);
+            }
+
+            float delay = RangedRandomFloat(min_delay, max_delay);
+            timer.Add(DelayedFriendControllerJob(delay, close_friends[i], _callback));
         }
     }
 
@@ -36,6 +54,11 @@ class FriendController {
             //        I could also add a timeout in case the goal is never reached
             _char.Execute("ResetMind();");
         }));
+    }
+
+    void Yell(int char_id, string type){
+        MovementObject@ char = ReadCharacterID(char_id);
+        char.Execute("this_mo.PlaySoundGroupVoice(\"" + type + "\", 0.0f);");
     }
 
     void ShowYellDistance(){

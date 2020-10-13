@@ -1,4 +1,5 @@
 #include "timed_execution/timed_execution.as"
+#include "timed_execution/delayed_job.as"
 #include "timed_execution/on_input_pressed_job.as"
 #include "timed_execution/on_input_down_job.as"
 #include "stronghold/friend_controller.as"
@@ -16,7 +17,9 @@ void Init(string level_name){
             _char.Execute("p_aggression = 1.0f;");
             _char.Execute("p_ground_aggression = 1.0f;");
             _char.Execute("ResetMind();");
+            friend_controller.Yell(_char.GetID(), "suspicious");
         });
+        friend_controller.Yell(FindPlayerID(), "engage");
         return true;
     }));
 
@@ -24,7 +27,9 @@ void Init(string level_name){
         friend_controller.Execute(function(_char){
             _char.Execute("p_aggression = 0.1f;");
             _char.Execute("p_ground_aggression = 0.1f;");
+            friend_controller.Yell(_char.GetID(), "suspicious");
         });
+        friend_controller.Yell(FindPlayerID(), "suspicious");
         return true;
     }));
 
@@ -32,7 +37,9 @@ void Init(string level_name){
         friend_controller.Execute(function(_char){
             MovementObject@ player_char = FindPlayer();
             friend_controller.NavigateToTarget(_char, player_char.position);
+            friend_controller.Yell(_char.GetID(), "attack");
         });
+        friend_controller.Yell(FindPlayerID(), "attack");
         return true;
     }));
 
@@ -42,7 +49,9 @@ void Init(string level_name){
             vec3 end = vec3(facing.x, max(-0.9, min(0.5f, facing.y)), facing.z) * 50.0f;
             vec3 hit = col.GetRayCollision(camera.GetPos(), camera.GetPos() + end);
             friend_controller.NavigateToTarget(_char, hit);
+            friend_controller.Yell(_char.GetID(), "attack");
         });
+        friend_controller.Yell(FindPlayerID(), "attack");
         return true;
     }));
 
@@ -51,7 +60,9 @@ void Init(string level_name){
             int player_id = FindPlayerID();
             _char.Execute("escort_id = " + player_id + ";");
             _char.Execute("SetGoal(_escort);");
+            friend_controller.Yell(_char.GetID(), "engage");
         });
+        friend_controller.Yell(FindPlayerID(), "engage");
         return true;
     }));
 
@@ -83,21 +94,20 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputPressedJob(0, "3", function(){
-        friend_controller.SetYellDistance(15.0f);
+        friend_controller.SetYellDistance(10.0f);
         return true;
     }));
 
     timer.Add(OnInputPressedJob(0, "4", function(){
-        friend_controller.SetYellDistance(25.0f);
+        friend_controller.SetYellDistance(20.0f);
         return true;
     }));
 
     timer.Add(OnInputPressedJob(0, "5", function(){
-        friend_controller.SetYellDistance(50.0f);
+        friend_controller.SetYellDistance(40.0f);
         return true;
     }));
 
-    // TODO: play sound group after action
     // TODO: inform enemies when yelling?
 }
 
@@ -110,10 +120,8 @@ bool HasFocus(){
     return false;
 }
 
-void DrawGUI(){
-}
+void DrawGUI(){}
 
 void ReceiveMessage(string msg){
     timer.AddLevelEvent(msg);
 }
-
