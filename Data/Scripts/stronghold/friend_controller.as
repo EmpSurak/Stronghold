@@ -34,8 +34,8 @@ class FriendController {
             }
 
             float max_delay = _max_delay_default;
-            if(char_params.HasParam(_min_delay_label)){
-                min_delay = char_params.GetFloat(_min_delay_label);
+            if(char_params.HasParam(_max_delay_label)){
+                max_delay = char_params.GetFloat(_max_delay_label);
             }
 
             float delay = RangedRandomFloat(min_delay, max_delay);
