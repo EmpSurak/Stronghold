@@ -18,6 +18,7 @@ class LightUpJob : TimerJobInterface {
         char_id = _char_id;
         @callback = @_callback;
         light_id = CreateObject("Data/Objects/default_light.xml", true);
+        ExecuteExpired();
     }
 
     void ExecuteExpired(){
