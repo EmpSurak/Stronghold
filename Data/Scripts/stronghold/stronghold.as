@@ -4,6 +4,7 @@
 #include "timed_execution/on_input_down_job.as"
 #include "stronghold/friend_controller.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
+#include "stronghold/timed_execution/delayed_death_job.as"
 #include "stronghold/common.as"
 
 TimedExecution timer;
@@ -107,6 +108,9 @@ void Init(string level_name){
         friend_controller.SetYellDistance(40.0f);
         return true;
     }));
+
+    // XXX: the hotspots that will dynamically create the characters will take care of registering the DelayedDeathJob
+    RegisterCleanupJobs();
 }
 
 void Update(int is_paused){
@@ -122,4 +126,16 @@ void DrawGUI(){}
 
 void ReceiveMessage(string msg){
     timer.AddLevelEvent(msg);
+}
+
+void RegisterCleanupJobs(){
+    int num = GetNumCharacters();
+    for(int i = 0; i < num; ++i){
+        MovementObject@ char = ReadCharacter(i);
+        if(!char.controlled){
+            timer.Add(DelayedDeathJob(30.0f, char.GetID(), function(_char){
+                DeleteObjectID(_char.GetID());
+            }));
+        }
+    }
 }
