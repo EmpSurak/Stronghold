@@ -1,5 +1,6 @@
 #include "timed_execution/timed_execution.as"
 #include "stronghold/timed_execution/delayed_friend_controller_job.as"
+#include "stronghold/timed_execution/light_up_job.as"
 #include "stronghold/command_job_storage.as"
 #include "stronghold/common.as"
 
@@ -42,6 +43,12 @@ class FriendController {
 
             float delay = RangedRandomFloat(min_delay, max_delay);
             timer.Add(DelayedFriendControllerJob(delay, close_friends[i], _callback));
+
+            timer.Add(LightUpJob(0.05f, 10.0f, close_friends[i], function(_char, _light, _return_value){
+                _light.SetTranslation(_char.position + vec3(0.0f, 2.5f, 0.0f));
+                _light.SetTint(vec3(_return_value));
+                return _return_value - 1.0f;
+            }));
         }
     }
 
