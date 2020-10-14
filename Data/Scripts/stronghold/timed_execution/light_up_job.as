@@ -37,7 +37,11 @@ class LightUpJob : TimerJobInterface {
     }
 
     bool IsRepeating(){
-        return return_value > 0.0f;
+        bool repeating = return_value > 0.0f;
+        if(!repeating){
+            DeleteObjectID(light_id);
+        }
+        return repeating;
     }
 
     void SetStarted(float time){
