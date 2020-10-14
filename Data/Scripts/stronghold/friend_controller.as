@@ -9,7 +9,7 @@ funcdef void CLOSE_FRIEND_CALLBACK(MovementObject@);
 const float _min_yell_distance = 2.0f;
 const float _max_yell_distance = 40.0f;
 const float _min_delay_default = 0.1f;
-const float _max_delay_default = 1.0f;
+const float _max_delay_default = 0.3f;
 const string _min_delay_label = "Min. Command Delay";
 const string _max_delay_label = "Max. Command Delay";
 
