@@ -1,4 +1,5 @@
 #include "stronghold/friend_controller.as"
+#include "stronghold/constants.as"
 
 const string _come_image_1 = "come_1";
 const string _come_image_2 = "come_2";
@@ -36,16 +37,16 @@ class HUDGUI {
         IMImage@ img_reset_1 = cast<IMImage>(this.FindElement(_reset_image_1));
         IMImage@ img_reset_2 = cast<IMImage>(this.FindElement(_reset_image_2));
 
-        img_follow_1.setVisible(!GetInputDown(0, "h"));
-        img_follow_2.setVisible(GetInputDown(0, "h"));
-        img_come_1.setVisible(!GetInputDown(0, "f"));
-        img_come_2.setVisible(GetInputDown(0, "f"));
-        img_go_to_1.setVisible(!GetInputDown(0, "g"));
-        img_go_to_2.setVisible(GetInputDown(0, "g"));
-        img_reset_1.setVisible(!GetInputDown(0, "r"));
-        img_reset_2.setVisible(GetInputDown(0, "r"));
-        img_stand_down_1.setVisible(!GetInputDown(0, "t"));
-        img_stand_down_2.setVisible(GetInputDown(0, "t"));
+        img_follow_1.setVisible(!GetInputDown(0, _key_follow));
+        img_follow_2.setVisible(GetInputDown(0, _key_follow));
+        img_come_1.setVisible(!GetInputDown(0, _key_come));
+        img_come_2.setVisible(GetInputDown(0, _key_come));
+        img_go_to_1.setVisible(!GetInputDown(0, _key_go_to));
+        img_go_to_2.setVisible(GetInputDown(0, _key_go_to));
+        img_reset_1.setVisible(!GetInputDown(0, _key_reset));
+        img_reset_2.setVisible(GetInputDown(0, _key_reset));
+        img_stand_down_1.setVisible(!GetInputDown(0, _key_stand_down));
+        img_stand_down_2.setVisible(GetInputDown(0, _key_stand_down));
     }
 
     void Clear(){

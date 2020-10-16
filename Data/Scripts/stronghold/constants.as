@@ -33,3 +33,9 @@ const int _TETHERED_REARCHOKE = 1;
 const int _TETHERED_REARCHOKED = 2;
 const int _TETHERED_DRAGBODY = 3;
 const int _TETHERED_DRAGGEDBODY = 4;
+
+const string _key_reset = "r";
+const string _key_stand_down = "t";
+const string _key_come = "f";
+const string _key_go_to = "g";
+const string _key_follow = "h";

@@ -8,6 +8,7 @@
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/timed_execution/delayed_death_job.as"
 #include "stronghold/common.as"
+#include "stronghold/constants.as"
 #include "stronghold/hudgui.as"
 
 TimedExecution timer;
@@ -17,7 +18,7 @@ HUDGUI@ hud_gui = HUDGUI();
 float current_time = 0.0f;
 
 void Init(string level_name){
-    timer.Add(OnInputPressedJob(0, "r", function(){
+    timer.Add(OnInputPressedJob(0, _key_reset, function(){
         friend_controller.Execute(function(_char){
             _char.Execute("p_aggression = 1.0f;");
             _char.Execute("p_ground_aggression = 1.0f;");
@@ -28,17 +29,16 @@ void Init(string level_name){
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "t", function(){
+    timer.Add(OnInputPressedJob(0, _key_stand_down, function(){
         friend_controller.Execute(function(_char){
             _char.Execute("p_aggression = 0.1f;");
             _char.Execute("p_ground_aggression = 0.1f;");
-            friend_controller.Yell(_char.GetID(), "suspicious");
         });
         friend_controller.Yell(FindPlayerID(), "suspicious");
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "f", function(){
+    timer.Add(OnInputPressedJob(0, _key_come, function(){
         friend_controller.Execute(function(_char){
             MovementObject@ player_char = FindPlayer();
             friend_controller.NavigateToTarget(_char, player_char.position);
@@ -48,7 +48,7 @@ void Init(string level_name){
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "g", function(){
+    timer.Add(OnInputPressedJob(0, _key_go_to, function(){
         friend_controller.Execute(function(_char){
             vec3 facing = camera.GetFacing();
             vec3 end = vec3(facing.x, max(-0.9, min(0.5f, facing.y)), facing.z) * 50.0f;
@@ -60,7 +60,7 @@ void Init(string level_name){
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "h", function(){
+    timer.Add(OnInputPressedJob(0, _key_follow, function(){
         friend_controller.Execute(function(_char){
             int player_id = FindPlayerID();
             _char.Execute("escort_id = " + player_id + ";");
