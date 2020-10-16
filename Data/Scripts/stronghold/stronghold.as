@@ -31,8 +31,8 @@ void Init(string level_name){
 
     timer.Add(OnInputPressedJob(0, _key_stand_down, function(){
         friend_controller.Execute(function(_char){
-            _char.Execute("p_aggression = 0.1f;");
-            _char.Execute("p_ground_aggression = 0.1f;");
+            _char.Execute("p_aggression = 0.0f;");
+            _char.Execute("p_ground_aggression = 0.0f;");
         });
         friend_controller.Yell(FindPlayerID(), "suspicious");
         return true;
