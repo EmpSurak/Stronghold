@@ -22,7 +22,7 @@
 </Terrain>
 <OutOfDate NavMesh="true" NavMeshParamHash="-1674835251" />
 <AmbientSounds />
-<Script>stronghold/stronghold.as</Script>
+<Script></Script>
 <LevelScriptParameters>
     <parameter name="Achievements" type="string" val="flawless, no_injuries, no_kills" />
     <parameter name="Fog amount" type="float" val="1" />
@@ -152,7 +152,7 @@
     <EnvObject t0="0.0528755" t1="0.000991821" t2="0.120728" s0="0.00596319" s1="0.00596319" s2="0.00596319" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" color_r="1" color_g="0.892857" color_b="0" overbright="35.075" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_slope.xml">
         <parameters />
     </EnvObject>
-    <CameraObject t0="44.0822" t1="135.283" t2="39.4734" s0="1" s1="1" s2="1" q0="-0.128784" q1="-0.854588" q2="0.25315" q3="-0.434751" euler_x="-2.56561" euler_y="0.941207" euler_z="3.14159" id="4">
+    <CameraObject t0="42.0002" t1="122.504" t2="-20.8366" s0="1" s1="1" s2="1" q0="0.312829" q1="0.0382974" q2="-0.012625" q3="0.948953" euler_x="0.636876" euler_y="0.0806713" euler_z="0" id="4">
         <parameters />
     </CameraObject>
     <EnvObject t0="0.0729561" t1="-0.00921631" t2="-0.0370407" s0="0.00596319" s1="0.00596319" s2="0.00596319" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="10" color_r="1" color_g="0.892857" color_b="0" overbright="35.075" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_slope.xml">
@@ -1243,6 +1243,76 @@
             <Color label="Skin" channel="3" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
+    <Prefab t0="36.5686" t1="118.024" t2="-27.2244" s0="2.01" s1="2.01" s2="2.01" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="115" version="1" prefab_locked="true" prefab_path="Data/Objects/stronghold/prefabs/characters/flag_bearer.xml" os0="2.01" os1="2.01" os2="2.01">
+        <parameters />
+        <ActorObject t0="36.5686" t1="118.024" t2="-27.2244" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="6" type_file="Data/Objects/stronghold/characters/flag_bearer_actor.xml" is_player="0">
+            <parameters>
+                <parameter name="Aggression" type="float" val="0.75141" />
+                <parameter name="Attack Damage" type="float" val="0" />
+                <parameter name="Attack Knockback" type="float" val="0" />
+                <parameter name="Attack Speed" type="float" val="0" />
+                <parameter name="Block Follow-up" type="float" val="0" />
+                <parameter name="Block Skill" type="float" val="0.5" />
+                <parameter name="Cannot Be Disarmed" type="int" val="0" />
+                <parameter name="Character Scale" type="float" val="1" />
+                <parameter name="Damage Resistance" type="float" val="1" />
+                <parameter name="Ear Size" type="float" val="1" />
+                <parameter name="Fall Damage Multiplier" type="float" val="1" />
+                <parameter name="Fat" type="float" val="0.5" />
+                <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
+                <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
+                <parameter name="Fear - Causes Fear On Sight" type="int" val="1" />
+                <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
+                <parameter name="Focus FOV distance" type="float" val="48.588" />
+                <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
+                <parameter name="Focus FOV vertical" type="float" val="0.62834" />
+                <parameter name="Ground Aggression" type="float" val="0.75141" />
+                <parameter name="Knockout Shield" type="int" val="0" />
+                <parameter name="Left handed" type="int" val="0" />
+                <parameter name="Movement Speed" type="float" val="0.80395" />
+                <parameter name="Muscle" type="float" val="0.5" />
+                <parameter name="No Look Around" type="int" val="0" />
+                <parameter name="Peripheral FOV distance" type="float" val="4" />
+                <parameter name="Peripheral FOV horizontal" type="float" val="1.31507" />
+                <parameter name="Peripheral FOV vertical" type="float" val="1.32389" />
+                <parameter name="Species" type="string" val="rat" />
+                <parameter name="Static" type="int" val="0" />
+                <parameter name="Stick To Nav Mesh" type="int" val="0" />
+                <parameter name="Teams" type="string" val="player" />
+                <parameter name="Throw Counter Probability" type="float" val="0" />
+                <parameter name="Throw Trainer" type="int" val="0" />
+                <parameter name="Weapon Catch Skill" type="float" val="1" />
+                <parameter name="Wearing Metal Armor" type="int" val="0" />
+            </parameters>
+            <Connections>
+                <Connection id="6" />
+            </Connections>
+            <ItemConnections />
+            <Palette>
+                <Color label="Pelts" channel="0" red="1" green="0.282353" blue="0.282353" />
+                <Color label="Shirt" channel="1" red="1" green="0.880438" blue="0.227451" />
+                <Color label="Fur" channel="2" red="0.521569" green="0.521563" blue="0.521563" />
+                <Color label="Skin" channel="3" red="0.341176" green="0.341173" blue="0.341173" />
+            </Palette>
+            <EnvObjectAttachments>
+                <EnvObjectAttachment>
+                    <BoneConnect bone_id="20" num_connections="1" m0="0.634733" m1="-0.752529" m2="0.175536" m3="0" m4="0.772717" m5="0.616736" m6="-0.150152" m7="0" m8="0.00473461" m9="0.230947" m10="0.972955" m11="0" m12="0.326195" m13="0.645813" m14="0.195736" m15="1" />
+                    <BoneConnect bone_id="1" num_connections="1" m0="0.999518" m1="0.00923579" m2="-0.0296377" m3="0" m4="-0.0103243" m5="0.99927" m6="-0.0367884" m7="0" m8="0.0292763" m9="0.0370766" m10="0.998883" m11="0" m12="-0.00202179" m13="0.944611" m14="0.224049" m15="1" />
+                    <BoneConnect bone_id="0" num_connections="1" m0="0.999653" m1="0.0204897" m2="0.0165556" m3="0" m4="-0.0200743" m5="0.999489" m6="-0.0248795" m7="0" m8="-0.0170569" m9="0.0245385" m10="0.999553" m11="0" m12="-0.00437546" m13="0.925835" m14="0.233847" m15="1" />
+                    <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
+                </EnvObjectAttachment>
+            </EnvObjectAttachments>
+            <Group t0="36.7103" t1="118.411" t2="-27.8012" s0="0.431066" s1="1.71132" s2="0.0534074" q0="-0.105407" q1="-0.290055" q2="-0.0670521" q3="0.948821" euler_x="-0.196473" euler_y="-0.599896" euler_z="-0.0801607" id="7" version="1">
+                <parameters />
+                <EnvObject t0="36.6546" t1="118.142" t2="-27.7529" s0="0.655914" s1="0.655914" s2="0.655914" q0="-0.745451" q1="-0.157687" q2="-0.252513" q3="0.596384" euler_x="-1.76727" euler_y="-0.599895" euler_z="-0.0801607" id="8" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Weapons/staff_basic.xml">
+                    <parameters />
+                </EnvObject>
+                <EnvObject t0="36.754" t1="118.62" t2="-27.8404" s0="0.165332" s1="0.165332" s2="0.0738391" q0="-0.105407" q1="-0.290055" q2="-0.067052" q3="0.94882" euler_x="-0.196473" euler_y="-0.599894" euler_z="-0.0801604" id="113" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/CaveArena/Banner_Hanging2Red.xml">
+                    <parameters />
+                </EnvObject>
+            </Group>
+        </ActorObject>
+    </Prefab>
     <ActorObject t0="63.1886" t1="123.174" t2="44.8469" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="118" type_file="Data/Objects/characters/rats/rat_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
@@ -1293,6 +1363,76 @@
             <Color label="Skin" channel="3" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
+    <Prefab t0="39.1628" t1="118.024" t2="-27.2244" s0="2.01" s1="2.01" s2="2.01" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="120" version="1" prefab_locked="true" prefab_path="Data/Objects/stronghold/prefabs/characters/flag_bearer.xml" os0="2.01" os1="2.01" os2="2.01">
+        <parameters />
+        <ActorObject t0="39.1628" t1="118.024" t2="-27.2244" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="121" type_file="Data/Objects/stronghold/characters/flag_bearer_actor.xml" is_player="0">
+            <parameters>
+                <parameter name="Aggression" type="float" val="0.75141" />
+                <parameter name="Attack Damage" type="float" val="0" />
+                <parameter name="Attack Knockback" type="float" val="0" />
+                <parameter name="Attack Speed" type="float" val="0" />
+                <parameter name="Block Follow-up" type="float" val="0" />
+                <parameter name="Block Skill" type="float" val="0.5" />
+                <parameter name="Cannot Be Disarmed" type="int" val="0" />
+                <parameter name="Character Scale" type="float" val="1" />
+                <parameter name="Damage Resistance" type="float" val="1" />
+                <parameter name="Ear Size" type="float" val="1" />
+                <parameter name="Fall Damage Multiplier" type="float" val="1" />
+                <parameter name="Fat" type="float" val="0.5" />
+                <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
+                <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
+                <parameter name="Fear - Causes Fear On Sight" type="int" val="1" />
+                <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
+                <parameter name="Focus FOV distance" type="float" val="48.588" />
+                <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
+                <parameter name="Focus FOV vertical" type="float" val="0.62834" />
+                <parameter name="Ground Aggression" type="float" val="0.75141" />
+                <parameter name="Knockout Shield" type="int" val="0" />
+                <parameter name="Left handed" type="int" val="0" />
+                <parameter name="Movement Speed" type="float" val="0.80395" />
+                <parameter name="Muscle" type="float" val="0.5" />
+                <parameter name="No Look Around" type="int" val="0" />
+                <parameter name="Peripheral FOV distance" type="float" val="4" />
+                <parameter name="Peripheral FOV horizontal" type="float" val="1.31507" />
+                <parameter name="Peripheral FOV vertical" type="float" val="1.32389" />
+                <parameter name="Species" type="string" val="rat" />
+                <parameter name="Static" type="int" val="0" />
+                <parameter name="Stick To Nav Mesh" type="int" val="0" />
+                <parameter name="Teams" type="string" val="player" />
+                <parameter name="Throw Counter Probability" type="float" val="0" />
+                <parameter name="Throw Trainer" type="int" val="0" />
+                <parameter name="Weapon Catch Skill" type="float" val="1" />
+                <parameter name="Wearing Metal Armor" type="int" val="0" />
+            </parameters>
+            <Connections>
+                <Connection id="121" />
+            </Connections>
+            <ItemConnections />
+            <Palette>
+                <Color label="Pelts" channel="0" red="1" green="0.282353" blue="0.282353" />
+                <Color label="Shirt" channel="1" red="1" green="0.880438" blue="0.227451" />
+                <Color label="Fur" channel="2" red="0.521569" green="0.521563" blue="0.521563" />
+                <Color label="Skin" channel="3" red="0.341176" green="0.341173" blue="0.341173" />
+            </Palette>
+            <EnvObjectAttachments>
+                <EnvObjectAttachment>
+                    <BoneConnect bone_id="20" num_connections="1" m0="0.634733" m1="-0.752529" m2="0.175536" m3="0" m4="0.772717" m5="0.616736" m6="-0.150152" m7="0" m8="0.00473461" m9="0.230947" m10="0.972955" m11="0" m12="0.326195" m13="0.645813" m14="0.195736" m15="1" />
+                    <BoneConnect bone_id="1" num_connections="1" m0="0.999518" m1="0.00923579" m2="-0.0296377" m3="0" m4="-0.0103243" m5="0.99927" m6="-0.0367884" m7="0" m8="0.0292763" m9="0.0370766" m10="0.998883" m11="0" m12="-0.00202179" m13="0.944611" m14="0.224049" m15="1" />
+                    <BoneConnect bone_id="0" num_connections="1" m0="0.999653" m1="0.0204897" m2="0.0165556" m3="0" m4="-0.0200743" m5="0.999489" m6="-0.0248795" m7="0" m8="-0.0170569" m9="0.0245385" m10="0.999553" m11="0" m12="-0.00437546" m13="0.925835" m14="0.233847" m15="1" />
+                    <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
+                </EnvObjectAttachment>
+            </EnvObjectAttachments>
+            <Group t0="39.296" t1="118.763" t2="-27.9473" s0="0.431066" s1="1.71132" s2="0.0534074" q0="-0.130726" q1="-0.215495" q2="-0.00870419" q3="0.967676" euler_x="-0.278128" euler_y="-0.432712" euler_z="0.0435198" id="122" version="1">
+                <parameters />
+                <EnvObject t0="39.2729" t1="118.495" t2="-27.874" s0="0.655914" s1="0.655914" s2="0.655914" q0="-0.776687" q1="-0.146223" q2="-0.158533" q3="0.591813" euler_x="-1.84892" euler_y="-0.432712" euler_z="0.0435198" id="123" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Weapons/staff_basic.xml">
+                    <parameters />
+                </EnvObject>
+                <EnvObject t0="39.3141" t1="118.971" t2="-28.0059" s0="0.165332" s1="0.165332" s2="0.0738391" q0="-0.130726" q1="-0.215495" q2="-0.00870414" q3="0.967675" euler_x="-0.278127" euler_y="-0.432711" euler_z="0.0435198" id="125" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/CaveArena/Banner_Hanging2Red.xml">
+                    <parameters />
+                </EnvObject>
+            </Group>
+        </ActorObject>
+    </Prefab>
     <ActorObject t0="65.0009" t1="123.174" t2="41.4366" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="124" type_file="Data/Objects/characters/rats/rat_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
@@ -1343,6 +1483,76 @@
             <Color label="Skin" channel="3" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
+    <Prefab t0="41.8452" t1="118.024" t2="-27.2244" s0="2.01" s1="2.01" s2="2.01" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="129" version="1" prefab_locked="true" prefab_path="Data/Objects/stronghold/prefabs/characters/flag_bearer.xml" os0="2.01" os1="2.01" os2="2.01">
+        <parameters />
+        <ActorObject t0="41.8452" t1="118.024" t2="-27.2244" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="130" type_file="Data/Objects/stronghold/characters/flag_bearer_actor.xml" is_player="0">
+            <parameters>
+                <parameter name="Aggression" type="float" val="0.75141" />
+                <parameter name="Attack Damage" type="float" val="0" />
+                <parameter name="Attack Knockback" type="float" val="0" />
+                <parameter name="Attack Speed" type="float" val="0" />
+                <parameter name="Block Follow-up" type="float" val="0" />
+                <parameter name="Block Skill" type="float" val="0.5" />
+                <parameter name="Cannot Be Disarmed" type="int" val="0" />
+                <parameter name="Character Scale" type="float" val="1" />
+                <parameter name="Damage Resistance" type="float" val="1" />
+                <parameter name="Ear Size" type="float" val="1" />
+                <parameter name="Fall Damage Multiplier" type="float" val="1" />
+                <parameter name="Fat" type="float" val="0.5" />
+                <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
+                <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
+                <parameter name="Fear - Causes Fear On Sight" type="int" val="1" />
+                <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
+                <parameter name="Focus FOV distance" type="float" val="48.588" />
+                <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
+                <parameter name="Focus FOV vertical" type="float" val="0.62834" />
+                <parameter name="Ground Aggression" type="float" val="0.75141" />
+                <parameter name="Knockout Shield" type="int" val="0" />
+                <parameter name="Left handed" type="int" val="0" />
+                <parameter name="Movement Speed" type="float" val="0.80395" />
+                <parameter name="Muscle" type="float" val="0.5" />
+                <parameter name="No Look Around" type="int" val="0" />
+                <parameter name="Peripheral FOV distance" type="float" val="4" />
+                <parameter name="Peripheral FOV horizontal" type="float" val="1.31507" />
+                <parameter name="Peripheral FOV vertical" type="float" val="1.32389" />
+                <parameter name="Species" type="string" val="rat" />
+                <parameter name="Static" type="int" val="0" />
+                <parameter name="Stick To Nav Mesh" type="int" val="0" />
+                <parameter name="Teams" type="string" val="player" />
+                <parameter name="Throw Counter Probability" type="float" val="0" />
+                <parameter name="Throw Trainer" type="int" val="0" />
+                <parameter name="Weapon Catch Skill" type="float" val="1" />
+                <parameter name="Wearing Metal Armor" type="int" val="0" />
+            </parameters>
+            <Connections>
+                <Connection id="130" />
+            </Connections>
+            <ItemConnections />
+            <Palette>
+                <Color label="Pelts" channel="0" red="1" green="0.282353" blue="0.282353" />
+                <Color label="Shirt" channel="1" red="1" green="0.880438" blue="0.227451" />
+                <Color label="Fur" channel="2" red="0.521569" green="0.521563" blue="0.521563" />
+                <Color label="Skin" channel="3" red="0.341176" green="0.341173" blue="0.341173" />
+            </Palette>
+            <EnvObjectAttachments>
+                <EnvObjectAttachment>
+                    <BoneConnect bone_id="20" num_connections="1" m0="0.634733" m1="-0.752529" m2="0.175536" m3="0" m4="0.772717" m5="0.616736" m6="-0.150152" m7="0" m8="0.00473461" m9="0.230947" m10="0.972955" m11="0" m12="0.326195" m13="0.645813" m14="0.195736" m15="1" />
+                    <BoneConnect bone_id="1" num_connections="1" m0="0.999518" m1="0.00923579" m2="-0.0296377" m3="0" m4="-0.0103243" m5="0.99927" m6="-0.0367884" m7="0" m8="0.0292763" m9="0.0370766" m10="0.998883" m11="0" m12="-0.00202179" m13="0.944611" m14="0.224049" m15="1" />
+                    <BoneConnect bone_id="0" num_connections="1" m0="0.999653" m1="0.0204897" m2="0.0165556" m3="0" m4="-0.0200743" m5="0.999489" m6="-0.0248795" m7="0" m8="-0.0170569" m9="0.0245385" m10="0.999553" m11="0" m12="-0.00437546" m13="0.925835" m14="0.233847" m15="1" />
+                    <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
+                </EnvObjectAttachment>
+            </EnvObjectAttachments>
+            <Group t0="41.8685" t1="119.209" t2="-27.3745" s0="0.431066" s1="1.71132" s2="0.0534074" q0="-0.0082056" q1="-0.0363414" q2="0.00737541" q3="0.999279" euler_x="-0.0169809" euler_y="-0.0725729" euler_z="0.0153777" id="131" version="1">
+                <parameters />
+                <EnvObject t0="41.8713" t1="118.931" t2="-27.3649" s0="0.655914" s1="0.655914" s2="0.655914" q0="-0.712475" q1="-0.0310121" q2="-0.0205474" q3="0.70071" euler_x="-1.58801" euler_y="-0.0728044" euler_z="0.0154367" id="132" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Weapons/staff_basic.xml">
+                    <parameters />
+                </EnvObject>
+                <EnvObject t0="41.8658" t1="119.426" t2="-27.3834" s0="0.165332" s1="0.165332" s2="0.0738391" q0="-0.00820565" q1="-0.0363413" q2="0.00737543" q3="0.999277" euler_x="-0.016981" euler_y="-0.0725727" euler_z="0.0153777" id="133" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/CaveArena/Banner_Hanging2Red.xml">
+                    <parameters />
+                </EnvObject>
+            </Group>
+        </ActorObject>
+    </Prefab>
     <EnvObject t0="65.9648" t1="126.526" t2="53.3541" s0="5.94962" s1="5.94962" s2="5.94962" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="139" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_04_Detail.xml">
         <parameters />
     </EnvObject>
@@ -1376,8 +1586,11 @@
     <SpawnerItem display_name="Sphere Crete Half" path="Data/Objects/Crete/sphere_crete_half.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sphere_crete_half.png" />
     <SpawnerItem display_name="Cliff Rock 03" path="Data/Objects/Environment/Cliffs/CliffRock_03.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_03.png" />
     <SpawnerItem display_name="Feather" path="Data/Objects/therium/feather.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Ouranian Hand Cat" path="Data/Objects/characters/cats/ouranian_hand_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/ouranian_hand_actor.png" />
     <SpawnerItem display_name="Arena Buttress Stone" path="Data/Objects/Buildings/arena/arena_buttress.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Arena Buttress.png" />
-    <SpawnerItem display_name="Soft Vest Male Rat" path="Data/Objects/characters/rats/rat_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/rat_actor.png" />
     <SpawnerItem display_name="Cliff Rock 04 Detail" path="Data/Objects/Environment/Cliffs/CliffRock_04_Detail.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_04.png" />
+    <SpawnerItem display_name="Soft Vest Male Rat" path="Data/Objects/characters/rats/rat_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/rat_actor.png" />
+    <SpawnerItem display_name="Staff Basic" path="Data/Objects/Weapons/staff_basic.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Banner Hanging 2Red" path="Data/Prototypes/CaveArena/Banner_Hanging2Red.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Ouranian Hand Cat" path="Data/Objects/characters/cats/ouranian_hand_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/ouranian_hand_actor.png" />
+    <SpawnerItem display_name="flag_bearer.xml" path="Data/Objects/stronghold/prefabs/characters/flag_bearer.xml" thumbnail_path="empty_placeholder.png" />
 </RecentItems>
