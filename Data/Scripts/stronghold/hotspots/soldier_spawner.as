@@ -49,25 +49,43 @@ void Init(){
     escort_name = params.HasParam(_escort_name_key) ? params.GetString(_escort_name_key) : _escort_name_default;
     go_to_name = params.HasParam(_go_to_name_key) ? params.GetString(_go_to_name_key) : _go_to_name_default;
 
-    timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
-        int soldier_id = CreateSoldier();
-        timer.Add(AfterCharInitJob(soldier_id, function(_char){
-            RegisterCleanUpJob(_char);
-            RegisterGoal(_char);
-            ApplySettings(_char);
-        }));
-        char_count++;
-
-        if(char_count >= max_char_count){
-            return 0.0f;
+    timer.Add(LevelEventJob("spawner_start", function(_params){
+        Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
+        if(_params.length() < 2 || _params[1] != hotspot_obj.GetName()){
+            return true;
         }
 
-        return GetRandDelay();
+        timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
+            int soldier_id = CreateSoldier();
+            timer.Add(AfterCharInitJob(soldier_id, function(_char){
+                RegisterCleanUpJob(_char);
+                RegisterGoal(_char);
+                ApplySettings(_char);
+            }));
+            char_count++;
+
+            if(char_count >= max_char_count){
+                return 0.0f;
+            }
+
+            return GetRandDelay();
+        }));
+
+        return false;
+    }));
+
+    timer.Add(LevelEventJob("spawner_reset", function(_params){
+        Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
+        if(_params.length() < 2 || _params[1] != hotspot_obj.GetName()){
+            return true;
+        }
+
+        Reset();
+        return false;
     }));
 
     timer.Add(LevelEventJob("reset", function(_params){
-        timer.DeleteAll();
-        Init();
+        Reset();
         return false;
     }));
 
@@ -92,6 +110,11 @@ float GetRandDelay(){
 
 void Dispose(){
     level.StopReceivingLevelEvents(hotspot.GetID());
+}
+
+void Reset(){
+    timer.DeleteAll();
+    Init();
 }
 
 void SetParameters(){
