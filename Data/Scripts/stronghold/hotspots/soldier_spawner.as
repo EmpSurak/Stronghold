@@ -25,12 +25,16 @@ const string _goal_none = "none";
 const string _goal_follow = "follow";
 const string _goal_go_to = "go_to";
 const string _goal_default = _goal_none;
+const string _escort_name_key = "Escort (Name)";
+const string _escort_name_default = "";
+const string _go_to_name_key = "Go to (Name)";
+const string _go_to_name_default = "";
 
 TimedExecution timer;
 CommandJobStorage command_job_storage;
 int char_count, max_char_count, team_color;
 float min_spawn_delay, max_spawn_delay, difficulty;
-string team, goal;
+string team, goal, escort_name, go_to_name;
 
 void Init(){
     level.ReceiveLevelEvents(hotspot.GetID());
@@ -42,6 +46,8 @@ void Init(){
     difficulty = params.HasParam(_difficulty_key) ? params.GetFloat(_difficulty_key) : _difficulty_default;
     team = params.HasParam(_team_key) ? params.GetString(_team_key) : _team_default;
     goal = params.HasParam(_goal_key) ? params.GetString(_goal_key) : _goal_default;
+    escort_name = params.HasParam(_escort_name_key) ? params.GetString(_escort_name_key) : _escort_name_default;
+    go_to_name = params.HasParam(_go_to_name_key) ? params.GetString(_go_to_name_key) : _go_to_name_default;
 
     timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
         int soldier_id = CreateSoldier();
@@ -96,6 +102,8 @@ void SetParameters(){
     params.AddFloat(_max_spawn_delay_key, _max_spawn_delay_default);
     params.AddFloat(_difficulty_key, _difficulty_default);
     params.AddString(_goal_key, _goal_default);
+    params.AddString(_escort_name_key, _escort_name_default);
+    params.AddString(_go_to_name_key, _go_to_name_default);
 }
 
 void HandleEvent(string event, MovementObject @mo){}
@@ -141,7 +149,13 @@ void RegisterCleanUpJob(MovementObject@ _char){
 
 void RegisterGoal(MovementObject@ _char){
     if(goal == _goal_go_to){
-        vec3 _target(1.0f); // TODO
+        int obj_id = FindFirstObjectByName(go_to_name);
+        if(obj_id < 0){
+            return;
+        }
+
+        Object@ obj = ReadObjectFromID(obj_id);
+        vec3 _target = obj.GetTranslation();
 
         _char.Execute("nav_target.x = " + _target.x + ";");
         _char.Execute("nav_target.y = " + _target.y + ";");
@@ -152,11 +166,30 @@ void RegisterGoal(MovementObject@ _char){
             _char.Execute("ResetMind();");
         }));
     }else if(goal == _goal_follow){
-        int escort_id = 1; // TODO
+        int escort_id = FindFirstObjectByName(go_to_name);
+        if(escort_id < 0){
+            return;
+        }
 
         _char.Execute("escort_id = " + escort_id + ";");
         _char.Execute("SetGoal(_escort);");
     }
+}
+
+int FindFirstObjectByName(string _name){
+    if(_name == ""){
+        return -1;
+    }
+
+    array<int> objects = GetObjectIDs();
+    for(uint i = 0; i < objects.length(); i++){
+        Object@ obj = ReadObjectFromID(objects[i]);
+        if(obj.GetName() == _name){
+            return obj.GetID();
+        }
+    }
+
+    return -1;
 }
 
 // based on (but modified) arena_level.as
