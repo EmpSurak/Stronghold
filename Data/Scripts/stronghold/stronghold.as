@@ -4,6 +4,7 @@
 #include "timed_execution/on_input_down_job.as"
 #include "timed_execution/after_char_init_job.as"
 #include "timed_execution/char_damage_job.as"
+#include "timed_execution/level_event_job.as"
 #include "stronghold/friend_controller.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/timed_execution/delayed_death_job.as"
@@ -19,6 +20,9 @@ float current_time = 0.0f;
 
 void Init(string level_name){
     timer.Add(OnInputPressedJob(0, _key_reset, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.Execute(function(_char){
             _char.Execute("combat_allowed = true;");
             _char.Execute("ResetMind();");
@@ -29,6 +33,9 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputPressedJob(0, _key_stand_down, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.Execute(function(_char){
             _char.Execute("combat_allowed = false;");
         });
@@ -37,6 +44,9 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputPressedJob(0, _key_come, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.Execute(function(_char){
             MovementObject@ player_char = FindPlayer();
             friend_controller.NavigateToTarget(_char, player_char.position);
@@ -47,6 +57,9 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputPressedJob(0, _key_go_to, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.Execute(function(_char){
             vec3 facing = camera.GetFacing();
             vec3 end = vec3(facing.x, max(-0.9, min(0.5f, facing.y)), facing.z) * 50.0f;
@@ -59,6 +72,9 @@ void Init(string level_name){
     }));
 
     timer.Add(OnInputPressedJob(0, _key_follow, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.Execute(function(_char){
             int player_id = FindPlayerID();
             _char.Execute("escort_id = " + player_id + ";");
@@ -69,48 +85,64 @@ void Init(string level_name){
         return true;
     }));
 
-    timer.Add(OnInputDownJob(0, "x", function(){
-        friend_controller.ShowYellDistance();
-        return true;
-    }));
-
-    timer.Add(OnInputDownJob(0, "n", function(){
+    timer.Add(OnInputDownJob(0, _key_decrease_distance, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(friend_controller.GetYellDistance() - 0.1f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
     }));
 
-    timer.Add(OnInputDownJob(0, "m", function(){
+    timer.Add(OnInputDownJob(0, _key_increase_distance, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(friend_controller.GetYellDistance() + 0.1f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "1", function(){
+    timer.Add(OnInputPressedJob(0, _key_radius_1, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(2.0f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "2", function(){
+    timer.Add(OnInputPressedJob(0, _key_radius_2, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(5.0f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "3", function(){
+    timer.Add(OnInputPressedJob(0, _key_radius_3, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(10.0f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "4", function(){
+    timer.Add(OnInputPressedJob(0, _key_radius_4, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(20.0f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
     }));
 
-    timer.Add(OnInputPressedJob(0, "5", function(){
+    timer.Add(OnInputPressedJob(0, _key_radius_5, function(){
+        if(EditorModeActive()){
+            return true;
+        }
         friend_controller.SetYellDistance(40.0f);
         hud_gui.SetDistance(friend_controller.GetYellDistance());
         return true;
@@ -169,15 +201,28 @@ void RegisterCleanupJobs(){
 
             Object@ char_obj = ReadObjectFromID(_char.GetID());
             ScriptParams@ char_params = char_obj.GetScriptParams();
-            char_params.AddInt("Smoke Emitter ID", emitter_id);
+            char_params.AddInt(_smoke_emitter_key, emitter_id);
         }));
 
         timer.Add(DelayedDeathJob(10.0f, char.GetID(), function(_char){
             Object@ char_obj = ReadObjectFromID(_char.GetID());
             ScriptParams@ char_params = char_obj.GetScriptParams();
-            int emitter_id = char_params.GetInt("Smoke Emitter ID");
+            int emitter_id = char_params.GetInt(_smoke_emitter_key);
             DeleteObjectID(_char.GetID());
             DeleteObjectID(emitter_id);
         }));
     }
+
+    timer.Add(LevelEventJob("reset", function(_params){
+        int num = GetNumCharacters();
+        for(int i = 0; i < num; ++i){
+            MovementObject@ char = ReadCharacter(i);
+            Object@ char_obj = ReadObjectFromID(char.GetID());
+            if(char_obj.IsExcludedFromSave()){
+                QueueDeleteObjectID(char.GetID());
+            }
+        }
+
+        return true;
+    }));
 }

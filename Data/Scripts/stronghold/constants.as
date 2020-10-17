@@ -39,3 +39,12 @@ const string _key_stand_down = "t";
 const string _key_come = "f";
 const string _key_go_to = "g";
 const string _key_follow = "h";
+const string _key_decrease_distance = "n";
+const string _key_increase_distance = "m";
+const string _key_radius_1 = "1";
+const string _key_radius_2 = "2";
+const string _key_radius_3 = "3";
+const string _key_radius_4 = "4";
+const string _key_radius_5 = "5";
+
+const string _smoke_emitter_key = "Smoke Emitter ID";
