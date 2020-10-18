@@ -30,6 +30,7 @@ const string _escort_name_key = "Escort (Name)";
 const string _escort_name_default = "";
 const string _go_to_name_key = "Go to (Name)";
 const string _go_to_name_default = "";
+const string _fur_channel_key = "Fur Channel";
 
 TimedExecution timer;
 CommandJobStorage command_job_storage;
@@ -142,11 +143,26 @@ void ReceiveMessage(string msg){
 }
 
 int CreateSoldier(){
-    int soldier_id = CreateObject("Data/Objects/stronghold/prefabs/characters/soldier_1.xml", true);
-    Object@ soldier_obj = ReadObjectFromID(soldier_id);
-    Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
-    soldier_obj.SetTranslation(hotspot_obj.GetTranslation());
+    array<string> soldier_prefabs = {
+        "Data/Objects/stronghold/prefabs/characters/soldier_1.xml",
+        "Data/Objects/stronghold/prefabs/characters/soldier_2.xml",
+        "Data/Objects/stronghold/prefabs/characters/soldier_3.xml",
+        "Data/Objects/stronghold/prefabs/characters/soldier_4.xml"
+    };
+    string soldier_file = soldier_prefabs[rand()%soldier_prefabs.length()];
+
+    int soldier_id = CreateObject(soldier_file, true);
+    MoveToHotspot(soldier_id);
+
+    // TODO: spawn random weapon
+
     return soldier_id; 
+}
+
+void MoveToHotspot(int _id){
+    Object@ obj = ReadObjectFromID(_id);
+    Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
+    obj.SetTranslation(hotspot_obj.GetTranslation());
 }
 
 void RegisterCleanUpJob(MovementObject@ _char){
@@ -201,8 +217,14 @@ void RegisterGoal(MovementObject@ _char){
     }
 }
 
-void ApplySettings(MovementObject@ _char, int _fur_channel = 1){
+void ApplySettings(MovementObject@ _char){
     Object@ char_obj = ReadObjectFromID(_char.GetID());
+    ScriptParams@ char_params = char_obj.GetScriptParams();
+
+    int fur_channel = 1;
+    if(char_params.HasParam(_fur_channel_key)){
+        fur_channel = char_params.GetInt(_fur_channel_key);
+    }
 
     for(int i = 0; i < 4; ++i){
         vec3 color = FloatTintFromByte(RandReasonableColor());
@@ -211,7 +233,7 @@ void ApplySettings(MovementObject@ _char, int _fur_channel = 1){
         color = mix(color, vec3(1.0-difficulty), 0.5f);
         char_obj.SetPaletteColor(i, color);
     }
-    char_obj.SetPaletteColor(_fur_channel, GetRandomFurColor());
+    char_obj.SetPaletteColor(fur_channel, GetRandomFurColor());
 
     ScriptParams@ params = char_obj.GetScriptParams();
     params.SetString("Teams", team);
