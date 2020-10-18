@@ -149,10 +149,10 @@
             <parameter name="Goal" type="string" val="none" />
             <parameter name="Max. Spawn Delay" type="float" val="5" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
-            <parameter name="Number of Characters" type="int" val="3" />
-            <parameter name="Team" type="string" val="Nobody" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Monster" />
             <parameter name="Team Color" type="int" val="2" />
-            <parameter name="Unit Type" type="string" val="soldier" />
+            <parameter name="Unit Type" type="string" val="giant" />
         </parameters>
         <Connections />
         <ConnectionsFrom />

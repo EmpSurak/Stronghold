@@ -283,7 +283,7 @@ int IsPassive() {
 }
 
 bool WantsToDragBody() {
-    return (goal == _investigate && (investigate_body_time > time - 2.0));
+    return false;
 }
 
 void ResetMind() {
@@ -2228,41 +2228,7 @@ void BrainSpeciesUpdate() {
 }
 
 bool WantsToThrowItem() {
-    int primary_weapon_id = weapon_slots[primary_weapon_slot];
-    int secondary_weapon_id = weapon_slots[secondary_weapon_slot];
-
-    if(species == _cat && chase_target_id != -1 &&
-            (secondary_weapon_id != -1 || (primary_weapon_id != -1 && ReadItemID(primary_weapon_id).GetLabel() == "knife"))) {
-        if(RangedRandomFloat(0.0f, 1.0f) > p_aggression * game_difficulty * 0.04) {
-            return false;
-        }
-
-        MovementObject@ target_char = ReadCharacterID(chase_target_id);
-        bool target_in_air = !target_char.GetBoolVar("on_ground") && target_char.GetIntVar("state") != _ragdoll_state;
-        float distance_sq_to_target = distance_squared(this_mo.position, target_char.position);
-
-        if(target_in_air && distance_sq_to_target > 2.5 * 2.5) {
-            return true;
-        }
-
-        if(distance_sq_to_target > 12.5 * 12.5) {
-            return true;
-        }
-
-        if(distance_sq_to_target > 5.5 * 5.5) {
-            return dot(target_char.GetFacing(), this_mo.GetFacing()) >= 0.0 &&
-                dot(target_char.position - this_mo.position, target_char.velocity) >= 0.0 &&
-                dot(target_char.velocity, target_char.velocity) >= 30.0;
-        }
-
-        return false;
-    }
-
-    if(species == _dog && chase_target_id != -1 && distance(this_mo.position, ReadCharacterID(chase_target_id).position) > 10) {
-        return true;
-    } else {
-        return false;
-    }
+    return false;
 }
 
 bool WantsToThrowEnemy() {

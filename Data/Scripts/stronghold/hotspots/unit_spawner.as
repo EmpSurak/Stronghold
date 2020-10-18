@@ -169,6 +169,9 @@ int CreateUnit(UnitType _type){
             break;
         }
         case _giant: {
+            possible_files = {
+                "Data/Objects/stronghold/prefabs/characters/giant_1.xml"
+            };
             break;
         }
     }
