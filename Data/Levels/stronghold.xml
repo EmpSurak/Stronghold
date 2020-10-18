@@ -96,34 +96,59 @@
             <Color label="Fur" channel="2" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
-    <CameraObject t0="69.4296" t1="134.539" t2="50.8963" s0="1" s1="1" s2="1" q0="0.20459" q1="-0.718854" q2="0.23695" q3="0.620682" euler_x="-2.50478" euler_y="-1.42448" euler_z="3.14159" id="4">
+    <CameraObject t0="82.5542" t1="136.779" t2="49.3419" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26017" euler_y="-1.55556" euler_z="3.14159" id="4">
         <parameters />
     </CameraObject>
-    <Hotspot t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+    <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
         <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
             <parameter name="Max. Spawn Delay" type="float" val="5" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
             <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="1" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot t0="58.9426" t1="129.182" t2="55.7079" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="44" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+    <Hotspot t0="74.6908" t1="126.394" t2="50.4706" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="8" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
+            <parameter name="Spawn Name" type="string" val="Spawner1" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <EnvObject t0="74.5427" t1="128.165" t2="50.5207" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="9" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml">
+        <parameters />
+    </EnvObject>
+    <Hotspot name="Spawner2" t0="58.9426" t1="129.182" t2="55.7079" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="44" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
             <parameter name="Max. Spawn Delay" type="float" val="5" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
             <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="2" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot t0="58.9426" t1="129.182" t2="49.4848" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="63" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+    <Hotspot name="Spawner3" t0="58.9426" t1="129.182" t2="49.4848" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="63" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
         <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
             <parameter name="Max. Spawn Delay" type="float" val="5" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
             <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="3" />
         </parameters>
         <Connections />
@@ -175,4 +200,6 @@
     <SpawnerItem display_name="Rat Machete" path="Data/Items/rat_weapons/rat_machete.xml" thumbnail_path="" />
     <SpawnerItem display_name="soldier_1.xml" path="Data/Objects/stronghold/prefabs/characters/soldier_1.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="soldier_spawner.xml" path="Data/Objects/stronghold/hotspots/soldier_spawner.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="spawner_start.xml" path="Data/Objects/stronghold/hotspots/spawner_start.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="Magma Arena Flag Red 1" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml" thumbnail_path="" />
 </RecentItems>
