@@ -9,6 +9,11 @@
 #include "stronghold/common.as"
 #include "stronghold/command_job_storage.as"
 
+const string _unit_type_key = "Unit Type";
+const string _unit_type_default = "";
+const string _unit_type_soldier = "soldier";
+const string _unit_type_tank = "tank";
+const string _unit_type_giant = "giant";
 const string _char_count_key = "Number of Characters";
 const int _char_count_default = 5;
 const string _team_key = "Team";
@@ -32,18 +37,12 @@ const string _go_to_name_key = "Go to (Name)";
 const string _go_to_name_default = "";
 const string _fur_channel_key = "Fur Channel";
 
-enum UnitType {
-    _soldier,
-    _tank,
-    _giant
-    
-};
-
 TimedExecution timer;
 CommandJobStorage command_job_storage;
 int char_count, max_char_count, team_color;
 float min_spawn_delay, max_spawn_delay, difficulty;
 string team, goal, escort_name, go_to_name;
+UnitType type;
 
 void Init(){
     level.ReceiveLevelEvents(hotspot.GetID());
@@ -57,6 +56,7 @@ void Init(){
     goal = params.HasParam(_goal_key) ? params.GetString(_goal_key) : _goal_default;
     escort_name = params.HasParam(_escort_name_key) ? params.GetString(_escort_name_key) : _escort_name_default;
     go_to_name = params.HasParam(_go_to_name_key) ? params.GetString(_go_to_name_key) : _go_to_name_default;
+    type = UnitTypeFromString(params.HasParam(_unit_type_key) ? params.GetString(_unit_type_key) : _unit_type_default);
 
     timer.Add(LevelEventJob("spawner_start", function(_params){
         Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
@@ -65,7 +65,7 @@ void Init(){
         }
 
         timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
-            int soldier_id = CreateUnit(_soldier);
+            int soldier_id = CreateUnit(type);
             timer.Add(AfterCharInitJob(soldier_id, function(_char){
                 RegisterCleanUpJob(_char);
                 RegisterGoal(_char);
@@ -128,6 +128,7 @@ void Reset(){
 }
 
 void SetParameters(){
+    params.AddString(_unit_type_key, _unit_type_default);
     params.AddInt(_char_count_key, _char_count_default);
     params.AddInt(_team_color_key, _team_color_default);
     params.AddString(_team_key, _team_default);
@@ -162,6 +163,9 @@ int CreateUnit(UnitType _type){
             break;
         }
         case _tank: {
+            possible_files = {
+                "Data/Objects/stronghold/prefabs/characters/tank_1.xml"
+            };
             break;
         }
         case _giant: {
@@ -190,6 +194,10 @@ void CreateAndAttachWeapon(UnitType _type, int _char_id){
             break;
         }
         case _tank: {
+            possible_files = {
+                "Data/Items/DogWeapons/DogBroadSword.xml",
+                "Data/Items/DogWeapons/DogSword.xml"
+            };
             break;
         }
         case _giant: {
@@ -293,4 +301,15 @@ void ApplySettings(MovementObject@ _char){
     params.SetFloat("Damage Resistance", mix(RangedRandomFloat(0.6f, 0.8f), RangedRandomFloat(0.9f, 1.1f), difficulty));
     params.SetInt("Left handed", (rand()%5 == 0) ? 1 : 0);
     char_obj.UpdateScriptParams();
+}
+
+UnitType UnitTypeFromString(const string _input){
+    if(_input == _unit_type_soldier){
+        return _soldier;
+    }else if(_input == _unit_type_tank){
+        return _tank;
+    }else if(_input == _unit_type_giant){
+        return _giant;
+    }
+    return _no_type;
 }

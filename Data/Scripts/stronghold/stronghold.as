@@ -231,6 +231,16 @@ void RegisterCleanupJobs(){
                 QueueDeleteObjectID(item.GetID());
             }
         }
+
+        int num_hotspots = GetNumHotspots();
+        for(int i = 0; i < num_hotspots; ++i){
+            Hotspot@ hot = ReadHotspot(i);
+            Object@ hot_obj = ReadObjectFromID(hot.GetID());
+            if(hot_obj.IsExcludedFromSave()){
+                QueueDeleteObjectID(hot.GetID());
+            }
+        }
+
         return true;
     }));
 }

@@ -96,7 +96,7 @@
             <Color label="Fur" channel="2" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
-    <CameraObject t0="79.2344" t1="132.876" t2="42.8385" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26041" euler_y="-1.5554" euler_z="3.14158" id="4">
+    <CameraObject t0="76.2297" t1="135.569" t2="52.9947" s0="1" s1="1" s2="1" q0="0.137041" q1="-0.724026" q2="0.150553" q3="0.659044" euler_x="-2.73156" euler_y="-1.4769" euler_z="-3.14159" id="4">
         <parameters />
     </CameraObject>
     <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
@@ -110,6 +110,7 @@
             <parameter name="Number of Characters" type="int" val="3" />
             <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
@@ -151,6 +152,7 @@
             <parameter name="Number of Characters" type="int" val="3" />
             <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="2" />
+            <parameter name="Unit Type" type="string" val="soldier" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
@@ -164,8 +166,9 @@
             <parameter name="Max. Spawn Delay" type="float" val="5" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
             <parameter name="Number of Characters" type="int" val="3" />
-            <parameter name="Team" type="string" val="Nobody" />
+            <parameter name="Team" type="string" val="Somebody" />
             <parameter name="Team Color" type="int" val="3" />
+            <parameter name="Unit Type" type="string" val="tank" />
         </parameters>
         <Connections />
         <ConnectionsFrom />

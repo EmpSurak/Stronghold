@@ -48,3 +48,10 @@ const string _key_radius_4 = "4";
 const string _key_radius_5 = "5";
 
 const string _smoke_emitter_key = "Smoke Emitter ID";
+
+enum UnitType {
+    _no_type,
+    _soldier,
+    _tank,
+    _giant
+};
