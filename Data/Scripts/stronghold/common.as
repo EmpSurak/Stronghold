@@ -1,3 +1,7 @@
+#include "timed_execution/timed_execution.as"
+#include "stronghold/timed_execution/delayed_death_job.as"
+#include "stronghold/constants.as"
+
 int FindPlayerID(){
     int num = GetNumCharacters();
     for(int i = 0; i < num; ++i){
@@ -44,6 +48,38 @@ int FindFirstObjectByName(string _name){
     }
 
     return -1;
+}
+
+void RegisterCharCleanUpJob(TimedExecution@ _timer, MovementObject@ _char){
+    _timer.Add(DelayedDeathJob(5.0f, _char.GetID(), function(_char){
+        int emitter_id = CreateObject("Data/Objects/Hotspots/emitter.xml", true);
+        Object@ emitter_obj = ReadObjectFromID(emitter_id);
+        emitter_obj.SetTranslation(_char.position);
+        emitter_obj.SetScale(0.1f);
+        ScriptParams@ emitter_params = emitter_obj.GetScriptParams();
+        emitter_params.SetString("Type", "Smoke");
+
+        Object@ char_obj = ReadObjectFromID(_char.GetID());
+        ScriptParams@ char_params = char_obj.GetScriptParams();
+        char_params.AddInt(_smoke_emitter_key, emitter_id);
+    }));
+
+    _timer.Add(DelayedDeathJob(10.0f, _char.GetID(), function(_char){
+        int char_id = _char.GetID();
+        Object@ char_obj = ReadObjectFromID(char_id);
+        ScriptParams@ char_params = char_obj.GetScriptParams();
+        int emitter_id = char_params.GetInt(_smoke_emitter_key);
+        DeleteObjectID(char_id);
+        DeleteObjectID(emitter_id);
+
+        int num_items = GetNumItems();
+        for(int i = 0; i < num_items; ++i){
+            ItemObject@ item = ReadItem(i);
+            if(item.last_held_char_id_ == char_id){
+                QueueDeleteObjectID(item.GetID());
+            }
+        }
+    }));
 }
 
 // based on (but modified) arena_level.as

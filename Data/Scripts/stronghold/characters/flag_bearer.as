@@ -55,7 +55,7 @@ const float kThrowDelay = 5.0;
 const float kDodgeDelay = 3.0;
 bool throw_after_active_block;
 bool allow_active_block = true;
-bool allow_throw = true;
+bool allow_throw = false;
 bool always_unaware = false;
 bool always_active_block = false;
 

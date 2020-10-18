@@ -191,26 +191,7 @@ void RegisterCleanupJobs(){
     int num = GetNumCharacters();
     for(int i = 0; i < num; ++i){
         MovementObject@ char = ReadCharacter(i);
-        timer.Add(DelayedDeathJob(5.0f, char.GetID(), function(_char){
-            int emitter_id = CreateObject("Data/Objects/Hotspots/emitter.xml", true);
-            Object@ emitter_obj = ReadObjectFromID(emitter_id);
-            emitter_obj.SetTranslation(_char.position);
-            emitter_obj.SetScale(0.1f);
-            ScriptParams@ emitter_params = emitter_obj.GetScriptParams();
-            emitter_params.SetString("Type", "Smoke");
-
-            Object@ char_obj = ReadObjectFromID(_char.GetID());
-            ScriptParams@ char_params = char_obj.GetScriptParams();
-            char_params.AddInt(_smoke_emitter_key, emitter_id);
-        }));
-
-        timer.Add(DelayedDeathJob(10.0f, char.GetID(), function(_char){
-            Object@ char_obj = ReadObjectFromID(_char.GetID());
-            ScriptParams@ char_params = char_obj.GetScriptParams();
-            int emitter_id = char_params.GetInt(_smoke_emitter_key);
-            DeleteObjectID(_char.GetID());
-            DeleteObjectID(emitter_id);
-        }));
+        RegisterCharCleanUpJob(timer, char);
     }
 
     timer.Add(LevelEventJob("reset", function(_params){

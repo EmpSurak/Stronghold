@@ -3,7 +3,6 @@
 #include "timed_execution/after_char_init_job.as"
 #include "timed_execution/repeating_dynamic_delayed_job.as"
 #include "timed_execution/level_event_job.as"
-#include "stronghold/timed_execution/delayed_death_job.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/constants.as"
 #include "stronghold/common.as"
@@ -67,7 +66,7 @@ void Init(){
         timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
             int soldier_id = CreateUnit(type);
             timer.Add(AfterCharInitJob(soldier_id, function(_char){
-                RegisterCleanUpJob(_char);
+                RegisterCharCleanUpJob(timer, _char);
                 RegisterGoal(_char);
                 ApplySettings(_char);
             }));
@@ -221,29 +220,6 @@ void MoveToHotspot(int _id){
     Object@ obj = ReadObjectFromID(_id);
     Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
     obj.SetTranslation(hotspot_obj.GetTranslation());
-}
-
-void RegisterCleanUpJob(MovementObject@ _char){
-    timer.Add(DelayedDeathJob(5.0f, _char.GetID(), function(_char){
-        int emitter_id = CreateObject("Data/Objects/Hotspots/emitter.xml", true);
-        Object@ emitter_obj = ReadObjectFromID(emitter_id);
-        emitter_obj.SetTranslation(_char.position);
-        emitter_obj.SetScale(0.1f);
-        ScriptParams@ emitter_params = emitter_obj.GetScriptParams();
-        emitter_params.SetString("Type", "Smoke");
-
-        Object@ char_obj = ReadObjectFromID(_char.GetID());
-        ScriptParams@ char_params = char_obj.GetScriptParams();
-        char_params.AddInt(_smoke_emitter_key, emitter_id);
-    }));
-
-    timer.Add(DelayedDeathJob(10.0f, _char.GetID(), function(_char){
-        Object@ char_obj = ReadObjectFromID(_char.GetID());
-        ScriptParams@ char_params = char_obj.GetScriptParams();
-        int emitter_id = char_params.GetInt(_smoke_emitter_key);
-        DeleteObjectID(_char.GetID());
-        DeleteObjectID(emitter_id);
-    }));
 }
 
 void RegisterGoal(MovementObject@ _char){
