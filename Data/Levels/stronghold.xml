@@ -96,7 +96,7 @@
             <Color label="Fur" channel="2" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
-    <CameraObject t0="82.5542" t1="136.779" t2="49.3419" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26017" euler_y="-1.55556" euler_z="3.14159" id="4">
+    <CameraObject t0="82.5599" t1="136.786" t2="49.3418" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26024" euler_y="-1.55537" euler_z="3.14159" id="4">
         <parameters />
     </CameraObject>
     <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
@@ -116,7 +116,9 @@
     </Hotspot>
     <Hotspot t0="74.6908" t1="126.394" t2="50.4706" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="8" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
-            <parameter name="Spawn Name" type="string" val="Spawner1" />
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Spawner" />
+            <parameter name="Team Only" type="string" val="" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
