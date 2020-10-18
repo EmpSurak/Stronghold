@@ -154,9 +154,28 @@ int CreateSoldier(){
     int soldier_id = CreateObject(soldier_file, true);
     MoveToHotspot(soldier_id);
 
-    // TODO: spawn random weapon
+    CreateAndAttachSoldierWeapon(soldier_id);
 
     return soldier_id; 
+}
+
+void CreateAndAttachSoldierWeapon(int _char_id){
+    array<string> weapons = {
+        "Data/Items/DogWeapons/DogSword.xml",
+        "Data/Items/DogWeapons/DogSpear.xml",
+        "Data/Items/DogWeapons/DogKnife.xml"
+    };
+    string weapon_file = weapons[rand()%weapons.length()];
+
+    int weapon_id = CreateObject(weapon_file, true);
+    MoveToHotspot(weapon_id);
+
+    Object@ char_obj = ReadObjectFromID(_char_id);
+    ScriptParams@ char_params = char_obj.GetScriptParams();
+    bool mirrored = char_params.HasParam("Left handed") && char_params.GetInt("Left handed") != 0;
+
+    Object@ weapon_obj = ReadObjectFromID(weapon_id);
+    char_obj.AttachItem(weapon_obj, _at_grip, mirrored);
 }
 
 void MoveToHotspot(int _id){

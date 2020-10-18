@@ -214,8 +214,8 @@ void RegisterCleanupJobs(){
     }
 
     timer.Add(LevelEventJob("reset", function(_params){
-        int num = GetNumCharacters();
-        for(int i = 0; i < num; ++i){
+        int num_chars = GetNumCharacters();
+        for(int i = 0; i < num_chars; ++i){
             MovementObject@ char = ReadCharacter(i);
             Object@ char_obj = ReadObjectFromID(char.GetID());
             if(char_obj.IsExcludedFromSave()){
@@ -223,6 +223,14 @@ void RegisterCleanupJobs(){
             }
         }
 
+        int num_items = GetNumItems();
+        for(int i = 0; i < num_items; ++i){
+            ItemObject@ item = ReadItem(i);
+            Object@ item_obj = ReadObjectFromID(item.GetID());
+            if(item_obj.IsExcludedFromSave()){
+                QueueDeleteObjectID(item.GetID());
+            }
+        }
         return true;
     }));
 }
