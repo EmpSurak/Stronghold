@@ -99,7 +99,7 @@
     <CameraObject t0="79.2344" t1="132.876" t2="42.8385" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26041" euler_y="-1.5554" euler_z="3.14158" id="4">
         <parameters />
     </CameraObject>
-    <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+    <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="0.5" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -140,7 +140,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Spawner2" t0="58.9426" t1="129.182" t2="55.7079" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="44" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+    <Hotspot name="Spawner2" t0="58.9426" t1="129.182" t2="55.7079" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="44" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="0.5" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -155,7 +155,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Spawner3" t0="58.9426" t1="129.182" t2="49.4848" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="63" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
+    <Hotspot name="Spawner3" t0="58.9426" t1="129.182" t2="49.4848" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="63" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="0.5" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -215,7 +215,7 @@
     <SpawnerItem display_name="Rabbit Catcher" path="Data/Items/DogWeapons/RabbitCatcher.xml" thumbnail_path="Data/UI/spawner/thumbs/Object/wcatcher.png" />
     <SpawnerItem display_name="Rat Machete" path="Data/Items/rat_weapons/rat_machete.xml" thumbnail_path="" />
     <SpawnerItem display_name="soldier_1.xml" path="Data/Objects/stronghold/prefabs/characters/soldier_1.xml" thumbnail_path="empty_placeholder.png" />
-    <SpawnerItem display_name="soldier_spawner.xml" path="Data/Objects/stronghold/hotspots/soldier_spawner.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="unit_spawner.xml" path="Data/Objects/stronghold/hotspots/unit_spawner.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="spawner_start.xml" path="Data/Objects/stronghold/hotspots/spawner_start.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="Magma Arena Flag Red 1" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml" thumbnail_path="" />
     <SpawnerItem display_name="spawner_control.xml" path="Data/Objects/stronghold/hotspots/spawner_control.xml" thumbnail_path="empty_placeholder.png" />

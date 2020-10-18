@@ -2,5 +2,5 @@
 <Type>generic</Type>
 <Hotspot>
 	<BillboardColorMap>Data/UI/spawner/thumbs/Hotspot/empty.png</BillboardColorMap>
-	<Script>stronghold/hotspots/soldier_spawner.as</Script>
+	<Script>stronghold/hotspots/unit_spawner.as</Script>
 </Hotspot>

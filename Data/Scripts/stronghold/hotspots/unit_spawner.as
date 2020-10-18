@@ -32,6 +32,13 @@ const string _go_to_name_key = "Go to (Name)";
 const string _go_to_name_default = "";
 const string _fur_channel_key = "Fur Channel";
 
+enum UnitType {
+    _soldier,
+    _tank,
+    _giant
+    
+};
+
 TimedExecution timer;
 CommandJobStorage command_job_storage;
 int char_count, max_char_count, team_color;
@@ -58,7 +65,7 @@ void Init(){
         }
 
         timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
-            int soldier_id = CreateSoldier();
+            int soldier_id = CreateUnit(_soldier);
             timer.Add(AfterCharInitJob(soldier_id, function(_char){
                 RegisterCleanUpJob(_char);
                 RegisterGoal(_char);
@@ -142,32 +149,56 @@ void ReceiveMessage(string msg){
     timer.AddEvent(msg);
 }
 
-int CreateSoldier(){
-    array<string> soldier_prefabs = {
-        "Data/Objects/stronghold/prefabs/characters/soldier_1.xml",
-        "Data/Objects/stronghold/prefabs/characters/soldier_2.xml",
-        "Data/Objects/stronghold/prefabs/characters/soldier_3.xml",
-        "Data/Objects/stronghold/prefabs/characters/soldier_4.xml"
-    };
-    string soldier_file = soldier_prefabs[rand()%soldier_prefabs.length()];
+int CreateUnit(UnitType _type){
+    array<string> possible_files;
+    switch(_type){
+        case _soldier: {
+            possible_files = {
+                "Data/Objects/stronghold/prefabs/characters/soldier_1.xml",
+                "Data/Objects/stronghold/prefabs/characters/soldier_2.xml",
+                "Data/Objects/stronghold/prefabs/characters/soldier_3.xml",
+                "Data/Objects/stronghold/prefabs/characters/soldier_4.xml"
+            };
+            break;
+        }
+        case _tank: {
+            break;
+        }
+        case _giant: {
+            break;
+        }
+    }
+    string random_file = possible_files[rand()%possible_files.length()];
 
-    int soldier_id = CreateObject(soldier_file, true);
-    MoveToHotspot(soldier_id);
+    int unit_id = CreateObject(random_file, true);
+    MoveToHotspot(unit_id);
 
-    CreateAndAttachSoldierWeapon(soldier_id);
+    CreateAndAttachWeapon(_type, unit_id);
 
-    return soldier_id; 
+    return unit_id; 
 }
 
-void CreateAndAttachSoldierWeapon(int _char_id){
-    array<string> weapons = {
-        "Data/Items/DogWeapons/DogSword.xml",
-        "Data/Items/DogWeapons/DogSpear.xml",
-        "Data/Items/DogWeapons/DogKnife.xml"
-    };
-    string weapon_file = weapons[rand()%weapons.length()];
+void CreateAndAttachWeapon(UnitType _type, int _char_id){
+    array<string> possible_files;
+    switch(_type){
+        case _soldier: {
+            possible_files = {
+                "Data/Items/DogWeapons/DogSword.xml",
+                "Data/Items/DogWeapons/DogSpear.xml",
+                "Data/Items/DogWeapons/DogKnife.xml"
+            };
+            break;
+        }
+        case _tank: {
+            break;
+        }
+        case _giant: {
+            break;
+        }
+    }
+    string random_file = possible_files[rand()%possible_files.length()];
 
-    int weapon_id = CreateObject(weapon_file, true);
+    int weapon_id = CreateObject(random_file, true);
     MoveToHotspot(weapon_id);
 
     Object@ char_obj = ReadObjectFromID(_char_id);
