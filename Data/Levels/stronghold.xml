@@ -47,7 +47,7 @@
     <EnvObject t0="64.6523" t1="122.18" t2="47.3256" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="1" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/terraces/cat_patio_box.xml">
         <parameters />
     </EnvObject>
-    <ActorObject t0="74.6612" t1="134.934" t2="51.927" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/IGF_Characters/IGF_TurnerActor.xml" is_player="1">
+    <ActorObject t0="74.6612" t1="130.327" t2="58.3213" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/IGF_Characters/IGF_TurnerActor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -96,7 +96,7 @@
             <Color label="Fur" channel="2" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
-    <CameraObject t0="74.6612" t1="134.934" t2="51.927" s0="1" s1="1" s2="1" q0="0.137041" q1="-0.724026" q2="0.150553" q3="0.659044" euler_x="-2.73156" euler_y="-1.47689" euler_z="-3.14159" id="4">
+    <CameraObject t0="84.5225" t1="139.252" t2="50.7348" s0="1" s1="1" s2="1" q0="0.137041" q1="-0.724026" q2="0.150553" q3="0.659044" euler_x="-2.73163" euler_y="-1.47696" euler_z="3.14159" id="4">
         <parameters />
     </CameraObject>
     <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">

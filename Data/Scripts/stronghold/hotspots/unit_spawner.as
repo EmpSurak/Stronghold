@@ -163,7 +163,8 @@ int CreateUnit(UnitType _type){
         }
         case _tank: {
             possible_files = {
-                "Data/Objects/stronghold/prefabs/characters/tank_1.xml"
+                "Data/Objects/stronghold/prefabs/characters/tank_1.xml",
+                "Data/Objects/stronghold/prefabs/characters/tank_2.xml"
             };
             break;
         }
