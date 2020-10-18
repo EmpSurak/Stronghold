@@ -38,7 +38,8 @@
             <parameter name="Throw Counter Probability" type="float" val="0.4" />
             <parameter name="Throw Trainer" type="int" val="0" />
             <parameter name="Weapon Catch Skill" type="float" val="1" />
-            <parameter name="Wearing Metal Armor" type="int" val="0" />
+            <parameter name="Wearing Metal Armor" type="int" val="1" />
+            <parameter name="Fur Channel" type="int" val="0" />
         </parameters>
         <Connections>
             <Connection id="0" />

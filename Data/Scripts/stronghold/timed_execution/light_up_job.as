@@ -23,6 +23,7 @@ class LightUpJob : TimerJobInterface {
 
     void ExecuteExpired(){
         if(!ObjectExists(light_id)){
+            return_value = 0.0f;
             return;
         }else if(!ObjectExists(char_id)){
             DeleteObjectID(light_id);

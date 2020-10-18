@@ -199,9 +199,10 @@ void CreateAndAttachWeapon(UnitType _type, int _char_id){
             };
             break;
         }
-        case _giant: {
-            break;
-        }
+    }
+    if(possible_files.length() == 0){
+        // Not every unit type has a weapon.
+        return;
     }
     string random_file = possible_files[rand()%possible_files.length()];
 

@@ -191,7 +191,9 @@ void RegisterCleanupJobs(){
     int num = GetNumCharacters();
     for(int i = 0; i < num; ++i){
         MovementObject@ char = ReadCharacter(i);
-        RegisterCharCleanUpJob(timer, char);
+        if(!char.controlled){
+            RegisterCharCleanUpJob(timer, char);
+        }
     }
 
     timer.Add(LevelEventJob("reset", function(_params){
