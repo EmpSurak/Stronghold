@@ -1,6 +1,7 @@
 #include "timed_execution/timed_execution.as"
 #include "timed_execution/after_init_job.as"
 #include "timed_execution/after_char_init_job.as"
+#include "timed_execution/char_damage_job.as"
 #include "timed_execution/repeating_dynamic_delayed_job.as"
 #include "timed_execution/level_event_job.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
@@ -13,6 +14,7 @@ const string _unit_type_default = "";
 const string _unit_type_soldier = "soldier";
 const string _unit_type_tank = "tank";
 const string _unit_type_giant = "giant";
+const string _unit_type_bomber = "bomber";
 const string _char_count_key = "Number of Characters";
 const int _char_count_default = 5;
 const string _team_key = "Team";
@@ -174,6 +176,13 @@ int CreateUnit(UnitType _type){
             };
             break;
         }
+        case _bomber: {
+            possible_files = {
+                "Data/Objects/stronghold/prefabs/characters/bomber_1.xml",
+                "Data/Objects/stronghold/prefabs/characters/bomber_2.xml"
+            };
+            break;
+        }
     }
     string random_file = possible_files[rand()%possible_files.length()];
 
@@ -182,7 +191,11 @@ int CreateUnit(UnitType _type){
 
     CreateAndAttachWeapon(_type, unit_id);
 
-    return unit_id; 
+    if(_type == _bomber){
+        AddBomberJob(unit_id);
+    }
+
+    return unit_id;
 }
 
 void CreateAndAttachWeapon(UnitType _type, int _char_id){
@@ -291,6 +304,67 @@ UnitType UnitTypeFromString(const string _input){
         return _tank;
     }else if(_input == _unit_type_giant){
         return _giant;
+    }else if(_input == _unit_type_bomber){
+        return _bomber;
     }
     return _no_type;
+}
+
+void AddBomberJob(int _char_id){
+    timer.Add(CharDamageJob(_char_id, function(_char, _p_blood, _p_permanent){
+        // Explosion effect inspired by Gyrth' rocket mod.
+        float radius = 15.0f;
+        float critical_radius = 5.0f;
+
+        array<int> nearby_characters;
+        GetCharactersInSphere(_char.position, radius, nearby_characters);
+
+        for(uint i = 0; i < nearby_characters.length(); i++){
+            MovementObject@ char = ReadCharacterID(nearby_characters[i]);
+            vec3 explode_direction = normalize(char.position - _char.position);
+            float center_distance = distance(_char.position, char.position);
+            float distance_alpha = 1.0f - (center_distance / radius);
+
+            if(char.controlled){
+                char.Execute("camera_shake += 10.0f;");
+            }
+
+            if(center_distance < critical_radius){
+                char.Execute("ko_shield = 0;");
+                char.Execute("SetOnFire(true);");
+            }
+
+            char.Execute("GoLimp(); TakeDamage(" + 2.0f * distance_alpha + ");");
+            char.rigged_object().ApplyForceToRagdoll(
+                explode_direction * 40000 * distance_alpha,
+                char.rigged_object().skeleton().GetCenterOfMass()
+            );
+        }
+
+        for(uint i = 0; i < 50; i++){
+            MakeParticle(
+                "Data/Particles/stronghold/explosion_sparks.xml",
+                _char.position,
+                vec3(
+                    RangedRandomFloat(-10.0f, 10.0f),
+                    RangedRandomFloat(-10.0f, 10.0f),
+                    RangedRandomFloat(-10.0f, 10.0f)
+                )
+            );
+        }
+
+        for(uint i = 0; i < 3; i++){
+            MakeParticle(
+                "Data/Particles/stronghold/explosion_smoke.xml",
+                _char.position,
+                vec3(-2.0f)
+            );
+        }
+
+        int explosion_number = rand()%3+1;
+        string explosion_sound = "Data/Sounds/explosives/explosion" + explosion_number + ".wav";
+        PlaySound(explosion_sound, _char.position);
+
+        return false;
+    }));
 }

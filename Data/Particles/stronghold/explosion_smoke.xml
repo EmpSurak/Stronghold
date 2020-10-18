@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<particle>
+    <textures color_map = "Data/Textures/smoke.tga" 
+              normal_map = "Data/Textures/smoke_normal.tga"
+              shader = "envobject #PARTICLE"
+              soft_shader = "envobject #PARTICLE"/>
+    <size min = "10.0" max = "20.0"/>
+    <rotation min = "-20.0" max = "20.0"/>
+    <color red =   "0.45"
+           green = "0.45"
+           blue =  "0.40"
+           alpha_min = "1.0" alpha_max = "1.0"/>
+    <behavior inertia="0.99" gravity="0.04" wind="-1.0" size_decay_rate="-0.5" opacity_decay_rate="0.027" opacity_ramp_time="0.4"/>
+</particle>

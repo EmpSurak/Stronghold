@@ -53,5 +53,6 @@ enum UnitType {
     _no_type,
     _soldier,
     _tank,
-    _giant
+    _giant,
+    _bomber
 };

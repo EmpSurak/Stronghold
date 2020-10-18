@@ -96,7 +96,7 @@
             <Color label="Fur" channel="2" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
-    <CameraObject t0="84.5225" t1="139.252" t2="50.7348" s0="1" s1="1" s2="1" q0="0.137041" q1="-0.724026" q2="0.150553" q3="0.659044" euler_x="-2.73163" euler_y="-1.47696" euler_z="3.14159" id="4">
+    <CameraObject t0="85.5579" t1="139.792" t2="48.4893" s0="1" s1="1" s2="1" q0="0.137041" q1="-0.724026" q2="0.150553" q3="0.659044" euler_x="-2.73161" euler_y="-1.47699" euler_z="3.14159" id="4">
         <parameters />
     </CameraObject>
     <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
@@ -137,6 +137,22 @@
             <parameter name="Team Only" type="string" val="" />
             <parameter name="Value" type="string" val="20" />
             <parameter name="Variable" type="string" val="max_char_count" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Spawner4" t0="58.9426" t1="129.182" t2="44.0849" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="12" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Max. Spawn Delay" type="float" val="5" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="Bombermen" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="bomber" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
