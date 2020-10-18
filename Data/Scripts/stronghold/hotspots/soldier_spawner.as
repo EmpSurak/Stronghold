@@ -6,6 +6,7 @@
 #include "stronghold/timed_execution/delayed_death_job.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/constants.as"
+#include "stronghold/common.as"
 #include "stronghold/command_job_storage.as"
 
 const string _char_count_key = "Number of Characters";
@@ -200,25 +201,7 @@ void RegisterGoal(MovementObject@ _char){
     }
 }
 
-int FindFirstObjectByName(string _name){
-    if(_name == ""){
-        return -1;
-    }
-
-    array<int> objects = GetObjectIDs();
-    for(uint i = 0; i < objects.length(); i++){
-        Object@ obj = ReadObjectFromID(objects[i]);
-        if(obj.GetName() == _name){
-            return obj.GetID();
-        }
-    }
-
-    return -1;
-}
-
-// based on (but modified) arena_level.as
-
-void ApplySettings(MovementObject@ _char, int fur_channel = 1){
+void ApplySettings(MovementObject@ _char, int _fur_channel = 1){
     Object@ char_obj = ReadObjectFromID(_char.GetID());
 
     for(int i = 0; i < 4; ++i){
@@ -228,56 +211,14 @@ void ApplySettings(MovementObject@ _char, int fur_channel = 1){
         color = mix(color, vec3(1.0-difficulty), 0.5f);
         char_obj.SetPaletteColor(i, color);
     }
-    char_obj.SetPaletteColor(fur_channel, GetRandomFurColor());
+    char_obj.SetPaletteColor(_fur_channel, GetRandomFurColor());
 
     ScriptParams@ params = char_obj.GetScriptParams();
     params.SetString("Teams", team);
     params.SetFloat("Ear Size", RangedRandomFloat(0.5f, 1.5f));
     params.SetFloat("Aggression", RangedRandomFloat(0.25f, 0.75f));
     params.SetFloat("Ground Aggression", mix(0.0f, 1.0f, difficulty));
-    params.SetFloat("Damage Resistance", mix(RangedRandomFloat(0.6f,0.8f), RangedRandomFloat(0.9f, 1.1f), difficulty));
+    params.SetFloat("Damage Resistance", mix(RangedRandomFloat(0.6f, 0.8f), RangedRandomFloat(0.9f, 1.1f), difficulty));
     params.SetInt("Left handed", (rand()%5 == 0) ? 1 : 0);
     char_obj.UpdateScriptParams();
-}
-
-vec3 GetRandomFurColor(){
-    vec3 fur_color_byte;
-    int rnd = rand()%6;
-    switch(rnd){
-        case 0: fur_color_byte = vec3(255); break;
-        case 1: fur_color_byte = vec3(34); break;
-        case 2: fur_color_byte = vec3(137); break;
-        case 3: fur_color_byte = vec3(105, 73, 54); break;
-        case 4: fur_color_byte = vec3(53, 28, 10); break;
-        case 5: fur_color_byte = vec3(172, 124, 62); break;
-    }
-    return FloatTintFromByte(fur_color_byte);
-}
-
-vec3 ColorFromTeam(int which_team){
-    switch(which_team){
-        case 0: return vec3(1, 0, 0);
-        case 1: return vec3(0, 0, 1);
-        case 2: return vec3(0, 0.5f, 0.5f);
-        case 3: return vec3(1, 1, 0);
-    }
-    return vec3(1, 1, 1);
-}
-
-vec3 FloatTintFromByte(const vec3 &in tint){
-    vec3 float_tint;
-    float_tint.x = tint.x / 255.0f;
-    float_tint.y = tint.y / 255.0f;
-    float_tint.z = tint.z / 255.0f;
-    return float_tint;
-}
-
-vec3 RandReasonableColor(){
-    vec3 color;
-    color.x = rand()%255;
-    color.y = rand()%255;
-    color.z = rand()%255;
-    float avg = (color.x + color.y + color.z) / 3.0f;
-    color = mix(color, vec3(avg), 0.7f);
-    return color;
 }
