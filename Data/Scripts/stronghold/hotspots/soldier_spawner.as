@@ -90,14 +90,15 @@ void Init(){
     }));
 
     timer.Add(LevelEventJob("spawner_control", function(_params){
-        if(_params.length() < 5 || !params.HasParam(_params[1]) || params.GetString(_params[1]) != _params[2]){
+        Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
+        if(_params.length() < 4 || _params[1] != hotspot_obj.GetName()){
             return true;
         }
 
-        if(_params[3] == "max_char_count"){
-            max_char_count = atoi(_params[4]);
-        }else if(_params[3] == "difficulty"){
-            difficulty = atof(_params[4]);
+        if(_params[2] == "max_char_count"){
+            max_char_count = atoi(_params[3]);
+        }else if(_params[2] == "difficulty"){
+            difficulty = atof(_params[3]);
         }
 
         return true;

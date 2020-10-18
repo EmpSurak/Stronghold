@@ -96,7 +96,7 @@
             <Color label="Fur" channel="2" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
-    <CameraObject t0="82.5599" t1="136.786" t2="49.3418" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26024" euler_y="-1.55537" euler_z="3.14159" id="4">
+    <CameraObject t0="79.2344" t1="132.876" t2="42.8385" s0="1" s1="1" s2="1" q0="0.299273" q1="-0.64445" q2="0.303901" q3="0.634636" euler_x="-2.26041" euler_y="-1.5554" euler_z="3.14158" id="4">
         <parameters />
     </CameraObject>
     <Hotspot name="Spawner1" t0="58.9426" t1="129.182" t2="62.3118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="7" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
@@ -126,6 +126,20 @@
     <EnvObject t0="74.5427" t1="128.165" t2="50.5207" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="9" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml">
         <parameters />
     </EnvObject>
+    <EnvObject t0="74.5427" t1="128.165" t2="42.6894" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="10" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml">
+        <parameters />
+    </EnvObject>
+    <Hotspot t0="74.6631" t1="126.394" t2="42.9137" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="11" type_file="Data/Objects/stronghold/hotspots/spawner_control.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Spawner1" />
+            <parameter name="Team Only" type="string" val="" />
+            <parameter name="Value" type="string" val="20" />
+            <parameter name="Variable" type="string" val="max_char_count" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <Hotspot name="Spawner2" t0="58.9426" t1="129.182" t2="55.7079" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="44" type_file="Data/Objects/stronghold/hotspots/soldier_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="0.5" />
@@ -204,4 +218,5 @@
     <SpawnerItem display_name="soldier_spawner.xml" path="Data/Objects/stronghold/hotspots/soldier_spawner.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="spawner_start.xml" path="Data/Objects/stronghold/hotspots/spawner_start.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="Magma Arena Flag Red 1" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml" thumbnail_path="" />
+    <SpawnerItem display_name="spawner_control.xml" path="Data/Objects/stronghold/hotspots/spawner_control.xml" thumbnail_path="empty_placeholder.png" />
 </RecentItems>
