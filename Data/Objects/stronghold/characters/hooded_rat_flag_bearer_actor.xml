@@ -1,5 +1,0 @@
-<?xml version="1.0" ?>
-<Actor>
-	<Character>Data/Characters/hooded_rat.xml</Character>
-    <ControlScript>stronghold/characters/flag_bearer.as</ControlScript>
-</Actor>
