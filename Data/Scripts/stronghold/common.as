@@ -66,7 +66,6 @@ void RegisterCharCleanUpJob(TimedExecution@ _timer, MovementObject@ _char){
 
     _timer.Add(DelayedDeathJob(10.0f, _char.GetID(), function(_char){
         _char.Execute("SetOnFire(false);");
-        _char.Execute("shadow_id = -1;");
 
         int char_id = _char.GetID();
         Object@ char_obj = ReadObjectFromID(char_id);

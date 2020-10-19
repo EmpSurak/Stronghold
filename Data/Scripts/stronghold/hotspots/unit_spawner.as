@@ -336,10 +336,6 @@ void AddBomberJob(int _char_id){
         for(uint i = 0; i < nearby_characters.length(); i++){
             MovementObject@ nearby_char = ReadCharacterID(nearby_characters[i]);
 
-            if(nearby_char.GetBoolVar("invincible")){
-                continue;
-            }
-
             if(nearby_char.GetIntVar("updated") < 1){
                 continue;
             }
@@ -348,13 +344,20 @@ void AddBomberJob(int _char_id){
             float center_distance = distance(_char.position, nearby_char.position);
             float distance_alpha = 1.0f - (center_distance / radius);
 
+            if(nearby_char.GetBoolVar("invincible")){
+                if(nearby_char.controlled){
+                    nearby_char.Execute("camera_shake += 2.0f;");
+                }
+                continue;
+            }
+
             if(nearby_char.controlled){
                 nearby_char.Execute("camera_shake += 10.0f;");
             }
 
             if(center_distance < critical_radius){
                 nearby_char.Execute("ko_shield = 0;");
-                //nearby_char.Execute("SetOnFire(true);"); // FIXME
+                nearby_char.Execute("SetOnFire(true);");
             }
 
             nearby_char.Execute("GoLimp(); TakeDamage(" + 2.0f * distance_alpha + ");");
