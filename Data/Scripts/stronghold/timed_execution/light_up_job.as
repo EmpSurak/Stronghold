@@ -23,10 +23,9 @@ class LightUpJob : TimerJobInterface {
 
     void ExecuteExpired(){
         if(!ObjectExists(light_id)){
-            return_value = 0.0f;
             return;
         }else if(!ObjectExists(char_id)){
-            DeleteObjectID(light_id);
+            QueueDeleteObjectID(light_id);
             return;
         }
         MovementObject@ _char = ReadCharacterID(char_id);
@@ -35,13 +34,19 @@ class LightUpJob : TimerJobInterface {
     }
 
     bool IsExpired(float time){
+        if(!ObjectExists(light_id) || !ObjectExists(char_id)){
+            return true;
+        }
         return time > GetEndTime();
     }
 
     bool IsRepeating(){
+        if(!ObjectExists(light_id) || !ObjectExists(char_id)){
+            return false;
+        }
         bool repeating = return_value > 0.0f;
         if(!repeating){
-            DeleteObjectID(light_id);
+            QueueDeleteObjectID(light_id);
         }
         return repeating;
     }

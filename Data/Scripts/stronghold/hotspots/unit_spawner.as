@@ -5,6 +5,9 @@
 #include "timed_execution/repeating_dynamic_delayed_job.as"
 #include "timed_execution/level_event_job.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
+#include "stronghold/timed_execution/flag_bearer_job.as"
+#include "stronghold/timed_execution/flag_bearer_effect_job.as"
+#include "stronghold/timed_execution/light_up_job.as"
 #include "stronghold/constants.as"
 #include "stronghold/common.as"
 #include "stronghold/command_job_storage.as"
@@ -15,6 +18,7 @@ const string _unit_type_soldier = "soldier";
 const string _unit_type_tank = "tank";
 const string _unit_type_giant = "giant";
 const string _unit_type_bomber = "bomber";
+const string _unit_type_flag_bearer = "flag_bearer";
 const string _char_count_key = "Number of Characters";
 const int _char_count_default = 5;
 const string _team_key = "Team";
@@ -183,6 +187,12 @@ int CreateUnit(UnitType _type){
             };
             break;
         }
+        case _flag_bearer: {
+            possible_files = {
+                "Data/Objects/stronghold/prefabs/characters/flag_bearer_1.xml"
+            };
+            break;
+        }
     }
     string random_file = possible_files[rand()%possible_files.length()];
 
@@ -193,6 +203,8 @@ int CreateUnit(UnitType _type){
 
     if(_type == _bomber){
         AddBomberJob(unit_id);
+    }else if(_type == _flag_bearer){
+        AddFlagBearerJob(unit_id);
     }
 
     return unit_id;
@@ -306,6 +318,8 @@ UnitType UnitTypeFromString(const string _input){
         return _giant;
     }else if(_input == _unit_type_bomber){
         return _bomber;
+    }else if(_input == _unit_type_flag_bearer){
+        return _flag_bearer;
     }
     return _no_type;
 }
@@ -320,24 +334,33 @@ void AddBomberJob(int _char_id){
         GetCharactersInSphere(_char.position, radius, nearby_characters);
 
         for(uint i = 0; i < nearby_characters.length(); i++){
-            MovementObject@ char = ReadCharacterID(nearby_characters[i]);
-            vec3 explode_direction = normalize(char.position - _char.position);
-            float center_distance = distance(_char.position, char.position);
+            MovementObject@ nearby_char = ReadCharacterID(nearby_characters[i]);
+
+            if(nearby_char.GetBoolVar("invincible")){
+                continue;
+            }
+
+            if(nearby_char.GetIntVar("updated") < 1){
+                continue;
+            }
+
+            vec3 explode_direction = normalize(nearby_char.position - _char.position);
+            float center_distance = distance(_char.position, nearby_char.position);
             float distance_alpha = 1.0f - (center_distance / radius);
 
-            if(char.controlled){
-                char.Execute("camera_shake += 10.0f;");
+            if(nearby_char.controlled){
+                nearby_char.Execute("camera_shake += 10.0f;");
             }
 
             if(center_distance < critical_radius){
-                char.Execute("ko_shield = 0;");
-                char.Execute("SetOnFire(true);");
+                nearby_char.Execute("ko_shield = 0;");
+                //nearby_char.Execute("SetOnFire(true);"); // FIXME
             }
 
-            char.Execute("GoLimp(); TakeDamage(" + 2.0f * distance_alpha + ");");
-            char.rigged_object().ApplyForceToRagdoll(
+            nearby_char.Execute("GoLimp(); TakeDamage(" + 2.0f * distance_alpha + ");");
+            nearby_char.rigged_object().ApplyForceToRagdoll(
                 explode_direction * 40000 * distance_alpha,
-                char.rigged_object().skeleton().GetCenterOfMass()
+                nearby_char.rigged_object().skeleton().GetCenterOfMass()
             );
         }
 
@@ -366,5 +389,46 @@ void AddBomberJob(int _char_id){
         PlaySound(explosion_sound, _char.position);
 
         return false;
+    }));
+}
+
+void AddFlagBearerJob(int _char_id){
+    timer.Add(FlagBearerJob(2.0f, _char_id, function(_job, _char){
+        timer.Add(LightUpJob(0.05f, 10.0f, _char.GetID(), function(_char, _light, _return_value){
+            _light.SetTranslation(_char.position + vec3(0.0f, 2.5f, 0.0f));
+            _light.SetTint(vec3(10.0f, _return_value, _return_value));
+            return _return_value - 1.0f;
+        }));
+
+        float radius = 20.0f;
+        string char_team = GetTeam(_char.GetID());
+
+        array<int> nearby_characters;
+        GetCharactersInSphere(_char.position, radius, nearby_characters);
+
+        for(uint i = 0; i < nearby_characters.length(); i++){
+            MovementObject@ _nearby_char = ReadCharacterID(nearby_characters[i]);
+            bool is_flag_bearer = nearby_characters[i] == _char.GetID();
+            bool is_dead = _char.GetIntVar("knocked_out") != _awake || _nearby_char.GetIntVar("knocked_out") != _awake;
+            bool is_same_team = char_team == GetTeam(nearby_characters[i]);
+            bool has_running_job = _nearby_char.GetBoolVar("invincible"); // FIXME: should be more generic
+            if(is_flag_bearer || is_dead || !is_same_team || has_running_job){
+                continue;
+            }
+
+            timer.Add(FlagBearerEffectJob(5.0f, _char.GetID(), nearby_characters[i], function(_char){
+                _char.Execute("invincible = true;");
+
+                for(uint i = 0; i < 3; i++){
+                    MakeParticle(
+                        "Data/Particles/stronghold/flag_smoke.xml",
+                        _char.position,
+                        vec3(-1.0f)
+                    );
+                }
+            }, function(_char){
+                _char.Execute("invincible = false;");
+            }));
+        }
     }));
 }

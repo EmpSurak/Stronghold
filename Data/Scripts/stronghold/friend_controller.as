@@ -110,10 +110,4 @@ class FriendController {
 
         return close_friends;
     }
-    
-    private string GetTeam(int char_id){
-        Object @_obj = ReadObjectFromID(char_id);
-        ScriptParams @_params = _obj.GetScriptParams();
-        return _params.GetString("Teams");
-    }
 }

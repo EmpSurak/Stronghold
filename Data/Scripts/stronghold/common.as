@@ -65,12 +65,15 @@ void RegisterCharCleanUpJob(TimedExecution@ _timer, MovementObject@ _char){
     }));
 
     _timer.Add(DelayedDeathJob(10.0f, _char.GetID(), function(_char){
+        _char.Execute("SetOnFire(false);");
+        _char.Execute("shadow_id = -1;");
+
         int char_id = _char.GetID();
         Object@ char_obj = ReadObjectFromID(char_id);
         ScriptParams@ char_params = char_obj.GetScriptParams();
         int emitter_id = char_params.GetInt(_smoke_emitter_key);
-        DeleteObjectID(char_id);
-        DeleteObjectID(emitter_id);
+        QueueDeleteObjectID(char_id);
+        QueueDeleteObjectID(emitter_id);
 
         int num_items = GetNumItems();
         for(int i = 0; i < num_items; ++i){
@@ -80,6 +83,12 @@ void RegisterCharCleanUpJob(TimedExecution@ _timer, MovementObject@ _char){
             }
         }
     }));
+}
+
+string GetTeam(int char_id){
+    Object @_obj = ReadObjectFromID(char_id);
+    ScriptParams @_params = _obj.GetScriptParams();
+    return _params.GetString("Teams");
 }
 
 // based on (but modified) arena_level.as

@@ -197,8 +197,8 @@ void RegisterCleanupJobs(){
     }
 
     timer.Add(LevelEventJob("reset", function(_params){
-        int num_chars = GetNumCharacters();
-        for(int i = 0; i < num_chars; ++i){
+        uint num_chars = GetNumCharacters();
+        for(uint i = 0; i < num_chars; ++i){
             MovementObject@ char = ReadCharacter(i);
             Object@ char_obj = ReadObjectFromID(char.GetID());
             if(char_obj.IsExcludedFromSave()){
@@ -206,8 +206,8 @@ void RegisterCleanupJobs(){
             }
         }
 
-        int num_items = GetNumItems();
-        for(int i = 0; i < num_items; ++i){
+        uint num_items = GetNumItems();
+        for(uint i = 0; i < num_items; ++i){
             ItemObject@ item = ReadItem(i);
             Object@ item_obj = ReadObjectFromID(item.GetID());
             if(item_obj.IsExcludedFromSave()){
@@ -215,12 +215,20 @@ void RegisterCleanupJobs(){
             }
         }
 
-        int num_hotspots = GetNumHotspots();
-        for(int i = 0; i < num_hotspots; ++i){
+        uint num_hotspots = GetNumHotspots();
+        for(uint i = 0; i < num_hotspots; ++i){
             Hotspot@ hot = ReadHotspot(i);
             Object@ hot_obj = ReadObjectFromID(hot.GetID());
             if(hot_obj.IsExcludedFromSave()){
                 QueueDeleteObjectID(hot.GetID());
+            }
+        }
+
+        array<int> dynamic_lights = GetObjectIDsType(_dynamic_light_object);
+        for(uint i = 0; i < dynamic_lights.length(); i++){
+            Object@ light_obj = ReadObjectFromID(dynamic_lights[i]);
+            if(light_obj.IsExcludedFromSave()){
+                QueueDeleteObjectID(dynamic_lights[i]);
             }
         }
 
