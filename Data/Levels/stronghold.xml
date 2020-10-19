@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="77.9301" t1="90.8057" t2="-42.818" s0="1" s1="1" s2="1" q0="0.0014369" q1="-0.985517" q2="0.169365" q3="0.00836131" euler_x="-2.80121" euler_y="-0.016968" euler_z="3.14159" id="1">
+    <CameraObject t0="181.566" t1="42.8985" t2="-15.9427" s0="1" s1="1" s2="1" q0="-0.0819461" q1="-0.856197" q2="0.143315" q3="-0.489564" euler_x="-2.8099" euler_y="1.03884" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject t0="197.096" t1="36.1929" t2="-7.65181" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -379,10 +379,67 @@
             <parameter name="Goal" type="string" val="none" />
             <parameter name="Max. Spawn Delay" type="float" val="2" />
             <parameter name="Min. Spawn Delay" type="float" val="1" />
-            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Number of Characters" type="int" val="2" />
             <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="1" />
             <parameter name="Unit Type" type="string" val="bomber" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot t0="194.996" t1="35.2756" t2="-3.66727" s0="3.98336" s1="1" s2="1" q0="0" q1="-0.282294" q2="0" q3="0.959328" euler_x="0" euler_y="-0.572369" euler_z="0" id="85" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Own Army" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Own Army 1" t0="200.546" t1="37.2171" t2="-9.17791" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="86" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Max. Spawn Delay" type="float" val="0" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="guard" />
+            <parameter name="Team Color" type="int" val="5" />
+            <parameter name="Unit Type" type="string" val="flag_bearer" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Own Army 2" t0="194.874" t1="37.0844" t2="-11.8464" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="87" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Max. Spawn Delay" type="float" val="0" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="4" />
+            <parameter name="Team" type="string" val="guard" />
+            <parameter name="Team Color" type="int" val="5" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Test 2" t0="144.848" t1="35.473" t2="133.178" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="176" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Test 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="4" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="8" />
+            <parameter name="Team" type="string" val="Nobody" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
