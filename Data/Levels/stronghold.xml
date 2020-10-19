@@ -40,10 +40,10 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="181.566" t1="42.8985" t2="-15.9427" s0="1" s1="1" s2="1" q0="-0.0819461" q1="-0.856197" q2="0.143315" q3="-0.489564" euler_x="-2.8099" euler_y="1.03884" euler_z="3.14159" id="1">
+    <CameraObject t0="50.9406" t1="54.5956" t2="-287.53" s0="1" s1="1" s2="1" q0="0.00238665" q1="-0.996978" q2="0.0697576" q3="0.0341096" euler_x="-3.00188" euler_y="-0.0683993" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject t0="197.096" t1="36.1929" t2="-7.65181" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="42.7" t1="36.8391" t2="-275.014" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -76,7 +76,7 @@
             <parameter name="Species" type="string" val="cat" />
             <parameter name="Static" type="int" val="0" />
             <parameter name="Stick To Nav Mesh" type="int" val="0" />
-            <parameter name="Teams" type="string" val="guard" />
+            <parameter name="Teams" type="string" val="attackers" />
             <parameter name="Throw Counter Probability" type="float" val="0.31638" />
             <parameter name="Throw Trainer" type="int" val="0" />
             <parameter name="Weapon Catch Skill" type="float" val="0.35028" />
@@ -87,12 +87,15 @@
         </Connections>
         <ItemConnections />
         <Palette>
-            <Color label="Fur" channel="0" red="0.999997" green="0.99999" blue="1" />
-            <Color label="Leather" channel="1" red="0.219608" green="0.348164" blue="1" />
-            <Color label="Shirt" channel="2" red="0" green="0.197132" blue="0.698039" />
-            <Color label="Pants" channel="3" red="0.242168" green="0.246886" blue="0.341176" />
+            <Color label="Fur" channel="0" red="0.537255" green="0.537255" blue="0.537255" />
+            <Color label="Leather" channel="1" red="1" green="1" blue="1" />
+            <Color label="Shirt" channel="2" red="1" green="1" blue="1" />
+            <Color label="Pants" channel="3" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
+    <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.00590111" euler_y="0.668842" euler_z="3.09657" id="3" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
+        <parameters />
+    </EnvObject>
     <EnvObject t0="83.0783" t1="42.8471" t2="121.277" s0="4.00429" s1="2.96564" s2="6.68998" q0="0.0206282" q1="-0.853176" q2="-0.00691607" q3="0.52117" euler_x="3.0688" euler_y="-1.09519" euler_z="-3.04884" id="6" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml">
         <parameters />
     </EnvObject>
@@ -428,6 +431,199 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <EnvObject t0="174.459" t1="29.7569" t2="-182.747" s0="11.1847" s1="11.1847" s2="11.1847" q0="0.491619" q1="-0.575883" q2="-0.651444" q3="-0.0478691" euler_x="1.7764" euler_y="0.769336" euler_z="-2.36425" id="88" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="130.234" t1="30.4751" t2="-225.942" s0="11.1847" s1="11.1847" s2="11.1847" q0="-0.419468" q1="-0.231428" q2="-0.331121" q3="0.812925" euler_x="-0.773952" euler_y="-0.712935" euler_z="-0.472398" id="89" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="82.3751" t1="37.1631" t2="-257.958" s0="9.68081" s1="9.68081" s2="9.68081" q0="-0.962745" q1="-0.0734568" q2="-0.105274" q3="-0.23802" euler_x="2.64029" euler_y="-0.168532" euler_z="0.195552" id="90" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="0.330048" t1="43.9445" t2="-260.508" s0="14.7752" s1="14.7752" s2="14.7752" q0="0.0647855" q1="-0.891635" q2="0.206244" q3="-0.397824" euler_x="-2.53037" euler_y="0.751457" euler_z="-2.7489" id="91" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="115.78" t1="26.2079" t2="-143.063" s0="13.2429" s1="13.2429" s2="13.2429" q0="0.862273" q1="0.353051" q2="-0.336565" q3="-0.136233" euler_x="-2.57099" euler_y="0.505481" euler_z="0.928446" id="92" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="91.8856" t1="28.5517" t2="-168.973" s0="12.0539" s1="12.0539" s2="12.0539" q0="0.598548" q1="0.787317" q2="-0.0628141" q3="-0.133878" euler_x="-2.87692" euler_y="-0.136033" euler_z="1.82341" id="93" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="42.516" t1="37.8989" t2="-198.117" s0="12.8479" s1="12.8479" s2="12.8479" q0="0.789573" q1="0.103192" q2="0.153121" q3="0.585212" euler_x="1.84433" euler_y="-0.12132" euler_z="0.351925" id="94" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <Hotspot name="Entry Ambush Trigger" t0="44.4585" t1="37.0797" t2="-247.009" s0="5.89428" s1="4.54097" s2="4.38531" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="95" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Entry Ambush Spawner" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Entry Ambush Spawner Support 1" t0="28.5242" t1="30.423" t2="-307.747" s0="1" s1="1" s2="1" q0="0" q1="0.275766" q2="0" q3="0.961225" euler_x="0" euler_y="0.558772" euler_z="0" id="96" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Entry Gathering Point" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Start Monster Trigger (Left)" t0="89.6349" t1="36.0536" t2="-368.446" s0="1" s1="6.34306" s2="49.7148" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="97" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Start Monster Spawner" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Start Monster Trigger (Right)" t0="12.3193" t1="36.0536" t2="-368.446" s0="1" s1="6.34306" s2="49.7148" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="98" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Start Monster Spawner" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Start Monster Spawner (Right)" t0="-52.7459" t1="37.7255" t2="-259.164" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="99" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="3" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Start Monster Trigger (Right)" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="0" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="5" />
+            <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Start Monster Spawner (Left)" t0="155.998" t1="26.7732" t2="-226.632" s0="1" s1="1" s2="1" q0="0" q1="-0.430078" q2="0" q3="0.902792" euler_x="0" euler_y="-0.889158" euler_z="0" id="100" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="3" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Start Monster Trigger (Left)" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="0" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="4" />
+            <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Group t0="39.7748" t1="46.8375" t2="-231.725" s0="3.58284" s1="2.17188" s2="3.96697" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="101" version="1">
+        <parameters />
+        <EnvObject t0="40.8224" t1="46.9878" t2="-232.405" s0="1" s1="1" s2="1" q0="0.0349278" q1="0.992413" q2="0.00894117" q3="0.117546" euler_x="3.1149" euler_y="0.234835" euler_z="3.06808" id="103" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/arm_meat.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="41.2169" t1="46.6486" t2="-233.327" s0="1" s1="1" s2="1" q0="0.0861353" q1="0.897172" q2="0.0213008" q3="0.432676" euler_x="2.96301" euler_y="0.883085" euler_z="2.86558" id="104" color_r="0.819608" color_g="0.556863" color_b="0.556863" overbright="0" type_file="Data/Objects/Environment/camp/bed_roll.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="40.7838" t1="46.8678" t2="-232.344" s0="1" s1="1" s2="1" q0="0.0355722" q1="0.86115" q2="-0.00587445" q3="0.507071" euler_x="3.0882" euler_y="1.06285" euler_z="3.02763" id="105" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/cook_tripod.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="40.798" t1="46.5982" t2="-232.45" s0="1.06381" s1="1" s2="1.0607" q0="0.0514757" q1="0.991692" q2="0.0109004" q3="0.11738" euler_x="3.10694" euler_y="0.233812" euler_z="3.0338" id="106" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/fire_ash.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="40.7555" t1="46.5925" t2="-232.463" s0="1" s1="1" s2="1" q0="0.0514757" q1="0.991692" q2="0.0109004" q3="0.11738" euler_x="3.10694" euler_y="0.233812" euler_z="3.0338" id="107" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/fire_pit.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="40.7968" t1="46.6421" t2="-232.405" s0="1" s1="1" s2="1" q0="0.0349278" q1="0.992413" q2="0.00894117" q3="0.117546" euler_x="3.1149" euler_y="0.234835" euler_z="3.06808" id="108" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/fire_wood.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="40.0214" t1="46.7417" t2="-232.71" s0="1" s1="1" s2="1" q0="-0.00942227" q1="0.103835" q2="0.0348011" q3="-0.993941" euler_x="0.0265281" euler_y="-0.207236" euler_z="-0.0727567" id="109" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/wood_pile.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="40.8508" t1="47.2366" t2="-232.403" s0="0.60316" s1="0.60316" s2="0.60316" q0="0.00486178" q1="0.652111" q2="0.108305" q3="-0.750331" euler_x="0.730777" euler_y="-1.36872" euler_z="-0.891814" id="110" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/RopeBall1.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="39.5442" t1="47.3858" t2="-231.608" s0="1" s1="1" s2="1" q0="-0.123537" q1="0.830067" q2="-0.039873" q3="-0.542345" euler_x="2.97712" euler_y="-1.14381" euler_z="-2.7401" id="111" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/ribcage_meat.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="39.8064" t1="46.7215" t2="-230.987" s0="1" s1="1" s2="1" q0="-0.0129761" q1="-0.00617926" q2="0.0677356" q3="-0.9976" euler_x="0.0250578" euler_y="0.0140872" euler_z="-0.135413" id="112" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/bed_roll.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="39.5329" t1="47.6148" t2="-231.582" s0="1" s1="1" s2="1" q0="0.622014" q1="-0.367841" q2="-0.271732" q3="-0.635574" euler_x="-1.64584" euler_y="0.936725" euler_z="-0.190529" id="113" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/RopeBall1.xml">
+            <parameters />
+        </EnvObject>
+        <Group t0="39.246" t1="46.8375" t2="-230.966" s0="2.51526" s1="2.16188" s2="2.43905" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="114" version="1">
+            <parameters />
+            <EnvObject t0="38.8914" t1="47.3028" t2="-231.238" s0="1" s1="1" s2="1" q0="0.431908" q1="0.299048" q2="0.196752" q3="-0.827837" euler_x="-0.927311" euler_y="-0.727606" euler_z="-0.0904258" id="115" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Fence1.xml">
+                <parameters />
+            </EnvObject>
+            <EnvObject t0="39.5831" t1="47.2402" t2="-230.629" s0="1" s1="1" s2="1" q0="0.827837" q1="-0.196752" q2="0.299048" q3="0.431908" euler_x="2.21428" euler_y="-0.727606" euler_z="-0.0904258" id="116" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Fence1.xml">
+                <parameters />
+            </EnvObject>
+            <EnvObject t0="39.6873" t1="47.6172" t2="-231.449" s0="1" s1="1" s2="1" q0="0.667226" q1="0.622405" q2="-0.279573" q3="-0.298764" euler_x="-2.2985" euler_y="0.0011718" euler_z="1.50184" id="117" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/PostRound1.xml">
+                <parameters />
+            </EnvObject>
+            <EnvObject t0="39.1882" t1="46.8886" t2="-232.019" s0="1" s1="1" s2="1" q0="0.66716" q1="0.223366" q2="0.27973" q3="-0.653266" euler_x="-1.55739" euler_y="-0.727606" euler_z="-0.0904257" id="118" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/PostRound1.xml">
+                <parameters />
+            </EnvObject>
+            <EnvObject t0="40.3152" t1="46.7864" t2="-231.011" s0="1" s1="1" s2="1" q0="0.66716" q1="0.223366" q2="0.27973" q3="-0.653266" euler_x="-1.55739" euler_y="-0.727606" euler_z="-0.0904257" id="119" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/PostRound1.xml">
+                <parameters />
+            </EnvObject>
+        </Group>
+    </Group>
+    <Hotspot name="Entry Ambush Spawner Support 2" t0="64.0588" t1="28.3339" t2="-302.757" s0="1" s1="1" s2="1" q0="0" q1="-0.462112" q2="0" q3="0.886821" euler_x="0" euler_y="-0.960751" euler_z="0" id="125" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="0.5" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Entry Gathering Point" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Group t0="39.3221" t1="37.7882" t2="-273.994" s0="4.69738" s1="2.16276" s2="3.44478" q0="-0.0752152" q1="-0.37262" q2="0.0560558" q3="0.923231" euler_x="-0.248825" euler_y="-0.747211" euler_z="0.219257" id="127" version="1">
+        <parameters />
+        <EnvObject t0="39.3158" t1="37.9188" t2="-274.018" s0="1" s1="1" s2="1" q0="-0.0752152" q1="-0.37262" q2="0.0560558" q3="0.923231" euler_x="-0.248825" euler_y="-0.747211" euler_z="0.219257" id="128" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/Carriage.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="41.2088" t1="37.2273" t2="-274.302" s0="1" s1="1" s2="1" q0="-0.0752152" q1="-0.37262" q2="0.0560558" q3="0.923231" euler_x="-0.248825" euler_y="-0.747211" euler_z="0.219257" id="129" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/wheel.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="39.5849" t1="36.8655" t2="-275.844" s0="1" s1="1" s2="1" q0="-0.0752152" q1="-0.37262" q2="0.0560558" q3="0.923231" euler_x="-0.248825" euler_y="-0.747211" euler_z="0.219257" id="130" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/wheel.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="38.9469" t1="37.5427" t2="-271.993" s0="1" s1="1" s2="1" q0="-0.0752152" q1="-0.37262" q2="0.0560558" q3="0.923231" euler_x="-0.248825" euler_y="-0.747211" euler_z="0.219257" id="131" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/wheel.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject t0="37.3229" t1="37.1808" t2="-273.534" s0="1" s1="1" s2="1" q0="-0.0752152" q1="-0.37262" q2="0.0560558" q3="0.923231" euler_x="-0.248825" euler_y="-0.747211" euler_z="0.219257" id="132" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/wheel.xml">
+            <parameters />
+        </EnvObject>
+    </Group>
+    <EnvObject t0="24.4023" t1="50.7852" t2="-206.89" s0="12.8479" s1="12.8479" s2="12.8479" q0="-0.490957" q1="0.00475967" q2="-0.0776612" q3="0.867696" euler_x="-1.02502" euler_y="-0.0680492" euler_z="-0.140229" id="144" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject name="Entry Gathering Point" t0="60.2169" t1="45.5183" t2="-227.75" s0="1" s1="1" s2="1" q0="0.0196729" q1="-0.0303469" q2="-0.0602273" q3="0.99753" euler_x="0.04299" euler_y="-0.0582071" euler_z="-0.121858" id="145" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/evergreen_stump_bleached.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="58.767" t1="35.1357" t2="-284.565" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="148" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Stump_Short1.xml">
+        <parameters />
+    </EnvObject>
     <Hotspot name="Test 2" t0="144.848" t1="35.473" t2="133.178" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="176" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
@@ -444,6 +640,9 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <EnvObject t0="71.3594" t1="38.546" t2="-266.22" s0="9.68081" s1="9.68081" s2="9.68081" q0="-0.848066" q1="-0.354044" q2="0.0473844" q3="-0.391406" euler_x="2.40073" euler_y="0.365611" euler_z="0.647613" id="185" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
 </ActorObjects>
 <RecentItems>
     <SpawnerItem display_name="Raider Rabbit" path="Data/Objects/characters/raider_rabbit_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/raider_rabbit_actor.png" />
@@ -473,7 +672,6 @@
     <SpawnerItem display_name="Lugaru Block Ruins Mossy Block 1" path="Data/Prototypes/Lugaru/BlockRuins_Mossy_Block1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Ruin Wall" path="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/ruin_wall.png" />
     <SpawnerItem display_name="Crete Impact" path="Data/Objects/Decals/crete_impact.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/crete_impact.png" />
-    <SpawnerItem display_name="Carriage Prefab" path="Data/Objects/therium/carriageprefab.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
     <SpawnerItem display_name="Wooden Row Boat" path="Data/Objects/therium/boat.xml" thumbnail_path="" />
     <SpawnerItem display_name="Wooden Sign Post H" path="Data/Objects/Buildings/shops/sign_post_h.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sign_post_h.png" />
     <SpawnerItem display_name="Granite Rock Boulder Round" path="Data/Objects/Environment/Rocks/granite_vine_rocks/granite_boulder_round.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/granite_boulder_round.png" />
@@ -491,9 +689,22 @@
     <SpawnerItem display_name="Basics Stone Stairs" path="Data/Objects/Buildings/basics/soft_stairs.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/soft_stairs.png" />
     <SpawnerItem display_name="Stucco House 3" path="Data/Prototypes/OG/WindowBlock_Mod3.xml" thumbnail_path="" />
     <SpawnerItem display_name="Stucco House 2" path="Data/Prototypes/OG/WindowBlock_Mod2.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Cliff Rock 02" path="Data/Objects/Environment/Cliffs/CliffRock_02.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_02.png" />
     <SpawnerItem display_name="Wood Fence Segment 1" path="Data/Objects/Environment/Farm/FenceSystem_Corner_02.xml" thumbnail_path="" />
     <SpawnerItem display_name="Arena Staircase" path="Data/Objects/Buildings/arena/arena_staircase.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Arena Staircase.png" />
+    <SpawnerItem display_name="Cliff Rock 01" path="Data/Objects/Environment/Cliffs/CliffRock_01.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_01.png" />
+    <SpawnerItem display_name="Cliff Rock 02" path="Data/Objects/Environment/Cliffs/CliffRock_02.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_02.png" />
+    <SpawnerItem display_name="soldier_1.xml" path="Data/Objects/stronghold/prefabs/characters/soldier_1.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="soldier_2.xml" path="Data/Objects/stronghold/prefabs/characters/soldier_2.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="Carriage" path="Data/Objects/therium/Carriage.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
+    <SpawnerItem display_name="Carriage Prefab" path="Data/Objects/therium/carriageprefab.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
     <SpawnerItem display_name="spawner_start.xml" path="Data/Objects/stronghold/hotspots/spawner_start.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="unit_spawner.xml" path="Data/Objects/stronghold/hotspots/unit_spawner.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="Path Point" path="Data/Objects/pathpoint/pathpoint.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/pathpoint.png" />
+    <SpawnerItem display_name="Lichen Rock E" path="Data/Objects/Environment/Rocks/lichen_rock_e.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/lichen_rock_e.png" />
+    <SpawnerItem display_name="Tree Stump 1" path="Data/Prototypes/OG/Stump_Short1.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Tree Evergreen Stump Bleached" path="Data/Objects/Plants/Trees/temperate/evergreen_stump_bleached.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/evergreen_stump_bleached.png" />
+    <SpawnerItem display_name="Fire Hotspot" path="Data/Objects/Hotspots/fire_test.xml" thumbnail_path="" />
+    <SpawnerItem display_name="fire.xml" path="Data/Objects/fire.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="Strata Rock Capital Mossy" path="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/strata_rock_capital_mossy.png" />
+    <SpawnerItem display_name="Camp All Assets" path="Data/Objects/Environment/camp/camp_all_assets.xml" thumbnail_path="Data/UI/spawner/thumbs/Prefabs/camp_all_assets.png" />
 </RecentItems>
