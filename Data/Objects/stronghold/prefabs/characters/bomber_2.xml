@@ -1,7 +1,7 @@
 <?xml version="2.0" ?>
 <Type>prefab</Type>
 <Prefab>
-    <ActorObject t0="66.0635" t1="127.394" t2="53.8905" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/hooded_rat_flag_bearer_actor.xml" is_player="0">
+    <ActorObject t0="66.0635" t1="127.394" t2="53.8905" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/hooded_rat_bomber_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.42373" />
             <parameter name="Attack Damage" type="float" val="0.0452" />

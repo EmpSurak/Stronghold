@@ -2232,11 +2232,23 @@ bool TargetedJump() {
 }
 
 bool WantsToJump() {
-    return false;
+    if(species == _wolf) {
+        return false;
+    } else {
+        return has_jump_target || trying_to_climb == _jump;
+    }
 }
 
 bool WantsToAttack() {
-    return false;
+    if(species == _wolf && block_stunned > 0.5) {
+        return false;
+    }
+
+    if(ai_attacking && !startled && combat_allowed) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 bool WantsToRollFromRagdoll() {
@@ -2311,90 +2323,10 @@ bool DeflectWeapon() {
 }
 
 bool WantsToStartActiveBlock(const Timestep &in ts) {
-    if(species == _wolf) {
-        return false;
-    }
-
-    bool should_block = ShouldDefend(BLOCK);
-
-    if(should_block && !going_to_block) {
-        MovementObject @char = ReadCharacterID(chase_target_id);
-        block_delay = char.rigged_object().anim_client().GetTimeUntilEvent("blockprepare");
-
-        if(block_delay != -1.0f) {
-            going_to_block = true;
-        }
-
-        float temp_block_skill = p_block_skill;
-        float temp_block_skill_power = 0.5 * pow(4.0, char.GetFloatVar("attack_predictability"));
-        // DebugText("temp_block_skill_power", "temp_block_skill_power: " + temp_block_skill_power, 2.0f);
-
-        if(sub_goal == _provoke_attack) {
-            temp_block_skill_power += 1.0;
-        }
-
-        temp_block_skill = 1.0 - pow((1.0 - temp_block_skill), temp_block_skill_power);
-
-        if(group_leader != -1) {
-            temp_block_skill *= 0.5;
-        }
-
-        // DebugText("temp_block_skill", "temp_block_skill: " + temp_block_skill, 2.0f);
-        temp_block_skill *= mix(0.1, 1.0, game_difficulty * game_difficulty);
-
-        if(RangedRandomFloat(0.0f, 1.0f) > temp_block_skill) {
-            block_delay += 0.4f;
-        }
-    }
-
-    if(going_to_block) {
-        block_delay -= ts.step();
-        block_delay = min(1.0f, block_delay);
-
-        if(block_delay <= 0.0f) {
-            going_to_block = false;
-            return true;
-        }
-    }
-
     return false;
 }
 
 bool WantsToDodge(const Timestep &in ts) {
-    bool should_block = ShouldDefend(DODGE);
-
-    if(should_block && !going_to_dodge) {
-        MovementObject @char = ReadCharacterID(chase_target_id);
-        dodge_delay = char.rigged_object().anim_client().GetTimeUntilEvent("blockprepare");
-
-        if(dodge_delay != -1.0f) {
-            going_to_dodge = true;
-        }
-
-        float temp_block_skill = p_block_skill;
-        float temp_block_skill_power = 0.5 * pow(4.0, char.GetFloatVar("attack_predictability"));
-
-        if(sub_goal == _provoke_attack) {
-            temp_block_skill_power += 1.0;
-        }
-
-        temp_block_skill = 1.0 - pow((1.0 - temp_block_skill), temp_block_skill_power);
-
-        if(RangedRandomFloat(0.0f, 1.0f) > temp_block_skill) {
-            dodge_delay += 0.4f;
-        }
-    }
-
-    if(going_to_dodge) {
-        dodge_delay -= ts.step();
-        dodge_delay = min(1.0f, dodge_delay);
-
-        if(dodge_delay <= 0.0f) {
-            going_to_dodge = false;
-            return true;
-        }
-    }
-
     return false;
 }
 

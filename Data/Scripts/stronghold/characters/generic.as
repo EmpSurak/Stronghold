@@ -2176,21 +2176,45 @@ bool WantsToSheatheItem() {
 }
 
 bool WantsToUnSheatheItem(int &out src) {
-    return false;
+    if(startled || goal != _attack || (weapon_slots[primary_weapon_slot] != -1 && species != _cat)) {
+        return false;
+    }
+
+    src = -1;
+
+    if(weapon_slots[_sheathed_right] != -1 && ReadItemID(weapon_slots[_sheathed_right]).GetType() == _weapon && ReadItemID(weapon_slots[_sheathed_right]).GetLabel() != "scabbard") {
+        src = _sheathed_right;
+    } else if(weapon_slots[_sheathed_left] != -1 && ReadItemID(weapon_slots[_sheathed_left]).GetType() == _weapon && ReadItemID(weapon_slots[_sheathed_left]).GetLabel() != "scabbard") {
+        src = _sheathed_left;
+    }
+
+    return true;
 }
 
 bool struggle_crouch = false;
 float struggle_crouch_change_time = 0.0f;
 
 bool WantsToCrouch() {
+    if(goal == _struggle) {
+        return struggle_crouch;
+    }
+
+    if(goal == _investigate && sub_goal == _investigate_body) {
+        return true;
+    }
+
     return false;
 }
 
 bool WantsToPickUpItem() {
-    return false;
+    return goal == _get_weapon;
 }
 
 bool WantsToDropItem() {
+    if(species == _wolf) {
+        return true;
+    }
+
     return false;
 }
 
@@ -2232,11 +2256,23 @@ bool TargetedJump() {
 }
 
 bool WantsToJump() {
-    return false;
+    if(species == _wolf) {
+        return false;
+    } else {
+        return has_jump_target || trying_to_climb == _jump;
+    }
 }
 
 bool WantsToAttack() {
-    return false;
+    if(species == _wolf && block_stunned > 0.5) {
+        return false;
+    }
+
+    if(ai_attacking && !startled && combat_allowed) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 bool WantsToRollFromRagdoll() {
@@ -3236,7 +3272,7 @@ vec3 GetTargetVelocity() {
 }
 
 bool WantsToThroatCut() {
-    return false;
+    return true;
 }
 
 // Called from aschar.as, bool front tells if the character is standing still.
