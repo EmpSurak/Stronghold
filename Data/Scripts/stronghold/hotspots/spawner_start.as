@@ -39,7 +39,7 @@ void HandleEvent(string event, MovementObject @mo){
 
     array<string> target_hotspots = FindHotspotsByNamePrefix(params.GetString(_name_key));
     for(uint i = 0; i < target_hotspots.length(); i++){
-        level.SendMessage(_event_name + " " + target_hotspots[i]);
+        level.SendMessage(_event_name + " \"" + target_hotspots[i] + "\"");
     }
 }
 

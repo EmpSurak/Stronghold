@@ -232,6 +232,9 @@ void RegisterCleanupJobs(){
             }
         }
 
+        timer.DeleteAll();
+        Init("");
+
         return true;
     }));
 }

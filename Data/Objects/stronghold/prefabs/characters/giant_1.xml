@@ -1,7 +1,7 @@
 <?xml version="2.0" ?>
 <Type>prefab</Type>
 <Prefab>
-    <ActorObject t0="68.3466" t1="127.394" t2="59.0003" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/IGF_Characters/IGF_WolfActor.xml" is_player="0">
+    <ActorObject t0="68.3466" t1="127.394" t2="59.0003" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/wolf_giant_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
