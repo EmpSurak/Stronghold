@@ -40,9 +40,59 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="41.4925" t1="57.1067" t2="-292.46" s0="1" s1="1" s2="1" q0="0.0905303" q1="0.890581" q2="-0.39669" q3="0.203243" euler_x="-2.3035" euler_y="0.448744" euler_z="-3.14159" id="1">
+    <CameraObject t0="35.3993" t1="82.5368" t2="-311.781" s0="1" s1="1" s2="1" q0="-0.0516281" q1="-0.93566" q2="0.313186" q3="-0.154242" euler_x="-2.49559" euler_y="0.326758" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
+    <ActorObject name="Player" t0="43.0931" t1="37.3033" t2="-276.508" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+        <parameters>
+            <parameter name="Aggression" type="float" val="0.5" />
+            <parameter name="Attack Damage" type="float" val="1" />
+            <parameter name="Attack Knockback" type="float" val="1" />
+            <parameter name="Attack Speed" type="float" val="1" />
+            <parameter name="Block Follow-up" type="float" val="0.5" />
+            <parameter name="Block Skill" type="float" val="0.5" />
+            <parameter name="Cannot Be Disarmed" type="int" val="0" />
+            <parameter name="Character Scale" type="float" val="1.06554" />
+            <parameter name="Damage Resistance" type="float" val="1" />
+            <parameter name="Ear Size" type="float" val="1" />
+            <parameter name="Fall Damage Multiplier" type="float" val="1" />
+            <parameter name="Fat" type="float" val="0.5" />
+            <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
+            <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
+            <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
+            <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
+            <parameter name="Focus FOV distance" type="float" val="100" />
+            <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
+            <parameter name="Focus FOV vertical" type="float" val="0.62834" />
+            <parameter name="Ground Aggression" type="float" val="0.5" />
+            <parameter name="Knockout Shield" type="int" val="0" />
+            <parameter name="Left handed" type="int" val="0" />
+            <parameter name="Movement Speed" type="float" val="0.88305" />
+            <parameter name="Muscle" type="float" val="0.57062" />
+            <parameter name="No Look Around" type="int" val="0" />
+            <parameter name="Peripheral FOV distance" type="float" val="4" />
+            <parameter name="Peripheral FOV horizontal" type="float" val="1.41376" />
+            <parameter name="Peripheral FOV vertical" type="float" val="1.41376" />
+            <parameter name="Species" type="string" val="cat" />
+            <parameter name="Static" type="int" val="0" />
+            <parameter name="Stick To Nav Mesh" type="int" val="0" />
+            <parameter name="Teams" type="string" val="attackers" />
+            <parameter name="Throw Counter Probability" type="float" val="0.31638" />
+            <parameter name="Throw Trainer" type="int" val="0" />
+            <parameter name="Weapon Catch Skill" type="float" val="0.35028" />
+            <parameter name="Wearing Metal Armor" type="int" val="0" />
+        </parameters>
+        <Connections>
+            <Connection id="2" />
+        </Connections>
+        <ItemConnections />
+        <Palette>
+            <Color label="Fur" channel="0" red="1" green="1" blue="1" />
+            <Color label="Leather" channel="1" red="1" green="1" blue="1" />
+            <Color label="Shirt" channel="2" red="1" green="1" blue="1" />
+            <Color label="Pants" channel="3" red="1" green="1" blue="1" />
+        </Palette>
+    </ActorObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
         <parameters />
     </EnvObject>
@@ -531,56 +581,6 @@
             </EnvObject>
         </Group>
     </Group>
-    <ActorObject name="Player" t0="43.6458" t1="36.9937" t2="-276.8" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="102" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
-        <parameters>
-            <parameter name="Aggression" type="float" val="0.5" />
-            <parameter name="Attack Damage" type="float" val="1" />
-            <parameter name="Attack Knockback" type="float" val="1" />
-            <parameter name="Attack Speed" type="float" val="1" />
-            <parameter name="Block Follow-up" type="float" val="0.5" />
-            <parameter name="Block Skill" type="float" val="0.5" />
-            <parameter name="Cannot Be Disarmed" type="int" val="0" />
-            <parameter name="Character Scale" type="float" val="1.06554" />
-            <parameter name="Damage Resistance" type="float" val="1" />
-            <parameter name="Ear Size" type="float" val="1" />
-            <parameter name="Fall Damage Multiplier" type="float" val="1" />
-            <parameter name="Fat" type="float" val="0.5" />
-            <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
-            <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
-            <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
-            <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
-            <parameter name="Focus FOV distance" type="float" val="100" />
-            <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
-            <parameter name="Focus FOV vertical" type="float" val="0.62834" />
-            <parameter name="Ground Aggression" type="float" val="0.5" />
-            <parameter name="Knockout Shield" type="int" val="0" />
-            <parameter name="Left handed" type="int" val="0" />
-            <parameter name="Movement Speed" type="float" val="0.88305" />
-            <parameter name="Muscle" type="float" val="0.57062" />
-            <parameter name="No Look Around" type="int" val="0" />
-            <parameter name="Peripheral FOV distance" type="float" val="4" />
-            <parameter name="Peripheral FOV horizontal" type="float" val="1.41376" />
-            <parameter name="Peripheral FOV vertical" type="float" val="1.41376" />
-            <parameter name="Species" type="string" val="cat" />
-            <parameter name="Static" type="int" val="0" />
-            <parameter name="Stick To Nav Mesh" type="int" val="0" />
-            <parameter name="Teams" type="string" val="attackers" />
-            <parameter name="Throw Counter Probability" type="float" val="0.31638" />
-            <parameter name="Throw Trainer" type="int" val="0" />
-            <parameter name="Weapon Catch Skill" type="float" val="0.35028" />
-            <parameter name="Wearing Metal Armor" type="int" val="0" />
-        </parameters>
-        <Connections>
-            <Connection id="102" />
-        </Connections>
-        <ItemConnections />
-        <Palette>
-            <Color label="Fur" channel="0" red="1" green="1" blue="1" />
-            <Color label="Leather" channel="1" red="1" green="1" blue="1" />
-            <Color label="Shirt" channel="2" red="1" green="1" blue="1" />
-            <Color label="Pants" channel="3" red="1" green="1" blue="1" />
-        </Palette>
-    </ActorObject>
     <Hotspot name="Entry Ambush Spawner Enemies 1" t0="95.6759" t1="39.6615" t2="-232.11" s0="1" s1="1" s2="1" q0="0" q1="0.275766" q2="0" q3="0.961225" euler_x="0" euler_y="0.558773" euler_z="0" id="120" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
@@ -940,9 +940,84 @@
     <EnvObject t0="40.6039" t1="35.7878" t2="-279.807" s0="1.74507" s1="1.74507" s2="1.74507" q0="-0.278434" q1="0.601427" q2="-0.717847" q3="-0.213204" euler_x="-1.40905" euler_y="-0.715771" euler_z="-3.10339" id="238" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/barrel.xml">
         <parameters />
     </EnvObject>
+    <Hotspot name="Catapult Patrol Trigger" t0="393.738" t1="28.5184" t2="114.016" s0="18.3384" s1="4.23436" s2="18.3384" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="247" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Catapult Spawner" />
+            <parameter name="Team Only" type="string" val="attackers" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Catapult Spawner Enemies 1" t0="450" t1="35.8938" t2="185.984" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373404" euler_z="0" id="248" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Catapult Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="0" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Catapult Spawner Enemies 3" t0="450" t1="34.7932" t2="27" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373404" euler_z="0" id="249" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Catapult Target 3" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="0" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Catapult Spawner Enemies 2" t0="450.085" t1="35.8708" t2="107.727" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373404" euler_z="0" id="250" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Catapult Target 2" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="0" />
+            <parameter name="Unit Type" type="string" val="tank" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <PlaceholderObject name="Catapult Target 3" t0="417.673" t1="37.3254" t2="71.3977" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="299" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="299" />
+        </Connections>
+    </PlaceholderObject>
     <EnvObject t0="252.638" t1="28.4294" t2="-132.325" s0="11.1847" s1="11.1847" s2="11.1847" q0="0.180884" q1="-0.403202" q2="-0.774388" q3="0.452814" euler_x="0.912677" euler_y="-0.0851049" euler_z="-2.12515" id="306" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
         <parameters />
     </EnvObject>
+    <PlaceholderObject name="Catapult Target 2" t0="418.405" t1="37.8689" t2="110.227" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="326" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="326" />
+        </Connections>
+    </PlaceholderObject>
+    <PlaceholderObject name="Catapult Target 1" t0="419.634" t1="37.3145" t2="146.162" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="334" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="334" />
+        </Connections>
+    </PlaceholderObject>
 </ActorObjects>
 <RecentItems>
     <SpawnerItem display_name="Raider Rabbit" path="Data/Objects/characters/raider_rabbit_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/raider_rabbit_actor.png" />
