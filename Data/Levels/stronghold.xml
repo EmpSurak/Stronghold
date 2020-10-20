@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="285.65" t1="131.46" t2="-155.354" s0="1" s1="1" s2="1" q0="0.0124475" q1="-0.940493" q2="0.337811" q3="0.0346549" euler_x="-2.45193" euler_y="-0.0736618" euler_z="3.14159" id="1">
+    <CameraObject t0="121.515" t1="70.4427" t2="-185.98" s0="1" s1="1" s2="1" q0="-0.155049" q1="0.33967" q2="-0.0568783" q3="-0.925931" euler_x="0.331825" euler_y="-0.703198" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="43.0931" t1="37.3033" t2="-276.508" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -86,12 +86,7 @@
             <Connection id="2" />
         </Connections>
         <ItemConnections />
-        <Palette>
-            <Color label="Fur" channel="0" red="1" green="1" blue="1" />
-            <Color label="Leather" channel="1" red="1" green="1" blue="1" />
-            <Color label="Shirt" channel="2" red="1" green="1" blue="1" />
-            <Color label="Pants" channel="3" red="1" green="1" blue="1" />
-        </Palette>
+        <Palette />
     </ActorObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
         <parameters />
@@ -548,10 +543,10 @@
             <parameter name="Goal" type="string" val="none" />
             <parameter name="Max. Spawn Delay" type="float" val="3" />
             <parameter name="Min. Spawn Delay" type="float" val="1" />
-            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Number of Characters" type="int" val="5" />
             <parameter name="Team" type="string" val="bandits" />
             <parameter name="Team Color" type="int" val="3" />
-            <parameter name="Unit Type" type="string" val="soldier" />
+            <parameter name="Unit Type" type="string" val="raider" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
@@ -818,7 +813,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <EnvObject t0="405.269" t1="35.5654" t2="111.776" s0="6.38189" s1="5.75713" s2="6.38189" q0="-0.2407" q1="0.5526" q2="-0.732801" q3="0.315756" euler_x="-1.29388" euler_y="-0.00379659" euler_z="-2.32503" id="169" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/shops/sign_post_i.xml">
+    <EnvObject t0="405.269" t1="35.5654" t2="111.776" s0="6.38189" s1="5.75713" s2="6.38189" q0="-0.2407" q1="0.5526" q2="-0.732801" q3="0.315756" euler_x="-1.29388" euler_y="-0.00379688" euler_z="-2.32503" id="169" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/shops/sign_post_i.xml">
         <parameters />
     </EnvObject>
     <Decal t0="397.142" t1="32.4007" t2="127.54" s0="6.75062" s1="6.75062" s2="6.75062" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="170" type_file="Data/Objects/Decals/blooddropsplat.xml" color_r="0.290196" color_g="0" color_b="0" overbright="0">
@@ -874,10 +869,10 @@
     <EnvObject t0="71.3594" t1="38.546" t2="-266.22" s0="9.68081" s1="9.68081" s2="9.68081" q0="-0.848066" q1="-0.354044" q2="0.0473844" q3="-0.391406" euler_x="2.40073" euler_y="0.365611" euler_z="0.647614" id="185" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="180.516" t1="37.3851" t2="77.1651" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.019797" q1="-0.206026" q2="-0.00992517" q3="0.978296" euler_x="0.046803" euler_y="-0.414483" euler_z="-0.0301326" id="190" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
+    <EnvObject t0="180.516" t1="37.3851" t2="77.1651" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.019797" q1="-0.206026" q2="-0.00992517" q3="0.978296" euler_x="0.046803" euler_y="-0.414482" euler_z="-0.0301325" id="190" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="170.891" t1="36.9431" t2="94.1819" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.0227199" q1="-0.281746" q2="-0.0242411" q3="0.958913" euler_x="0.0680121" euler_y="-0.569533" euler_z="-0.0704644" id="191" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
+    <EnvObject t0="170.891" t1="36.9431" t2="94.1819" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.0227199" q1="-0.281746" q2="-0.0242411" q3="0.958913" euler_x="0.0680121" euler_y="-0.569532" euler_z="-0.0704644" id="191" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
         <parameters />
     </EnvObject>
     <Hotspot name="Spawner Front Spawner Enemies 2" t0="188.814" t1="38.4932" t2="39.8519" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="192" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">

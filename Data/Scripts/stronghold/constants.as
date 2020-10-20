@@ -55,5 +55,6 @@ enum UnitType {
     _tank,
     _giant,
     _bomber,
-    _flag_bearer
+    _flag_bearer,
+    _raider
 };

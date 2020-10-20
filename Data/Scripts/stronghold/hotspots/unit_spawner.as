@@ -14,6 +14,7 @@
 
 const string _unit_type_key = "Unit Type";
 const string _unit_type_default = "";
+const string _unit_type_raider = "raider";
 const string _unit_type_soldier = "soldier";
 const string _unit_type_tank = "tank";
 const string _unit_type_giant = "giant";
@@ -193,6 +194,13 @@ int CreateUnit(UnitType _type){
             };
             break;
         }
+        case _raider: {
+            possible_files = {
+                "Data/Objects/stronghold/prefabs/characters/raider_1.xml",
+                "Data/Objects/stronghold/prefabs/characters/raider_2.xml"
+            };
+            break;
+        }
     }
     string random_file = possible_files[rand()%possible_files.length()];
 
@@ -225,6 +233,17 @@ void CreateAndAttachWeapon(UnitType _type, int _char_id){
             possible_files = {
                 "Data/Items/DogWeapons/DogBroadSword.xml",
                 "Data/Items/DogWeapons/DogSword.xml"
+            };
+            break;
+        }
+        case _raider: {
+            if(rand()%10 > 8){
+                break;
+            }
+            possible_files = {
+                "Data/Items/rabbit_weapons/rabbit_knife.xml",
+                "Data/Items/DogWeapons/DogKnife.xml",
+                "Data/Items/staffbasic.xml"
             };
             break;
         }
@@ -320,6 +339,8 @@ UnitType UnitTypeFromString(const string _input){
         return _bomber;
     }else if(_input == _unit_type_flag_bearer){
         return _flag_bearer;
+    }else if(_input == _unit_type_raider){
+        return _raider;
     }
     return _no_type;
 }
