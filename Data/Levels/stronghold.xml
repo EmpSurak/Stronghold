@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="114.002" t1="96.0989" t2="200.804" s0="1" s1="1" s2="1" q0="0.0409145" q1="0.944873" q2="-0.297808" q3="0.129811" euler_x="-2.53094" euler_y="0.273061" euler_z="3.14159" id="1">
+    <CameraObject t0="162.76" t1="106.193" t2="402.785" s0="1" s1="1" s2="1" q0="-0.246206" q1="0.173436" q2="-0.0448295" q3="-0.952519" euler_x="0.505886" euler_y="-0.360216" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="136.752" t1="57.7537" t2="380.708" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -1656,9 +1656,56 @@
             <Connection id="373" />
         </Connections>
     </PlaceholderObject>
-    <EnvObject t0="139.185" t1="70.7934" t2="259.9" s0="1.95672" s1="1.95672" s2="1.95672" q0="-0.104961" q1="0.569211" q2="0.0515117" q3="0.813835" euler_x="-0.32777" euler_y="1.2148" euler_z="-0.102457" id="374" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml">
+    <EnvObject t0="139.185" t1="70.7934" t2="259.9" s0="1.95672" s1="1.95672" s2="1.95672" q0="-0.104961" q1="0.569211" q2="0.0515117" q3="0.813835" euler_x="-0.327771" euler_y="1.2148" euler_z="-0.102457" id="374" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml">
         <parameters />
     </EnvObject>
+    <Hotspot name="Statue Platforms Trigger" t0="140.178" t1="53.6745" t2="304.356" s0="9.09897" s1="2.05187" s2="5.41693" q0="0" q1="-0.293092" q2="0" q3="0.956084" euler_x="0" euler_y="-0.594918" euler_z="0" id="375" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Statue Platforms Spawner" />
+            <parameter name="Team Only" type="string" val="attackers" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Statue Platforms Spawner Enemies 2" t0="130.602" t1="57.6203" t2="307.712" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.290225" q2="0" q3="0.956958" euler_x="0" euler_y="-0.588924" euler_z="0" id="376" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Statue Platforms Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="3" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="0" />
+            <parameter name="Unit Type" type="string" val="flag_bearer" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Statue Platforms Spawner Enemies 1" t0="132.577" t1="57.6604" t2="309.04" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.290225" q2="0" q3="0.956958" euler_x="0" euler_y="-0.588924" euler_z="0" id="377" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Statue Platforms Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="3" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="0" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <PlaceholderObject name="Statue Platforms Target 1" t0="137.703" t1="57.8017" t2="301.657" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="378" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="378" />
+        </Connections>
+    </PlaceholderObject>
     <PlaceholderObject name="Rich Hut Target 1" t0="173.686" t1="50.844" t2="290.339" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
         <parameters />
         <Connections>
