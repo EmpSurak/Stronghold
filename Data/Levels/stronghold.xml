@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="83.7936" t1="90.2772" t2="120.994" s0="1" s1="1" s2="1" q0="-0.079139" q1="-0.897476" q2="0.394866" q3="-0.179872" euler_x="-2.31262" euler_y="0.395599" euler_z="-3.14159" id="1">
+    <CameraObject t0="114.002" t1="96.0989" t2="200.804" s0="1" s1="1" s2="1" q0="0.0409145" q1="0.944873" q2="-0.297808" q3="0.129811" euler_x="-2.53094" euler_y="0.273061" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="136.752" t1="57.7537" t2="380.708" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -138,7 +138,7 @@
     <EnvObject t0="128.462" t1="41.1728" t2="25.2144" s0="4.00429" s1="2.96564" s2="6.68998" q0="0" q1="-0.990202" q2="0" q3="0.139643" euler_x="3.14159" euler_y="-0.280202" euler_z="3.14159" id="18" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="116.805" t1="41.1798" t2="36.3176" s0="4.00429" s1="2.96564" s2="6.68998" q0="0" q1="-0.810948" q2="0" q3="0.585118" euler_x="3.14159" euler_y="-1.25005" euler_z="3.14159" id="19" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml">
+    <EnvObject t0="116.805" t1="41.1632" t2="36.3176" s0="4.00429" s1="2.9601" s2="6.68998" q0="0" q1="-0.810948" q2="0" q3="0.585118" euler_x="3.14159" euler_y="-1.25005" euler_z="3.14159" id="19" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml">
         <parameters />
     </EnvObject>
     <EnvObject t0="109.457" t1="41.4508" t2="58.436" s0="4.00429" s1="2.96564" s2="6.68998" q0="-0.00934845" q1="-0.810894" q2="0.00674525" q3="0.585079" euler_x="-3.07231" euler_y="-1.24925" euler_z="3.06858" id="20" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml">
@@ -1656,6 +1656,9 @@
             <Connection id="373" />
         </Connections>
     </PlaceholderObject>
+    <EnvObject t0="139.185" t1="70.7934" t2="259.9" s0="1.95672" s1="1.95672" s2="1.95672" q0="-0.104961" q1="0.569211" q2="0.0515117" q3="0.813835" euler_x="-0.32777" euler_y="1.2148" euler_z="-0.102457" id="374" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml">
+        <parameters />
+    </EnvObject>
     <PlaceholderObject name="Rich Hut Target 1" t0="173.686" t1="50.844" t2="290.339" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
         <parameters />
         <Connections>
@@ -1696,7 +1699,6 @@
     <SpawnerItem display_name="Wooden Row Boat" path="Data/Objects/therium/boat.xml" thumbnail_path="" />
     <SpawnerItem display_name="Wooden Sign Post H" path="Data/Objects/Buildings/shops/sign_post_h.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sign_post_h.png" />
     <SpawnerItem display_name="Granite Rock Boulder Round" path="Data/Objects/Environment/Rocks/granite_vine_rocks/granite_boulder_round.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/granite_boulder_round.png" />
-    <SpawnerItem display_name="Magma Arena Flag Red 1" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Wood Railing Long 1" path="Data/Prototypes/Common/Wood_RailingLong1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Large Wood Plate" path="Data/Items/gear/rabbit_gear/large_wood_plate.xml" thumbnail_path="" />
     <SpawnerItem display_name="Construction Tower 1 (impostor)" path="Data/Objects/2d_3d/structures/construction_tower_1.xml" thumbnail_path="" />
@@ -1786,4 +1788,5 @@
     <SpawnerItem display_name="Dark Rocks Red Dirt" path="Data/Objects/Decals/dark_rocks_red_dirt.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/dark_rocks_red_dirt.png" />
     <SpawnerItem display_name="Blood Drop Splat" path="Data/Objects/Decals/blooddropsplat.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/blooddropsplat.png" />
     <SpawnerItem display_name="Blood Spatter" path="Data/Objects/Decals/bloodspatter.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/bloodspatter.png" />
+    <SpawnerItem display_name="Magma Arena Flag Red 1" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_Red1.xml" thumbnail_path="" />
 </RecentItems>

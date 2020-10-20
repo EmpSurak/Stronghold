@@ -52,6 +52,10 @@ UnitType type;
 
 void Init(){
     level.ReceiveLevelEvents(hotspot.GetID());
+    InitJobs();
+}
+
+void InitJobs(){
     char_count = 0;
     max_char_count = params.HasParam(_char_count_key) ? params.GetInt(_char_count_key) : _char_count_default;
     team_color = params.HasParam(_team_color_key) ? params.GetInt(_team_color_key) : _team_color_default;
@@ -99,11 +103,6 @@ void Init(){
         return false;
     }));
 
-    timer.Add(LevelEventJob("reset", function(_params){
-        Reset();
-        return false;
-    }));
-
     timer.Add(LevelEventJob("spawner_control", function(_params){
         Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
         if(_params.length() < 4 || _params[1] != hotspot_obj.GetName()){
@@ -130,7 +129,7 @@ void Dispose(){
 
 void Reset(){
     timer.DeleteAll();
-    Init();
+    InitJobs();
 }
 
 void SetParameters(){
