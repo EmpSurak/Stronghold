@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="302.29" t1="69.0145" t2="161.042" s0="1" s1="1" s2="1" q0="-0.209426" q1="0.699177" q2="-0.2271" q3="-0.644762" euler_x="-2.51347" euler_y="-1.48986" euler_z="3.14159" id="1">
+    <CameraObject t0="176.03" t1="45.0012" t2="107.657" s0="1" s1="1" s2="1" q0="0.227501" q1="-0.483446" q2="0.131723" q3="0.834969" euler_x="0.532018" euler_y="-1.04967" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="158.561" t1="50.5628" t2="149.676" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -1767,6 +1767,81 @@
         <parameters />
         <Connections>
             <Connection id="383" />
+        </Connections>
+    </PlaceholderObject>
+    <PlaceholderObject name="Camp Target 3" t0="155.257" t1="36.4294" t2="92.6823" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="384" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="384" />
+        </Connections>
+    </PlaceholderObject>
+    <Hotspot name="Camp Trigger" t0="165.435" t1="37.4466" t2="72.8775" s0="15.0742" s1="1.73382" s2="6.48933" q0="0" q1="-0.276507" q2="0" q3="0.961012" euler_x="0" euler_y="-0.560315" euler_z="0" id="385" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Camp Spawner" />
+            <parameter name="Team Only" type="string" val="attackers" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Camp Spawner Enemies 1" t0="193.293" t1="37.3229" t2="66.5685" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.753068" q2="0" q3="0.657942" euler_x="3.14159" euler_y="-1.43616" euler_z="-3.14159" id="386" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Camp Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Camp Spawner Enemies 1" t0="184.187" t1="36.2263" t2="87.4358" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.84544" q2="0" q3="0.53407" euler_x="3.14159" euler_y="-1.12681" euler_z="-3.14159" id="387" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Camp Target 2" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Camp Spawner Enemies 3" t0="172.302" t1="36.1437" t2="106.12" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.885227" q2="0" q3="0.465159" euler_x="3.14159" euler_y="-0.967627" euler_z="-3.14159" id="388" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Camp Target 3" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="tank" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <PlaceholderObject name="Camp Target 2" t0="167.133" t1="36.4293" t2="82.5066" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="389" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="389" />
+        </Connections>
+    </PlaceholderObject>
+    <PlaceholderObject name="Camp Target 1" t0="172.537" t1="36.8195" t2="68.4442" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="390" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="390" />
         </Connections>
     </PlaceholderObject>
     <PlaceholderObject name="Rich Hut Target 1" t0="171.373" t1="52.105" t2="293.704" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
