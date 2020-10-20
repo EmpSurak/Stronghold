@@ -40,10 +40,10 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="176.896" t1="88.7988" t2="-179.123" s0="1" s1="1" s2="1" q0="-0.0813367" q1="0.893695" q2="-0.402612" q3="-0.180547" euler_x="-2.29505" euler_y="-0.39868" euler_z="3.14159" id="1">
+    <CameraObject t0="89.6169" t1="59.8873" t2="-58.9093" s0="1" s1="1" s2="1" q0="0.22658" q1="0.441424" q2="-0.116245" q3="0.860403" euler_x="0.514992" euler_y="0.948056" euler_z="0" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject name="Player" t0="139.897" t1="36.2448" t2="-182.632" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="43.1283" t1="37.111" t2="-275.842" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -806,7 +806,7 @@
             <parameters />
         </EnvObject>
     </Group>
-    <Hotspot name="River Wall of Death Spawner Enemies 1" t0="273.172" t1="18.746" t2="-91.5614" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373403" euler_z="0" id="159" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="River Wall of Death Spawner Enemies 1" t0="273.172" t1="18.746" t2="-91.5614" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373404" euler_z="0" id="159" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -822,7 +822,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="River Wall of Death Spawner Enemies 2" t0="133.632" t1="18.2316" t2="-73.7578" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373403" euler_z="0" id="160" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="River Wall of Death Spawner Enemies 2" t0="133.632" t1="18.2316" t2="-73.7578" s0="1" s1="1" s2="1" q0="0" q1="-0.0186691" q2="0" q3="0.999826" euler_x="0" euler_y="-0.0373404" euler_z="0" id="160" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -830,7 +830,7 @@
             <parameter name="Goal" type="string" val="go_to" />
             <parameter name="Max. Spawn Delay" type="float" val="1" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
-            <parameter name="Number of Characters" type="int" val="4" />
+            <parameter name="Number of Characters" type="int" val="5" />
             <parameter name="Team" type="string" val="defenders" />
             <parameter name="Team Color" type="int" val="0" />
             <parameter name="Unit Type" type="string" val="tank" />
