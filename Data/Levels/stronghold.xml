@@ -40,10 +40,10 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="151.38" t1="78.6666" t2="384.444" s0="1" s1="1" s2="1" q0="0.214745" q1="-0.120347" q2="0.0266744" q3="0.96886" euler_x="0.436241" euler_y="-0.247163" euler_z="0" id="1">
+    <CameraObject t0="105.492" t1="49.8194" t2="330.398" s0="1" s1="1" s2="1" q0="0.0837508" q1="-0.916041" q2="0.266959" q3="0.287382" euler_x="-2.57445" euler_y="-0.607995" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject name="Player" t0="136.752" t1="57.7537" t2="380.708" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="-3.14159" euler_y="0.166355" euler_z="-3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="136.752" t1="57.7537" t2="380.708" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -1356,7 +1356,7 @@
     <EnvObject t0="166.93" t1="38.5664" t2="50.6557" s0="3.5418" s1="3.5418" s2="3.5418" q0="0.257642" q1="0.635917" q2="-0.0690827" q3="-0.724191" euler_x="-1.44466" euler_y="-1.08747" euler_z="1.16915" id="329" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="162.281" t1="36.3573" t2="46.51" s0="5.04133" s1="5.04133" s2="5.04133" q0="0.399185" q1="0.80658" q2="-0.0637601" q3="-0.431283" euler_x="-2.51662" euler_y="-0.700792" euler_z="1.98738" id="333" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
+    <EnvObject t0="162.281" t1="36.3573" t2="46.51" s0="5.04133" s1="5.04133" s2="5.04133" q0="0.399185" q1="0.80658" q2="-0.0637601" q3="-0.431283" euler_x="-2.51662" euler_y="-0.700793" euler_z="1.98738" id="333" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
     <PlaceholderObject name="Catapult Target 1" t0="419.634" t1="37.3145" t2="146.162" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="334" type_file="" special_type="0">
@@ -1368,13 +1368,13 @@
     <Decal t0="127.949" t1="35.9211" t2="117.556" s0="25.5563" s1="10.8773" s2="45.6239" q0="0" q1="-0.148383" q2="0" q3="0.98893" euler_x="0" euler_y="-0.297866" euler_z="0" id="335" type_file="Data/Objects/Decals/dark_rocks_red_dirt.xml" color_r="0.941176" color_g="1" color_b="0" overbright="0">
         <parameters />
     </Decal>
-    <EnvObject t0="161.018" t1="37.9294" t2="40.5565" s0="5.45235" s1="3.59591" s2="5.90721" q0="-0.0979177" q1="-0.169223" q2="0.401763" q3="-0.894623" euler_x="0.0424453" euler_y="0.391375" euler_z="-0.835762" id="342" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
+    <EnvObject t0="161.018" t1="37.9294" t2="40.5565" s0="5.45235" s1="3.59591" s2="5.90721" q0="-0.0979177" q1="-0.169223" q2="0.401763" q3="-0.894623" euler_x="0.0424451" euler_y="0.391376" euler_z="-0.835763" id="342" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="164.508" t1="37.1748" t2="49.8353" s0="3.04249" s1="3.04249" s2="3.04249" q0="-0.29057" q1="-0.343782" q2="-0.381929" q3="0.807158" euler_x="-0.334131" euler_y="-0.88977" euler_z="-0.723451" id="343" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
+    <EnvObject t0="164.508" t1="37.1748" t2="49.8353" s0="3.04249" s1="3.04249" s2="3.04249" q0="-0.29057" q1="-0.343782" q2="-0.381929" q3="0.807158" euler_x="-0.334131" euler_y="-0.88977" euler_z="-0.723452" id="343" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="177.25" t1="37.5326" t2="49.7029" s0="4.36133" s1="3.5418" s2="5.64979" q0="0.315834" q1="0.0587064" q2="-0.255053" q3="-0.912002" euler_x="-0.652173" euler_y="0.0540542" euler_z="0.527108" id="344" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
+    <EnvObject t0="177.25" t1="37.5326" t2="49.7029" s0="4.36133" s1="3.5418" s2="5.64979" q0="0.315834" q1="0.0587064" q2="-0.255053" q3="-0.912002" euler_x="-0.652174" euler_y="0.0540544" euler_z="0.527108" id="344" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
     <Decal t0="173.225" t1="36.7056" t2="47.5717" s0="4.47172" s1="1.94407" s2="4.47172" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="345" type_file="Data/Objects/Decals/blooddropsplat.xml" color_r="0.470588" color_g="0" color_b="0" overbright="0">
@@ -1383,6 +1383,18 @@
     <Decal t0="167.519" t1="36.7914" t2="40.2745" s0="4.8351" s1="4.8351" s2="4.8351" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="346" type_file="Data/Objects/Decals/bloodspatter.xml" color_r="0.423529" color_g="0" color_b="0" overbright="0">
         <parameters />
     </Decal>
+    <PlaceholderObject name="Infront Huts Target 2" t0="111.273" t1="41.6471" t2="345.799" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="347" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="347" />
+        </Connections>
+    </PlaceholderObject>
+    <PlaceholderObject name="Infront Huts Target 1" t0="98.153" t1="40.1307" t2="336.314" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="348" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="348" />
+        </Connections>
+    </PlaceholderObject>
     <Hotspot name="Behind Huts Trigger" t0="66.6192" t1="37.4483" t2="318.237" s0="10.7464" s1="4.5463" s2="6.91169" q0="0" q1="-0.661577" q2="0" q3="0.749877" euler_x="0" euler_y="-1.44584" euler_z="0" id="350" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -1392,7 +1404,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Behind Huts Spawner Enemies 1" t0="69.055" t1="37.0802" t2="298.913" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.664067" q2="0" q3="0.747673" euler_x="0" euler_y="-1.45248" euler_z="0" id="351" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Behind Huts Spawner Enemies 1" t0="69.055" t1="37.0802" t2="298.913" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.664067" q2="0" q3="0.747673" euler_x="0" euler_y="-1.45249" euler_z="0" id="351" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -1518,12 +1530,12 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Infront Huts Spawner Enemies 1" t0="92.5424" t1="41.3792" t2="345.189" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.947039" q2="0" q3="0.321117" euler_x="-3.14159" euler_y="-0.653818" euler_z="3.14159" id="362" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Infront Huts Spawner Enemies 1" t0="92.7632" t1="40.4593" t2="345.477" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.947039" q2="0" q3="0.321117" euler_x="3.14159" euler_y="-0.653817" euler_z="3.14159" id="362" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="" />
-            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Go to (Name)" type="string" val="Infront Huts Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="4" />
@@ -1534,12 +1546,12 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Infront Huts Spawner Enemies 3" t0="138.633" t1="45.7825" t2="360.547" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.806752" q2="0" q3="0.590889" euler_x="-3.14159" euler_y="-1.26432" euler_z="3.14159" id="363" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Infront Huts Spawner Enemies 3" t0="140.23" t1="45.4025" t2="362.614" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.806752" q2="0" q3="0.590889" euler_x="3.14159" euler_y="-1.26432" euler_z="3.14159" id="363" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="" />
-            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Go to (Name)" type="string" val="Infront Huts Target 3" />
+            <parameter name="Goal" type="string" val="go_to" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1550,12 +1562,12 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Infront Huts Spawner Enemies 2" t0="110.237" t1="42.8646" t2="356.302" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.806752" q2="0" q3="0.590889" euler_x="-3.14159" euler_y="-1.26432" euler_z="3.14159" id="364" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Infront Huts Spawner Enemies 2" t0="110.625" t1="41.94" t2="356.936" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.806752" q2="0" q3="0.590889" euler_x="3.14159" euler_y="-1.26432" euler_z="3.14159" id="364" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="" />
-            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Go to (Name)" type="string" val="Infront Huts Target 2" />
+            <parameter name="Goal" type="string" val="go_to" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1566,6 +1578,12 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <PlaceholderObject name="Infront Huts Target 3" t0="118.903" t1="42.708" t2="342.925" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="365" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="365" />
+        </Connections>
+    </PlaceholderObject>
     <Hotspot name="Rich Hut Trigger" t0="179.099" t1="48.5702" t2="290.388" s0="7.96522" s1="4.3065" s2="9.8809" q0="0" q1="-0.293092" q2="0" q3="0.956084" euler_x="0" euler_y="-0.594918" euler_z="0" id="368" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -1591,13 +1609,13 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Rich Hut Target 1" t0="173.686" t1="50.844" t2="290.339" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602088" euler_z="0" id="459" type_file="" special_type="0">
+    <PlaceholderObject name="Rich Hut Target 1" t0="173.686" t1="50.844" t2="290.339" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="459" />
         </Connections>
     </PlaceholderObject>
-    <PlaceholderObject name="Rich Hut Target 2" t0="184.364" t1="57.6098" t2="264.902" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602088" euler_z="0" id="470" type_file="" special_type="0">
+    <PlaceholderObject name="Rich Hut Target 2" t0="184.364" t1="57.6098" t2="264.902" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="470" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="470" />
