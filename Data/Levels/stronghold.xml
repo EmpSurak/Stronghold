@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="35.3993" t1="82.5368" t2="-311.781" s0="1" s1="1" s2="1" q0="-0.0516281" q1="-0.93566" q2="0.313186" q3="-0.154242" euler_x="-2.49559" euler_y="0.326758" euler_z="3.14159" id="1">
+    <CameraObject t0="285.65" t1="131.46" t2="-155.354" s0="1" s1="1" s2="1" q0="0.0124475" q1="-0.940493" q2="0.337811" q3="0.0346549" euler_x="-2.45193" euler_y="-0.0736618" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="43.0931" t1="37.3033" t2="-276.508" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -359,10 +359,10 @@
     <EnvObject t0="216.125" t1="50.1949" t2="295.56" s0="1.38934" s1="1.38934" s2="1.38934" q0="0.00735152" q1="0.0865905" q2="-0.000639068" q3="0.996217" euler_x="0.0147586" euler_y="0.173403" euler_z="0" id="80" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/arena/arena_staircase.xml">
         <parameters />
     </EnvObject>
-    <Hotspot name="Spawner Front Gate" t0="180.703" t1="39.1729" t2="23.3776" s0="2.60018" s1="1.73382" s2="2.51076" q0="0" q1="-0.276507" q2="0" q3="0.961012" euler_x="0" euler_y="-0.560315" euler_z="0" id="81" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+    <Hotspot name="Spawner Front Gate" t0="183.4" t1="39.1729" t2="19.0794" s0="2.60019" s1="1.73382" s2="0.784964" q0="0" q1="-0.276507" q2="0" q3="0.961012" euler_x="0" euler_y="-0.560315" euler_z="0" id="81" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="1" />
-            <parameter name="Spawn Name (Prefix)" type="string" val="Test" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Spawner Front Spawner" />
             <parameter name="Team Only" type="string" val="" />
         </parameters>
         <Connections />
@@ -374,7 +374,7 @@
     <EnvObject t0="213.215" t1="53.8354" t2="299.612" s0="1" s1="1" s2="1" q0="0" q1="0.582883" q2="0" q3="0.812556" euler_x="0" euler_y="1.24454" euler_z="0" id="83" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Farm/FenceSystem_Corner_02.xml">
         <parameters />
     </EnvObject>
-    <Hotspot name="Test 1" t0="161.671" t1="37.7031" t2="26.3189" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="84" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Spawner Front Spawner Enemies 1" t0="161.671" t1="37.7031" t2="26.3189" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="84" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -385,47 +385,6 @@
             <parameter name="Number of Characters" type="int" val="2" />
             <parameter name="Team" type="string" val="Nobody" />
             <parameter name="Team Color" type="int" val="1" />
-            <parameter name="Unit Type" type="string" val="bomber" />
-        </parameters>
-        <Connections />
-        <ConnectionsFrom />
-    </Hotspot>
-    <Hotspot t0="194.996" t1="35.2756" t2="-3.66727" s0="3.98336" s1="1" s2="1" q0="0" q1="-0.282294" q2="0" q3="0.959328" euler_x="0" euler_y="-0.572369" euler_z="0" id="85" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
-        <parameters>
-            <parameter name="Player Only" type="int" val="1" />
-            <parameter name="Spawn Name (Prefix)" type="string" val="Own Army" />
-            <parameter name="Team Only" type="string" val="" />
-        </parameters>
-        <Connections />
-        <ConnectionsFrom />
-    </Hotspot>
-    <Hotspot name="Own Army 1" t0="200.546" t1="37.2171" t2="-9.17791" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="86" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
-        <parameters>
-            <parameter name="Difficulty" type="float" val="0.5" />
-            <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="" />
-            <parameter name="Goal" type="string" val="none" />
-            <parameter name="Max. Spawn Delay" type="float" val="0" />
-            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
-            <parameter name="Number of Characters" type="int" val="2" />
-            <parameter name="Team" type="string" val="guard" />
-            <parameter name="Team Color" type="int" val="5" />
-            <parameter name="Unit Type" type="string" val="flag_bearer" />
-        </parameters>
-        <Connections />
-        <ConnectionsFrom />
-    </Hotspot>
-    <Hotspot name="Own Army 2" t0="194.874" t1="37.0844" t2="-11.8464" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="87" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
-        <parameters>
-            <parameter name="Difficulty" type="float" val="0.5" />
-            <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="" />
-            <parameter name="Goal" type="string" val="none" />
-            <parameter name="Max. Spawn Delay" type="float" val="0" />
-            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
-            <parameter name="Number of Characters" type="int" val="4" />
-            <parameter name="Team" type="string" val="guard" />
-            <parameter name="Team Color" type="int" val="5" />
             <parameter name="Unit Type" type="string" val="soldier" />
         </parameters>
         <Connections />
@@ -859,25 +818,15 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <EnvObject t0="405.269" t1="35.5654" t2="111.776" s0="6.38189" s1="5.75713" s2="6.38189" q0="-0.2407" q1="0.5526" q2="-0.732801" q3="0.315756" euler_x="-1.29388" euler_y="-0.00379659" euler_z="-2.32503" id="169" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/shops/sign_post_i.xml">
+        <parameters />
+    </EnvObject>
+    <Decal t0="397.142" t1="32.4007" t2="127.54" s0="6.75062" s1="6.75062" s2="6.75062" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="170" type_file="Data/Objects/Decals/blooddropsplat.xml" color_r="0.290196" color_g="0" color_b="0" overbright="0">
+        <parameters />
+    </Decal>
     <EnvObject t0="64.5916" t1="45.5811" t2="-257.57" s0="5.17775" s1="6.54166" s2="13.1374" q0="0" q1="-0.611195" q2="0" q3="0.79148" euler_x="0" euler_y="-1.31514" euler_z="0" id="172" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/invisibleblock.xml">
         <parameters />
     </EnvObject>
-    <Hotspot name="Test 2" t0="144.848" t1="35.473" t2="133.178" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="176" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
-        <parameters>
-            <parameter name="Difficulty" type="float" val="1" />
-            <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Test 1" />
-            <parameter name="Goal" type="string" val="go_to" />
-            <parameter name="Max. Spawn Delay" type="float" val="4" />
-            <parameter name="Min. Spawn Delay" type="float" val="1" />
-            <parameter name="Number of Characters" type="int" val="8" />
-            <parameter name="Team" type="string" val="Nobody" />
-            <parameter name="Team Color" type="int" val="1" />
-            <parameter name="Unit Type" type="string" val="soldier" />
-        </parameters>
-        <Connections />
-        <ConnectionsFrom />
-    </Hotspot>
     <Hotspot name="Entry Gathering Point" t0="47.9978" t1="46.6319" t2="-231.424" s0="5.11841" s1="1.46492" s2="1.46491" q0="1.91927e-005" q1="-0.00167513" q2="-0.000448569" q3="0.999998" euler_x="3.98884e-005" euler_y="-0.00335024" euler_z="-0.000897206" id="178" type_file="Data/Objects/Hotspots/emitter.xml">
         <parameters>
             <parameter name="Type" type="string" val="Foggy" />
@@ -919,7 +868,51 @@
             <Connection id="182" />
         </Connections>
     </PlaceholderObject>
+    <EnvObject t0="184.433" t1="37.8144" t2="58.3716" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.0189354" q1="0" q2="0" q3="0.999821" euler_x="0.0378731" euler_y="0" euler_z="0" id="183" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
+        <parameters />
+    </EnvObject>
     <EnvObject t0="71.3594" t1="38.546" t2="-266.22" s0="9.68081" s1="9.68081" s2="9.68081" q0="-0.848066" q1="-0.354044" q2="0.0473844" q3="-0.391406" euler_x="2.40073" euler_y="0.365611" euler_z="0.647614" id="185" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Cliffs/CliffRock_02.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="180.516" t1="37.3851" t2="77.1651" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.019797" q1="-0.206026" q2="-0.00992517" q3="0.978296" euler_x="0.046803" euler_y="-0.414483" euler_z="-0.0301326" id="190" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="170.891" t1="36.9431" t2="94.1819" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.0227199" q1="-0.281746" q2="-0.0242411" q3="0.958913" euler_x="0.0680121" euler_y="-0.569533" euler_z="-0.0704644" id="191" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
+        <parameters />
+    </EnvObject>
+    <Hotspot name="Spawner Front Spawner Enemies 2" t0="188.814" t1="38.4932" t2="39.8519" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="192" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="Nobody" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Spawner Front Spawner Enemies 2" t0="191.635" t1="38.5841" t2="43.7977" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="193" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="none" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Nobody" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="flag_bearer" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <EnvObject t0="191.569" t1="35.7725" t2="14.2332" s0="1.77791" s1="1.77791" s2="1.77791" q0="-0.0142598" q1="0.0151375" q2="0.685541" q3="0.727737" euler_x="0" euler_y="0.0415956" euler_z="1.5111" id="194" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/arena/arena_door.xml">
         <parameters />
     </EnvObject>
     <EnvObject t0="37.3144" t1="36.3671" t2="-408.684" s0="2.94732" s1="2.94732" s2="2.94732" q0="0.0678345" q1="-0.0341516" q2="0.0148832" q3="0.997002" euler_x="0.134986" euler_y="-0.0701752" euler_z="0.0251083" id="206" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/barrel.xml">
@@ -1092,4 +1085,8 @@
     <SpawnerItem display_name="Cliff Rock 04" path="Data/Objects/Environment/Cliffs/CliffRock_04.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_04.png" />
     <SpawnerItem display_name="Sharp Wooden Stick Long" path="Data/Objects/Environment/camp/sharp_stick_long.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sharp_stick_long.png" />
     <SpawnerItem display_name="spawner_start.xml" path="Data/Objects/stronghold/hotspots/spawner_start.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="Wooden Sign Post I" path="Data/Objects/Buildings/shops/sign_post_i.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sign_post_i.png" />
+    <SpawnerItem display_name="Blood Drop Splat" path="Data/Objects/Decals/blooddropsplat.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/blooddropsplat.png" />
+    <SpawnerItem display_name="Tent" path="Data/Prototypes/OG/Tent.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Arena Door Wooden" path="Data/Objects/Buildings/arena/arena_door.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Arena Door.png" />
 </RecentItems>
