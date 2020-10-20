@@ -40,10 +40,10 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="162.76" t1="106.193" t2="402.785" s0="1" s1="1" s2="1" q0="-0.246206" q1="0.173436" q2="-0.0448295" q3="-0.952519" euler_x="0.505886" euler_y="-0.360216" euler_z="0" id="1">
+    <CameraObject t0="302.29" t1="69.0145" t2="161.042" s0="1" s1="1" s2="1" q0="-0.209426" q1="0.699177" q2="-0.2271" q3="-0.644762" euler_x="-2.51347" euler_y="-1.48986" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject name="Player" t0="136.752" t1="57.7537" t2="380.708" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="158.561" t1="50.5628" t2="149.676" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -806,13 +806,13 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="River Wall of Death Target (Left)" t0="209.949" t1="20.1118" t2="-96.7954" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="161" type_file="" special_type="0">
+    <PlaceholderObject name="River Wall of Death Target (Left)" t0="209.949" t1="20.1118" t2="-96.7954" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="161" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="161" />
         </Connections>
     </PlaceholderObject>
-    <PlaceholderObject name="River Wall of Death Target (Right)" t0="189.263" t1="19.4846" t2="-96.2118" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="162" type_file="" special_type="0">
+    <PlaceholderObject name="River Wall of Death Target (Right)" t0="189.263" t1="19.4846" t2="-96.2118" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="162" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="162" />
@@ -874,7 +874,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Side Lake Target" t0="31.0442" t1="19.2285" t2="-65.817" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="182" type_file="" special_type="0">
+    <PlaceholderObject name="Side Lake Target" t0="31.0442" t1="19.2285" t2="-65.817" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="182" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="182" />
@@ -1332,7 +1332,7 @@
             <parameters />
         </EnvObject>
     </Group>
-    <PlaceholderObject name="Catapult Target 3" t0="417.673" t1="37.3254" t2="71.3977" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="299" type_file="" special_type="0">
+    <PlaceholderObject name="Catapult Target 3" t0="417.673" t1="37.3254" t2="71.3977" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="299" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="299" />
@@ -1347,7 +1347,7 @@
     <EnvObject t0="171.539" t1="38.1386" t2="51.1981" s0="4.80693" s1="3.5418" s2="5.92343" q0="0.166051" q1="0.876478" q2="-0.391751" q3="-0.225263" euler_x="-2.23124" euler_y="-0.26797" euler_z="2.63537" id="324" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
-    <PlaceholderObject name="Catapult Target 2" t0="418.405" t1="37.8689" t2="110.227" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="326" type_file="" special_type="0">
+    <PlaceholderObject name="Catapult Target 2" t0="418.405" t1="37.8689" t2="110.227" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="326" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="326" />
@@ -1359,7 +1359,7 @@
     <EnvObject t0="162.281" t1="36.3573" t2="46.51" s0="5.04133" s1="5.04133" s2="5.04133" q0="0.399185" q1="0.80658" q2="-0.0637601" q3="-0.431283" euler_x="-2.51662" euler_y="-0.700793" euler_z="1.98738" id="333" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/camp/sharp_stick_long.xml">
         <parameters />
     </EnvObject>
-    <PlaceholderObject name="Catapult Target 1" t0="419.634" t1="37.3145" t2="146.162" s0="7.38374" s1="7.38374" s2="7.38374" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="334" type_file="" special_type="0">
+    <PlaceholderObject name="Catapult Target 1" t0="419.913" t1="36.7103" t2="144.264" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="334" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="334" />
@@ -1483,7 +1483,7 @@
     <Decal t0="106.367" t1="35.3849" t2="165.568" s0="35.7597" s1="13.242" s2="68.8914" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="356" type_file="Data/Objects/Decals/dark_rocks_red_dirt.xml" color_r="0.941176" color_g="1" color_b="0" overbright="0">
         <parameters />
     </Decal>
-    <Hotspot name="Rich Hut Spawner Enemies 1" t0="184.611" t1="52.8356" t2="278.772" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.290225" q2="0" q3="0.956958" euler_x="0" euler_y="-0.588924" euler_z="0" id="357" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Rich Hut Spawner Enemies 1" t0="183.614" t1="52.8356" t2="278.106" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.290225" q2="0" q3="0.956958" euler_x="0" euler_y="-0.588924" euler_z="0" id="357" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -1602,7 +1602,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Rich Hut Spawner Enemies 3" t0="180.225" t1="52.8366" t2="275.57" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.290225" q2="0" q3="0.956958" euler_x="0" euler_y="-0.588924" euler_z="0" id="370" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Rich Hut Spawner Enemies 3" t0="181.295" t1="52.8366" t2="276.285" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.290225" q2="0" q3="0.956958" euler_x="0" euler_y="-0.588924" euler_z="0" id="370" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -1706,7 +1706,70 @@
             <Connection id="378" />
         </Connections>
     </PlaceholderObject>
-    <PlaceholderObject name="Rich Hut Target 1" t0="173.686" t1="50.844" t2="290.339" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
+    <Hotspot name="Side Hole Trigger" t0="198.719" t1="28.7948" t2="131.576" s0="11.1647" s1="3.97312" s2="14.4781" q0="0" q1="-0.276507" q2="0" q3="0.961012" euler_x="0" euler_y="-0.560315" euler_z="0" id="379" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Side Hole Spawner" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Side Hole Spawner Enemies 1" t0="251.472" t1="22.108" t2="54.6947" s0="1" s1="1.00013" s2="1" q0="0" q1="0.468505" q2="0" q3="0.88346" euler_x="0" euler_y="0.975195" euler_z="0" id="380" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Side Hole Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="bandits" />
+            <parameter name="Team Color" type="int" val="4" />
+            <parameter name="Unit Type" type="string" val="raider" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Side Hole Spawner Enemies 2" t0="283.519" t1="29.8651" t2="109.378" s0="1" s1="1.00013" s2="1" q0="0" q1="0.775253" q2="0" q3="0.63165" euler_x="3.14159" euler_y="1.36736" euler_z="3.14159" id="381" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Side Hole Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="bandits" />
+            <parameter name="Team Color" type="int" val="4" />
+            <parameter name="Unit Type" type="string" val="raider" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Side Hole Spawner Enemies 3" t0="247.122" t1="27.2102" t2="212.66" s0="1" s1="1.00013" s2="1" q0="0" q1="0.916003" q2="0" q3="0.401169" euler_x="3.14159" euler_y="0.825586" euler_z="3.14159" id="382" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Side Hole Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="2" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="bandits" />
+            <parameter name="Team Color" type="int" val="4" />
+            <parameter name="Unit Type" type="string" val="raider" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <PlaceholderObject name="Side Hole Target 1" t0="193.772" t1="33.1035" t2="131.925" s0="1" s1="1" s2="1" q0="0" q1="-0.195384" q2="0" q3="0.980727" euler_x="0" euler_y="-0.393298" euler_z="0" id="383" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="383" />
+        </Connections>
+    </PlaceholderObject>
+    <PlaceholderObject name="Rich Hut Target 1" t0="171.373" t1="52.105" t2="293.704" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="459" />
