@@ -17,6 +17,10 @@ void SetParameters(){
 }
 
 void HandleEvent(string event, MovementObject @mo){
+    if(!ReadObjectFromID(hotspot.GetID()).GetEnabled()){
+        return;
+    }
+
     if(!params.HasParam(_name_key) || params.GetString(_name_key) == ""){
         return;
     }

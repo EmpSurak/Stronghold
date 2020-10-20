@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="176.03" t1="45.0012" t2="107.657" s0="1" s1="1" s2="1" q0="0.227501" q1="-0.483446" q2="0.131723" q3="0.834969" euler_x="0.532018" euler_y="-1.04967" euler_z="0" id="1">
+    <CameraObject t0="40.6924" t1="24.9185" t2="-63.0445" s0="1" s1="1" s2="1" q0="-0.19557" q1="0.730427" q2="-0.233707" q3="-0.611236" euler_x="-2.52226" euler_y="-1.39359" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="158.561" t1="50.5628" t2="149.676" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -874,7 +874,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Side Lake Target" t0="31.0442" t1="19.2285" t2="-65.817" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="182" type_file="" special_type="0">
+    <PlaceholderObject name="Side Lake Target" t0="31.5407" t1="20.8507" t2="-65.817" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="182" type_file="" special_type="0">
         <parameters />
         <Connections>
             <Connection id="182" />
