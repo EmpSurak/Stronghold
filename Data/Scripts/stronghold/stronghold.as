@@ -152,6 +152,7 @@ void Init(string level_name){
         timer.Add(AfterCharInitJob(FindPlayerID(), function(_char){
             hud_gui.SetHealth(1.0f);
             hud_gui.SetDistance(friend_controller.GetYellDistance());
+            _char.Execute("UpdateListener(camera.GetPos(), vec3(0, 0, 0), camera.GetFacing(), camera.GetUpVector());");
 
             timer.Add(CharDamageJob(FindPlayerID(), function(_char, _p_blood, _p_permanent){
                 float _blood = _char.GetFloatVar("blood_health");
