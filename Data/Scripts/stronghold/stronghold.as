@@ -1,5 +1,6 @@
 #include "timed_execution/timed_execution.as"
 #include "timed_execution/after_init_job.as"
+#include "timed_execution/repeating_delayed_job.as"
 #include "timed_execution/on_input_pressed_job.as"
 #include "timed_execution/on_input_down_job.as"
 #include "timed_execution/after_char_init_job.as"
@@ -11,10 +12,13 @@
 #include "stronghold/common.as"
 #include "stronghold/constants.as"
 #include "stronghold/hudgui.as"
+#include "music_load.as"
 
 TimedExecution timer;
 FriendController friend_controller(timer);
 HUDGUI@ hud_gui = HUDGUI();
+
+MusicLoad ml("Data/Music/stronghold/stronghold.xml");
 
 float current_time = 0.0f;
 
@@ -169,6 +173,7 @@ void Init(string level_name){
             }));
 
             RegisterCleanupJobs();
+            RegisterMusicJobs();
         }));
     }));
 }
@@ -248,6 +253,24 @@ void RegisterCleanupJobs(){
 
         timer.DeleteAll();
         Init("");
+
+        return true;
+    }));
+}
+
+void RegisterMusicJobs(){
+    timer.Add(RepeatingDelayedJob(0.2f, function(){
+        int player_id = FindPlayerID();
+        if(!MovementObjectExists(player_id)){
+            return true;
+        }
+        MovementObject@ _char = ReadCharacterID(player_id);
+
+        if(_char.QueryIntFunction("int CombatSong()") == 1){
+            PlaySong("fate");
+        }else{
+            PlaySong("endurance");
+        }
 
         return true;
     }));
