@@ -1,17 +1,17 @@
 <?xml version="2.0" ?>
-<Type>prefab</Type>
-<Prefab>
-    <ActorObject t0="67.8953" t1="127.394" t2="58.5625" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/male_cat_soldier_actor.xml" is_player="0">
+<Type>saved</Type>
+<ActorObjects>
+    <ActorObject t0="14.1211" t1="15.3674" t2="53.8615" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="269" type_file="Data/Objects/stronghold/characters/male_cat_soldier_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
-            <parameter name="Attack Damage" type="float" val="0.71186" />
-            <parameter name="Attack Knockback" type="float" val="0.66667" />
-            <parameter name="Attack Speed" type="float" val="0.74576" />
-            <parameter name="Block Follow-up" type="float" val="0.29944" />
-            <parameter name="Block Skill" type="float" val="0.24294" />
+            <parameter name="Attack Damage" type="float" val="0.6" />
+            <parameter name="Attack Knockback" type="float" val="0.8" />
+            <parameter name="Attack Speed" type="float" val="0.9" />
+            <parameter name="Block Follow-up" type="float" val="0.35" />
+            <parameter name="Block Skill" type="float" val="0.34" />
             <parameter name="Cannot Be Disarmed" type="int" val="0" />
             <parameter name="Character Scale" type="float" val="1" />
-            <parameter name="Damage Resistance" type="float" val="0.65537" />
+            <parameter name="Damage Resistance" type="float" val="0.75" />
             <parameter name="Ear Size" type="float" val="1" />
             <parameter name="Fall Damage Multiplier" type="float" val="1" />
             <parameter name="Fat" type="float" val="0.5" />
@@ -19,30 +19,30 @@
             <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
             <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
             <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
-            <parameter name="Focus FOV distance" type="float" val="71.751" />
-            <parameter name="Focus FOV horizontal" type="float" val="0.512621" />
-            <parameter name="Focus FOV vertical" type="float" val="0.521453" />
+            <parameter name="Focus FOV distance" type="float" val="65" />
+            <parameter name="Focus FOV horizontal" type="float" val="0.610866" />
+            <parameter name="Focus FOV vertical" type="float" val="0.610866" />
+            <parameter name="Fur Channel" type="int" val="2" />
             <parameter name="Ground Aggression" type="float" val="0.5" />
             <parameter name="Knockout Shield" type="int" val="0" />
             <parameter name="Left handed" type="int" val="0" />
-            <parameter name="Movement Speed" type="float" val="0.76441" />
+            <parameter name="Movement Speed" type="float" val="0.75" />
             <parameter name="Muscle" type="float" val="0.5" />
             <parameter name="No Look Around" type="int" val="0" />
-            <parameter name="Peripheral FOV distance" type="float" val="3.39" />
-            <parameter name="Peripheral FOV horizontal" type="float" val="1.12108" />
-            <parameter name="Peripheral FOV vertical" type="float" val="1.09462" />
+            <parameter name="Peripheral FOV distance" type="float" val="4" />
+            <parameter name="Peripheral FOV horizontal" type="float" val="1.13447" />
+            <parameter name="Peripheral FOV vertical" type="float" val="1.13447" />
             <parameter name="Species" type="string" val="cat" />
             <parameter name="Static" type="int" val="0" />
             <parameter name="Stick To Nav Mesh" type="int" val="0" />
-            <parameter name="Teams" type="string" val="guard" />
-            <parameter name="Throw Counter Probability" type="float" val="0.20904" />
+            <parameter name="Teams" type="string" val="none" />
+            <parameter name="Throw Counter Probability" type="float" val="0.15" />
             <parameter name="Throw Trainer" type="int" val="0" />
             <parameter name="Weapon Catch Skill" type="float" val="0.01695" />
             <parameter name="Wearing Metal Armor" type="int" val="1" />
-            <parameter name="Fur Channel" type="int" val="2" />
         </parameters>
         <Connections>
-            <Connection id="0" />
+            <Connection id="269" />
         </Connections>
         <ItemConnections />
         <Palette>
@@ -65,11 +65,11 @@
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
         </EnvObjectAttachments>
-        <EnvObject s0="1.52973" s1="1.52973" s2="1.52973" id="1" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_head_straps.xml">
+        <EnvObject s0="1.52973" s1="1.52973" s2="1.52973" id="270" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_head_straps.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.213" s1="1.213" s2="1.213" id="2" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_breastplate.xml">
+        <EnvObject s0="1.213" s1="1.213" s2="1.213" id="271" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_breastplate.xml">
             <parameters />
         </EnvObject>
     </ActorObject>
-</Prefab>
+</ActorObjects>

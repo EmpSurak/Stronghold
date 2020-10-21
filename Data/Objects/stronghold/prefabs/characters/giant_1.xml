@@ -1,9 +1,9 @@
 <?xml version="2.0" ?>
-<Type>prefab</Type>
-<Prefab>
-    <ActorObject t0="68.3466" t1="127.394" t2="59.0003" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/wolf_giant_actor.xml" is_player="0">
+<Type>saved</Type>
+<ActorObjects>
+    <ActorObject t0="2.08295" t1="14.7539" t2="60.2275" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="236" type_file="Data/Objects/stronghold/characters/wolf_giant_actor.xml" is_player="0">
         <parameters>
-            <parameter name="Aggression" type="float" val="0.5" />
+            <parameter name="Aggression" type="float" val="0.7" />
             <parameter name="Attack Damage" type="float" val="1" />
             <parameter name="Attack Knockback" type="float" val="1" />
             <parameter name="Attack Speed" type="float" val="1" />
@@ -22,6 +22,7 @@
             <parameter name="Focus FOV distance" type="float" val="100" />
             <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
             <parameter name="Focus FOV vertical" type="float" val="0.62834" />
+            <parameter name="Fur Channel" type="int" val="0" />
             <parameter name="Ground Aggression" type="float" val="0.5" />
             <parameter name="Knockout Shield" type="int" val="0" />
             <parameter name="Left handed" type="int" val="0" />
@@ -29,22 +30,21 @@
             <parameter name="Muscle" type="float" val="0.5" />
             <parameter name="No Look Around" type="int" val="0" />
             <parameter name="Peripheral FOV distance" type="float" val="4" />
-            <parameter name="Peripheral FOV horizontal" type="float" val="1.41376" />
-            <parameter name="Peripheral FOV vertical" type="float" val="1.41376" />
+            <parameter name="Peripheral FOV horizontal" type="float" val="1.39627" />
+            <parameter name="Peripheral FOV vertical" type="float" val="1.39627" />
             <parameter name="Species" type="string" val="wolf" />
             <parameter name="Static" type="int" val="0" />
             <parameter name="Stick To Nav Mesh" type="int" val="0" />
-            <parameter name="Teams" type="string" val="guard" />
+            <parameter name="Teams" type="string" val="none" />
             <parameter name="Throw Counter Probability" type="float" val="0.4" />
             <parameter name="Throw Trainer" type="int" val="0" />
             <parameter name="Weapon Catch Skill" type="float" val="1" />
             <parameter name="Wearing Metal Armor" type="int" val="0" />
-            <parameter name="Fur Channel" type="int" val="0" />
         </parameters>
         <Connections>
-            <Connection id="0" />
+            <Connection id="236" />
         </Connections>
         <ItemConnections />
         <Palette />
     </ActorObject>
-</Prefab>
+</ActorObjects>

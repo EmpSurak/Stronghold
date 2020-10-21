@@ -1,17 +1,17 @@
 <?xml version="2.0" ?>
-<Type>prefab</Type>
-<Prefab>
-    <ActorObject t0="64.9355" t1="126.994" t2="60.9485" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/male_dog_tank_actor.xml" is_player="0">
+<Type>saved</Type>
+<ActorObjects>
+    <ActorObject t0="21.2435" t1="15.5476" t2="49.6269" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="288" type_file="Data/Objects/stronghold/characters/male_dog_tank_actor.xml" is_player="0">
         <parameters>
-            <parameter name="Aggression" type="float" val="0.62712" />
-            <parameter name="Attack Damage" type="float" val="1.07345" />
-            <parameter name="Attack Knockback" type="float" val="1.06215" />
-            <parameter name="Attack Speed" type="float" val="0.70056" />
-            <parameter name="Block Follow-up" type="float" val="0.44068" />
-            <parameter name="Block Skill" type="float" val="0.64407" />
+            <parameter name="Aggression" type="float" val="0.7" />
+            <parameter name="Attack Damage" type="float" val="1" />
+            <parameter name="Attack Knockback" type="float" val="1" />
+            <parameter name="Attack Speed" type="float" val="0.85" />
+            <parameter name="Block Follow-up" type="float" val="0.5" />
+            <parameter name="Block Skill" type="float" val="0.7" />
             <parameter name="Cannot Be Disarmed" type="int" val="1" />
             <parameter name="Character Scale" type="float" val="1.12429" />
-            <parameter name="Damage Resistance" type="float" val="1.66102" />
+            <parameter name="Damage Resistance" type="float" val="1.77401" />
             <parameter name="Ear Size" type="float" val="1.27119" />
             <parameter name="Fall Damage Multiplier" type="float" val="1" />
             <parameter name="Fat" type="float" val="0.5" />
@@ -19,31 +19,30 @@
             <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
             <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
             <parameter name="Fear - Never Afraid On Sight" type="int" val="1" />
-            <parameter name="Focus FOV distance" type="float" val="51.977" />
-            <parameter name="Focus FOV horizontal" type="float" val="0.468534" />
-            <parameter name="Focus FOV vertical" type="float" val="0.468534" />
+            <parameter name="Focus FOV distance" type="float" val="50" />
+            <parameter name="Focus FOV horizontal" type="float" val="0.436333" />
+            <parameter name="Focus FOV vertical" type="float" val="0.436333" />
             <parameter name="Fur Channel" type="int" val="0" />
             <parameter name="Ground Aggression" type="float" val="0.5" />
-            <parameter name="Knockout Shield" type="int" val="2" />
+            <parameter name="Knockout Shield" type="int" val="1" />
             <parameter name="Left handed" type="int" val="0" />
-            <parameter name="Movement Speed" type="float" val="0.39266" />
+            <parameter name="Movement Speed" type="float" val="0.5" />
             <parameter name="Muscle" type="float" val="0.5" />
             <parameter name="No Look Around" type="int" val="1" />
-            <parameter name="Peripheral FOV distance" type="float" val="4" />
-            <parameter name="Peripheral FOV horizontal" type="float" val="1.41376" />
-            <parameter name="Peripheral FOV vertical" type="float" val="1.41376" />
+            <parameter name="Peripheral FOV distance" type="float" val="3" />
+            <parameter name="Peripheral FOV horizontal" type="float" val="0.959932" />
+            <parameter name="Peripheral FOV vertical" type="float" val="0.959932" />
             <parameter name="Species" type="string" val="doggo" />
             <parameter name="Static" type="int" val="0" />
             <parameter name="Stick To Nav Mesh" type="int" val="0" />
-            <parameter name="Teams" type="string" val="guard" />
-            <parameter name="Throw Counter Probability" type="float" val="0.43503" />
+            <parameter name="Teams" type="string" val="none" />
+            <parameter name="Throw Counter Probability" type="float" val="0.4" />
             <parameter name="Throw Trainer" type="int" val="0" />
             <parameter name="Weapon Catch Skill" type="float" val="1" />
             <parameter name="Wearing Metal Armor" type="int" val="1" />
-            <parameter name="Fur Channel" type="int" val="0" />
         </parameters>
         <Connections>
-            <Connection id="0" />
+            <Connection id="288" />
         </Connections>
         <ItemConnections />
         <Palette>
@@ -96,41 +95,41 @@
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
         </EnvObjectAttachments>
-        <EnvObject s0="1.3989" s1="1.3989" s2="1.3989" id="1" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_helmet.xml">
+        <EnvObject s0="1.3989" s1="1.3989" s2="1.3989" id="289" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_helmet.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.2019" s1="1.2019" s2="1.2019" id="2" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
+        <EnvObject s0="1.2019" s1="1.2019" s2="1.2019" id="290" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.2019" s1="1.2019" s2="1.2019" id="3" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
+        <EnvObject s0="1.2019" s1="1.2019" s2="1.2019" id="291" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.3124" s1="1.3124" s2="1.3124" id="4" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
+        <EnvObject s0="1.3124" s1="1.3124" s2="1.3124" id="292" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.3124" s1="1.3124" s2="1.3124" id="5" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
+        <EnvObject s0="1.3124" s1="1.3124" s2="1.3124" id="293" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_shoulder_a.xml">
             <parameters />
         </EnvObject>
-        <Group t0="64.9446" t1="127.777" t2="60.7046" s0="0.564642" s1="0.889906" s2="0.166181" q0="0.00023994" q1="0.000330726" q2="0.000447559" q3="1" euler_x="0.000480177" euler_y="0.000661236" euler_z="0.000895277" id="6" version="1">
+        <Group t0="21.2367" t1="16.3243" t2="49.3826" s0="0.564642" s1="0.889906" s2="0.166181" q0="0.000382528" q1="0.000308633" q2="0.00584983" q3="0.999983" euler_x="0.000768654" euler_y="0.00061278" euler_z="0.0117" id="294" version="1">
             <parameters />
-            <EnvObject t0="65.0821" t1="127.905" t2="60.7144" s0="0.986563" s1="0.986563" s2="0.986563" q0="0.000278175" q1="-0.0873821" q2="0.00042475" q3="0.996175" euler_x="0.000487434" euler_y="-0.174988" euler_z="0.000810006" id="7" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
+            <EnvObject t0="21.3728" t1="16.4539" t2="49.3924" s0="0.986563" s1="0.986563" s2="0.986563" q0="0.00089401" q1="-0.0874026" q2="0.00579359" q3="0.996156" euler_x="0.000780321" euler_y="-0.175036" euler_z="0.0115633" id="295" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="64.8206" t1="127.905" t2="60.7146" s0="0.986563" s1="0.986563" s2="0.986563" q0="0.000181556" q1="0.126487" q2="0.000474222" q3="0.991968" euler_x="0.000496032" euler_y="0.253652" euler_z="0.00101937" id="8" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
+            <EnvObject t0="21.1113" t1="16.451" t2="49.3927" s0="0.986563" s1="0.986563" s2="0.986563" q0="-0.000358462" q1="0.126463" q2="0.0058512" q3="0.991954" euler_x="0.000794172" euler_y="0.253606" euler_z="0.0118984" id="296" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="65.0824" t1="127.525" t2="60.7142" s0="0.986563" s1="0.986563" s2="0.986563" q0="0.00029397" q1="-0.124737" q2="0.000414039" q3="0.99219" euler_x="0.000495474" euler_y="-0.250127" euler_z="0.000772307" id="9" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
+            <EnvObject t0="21.3772" t1="16.0738" t2="49.3921" s0="0.986563" s1="0.986563" s2="0.986563" q0="0.00111103" q1="-0.124756" q2="0.00575592" q3="0.992171" euler_x="0.000793181" euler_y="-0.250173" euler_z="0.0115028" id="297" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="64.8073" t1="127.524" t2="60.7144" s0="0.986563" s1="0.986563" s2="0.986563" q0="0.00017786" q1="0.134154" q2="0.000475615" q3="0.99096" euler_x="0.000498043" euler_y="0.269119" euler_z="0.00102733" id="10" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
+            <EnvObject t0="21.1021" t1="16.0699" t2="49.3924" s0="0.986563" s1="0.986563" s2="0.986563" q0="-0.000403702" q1="0.13413" q2="0.00584826" q3="0.990946" euler_x="0.000797459" euler_y="0.269072" euler_z="0.0119112" id="298" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="64.9348" t1="127.974" t2="60.6769" s0="1.28433" s1="1.28433" s2="1.28433" q0="0.000231147" q1="0.0198661" q2="0.000452188" q3="0.999802" euler_x="0.000480548" euler_y="0.0397347" euler_z="0.000914103" id="11" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
+            <EnvObject t0="21.2248" t1="16.5212" t2="49.355" s0="1.28433" s1="1.28433" s2="1.28433" q0="0.000268102" q1="0.0198438" q2="0.00585602" q3="0.999785" euler_x="0.000769105" euler_y="0.0396864" euler_z="0.0117297" id="299" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
                 <parameters />
             </EnvObject>
         </Group>
-        <EnvObject s0="1" s1="1" s2="1" id="12" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="300" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_backplate.xml">
             <parameters />
         </EnvObject>
     </ActorObject>
-</Prefab>
+</ActorObjects>

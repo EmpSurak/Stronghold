@@ -1,41 +1,41 @@
 <?xml version="2.0" ?>
 <Type>prefab</Type>
 <Prefab>
-    <ActorObject t0="376.111" t1="38.9655" t2="-178.391" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/male_cat_soldier_actor.xml" is_player="0">
+    <ActorObject t0="-15.8469" t1="15.0657" t2="53.8587" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="0" type_file="Data/Objects/stronghold/characters/male_cat_soldier_actor.xml" is_player="0">
         <parameters>
-            <parameter name="Aggression" type="float" val="0.44068" />
-            <parameter name="Attack Damage" type="float" val="0.54237" />
-            <parameter name="Attack Knockback" type="float" val="0.48588" />
-            <parameter name="Attack Speed" type="float" val="0.56497" />
-            <parameter name="Block Follow-up" type="float" val="0.25424" />
-            <parameter name="Block Skill" type="float" val="0.19774" />
+            <parameter name="Aggression" type="float" val="0.5" />
+            <parameter name="Attack Damage" type="float" val="0.3" />
+            <parameter name="Attack Knockback" type="float" val="0.75" />
+            <parameter name="Attack Speed" type="float" val="0.85" />
+            <parameter name="Block Follow-up" type="float" val="0.3" />
+            <parameter name="Block Skill" type="float" val="0.3" />
             <parameter name="Cannot Be Disarmed" type="int" val="0" />
             <parameter name="Character Scale" type="float" val="0.9435" />
-            <parameter name="Damage Resistance" type="float" val="0.65537" />
+            <parameter name="Damage Resistance" type="float" val="0.5" />
             <parameter name="Ear Size" type="float" val="0.88136" />
-            <parameter name="Fall Damage Multiplier" type="float" val="1" />
+            <parameter name="Fall Damage Multiplier" type="float" val="1.5" />
             <parameter name="Fat" type="float" val="0.41808" />
             <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
             <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
             <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
             <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
-            <parameter name="Focus FOV distance" type="float" val="71.751" />
-            <parameter name="Focus FOV horizontal" type="float" val="0.512621" />
-            <parameter name="Focus FOV vertical" type="float" val="0.521453" />
+            <parameter name="Focus FOV distance" type="float" val="60" />
+            <parameter name="Focus FOV horizontal" type="float" val="0.610866" />
+            <parameter name="Focus FOV vertical" type="float" val="0.610866" />
             <parameter name="Fur Channel" type="int" val="2" />
             <parameter name="Ground Aggression" type="float" val="0.5" />
             <parameter name="Knockout Shield" type="int" val="0" />
             <parameter name="Left handed" type="int" val="0" />
-            <parameter name="Movement Speed" type="float" val="0.76441" />
+            <parameter name="Movement Speed" type="float" val="0.75" />
             <parameter name="Muscle" type="float" val="0.5" />
             <parameter name="No Look Around" type="int" val="0" />
-            <parameter name="Peripheral FOV distance" type="float" val="3.39" />
-            <parameter name="Peripheral FOV horizontal" type="float" val="1.12108" />
-            <parameter name="Peripheral FOV vertical" type="float" val="1.09462" />
+            <parameter name="Peripheral FOV distance" type="float" val="3" />
+            <parameter name="Peripheral FOV horizontal" type="float" val="1.13447" />
+            <parameter name="Peripheral FOV vertical" type="float" val="1.13447" />
             <parameter name="Species" type="string" val="cat" />
             <parameter name="Static" type="int" val="0" />
             <parameter name="Stick To Nav Mesh" type="int" val="0" />
-            <parameter name="Teams" type="string" val="guard" />
+            <parameter name="Teams" type="string" val="none" />
             <parameter name="Throw Counter Probability" type="float" val="0.20904" />
             <parameter name="Throw Trainer" type="int" val="0" />
             <parameter name="Weapon Catch Skill" type="float" val="0.01695" />
