@@ -21,6 +21,7 @@ HUDGUI@ hud_gui = HUDGUI();
 MusicLoad ml("Data/Music/stronghold/stronghold.xml");
 
 float current_time = 0.0f;
+int player_id = -1;
 
 void Init(string level_name){
     timer.Add(OnInputPressedJob(0, _key_reset, function(){
@@ -32,7 +33,7 @@ void Init(string level_name){
             _char.Execute("ResetMind();");
             friend_controller.Yell(_char.GetID(), "suspicious");
         });
-        friend_controller.Yell(FindPlayerID(), "engage");
+        friend_controller.Yell(player_id, "engage");
         return true;
     }));
 
@@ -43,7 +44,7 @@ void Init(string level_name){
         friend_controller.Execute(function(_char){
             _char.Execute("combat_allowed = false;");
         });
-        friend_controller.Yell(FindPlayerID(), "suspicious");
+        friend_controller.Yell(player_id, "suspicious");
         return true;
     }));
 
@@ -56,7 +57,7 @@ void Init(string level_name){
             friend_controller.NavigateToTarget(_char, player_char.position);
             friend_controller.Yell(_char.GetID(), "attack");
         });
-        friend_controller.Yell(FindPlayerID(), "attack");
+        friend_controller.Yell(player_id, "attack");
         return true;
     }));
 
@@ -71,7 +72,7 @@ void Init(string level_name){
             friend_controller.NavigateToTarget(_char, hit);
             friend_controller.Yell(_char.GetID(), "attack");
         });
-        friend_controller.Yell(FindPlayerID(), "attack");
+        friend_controller.Yell(player_id, "attack");
         return true;
     }));
 
@@ -80,12 +81,11 @@ void Init(string level_name){
             return true;
         }
         friend_controller.Execute(function(_char){
-            int player_id = FindPlayerID();
             _char.Execute("escort_id = " + player_id + ";");
             _char.Execute("SetGoal(_escort);");
             friend_controller.Yell(_char.GetID(), "engage");
         });
-        friend_controller.Yell(FindPlayerID(), "engage");
+        friend_controller.Yell(player_id, "engage");
         return true;
     }));
 
@@ -153,12 +153,14 @@ void Init(string level_name){
     }));
 
     timer.Add(AfterInitJob(function(){
-        timer.Add(AfterCharInitJob(FindPlayerID(), function(_char){
+        player_id = FindPlayerID();
+
+        timer.Add(AfterCharInitJob(player_id, function(_char){
             hud_gui.SetHealth(1.0f);
             hud_gui.SetDistance(friend_controller.GetYellDistance());
             _char.Execute("UpdateListener(camera.GetPos(), vec3(0, 0, 0), camera.GetFacing(), camera.GetUpVector());");
 
-            timer.Add(CharDamageJob(FindPlayerID(), function(_char, _p_blood, _p_permanent){
+            timer.Add(CharDamageJob(player_id, function(_char, _p_blood, _p_permanent){
                 float _blood = _char.GetFloatVar("blood_health");
                 float _permanent = _char.GetFloatVar("permanent_health");
             
@@ -260,13 +262,9 @@ void RegisterCleanupJobs(){
 
 void RegisterMusicJobs(){
     timer.Add(RepeatingDelayedJob(0.2f, function(){
-        int player_id = FindPlayerID();
-        if(!MovementObjectExists(player_id)){
-            return true;
-        }
         MovementObject@ _char = ReadCharacterID(player_id);
 
-        if(_char.QueryIntFunction("int CombatSong()") == 1){
+        if(_char.HasFunction("int CombatSong()") && _char.QueryIntFunction("int CombatSong()") == 1){
             PlaySong("fate");
         }else{
             PlaySong("endurance");
