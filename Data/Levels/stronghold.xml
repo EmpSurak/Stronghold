@@ -47,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="9.30745" t1="88.6378" t2="-307.539" s0="1" s1="1" s2="1" q0="0.221014" q1="0.765299" q2="-0.501891" q3="0.337009" euler_x="-1.98069" euler_y="0.82962" euler_z="-3.14159" id="1">
+    <CameraObject t0="142.562" t1="83.6243" t2="99.3383" s0="1" s1="1" s2="1" q0="-0.469889" q1="-0.338892" q2="0.201636" q3="-0.789747" euler_x="1.07345" euler_y="0.810701" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.343819" q2="0" q3="0.939036" euler_x="0" euler_y="0.701962" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -1746,18 +1746,12 @@
             <Connection id="383" />
         </Connections>
     </PlaceholderObject>
-    <PlaceholderObject name="Camp Target 3" t0="155.257" t1="36.4294" t2="92.6823" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="384" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="384" />
-        </Connections>
-    </PlaceholderObject>
     <Hotspot name="Camp Spawner Enemies 1" t0="193.293" t1="37.3229" t2="66.5685" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.753068" q2="0" q3="0.657942" euler_x="3.14159" euler_y="-1.43616" euler_z="3.14159" id="386" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Camp Target 1" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="1" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1772,8 +1766,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Camp Target 2" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="1" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1784,12 +1778,12 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Camp Spawner Enemies 3" t0="172.302" t1="36.1437" t2="106.12" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.885227" q2="0" q3="0.465159" euler_x="3.14159" euler_y="-0.967628" euler_z="3.14159" id="388" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Camp Spawner Enemies 3" t0="172.305" t1="36.1456" t2="106.121" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.885227" q2="0" q3="0.465159" euler_x="3.14159" euler_y="-0.967628" euler_z="3.14159" id="388" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Camp Target 3" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="1" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1800,18 +1794,6 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Camp Target 2" t0="167.133" t1="36.4293" t2="82.5066" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="389" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="389" />
-        </Connections>
-    </PlaceholderObject>
-    <PlaceholderObject name="Camp Target 1" t0="172.537" t1="36.8195" t2="68.4442" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="390" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="390" />
-        </Connections>
-    </PlaceholderObject>
     <EnvObject t0="149.334" t1="49.9541" t2="14.1725" s0="7.66155" s1="7.52095" s2="7.52096" q0="0" q1="0.13376" q2="0" q3="0.991014" euler_x="0" euler_y="0.268324" euler_z="0" id="391" color_r="0.705882" color_g="0.705875" color_b="0.705875" overbright="0" type_file="Data/Objects/Buildings/cat_town/rock_trim.xml">
         <parameters />
     </EnvObject>
@@ -2609,6 +2591,15 @@
             <parameter name="Global" type="int" val="1" />
             <parameter name="Sound Path" type="string" val="Data/Sounds/weather/rain.wav" />
             <parameter name="Wind Scale" type="int" val="0" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Camp Trigger" t0="156.504" t1="36.8702" t2="66.3464" s0="8.99336" s1="2.91218" s2="5.97498" q0="0" q1="-0.16133" q2="0" q3="0.986901" euler_x="0" euler_y="-0.324076" euler_z="0" id="562" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Camp Spawner" />
+            <parameter name="Team Only" type="string" val="attackers" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
