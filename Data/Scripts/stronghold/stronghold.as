@@ -258,6 +258,28 @@ void RegisterCleanupJobs(){
 
         return true;
     }));
+    
+    timer.Add(RepeatingDelayedJob(1.0f, function(){
+        MovementObject@ _player = ReadCharacterID(player_id);
+
+        uint num_chars = GetNumCharacters();
+        for(uint i = 0; i < num_chars; ++i){
+            MovementObject@ char = ReadCharacter(i);
+            Object@ char_obj = ReadObjectFromID(char.GetID());
+            if(char_obj.IsExcludedFromSave()){
+                bool far_away = distance(_player.position, char.position) > _deactivation_radius;
+                int goal = char.GetIntVar("goal");
+                bool has_goal = goal == _navigate || goal == _attack || goal == _escort;
+                if(far_away && !has_goal){
+                    char_obj.SetEnabled(false);
+                }else{
+                    char_obj.SetEnabled(true);
+                }
+            }
+        }
+
+        return true;
+    }));
 }
 
 void RegisterMusicJobs(){
