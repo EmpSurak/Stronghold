@@ -24,35 +24,32 @@
 <AmbientSounds />
 <Script>stronghold/stronghold.as</Script>
 <LevelScriptParameters>
-    <parameter name="Achievements" type="string" val="flawless, no_injuries, no_kills" />
-    <parameter name="Custom Shader" type="string" val="#SNOW_EVERYWHERE #GPU_PARTICLE_FIELD_OCCLUSION" />
     <parameter name="Dialogue Colors" type="string" val="Data/Levels/og_story/character_dialogue.txt" />
-    <parameter name="Fog amount" type="float" val="1.9325" />
+    <parameter name="Fog amount" type="float" val="0" />
     <parameter name="GPU Particle Field" type="string" val="" />
-    <parameter name="HDR Black point" type="float" val="0.13072" />
-    <parameter name="HDR Bloom multiplier" type="float" val="1.08696" />
-    <parameter name="HDR White point" type="float" val="0.75" />
+    <parameter name="HDR Black point" type="float" val="0" />
+    <parameter name="HDR Bloom multiplier" type="float" val="0" />
+    <parameter name="HDR White point" type="float" val="0.68712" />
     <parameter name="Level Boundaries" type="int" val="1" />
     <parameter name="Load Tip" type="string" val="" />
     <parameter name="Objectives" type="string" val="destroy_all" />
-    <parameter name="Saturation" type="float" val="0.73224" />
-    <parameter name="Sky Brightness" type="float" val="1.15942" />
-    <parameter name="Sky Rotation" type="float" val="183" />
+    <parameter name="Saturation" type="float" val="2" />
+    <parameter name="Sky Brightness" type="float" val="0.39877" />
+    <parameter name="Sky Rotation" type="float" val="-46" />
     <parameter name="Sky Tint" type="string" val="255, 255, 255" />
-    <parameter name="cold_breath" type="string" val="true" />
 </LevelScriptParameters>
 <NavMeshParameters generate="true" cell_size="0.3" cell_height="0.2" agent_height="1.7" agent_radius="0.4" agent_max_climb="1.5" agent_max_slope="60" />
 <Sky>
     <DomeTexture>Data/Textures/skies/cirrus2_volcano_slope.tga</DomeTexture>
     <SunAngularRad>0.314159</SunAngularRad>
     <SunColorAngle>0</SunColorAngle>
-    <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
+    <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="144.108" t1="80.7247" t2="-7.13382" s0="1" s1="1" s2="1" q0="0.0228309" q1="0.975507" q2="-0.180806" q3="0.12318" euler_x="-2.77506" euler_y="0.251216" euler_z="3.14159" id="1">
+    <CameraObject t0="130.357" t1="116.85" t2="-274.513" s0="1" s1="1" s2="1" q0="0.0355758" q1="-0.957558" q2="0.252111" q3="0.135123" euler_x="-2.62671" euler_y="-0.280372" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject name="Player" t0="111.74" t1="51.2297" t2="53.6982" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />

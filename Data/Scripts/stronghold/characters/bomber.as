@@ -708,9 +708,6 @@ void Notice(int character_id) {
 
                 SetGoal(_attack);
                 break;
-            case _escort:
-                SetGoal(_attack);
-                break;
         }
 
         if(goal == _attack && ((char.HasVar("g_fear_causes_fear_on_sight") && char.GetBoolVar("g_fear_causes_fear_on_sight") && !g_fear_never_afraid_on_sight) || g_fear_always_afraid_on_sight)) {
