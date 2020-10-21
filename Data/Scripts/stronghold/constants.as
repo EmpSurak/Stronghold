@@ -48,6 +48,7 @@ const string _key_radius_4 = "4";
 const string _key_radius_5 = "5";
 
 const string _smoke_emitter_key = "Smoke Emitter ID";
+const string _magic_key = "STRONGHOLD";
 
 enum UnitType {
     _no_type,

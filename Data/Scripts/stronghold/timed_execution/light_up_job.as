@@ -1,4 +1,5 @@
 #include "timed_execution/timer_job_interface.as"
+#include "stronghold/constants.as"
 
 funcdef float LIGHT_UP_CALLBACK(MovementObject@, Object@, float);
 
@@ -18,6 +19,7 @@ class LightUpJob : TimerJobInterface {
         char_id = _char_id;
         @callback = @_callback;
         light_id = CreateObject("Data/Objects/default_light.xml", true);
+        AddMagicKey();
         ExecuteExpired();
     }
 
@@ -57,5 +59,11 @@ class LightUpJob : TimerJobInterface {
 
     private float GetEndTime(){
         return started+wait;
+    }
+
+    private void AddMagicKey(){
+        Object@ _light = ReadObjectFromID(light_id);
+        ScriptParams@ _params = _light.GetScriptParams();
+        _params.AddString(_magic_key, "1");
     }
 }

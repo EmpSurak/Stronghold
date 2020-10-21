@@ -227,7 +227,8 @@ void RegisterCleanupJobs(){
         array<int> dynamic_lights = GetObjectIDsType(_dynamic_light_object);
         for(uint i = 0; i < dynamic_lights.length(); i++){
             Object@ light_obj = ReadObjectFromID(dynamic_lights[i]);
-            if(light_obj.IsExcludedFromSave()){
+            ScriptParams@ _light_params = light_obj.GetScriptParams();
+            if(light_obj.IsExcludedFromSave() && _light_params.HasParam(_magic_key)){
                 QueueDeleteObjectID(dynamic_lights[i]);
             }
         }
