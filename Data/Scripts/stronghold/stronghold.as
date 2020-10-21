@@ -1,5 +1,6 @@
 #include "timed_execution/timed_execution.as"
 #include "timed_execution/after_init_job.as"
+#include "timed_execution/delayed_job.as"
 #include "timed_execution/repeating_delayed_job.as"
 #include "timed_execution/on_input_pressed_job.as"
 #include "timed_execution/on_input_down_job.as"
@@ -9,14 +10,17 @@
 #include "stronghold/friend_controller.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/timed_execution/delayed_death_job.as"
+#include "stronghold/timed_execution/defeat_job.as"
 #include "stronghold/common.as"
 #include "stronghold/constants.as"
 #include "stronghold/hudgui.as"
+#include "stronghold/end_screen.as"
 #include "music_load.as"
 
 TimedExecution timer;
 FriendController friend_controller(timer);
 HUDGUI@ hud_gui = HUDGUI();
+EndScreen end_screen;
 
 MusicLoad ml("Data/Music/stronghold/stronghold.xml");
 
@@ -24,6 +28,10 @@ float current_time = 0.0f;
 int player_id = -1;
 
 void Init(string level_name){
+    timer.Add(DefeatJob(function(){
+        EndLevel("You failed!");
+    }));
+
     timer.Add(OnInputPressedJob(0, _key_reset, function(){
         if(EditorModeActive()){
             return true;
@@ -184,6 +192,7 @@ void Update(int is_paused){
     current_time += time_step;
     timer.Update();
     hud_gui.ShowPressedButtons();
+    end_screen.Update();
 }
 
 bool HasFocus(){
@@ -193,6 +202,7 @@ bool HasFocus(){
 void DrawGUI(){
     hud_gui.Update();
     hud_gui.Render();
+    end_screen.Render();
 }
 
 void ReceiveMessage(string msg){
@@ -209,6 +219,8 @@ void RegisterCleanupJobs(){
     }
 
     timer.Add(LevelEventJob("reset", function(_params){
+        end_screen.Reset();
+
         uint num_chars = GetNumCharacters();
         for(uint i = 0; i < num_chars; ++i){
             MovementObject@ char = ReadCharacter(i);
@@ -293,5 +305,29 @@ void RegisterMusicJobs(){
         }
 
         return true;
+    }));
+}
+
+void EndLevel(string message, float delay = 1.5f){
+    end_screen.ShowMessage(message, current_time);
+
+    timer.Add(DelayedJob(delay, function(){
+        end_screen.ShowControls();    
+        RegisterKeys();
+    }));
+}
+
+void RegisterKeys(){
+    timer.Add(OnInputPressedJob(0, "space", function(){
+        SetPaused(false);
+        timer.Add(AfterInitJob(function(){
+            level.SendMessage("reset");
+        }));
+        return false;
+    }));
+
+    timer.Add(OnInputPressedJob(0, "esc", function(){
+        level.SendMessage("go_to_main_menu");
+        return false;
     }));
 }
