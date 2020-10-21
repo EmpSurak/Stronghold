@@ -40,10 +40,10 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="64.8154" t1="61.6833" t2="320.464" s0="1" s1="1" s2="1" q0="-0.109069" q1="-0.259841" q2="0.0295517" q3="-0.959017" euler_x="0.226487" euler_y="0.529184" euler_z="0" id="1">
+    <CameraObject t0="115.142" t1="54.3553" t2="34.6506" s0="1" s1="1" s2="1" q0="-0.166616" q1="-0.746333" q2="0.203372" q3="-0.611446" euler_x="-2.60952" euler_y="1.37276" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject name="Player" t0="36.3429" t1="52.7211" t2="204.226" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="113.763" t1="51.0866" t2="47.833" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -2042,6 +2042,37 @@
     <Decal t0="91.8133" t1="38.8579" t2="276.96" s0="1.78989" s1="1.78989" s2="1.78989" q0="-0.546905" q1="0.475547" q2="-0.683795" q3="-0.0846975" euler_x="-1.6611" euler_y="-0.976419" euler_z="-2.33487" id="487" type_file="Data/Objects/Decals/footprints/rabbit_blood_footprint_smear.xml" color_r="0.643137" color_g="0" color_b="0" overbright="0">
         <parameters />
     </Decal>
+    <Hotspot name="Entry Wall Trigger" t0="124.408" t1="52.5877" t2="37.6663" s0="1.47204" s1="1.36788" s2="1.3364" q0="0" q1="-0.153466" q2="0" q3="0.988154" euler_x="0" euler_y="-0.30815" euler_z="0" id="488" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Entry Wall Spawner" />
+            <parameter name="Team Only" type="string" val="attackers" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Entry Wall Spawner Enemies 1" t0="170.274" t1="51.8354" t2="17.6987" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.26778" q2="0" q3="0.96348" euler_x="0" euler_y="-0.542176" euler_z="0" id="491" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Entry Wall Target 1" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="3" />
+            <parameter name="Team" type="string" val="defenders" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <PlaceholderObject name="Entry Wall Target 1" t0="143.552" t1="51.3997" t2="20.418" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="492" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="492" />
+        </Connections>
+    </PlaceholderObject>
     <Hotspot name="Burgfried Bridge Trigger" t0="31.6836" t1="49.5145" t2="229.53" s0="5.43801" s1="2.30057" s2="2.84993" q0="0" q1="-0.386791" q2="0" q3="0.922167" euler_x="0" euler_y="-0.794298" euler_z="0" id="569" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -2171,7 +2202,6 @@
     <SpawnerItem display_name="Strata Rock Pillar" path="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_pillar.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/strata_rock_pillar.png" />
     <SpawnerItem display_name="Spire All" path="Data/Objects/Buildings/spires/spires_all.xml" thumbnail_path="Data/UI/spawner/thumbs/Prefabs/spire_all.png" />
     <SpawnerItem display_name="Large Wood Plate" path="Data/Objects/Gear/rabbit_gear/large_wood_plate.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Wooden Fence" path="Data/Objects/Buildings/Fence1.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Fence1.png" />
     <SpawnerItem display_name="Stucco Wall (ramp 2)" path="Data/Prototypes/OG/StuccoWall_Ramp2.xml" thumbnail_path="" />
     <SpawnerItem display_name="Invisible Block" path="Data/Objects/invisibleblock.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/invisibleblock.png" />
     <SpawnerItem display_name="Wooden Barrel" path="Data/Objects/therium/barrel.xml" thumbnail_path="" />
@@ -2199,4 +2229,8 @@
     <SpawnerItem display_name="Blood Drop Splat" path="Data/Objects/Decals/blooddropsplat.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/blooddropsplat.png" />
     <SpawnerItem display_name="Rabbit Blood Footprint" path="Data/Objects/Decals/footprints/rabbit_blood_footprint.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/footprints/rabbitbloodprint.png" />
     <SpawnerItem display_name="Rabbit Blood Footprint Smear" path="Data/Objects/Decals/footprints/rabbit_blood_footprint_smear.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/footprints/rabbitbloodprintsmear.png" />
+    <SpawnerItem display_name="Wood Railing Short 1" path="Data/Prototypes/Common/Wood_RailingShort1.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Wooden Crate 1" path="Data/Prototypes/CaveArena/Crate_1.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Wooden Fence" path="Data/Objects/Buildings/Fence1.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Fence1.png" />
+    <SpawnerItem display_name="Magma Arena Flag White 2" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_White2.xml" thumbnail_path="" />
 </RecentItems>
