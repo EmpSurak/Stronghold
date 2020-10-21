@@ -1,7 +1,7 @@
 <?xml version="2.0" ?>
 <Type>saved</Type>
 <ActorObjects>
-    <ActorObject t0="0" t1="2" t2="-5" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="6" type_file="Data/Objects/stronghold/characters/male_cat_soldier_actor.xml" is_player="0">
+    <ActorObject t0="5" t1="2" t2="0" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="144" type_file="Data/Objects/stronghold/characters/rabbit_guard_soldier_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="0.3" />
@@ -10,11 +10,11 @@
             <parameter name="Block Follow-up" type="float" val="0.3" />
             <parameter name="Block Skill" type="float" val="0.3" />
             <parameter name="Cannot Be Disarmed" type="int" val="0" />
-            <parameter name="Character Scale" type="float" val="0.9435" />
+            <parameter name="Character Scale" type="float" val="0.94802" />
             <parameter name="Damage Resistance" type="float" val="0.5" />
-            <parameter name="Ear Size" type="float" val="0.88136" />
+            <parameter name="Ear Size" type="float" val="0.84746" />
             <parameter name="Fall Damage Multiplier" type="float" val="1.5" />
-            <parameter name="Fat" type="float" val="0.41808" />
+            <parameter name="Fat" type="float" val="0.42938" />
             <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
             <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
             <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
@@ -22,98 +22,98 @@
             <parameter name="Focus FOV distance" type="float" val="60" />
             <parameter name="Focus FOV horizontal" type="float" val="0.610866" />
             <parameter name="Focus FOV vertical" type="float" val="0.610866" />
-            <parameter name="Fur Channel" type="int" val="2" />
+            <parameter name="Fur Channel" type="int" val="1" />
             <parameter name="Ground Aggression" type="float" val="0.5" />
             <parameter name="Knockout Shield" type="int" val="0" />
             <parameter name="Left handed" type="int" val="0" />
             <parameter name="Movement Speed" type="float" val="0.75" />
             <parameter name="Muscle" type="float" val="0.5" />
-            <parameter name="No Look Around" type="int" val="1" />
+            <parameter name="No Look Around" type="int" val="0" />
             <parameter name="Peripheral FOV distance" type="float" val="3" />
             <parameter name="Peripheral FOV horizontal" type="float" val="1.13447" />
             <parameter name="Peripheral FOV vertical" type="float" val="1.13447" />
-            <parameter name="Species" type="string" val="cat" />
+            <parameter name="Species" type="string" val="soldier" />
             <parameter name="Static" type="int" val="0" />
             <parameter name="Stick To Nav Mesh" type="int" val="0" />
             <parameter name="Teams" type="string" val="none" />
-            <parameter name="Throw Counter Probability" type="float" val="0.20904" />
+            <parameter name="Throw Counter Probability" type="float" val="0.01695" />
             <parameter name="Throw Trainer" type="int" val="0" />
-            <parameter name="Weapon Catch Skill" type="float" val="0.01695" />
+            <parameter name="Weapon Catch Skill" type="float" val="0" />
             <parameter name="Wearing Metal Armor" type="int" val="1" />
         </parameters>
         <Connections>
-            <Connection id="6" />
+            <Connection id="144" />
         </Connections>
         <ItemConnections />
         <Palette>
-            <Color label="Fur" channel="0" red="1" green="1" blue="1" />
-            <Color label="Shirt" channel="1" red="1" green="1" blue="1" />
-            <Color label="Pants" channel="2" red="1" green="1" blue="1" />
-            <Color label="Spots" channel="3" red="1" green="1" blue="1" />
+            <Color label="Clothes" channel="0" red="1" green="1" blue="1" />
+            <Color label="Fur" channel="1" red="1" green="1" blue="1" />
+            <Color label="Leather" channel="2" red="1" green="1" blue="1" />
+            <Color label="Armor" channel="3" red="1" green="1" blue="1" />
         </Palette>
         <EnvObjectAttachments>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="31" num_connections="1" m0="0.915838" m1="-0.09125" m2="-0.391043" m3="0" m4="0.162567" m5="0.974718" m6="0.153287" m7="0" m8="0.367169" m9="-0.203957" m10="0.907518" m11="0" m12="0.0280762" m13="0.641014" m14="0.399841" m15="1" />
+                <BoneConnect bone_id="31" num_connections="1" m0="0.990508" m1="-0.0505001" m2="-0.127843" m3="0" m4="0.111715" m5="0.837645" m6="0.534668" m7="0" m8="0.0800862" m9="-0.543875" m10="0.835336" m11="0" m12="0.00970459" m13="0.55254" m14="0.0439758" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="2" num_connections="1" m0="0.999992" m1="-0.00354883" m2="0.0017512" m3="0" m4="0.00174237" m5="-0.00248796" m6="-0.999995" m7="0" m8="0.00355318" m9="0.999991" m10="-0.00248175" m11="0" m12="0.0574418" m13="0.411333" m14="0.121553" m15="1" />
+                <BoneConnect bone_id="2" num_connections="1" m0="-0.829432" m1="0.558009" m2="-0.0256174" m3="0" m4="-0.0109536" m5="-0.0620948" m6="-0.998007" m7="0" m8="-0.558489" m9="-0.827504" m10="0.057622" m11="0" m12="0.00921631" m13="0.185268" m14="0.0934601" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="2" num_connections="1" m0="0.999992" m1="-0.00349137" m2="0.00175083" m3="0" m4="-0.00178478" m5="-0.00974473" m6="0.999951" m7="0" m8="-0.00347414" m9="-0.999947" m10="-0.00975089" m11="0" m12="-0.00402121" m13="0.403724" m14="0.132092" m15="1" />
+                <BoneConnect bone_id="2" num_connections="1" m0="-0.847277" m1="-0.529802" m2="-0.0378361" m3="0" m4="-0.0572127" m5="0.0202123" m6="0.998158" m7="0" m8="-0.528061" m9="0.84788" m10="-0.0474371" m11="0" m12="0.00357246" m13="0.190172" m14="-0.133732" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="2" num_connections="1" m0="0.900804" m1="-0.00422615" m2="-0.434205" m3="0" m4="-0.434212" m5="-0.000716719" m6="-0.900811" m7="0" m8="0.00349579" m9="0.999991" m10="-0.00248068" m11="0" m12="-0.0723531" m13="0.411787" m14="0.121326" m15="1" />
+                <BoneConnect bone_id="2" num_connections="1" m0="0.670977" m1="0.730905" m2="0.124773" m3="0" m4="0.0740388" m5="0.101392" m6="-0.992088" m7="0" m8="-0.737772" m9="0.674906" m10="0.0139163" m11="0" m12="-0.0037756" m13="0.189076" m14="0.0871161" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="9" num_connections="1" m0="0.351032" m1="0.325534" m2="-0.877955" m3="0" m4="0.48947" m5="0.735524" m6="0.468427" m7="0" m8="0.798245" m9="-0.594165" m10="0.0988531" m11="0" m12="0.505503" m13="0.292423" m14="0.260226" m15="1" />
+                <BoneConnect bone_id="2" num_connections="1" m0="0.803896" m1="-0.594769" m2="-0.00079155" m3="0" m4="0.0740388" m5="0.101392" m6="-0.992088" m7="0" m8="0.590143" m9="0.797477" m10="0.125545" m11="0" m12="0.0129929" m13="0.21204" m14="-0.137576" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="22" num_connections="1" m0="0.0344455" m1="-0.350554" m2="-0.935911" m3="0" m4="0.466957" m5="-0.822317" m6="0.325194" m7="0" m8="-0.88361" m9="-0.448232" m10="0.135366" m11="0" m12="-0.536283" m13="0.285974" m14="0.25351" m15="1" />
+                <BoneConnect bone_id="47" num_connections="1" m0="0.985762" m1="0.08839" m2="-0.143043" m3="0" m4="0.0846523" m5="0.474152" m6="0.876364" m7="0" m8="0.145286" m9="-0.875995" m10="0.459918" m11="0" m12="-0.0855908" m13="-0.320668" m14="0.115235" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="2" num_connections="1" m0="-0.040346" m1="-0.978316" m2="-0.203149" m3="0" m4="0.0345399" m5="0.201828" m6="-0.978812" m7="0" m8="0.998588" m9="-0.0465081" m10="0.0256482" m11="0" m12="0.00823983" m13="0.420016" m14="0.125828" m15="1" />
+                <BoneConnect bone_id="40" num_connections="1" m0="0.998583" m1="0.00395657" m2="0.0530613" m3="0" m4="-0.0486572" m5="0.471457" m6="0.880545" m7="0" m8="-0.0215322" m9="-0.88188" m10="0.470982" m11="0" m12="0.101251" m13="-0.321962" m14="0.113713" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
         </EnvObjectAttachments>
-        <EnvObject s0="2.30922" s1="2.30922" s2="2.30922" id="7" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/RatJunk/RatJunkBirdSkull.xml">
+        <EnvObject s0="1.68492" s1="1.68492" s2="1.68492" id="145" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/rat_skull.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="0.965275" s1="0.965275" s2="0.965275" id="89" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogArmBone.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="146" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1" s1="1" s2="1" id="90" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="147" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1" s1="1" s2="1" id="91" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogArmBone.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="153" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.00541" s1="1.00541" s2="1.00541" id="92" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="151" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.00541" s1="1.00541" s2="1.00541" id="93" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="152" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/rabbit_skull_decal.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1" s1="1" s2="1" id="141" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Environment/Bones/DogLegBone.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="154" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/rabbit_skull_decal.xml">
             <parameters />
         </EnvObject>
     </ActorObject>

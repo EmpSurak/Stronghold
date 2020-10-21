@@ -228,7 +228,11 @@ int CreateUnit(UnitType _type){
         case _raider: {
             possible_files = {
                 "Data/Objects/stronghold/prefabs/characters/raider_1.xml",
-                "Data/Objects/stronghold/prefabs/characters/raider_2.xml"
+                "Data/Objects/stronghold/prefabs/characters/raider_2.xml",
+                "Data/Objects/stronghold/prefabs/characters/raider_3.xml",
+                "Data/Objects/stronghold/prefabs/characters/raider_4.xml",
+                "Data/Objects/stronghold/prefabs/characters/raider_5.xml",
+                "Data/Objects/stronghold/prefabs/characters/raider_6.xml"
             };
             break;
         }
