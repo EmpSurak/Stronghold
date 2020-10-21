@@ -26,11 +26,14 @@ MusicLoad ml("Data/Music/stronghold/stronghold.xml");
 
 float current_time = 0.0f;
 int player_id = -1;
+int casualties = 0;
 
 void Init(string level_name){
     current_time = 0.0f;
+    casualties = 0;
 
     timer.Add(DefeatJob(function(){
+        casualties++;
         EndLevel("You failed!");
     }));
 
@@ -188,6 +191,11 @@ void Init(string level_name){
             RegisterMusicJobs();
         }));
     }));
+
+    timer.Add(LevelEventJob("stronghold_death", function(_params){
+        casualties++;
+        return true;
+    }));
 }
 
 void Update(int is_paused){
@@ -311,7 +319,7 @@ void RegisterMusicJobs(){
 }
 
 void EndLevel(string message, float delay = 1.5f){
-    end_screen.ShowMessage(message, current_time);
+    end_screen.ShowMessage(message, current_time, casualties);
 
     timer.Add(DelayedJob(delay, function(){
         end_screen.ShowControls();    

@@ -51,6 +51,10 @@ int FindFirstObjectByName(string _name){
 }
 
 void RegisterCharCleanUpJob(TimedExecution@ _timer, MovementObject@ _char){
+    _timer.Add(DelayedDeathJob(0.0f, _char.GetID(), function(_char){
+        level.SendMessage("stronghold_death " + _char.GetID());
+    }));
+
     _timer.Add(DelayedDeathJob(5.0f, _char.GetID(), function(_char){
         int emitter_id = CreateObject("Data/Objects/Hotspots/emitter.xml", true);
         Object@ emitter_obj = ReadObjectFromID(emitter_id);

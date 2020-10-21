@@ -15,6 +15,7 @@ const string _text_font = "OpenSans-Regular";
 class EndScreen : AHGUI::GUI {
     private float time = 0;
     private string message = "";
+    private int casualties = 0;
 
     private EndScreenState current_state = agsFighting;
     private EndScreenState last_state = agsInvalidState;
@@ -55,7 +56,8 @@ class EndScreen : AHGUI::GUI {
         DisplayText(message_title, DDCenter, message, _text_color, true);
 
         AHGUI::Divider@ score_pane = main_pane.addDivider(DDTop, DOVertical, ivec2(AH_UNDEFINEDSIZE, 250));
-        DisplayText(score_pane, DDTop, "Your time: " + GetTime(int(time)), _text_color, true);
+        DisplayText(score_pane, DDTop, "Time of Death: " + GetTime(int(time)), _text_color, true);
+        DisplayText(score_pane, DDTop, "Casualties of War: " + casualties, _text_color, true);
 
         if(current_state == agsEndScreen){
             AHGUI::Divider@ footer = main_pane.addDivider(DDBottom, DOHorizontal, ivec2(AH_UNDEFINEDSIZE, 300));
@@ -98,9 +100,10 @@ class EndScreen : AHGUI::GUI {
         single_sentence.showBorder(false);
     }
 
-    void ShowMessage(string _message, float _time){
+    void ShowMessage(string _message, float _time, int _casualties){
         time = _time;
         message = _message;
+        casualties = _casualties;
         current_state = agsMsgScreen;
     }
 
