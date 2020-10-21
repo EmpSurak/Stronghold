@@ -47,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="198.835" t1="48.603" t2="3.346" s0="1" s1="1" s2="1" q0="-0.15891" q1="0.569614" q2="-0.113374" q3="-0.798395" euler_x="0.392939" euler_y="-1.23939" euler_z="0" id="1">
+    <CameraObject t0="83.7482" t1="107.378" t2="-249.983" s0="1" s1="1" s2="1" q0="-0.0227949" q1="0.851804" q2="-0.52204" q3="-0.037194" euler_x="-2.04194" euler_y="-0.0872745" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.343819" q2="0" q3="0.939036" euler_x="0" euler_y="0.701962" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -579,7 +579,7 @@
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
             <parameter name="Spawn Name (Prefix)" type="string" val="Late Entry Ambush Spawner" />
-            <parameter name="Team Only" type="string" val="" />
+            <parameter name="Team Only" type="string" val="attackers" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
@@ -707,7 +707,7 @@
             <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="3" />
-            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Number of Characters" type="int" val="1" />
             <parameter name="Team" type="string" val="bandits" />
             <parameter name="Team Color" type="int" val="3" />
             <parameter name="Unit Type" type="string" val="bomber" />
