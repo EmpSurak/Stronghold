@@ -28,6 +28,8 @@ float current_time = 0.0f;
 int player_id = -1;
 
 void Init(string level_name){
+    current_time = 0.0f;
+
     timer.Add(DefeatJob(function(){
         EndLevel("You failed!");
     }));
