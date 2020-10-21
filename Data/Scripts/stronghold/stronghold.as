@@ -166,9 +166,9 @@ void Init(string level_name){
                 }
                 return true;
             }));
-        }));
 
-        RegisterCleanupJobs();
+            RegisterCleanupJobs();
+        }));
     }));
 }
 
