@@ -53,6 +53,7 @@ UnitType type;
 
 int player_id = -1;
 bool is_close = false;
+bool was_triggered = false;
 
 void Init(){
     level.ReceiveLevelEvents(hotspot.GetID());
@@ -61,6 +62,8 @@ void Init(){
 
 void InitJobs(){
     char_count = 0;
+    was_triggered = false;
+    last_triggered_by = -1;
     max_char_count = params.HasParam(_char_count_key) ? params.GetInt(_char_count_key) : _char_count_default;
     team_color = params.HasParam(_team_color_key) ? params.GetInt(_team_color_key) : _team_color_default;
     min_spawn_delay = params.HasParam(_min_spawn_delay_key) ? params.GetFloat(_min_spawn_delay_key) : _min_spawn_delay_default;
@@ -82,6 +85,7 @@ void InitJobs(){
             return true;
         }
         last_triggered_by = atoi(_params[2]);
+        was_triggered = true;
 
         timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
             int soldier_id = CreateUnit(type);
@@ -158,13 +162,23 @@ void HandleEvent(string event, MovementObject @mo){}
 
 void Update(){
     timer.Update();
+
+    if(was_triggered){
+        return;
+    }
+
     UpdatePlayerDistance();
 }
 
 void ReceiveMessage(string msg){
-    if(is_close){
-        timer.AddEvent(msg);
+    if(!is_close || was_triggered){
+        return;
     }
+    timer.AddEvent(msg);
+}
+
+bool WasTriggered(){
+    return char_count >= max_char_count;
 }
 
 void UpdatePlayerDistance(){
