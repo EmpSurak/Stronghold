@@ -237,6 +237,14 @@ void RegisterCleanupJobs(){
             }
         }
 
+        array<int> envs = GetObjectIDsType(_env_object);
+        for(uint i = 0; i < envs.length(); i++){
+            Object@ env_obj = ReadObjectFromID(envs[i]);
+            if(env_obj.IsExcludedFromSave()){
+                QueueDeleteObjectID(envs[i]);
+            }
+        }
+
         timer.DeleteAll();
         Init("");
 

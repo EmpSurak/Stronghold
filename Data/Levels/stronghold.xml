@@ -47,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="83.7482" t1="107.378" t2="-249.983" s0="1" s1="1" s2="1" q0="-0.0227949" q1="0.851804" q2="-0.52204" q3="-0.037194" euler_x="-2.04194" euler_y="-0.0872745" euler_z="-3.14159" id="1">
+    <CameraObject t0="72.3498" t1="161.904" t2="-209.939" s0="1" s1="1" s2="1" q0="0.143412" q1="0.85655" q2="-0.354883" q3="0.346141" euler_x="-2.35602" euler_y="0.768089" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.343819" q2="0" q3="0.939036" euler_x="0" euler_y="0.701962" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -952,7 +952,7 @@
             <parameters />
         </EnvObject>
     </Group>
-    <EnvObject t0="37.3144" t1="36.3671" t2="-408.684" s0="2.94732" s1="2.94732" s2="2.94732" q0="0.0678345" q1="-0.0341516" q2="0.0148832" q3="0.997002" euler_x="0.134986" euler_y="-0.0701752" euler_z="0.0251083" id="206" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/barrel.xml">
+    <EnvObject t0="37.3181" t1="36.2615" t2="-408.698" s0="2.94732" s1="2.94732" s2="2.94732" q0="0.0678345" q1="-0.0341516" q2="0.0148832" q3="0.997002" euler_x="0.134986" euler_y="-0.0701752" euler_z="0.0251083" id="206" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/barrel.xml">
         <parameters />
     </EnvObject>
     <Decal t0="42.6001" t1="26.5925" t2="-341.92" s0="35.4515" s1="8.99637" s2="74.3529" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="207" type_file="Data/Objects/Decals/DarkStonyDirt.xml" color_r="1" color_g="1" color_b="1" overbright="0">
@@ -2600,7 +2600,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Rain Sound" t0="28.5989" t1="34.0413" t2="-301.859" s0="1" s1="1" s2="1" q0="0" q1="-0.263918" q2="0" q3="0.964545" euler_x="0" euler_y="-0.534165" euler_z="0" id="552" type_file="Data/Objects/Hotspots/ambient_sound.xml">
+    <Hotspot name="Rain Sound" t0="28.5989" t1="34.0413" t2="-301.859" s0="1" s1="1" s2="1" q0="0" q1="-0.263918" q2="0" q3="0.964545" euler_x="0" euler_y="-0.534164" euler_z="0" id="552" type_file="Data/Objects/Hotspots/ambient_sound.xml">
         <parameters>
             <parameter name="Delay Max" type="float" val="10" />
             <parameter name="Delay Min" type="float" val="3" />
