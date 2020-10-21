@@ -40,7 +40,7 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="28.3569" t1="124.07" t2="113.792" s0="1" s1="1" s2="1" q0="0.212182" q1="0.683664" q2="-0.218756" q3="0.66312" euler_x="-2.52223" euler_y="1.54029" euler_z="3.14159" id="1">
+    <CameraObject t0="58.5522" t1="88.9738" t2="144.05" s0="1" s1="1" s2="1" q0="0.281295" q1="0.546528" q2="-0.201598" q3="0.762586" euler_x="0.706771" euler_y="1.24366" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="49.3884" t1="50.1197" t2="250.298" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -933,7 +933,7 @@
     <EnvObject t0="84.2916" t1="35.6124" t2="148.605" s0="1" s1="1" s2="1" q0="0" q1="0.631256" q2="0" q3="0.775575" euler_x="0" euler_y="1.36635" euler_z="0" id="202" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/cat_town/hut_small.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="117.051" t1="39.3167" t2="83.8489" s0="1" s1="1" s2="1" q0="0.0217654" q1="0.490812" q2="0.0276737" q3="0.870553" euler_x="0.125123" euler_y="1.02238" euler_z="0.133803" id="203" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/cat_town/hut_small.xml">
+    <EnvObject t0="115.584" t1="39.1192" t2="86.2722" s0="1" s1="1" s2="1" q0="0.0215774" q1="0.490806" q2="0.0277797" q3="0.870558" euler_x="0.124691" euler_y="1.02238" euler_z="0.133803" id="203" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/cat_town/hut_small.xml">
         <parameters />
     </EnvObject>
     <EnvObject t0="115.584" t1="43.8646" t2="310.186" s0="1" s1="1" s2="1" q0="0" q1="-0.890093" q2="0" q3="0.45578" euler_x="3.14159" euler_y="-0.946497" euler_z="3.14159" id="204" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/cat_town/large_door.xml">
@@ -2143,10 +2143,10 @@
             <Connection id="449" />
         </Connections>
     </PlaceholderObject>
-    <EnvObject t0="122.456" t1="40.0639" t2="67.2814" s0="4.57029" s1="6.62343" s2="5.03065" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="450" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
+    <EnvObject t0="122.442" t1="40.0639" t2="67.3138" s0="4.92453" s1="6.62343" s2="5.03065" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="450" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="124.841" t1="40.0639" t2="61.8859" s0="4.57028" s1="6.62343" s2="5.17863" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="451" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
+    <EnvObject t0="124.816" t1="40.0639" t2="61.9446" s0="5.21091" s1="6.62343" s2="5.17864" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="451" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
         <parameters />
     </EnvObject>
     <EnvObject t0="188.428" t1="49.746" t2="36.2061" s0="1.41837" s1="3.10209" s2="3.5365" q0="0.43987" q1="-0.505549" q2="0.662131" q3="0.335435" euler_x="-1.30513" euler_y="-1.17234" euler_z="-3.14018" id="452" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Fence1.xml">
@@ -2187,6 +2187,9 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <Decal t0="124.912" t1="36.7277" t2="66.9374" s0="3.37743" s1="3.37743" s2="3.37743" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="457" type_file="Data/Objects/Decals/blooddropsplat.xml" color_r="0.678431" color_g="0.0638524" color_b="0.0638524" overbright="0">
+        <parameters />
+    </Decal>
     <EnvObject t0="58.8379" t1="51.0107" t2="284.337" s0="1.82723" s1="1.07327" s2="1.07327" q0="-0.0177976" q1="-0.706883" q2="0.0177975" q3="0.706883" euler_x="-1.57081" euler_y="-1.52047" euler_z="1.57081" id="458" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Stairs1.xml">
         <parameters />
     </EnvObject>
@@ -2196,6 +2199,97 @@
             <Connection id="459" />
         </Connections>
     </PlaceholderObject>
+    <EnvObject t0="126.129" t1="36.9765" t2="65.8625" s0="2.15035" s1="2.15035" s2="2.15035" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="460" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/rope/knot.xml">
+        <parameters />
+    </EnvObject>
+    <Decal t0="113.998" t1="40.3287" t2="60.6882" s0="4.59565" s1="4.59565" s2="4.59565" q0="0.619634" q1="0.202502" q2="-0.484641" q3="0.58323" euler_x="1.29308" euler_y="0.991429" euler_z="-0.61162" id="461" type_file="Data/Objects/therium/Decals/cavepaintings/uridranvaldran.xml" color_r="0.592157" color_g="0.592156" color_b="0.592151" overbright="0">
+        <parameters />
+    </Decal>
+    <Decal t0="155.394" t1="40.6503" t2="104.185" s0="6.48066" s1="6.48066" s2="6.48066" q0="-0.197147" q1="-0.0593508" q2="0.283999" q3="0.936458" euler_x="-0.414739" euler_y="0.000819907" euler_z="0.588733" id="462" type_file="Data/Objects/Decals/crete_impact.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+        <parameters />
+    </Decal>
+    <Decal t0="145.311" t1="36.5583" t2="119.016" s0="6.48066" s1="6.48066" s2="6.48066" q0="-0.197147" q1="-0.0593508" q2="0.283999" q3="0.936458" euler_x="-0.414739" euler_y="0.000819907" euler_z="0.588733" id="463" type_file="Data/Objects/Decals/crete_impact.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+        <parameters />
+    </Decal>
+    <Hotspot name="Burgfried Entry Support Trigger" t0="88.1336" t1="35.9233" t2="274.671" s0="2.97723" s1="5.00805" s2="2.13552" q0="0" q1="-0.671012" q2="0" q3="0.741446" euler_x="0" euler_y="-1.47114" euler_z="0" id="464" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="1" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Burgfried Entry Support Spawner" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Burgfried Entry Support Spawner 1" t0="146.452" t1="34.6364" t2="146.419" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.673033" q2="0" q3="0.739612" euler_x="0" euler_y="-1.4766" euler_z="0" id="465" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Burgfried Entry Support Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="4" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="soldier" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Burgfried Entry Support Spawner 2" t0="146.006" t1="34.6364" t2="141.692" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.673033" q2="0" q3="0.739612" euler_x="0" euler_y="-1.4766" euler_z="0" id="466" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Burgfried Entry Support Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="tank" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <PlaceholderObject name="Burgfried Entry Support Target" t0="86.472" t1="36.6083" t2="258.513" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="467" type_file="" special_type="0">
+        <parameters />
+        <Connections>
+            <Connection id="467" />
+        </Connections>
+    </PlaceholderObject>
+    <Hotspot name="Burgfried Entry Support Spawner 3" t0="140.975" t1="34.6364" t2="142.167" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.673033" q2="0" q3="0.739612" euler_x="0" euler_y="-1.4766" euler_z="0" id="468" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Burgfried Entry Support Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="bomber" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Burgfried Entry Support Spawner 4" t0="141.412" t1="34.6364" t2="146.798" s0="1" s1="1.00013" s2="1" q0="0" q1="-0.673033" q2="0" q3="0.739612" euler_x="0" euler_y="-1.4766" euler_z="0" id="469" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="1" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Burgfried Entry Support Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="1" />
+            <parameter name="Min. Spawn Delay" type="float" val="0" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="flag_bearer" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <PlaceholderObject name="Rich Hut Target 2" t0="184.364" t1="57.6098" t2="264.902" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="470" type_file="" special_type="0">
         <parameters />
         <Connections>
@@ -2313,7 +2407,6 @@
     <SpawnerItem display_name="Magma Arena Walls" path="Data/Prototypes/MagmaArena/MagmaArenaWalls.xml" thumbnail_path="" />
     <SpawnerItem display_name="Lugaru Block Ruins Mossy Block 1" path="Data/Prototypes/Lugaru/BlockRuins_Mossy_Block1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Ruin Wall" path="Data/Objects/Buildings/Ruins/mysterious/ruin_wall.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/ruin_wall.png" />
-    <SpawnerItem display_name="Crete Impact" path="Data/Objects/Decals/crete_impact.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/crete_impact.png" />
     <SpawnerItem display_name="Wooden Row Boat" path="Data/Objects/therium/boat.xml" thumbnail_path="" />
     <SpawnerItem display_name="Wooden Sign Post H" path="Data/Objects/Buildings/shops/sign_post_h.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sign_post_h.png" />
     <SpawnerItem display_name="Granite Rock Boulder Round" path="Data/Objects/Environment/Rocks/granite_vine_rocks/granite_boulder_round.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/granite_boulder_round.png" />
@@ -2411,7 +2504,6 @@
     <SpawnerItem display_name="Lugaru Block Ruins Sandy Block Stack 1" path="Data/Prototypes/Lugaru/BlockRuins_Sandy_BlockStack1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Lugaru Block Ruins Snowy Block Stack 5" path="Data/Prototypes/Lugaru/BlockRuins_Snowy_BlockStack5.xml" thumbnail_path="" />
     <SpawnerItem display_name="Small Stone Stairs" path="Data/Objects/Buildings/Stairs1.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Stairs1.png" />
-    <SpawnerItem display_name="Blood Drop Splat" path="Data/Objects/Decals/blooddropsplat.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/blooddropsplat.png" />
     <SpawnerItem display_name="Rabbit Blood Footprint" path="Data/Objects/Decals/footprints/rabbit_blood_footprint.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/footprints/rabbitbloodprint.png" />
     <SpawnerItem display_name="Rabbit Blood Footprint Smear" path="Data/Objects/Decals/footprints/rabbit_blood_footprint_smear.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/footprints/rabbitbloodprintsmear.png" />
     <SpawnerItem display_name="Wood Railing Short 1" path="Data/Prototypes/Common/Wood_RailingShort1.xml" thumbnail_path="" />
@@ -2420,4 +2512,10 @@
     <SpawnerItem display_name="Magma Arena Flag White 1" path="Data/Prototypes/MagmaArena/MagmaArenaFlag_White1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Wooden Box Base Angled" path="Data/Objects/Buildings/window_boxes/box_base_angled.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/box_base_angled.png" />
     <SpawnerItem display_name="Wooden Fence" path="Data/Objects/Buildings/Fence1.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Fence1.png" />
+    <SpawnerItem display_name="Blood Drop Splat" path="Data/Objects/Decals/blooddropsplat.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/blooddropsplat.png" />
+    <SpawnerItem display_name="Bridge Rope Short" path="Data/Objects/therium/rope/Bridge_rope_short.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Rope Knot" path="Data/Objects/therium/rope/knot.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Scratches" path="Data/Objects/Decals/Scratches/Scratches_01.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/Decal_Scratches.png" />
+    <SpawnerItem display_name="Cave Painting Decal 1" path="Data/Objects/therium/Decals/cavepaintings/uridranvaldran.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Crete Impact" path="Data/Objects/Decals/crete_impact.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/crete_impact.png" />
 </RecentItems>
