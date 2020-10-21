@@ -25,7 +25,7 @@
 <Script>stronghold/stronghold.as</Script>
 <LevelScriptParameters>
     <parameter name="Achievements" type="string" val="flawless, no_injuries, no_kills" />
-    <parameter name="Custom Shader" type="string" val="#RAINY" />
+    <parameter name="Custom Shader" type="string" val="#RAINY #GPU_PARTICLE_FIELD_OCCLUSION" />
     <parameter name="Fog amount" type="float" val="1" />
     <parameter name="GPU Particle Field" type="string" val="#RAIN" />
     <parameter name="HDR Black point" type="float" val="0.05" />
@@ -47,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="30.6137" t1="57.2349" t2="-340.92" s0="1" s1="1" s2="1" q0="0.00511017" q1="0.992121" q2="-0.117514" q3="0.043143" euler_x="-2.9058" euler_y="0.0869166" euler_z="3.14159" id="1">
+    <CameraObject t0="198.835" t1="48.603" t2="3.346" s0="1" s1="1" s2="1" q0="-0.15891" q1="0.569614" q2="-0.113374" q3="-0.798395" euler_x="0.392939" euler_y="-1.23939" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.343819" q2="0" q3="0.939036" euler_x="0" euler_y="0.701962" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -2595,6 +2595,24 @@
             <parameters />
         </Decal>
     </Group>
+    <Hotspot name="Thunder Hotspot" t0="32.3527" t1="34.2723" t2="-299.893" s0="1" s1="1" s2="1" q0="0" q1="-0.273251" q2="0" q3="0.961943" euler_x="0" euler_y="-0.553542" euler_z="0" id="551" type_file="Data/Objects/stronghold/hotspots/thunder.xml">
+        <parameters />
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Rain Sound" t0="28.5989" t1="34.0413" t2="-301.859" s0="1" s1="1" s2="1" q0="0" q1="-0.263918" q2="0" q3="0.964545" euler_x="0" euler_y="-0.534165" euler_z="0" id="552" type_file="Data/Objects/Hotspots/ambient_sound.xml">
+        <parameters>
+            <parameter name="Delay Max" type="float" val="10" />
+            <parameter name="Delay Min" type="float" val="3" />
+            <parameter name="Fade Distance" type="float" val="1" />
+            <parameter name="Gain" type="float" val="0.5" />
+            <parameter name="Global" type="int" val="1" />
+            <parameter name="Sound Path" type="string" val="Data/Sounds/weather/rain.wav" />
+            <parameter name="Wind Scale" type="int" val="0" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <Hotspot name="Burgfried Bridge Trigger" t0="31.6836" t1="49.5145" t2="229.53" s0="5.43801" s1="2.30057" s2="2.84993" q0="0" q1="-0.386791" q2="0" q3="0.922167" euler_x="0" euler_y="-0.794298" euler_z="0" id="569" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -2626,7 +2644,12 @@
             <Connection id="571" />
         </Connections>
     </PlaceholderObject>
-    <Hotspot name="Thunder Hotspot" t0="187.544" t1="97.888" t2="26.7177" s0="1" s1="1" s2="1" q0="0" q1="-0.273251" q2="0" q3="0.961943" euler_x="0" euler_y="-0.553542" euler_z="0" id="589" type_file="Data/Objects/stronghold/hotspots/thunder.xml">
+    <Hotspot t0="40.7463" t1="47.4194" t2="-232.527" s0="0.266607" s1="0.645325" s2="0.266607" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="613" type_file="Data/Objects/Hotspots/particle_occluder.xml">
+        <parameters />
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot t0="149.551" t1="38.6069" t2="61.9259" s0="0.408134" s1="0.987894" s2="0.408134" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="621" type_file="Data/Objects/Hotspots/particle_occluder.xml">
         <parameters />
         <Connections />
         <ConnectionsFrom />
@@ -2762,7 +2785,6 @@
     <SpawnerItem display_name="Scratches" path="Data/Objects/Decals/Scratches/Scratches_01.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/Decal_Scratches.png" />
     <SpawnerItem display_name="Cave Painting Decal 1" path="Data/Objects/therium/Decals/cavepaintings/uridranvaldran.xml" thumbnail_path="" />
     <SpawnerItem display_name="Crete Impact" path="Data/Objects/Decals/crete_impact.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/crete_impact.png" />
-    <SpawnerItem display_name="Particle Occluder Hotspot" path="Data/Objects/Hotspots/particle_occluder.xml" thumbnail_path="Data/UI/spawner/thumbs/Hotspot/emitter_icon.png" />
     <SpawnerItem display_name="Fire Hotspot" path="Data/Objects/Hotspots/fire_test.xml" thumbnail_path="" />
     <SpawnerItem display_name="Fire Wood Hot" path="Data/Objects/Environment/camp/fire_wood_hot.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/fire_wood_hot.png" />
     <SpawnerItem display_name="Fire Pit" path="Data/Objects/Environment/camp/fire_pit.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/fire_pit.png" />
@@ -2788,4 +2810,7 @@
     <SpawnerItem display_name="rain.xml" path="Data/Objects/Hotspots/rain.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="rain.xml" path="Data/Objects/stronghold/hotspots/rain.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="thunder.xml" path="Data/Objects/stronghold/hotspots/thunder.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="Sound Hotspot" path="Data/Objects/Hotspots/sound_hotspot.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
+    <SpawnerItem display_name="Ambient Sound Hotspot" path="Data/Objects/Hotspots/ambient_sound.xml" thumbnail_path="Data/UI/spawner/thumbs/Sounds/speaker_icon.png" />
+    <SpawnerItem display_name="Particle Occluder Hotspot" path="Data/Objects/Hotspots/particle_occluder.xml" thumbnail_path="Data/UI/spawner/thumbs/Hotspot/emitter_icon.png" />
 </RecentItems>
