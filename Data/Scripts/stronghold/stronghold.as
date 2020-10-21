@@ -149,19 +149,23 @@ void Init(string level_name){
     }));
 
     timer.Add(AfterInitJob(function(){
-        MovementObject@ char = FindPlayer();
-        hud_gui.SetHealth(1.0f);
-        hud_gui.SetDistance(friend_controller.GetYellDistance());
+        timer.Add(AfterCharInitJob(FindPlayerID(), function(_char){
+            hud_gui.SetHealth(1.0f);
+            hud_gui.SetDistance(friend_controller.GetYellDistance());
 
-        timer.Add(CharDamageJob(FindPlayerID(), function(_char, _p_blood, _p_permanent){
-            if(_char.GetIntVar("knocked_out") != _awake){
-                hud_gui.SetHealth(0.0f);
-            }else if(_p_blood < _p_permanent){
-                hud_gui.SetHealth(_p_blood);
-            }else{
-                hud_gui.SetHealth(_p_permanent);
-            }
-            return true;
+            timer.Add(CharDamageJob(FindPlayerID(), function(_char, _p_blood, _p_permanent){
+                float _blood = _char.GetFloatVar("blood_health");
+                float _permanent = _char.GetFloatVar("permanent_health");
+            
+                if(_char.GetIntVar("knocked_out") != _awake){
+                    hud_gui.SetHealth(0.0f);
+                }else if(_blood < _permanent){
+                    hud_gui.SetHealth(_blood);
+                }else{
+                    hud_gui.SetHealth(_permanent);
+                }
+                return true;
+            }));
         }));
 
         RegisterCleanupJobs();
