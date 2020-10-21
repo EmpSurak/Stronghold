@@ -36,6 +36,7 @@ const string _goal_key = "Goal";
 const string _goal_none = "none";
 const string _goal_follow = "follow";
 const string _goal_go_to = "go_to";
+const string _goal_attack = "attack";
 const string _goal_default = _goal_none;
 const string _escort_name_key = "Escort (Name)";
 const string _escort_name_default = "";
@@ -45,7 +46,7 @@ const string _fur_channel_key = "Fur Channel";
 
 TimedExecution timer;
 CommandJobStorage command_job_storage;
-int char_count, max_char_count, team_color;
+int char_count, max_char_count, team_color, last_triggered_by;
 float min_spawn_delay, max_spawn_delay, difficulty;
 string team, goal, escort_name, go_to_name;
 UnitType type;
@@ -73,6 +74,7 @@ void InitJobs(){
         if(_params.length() < 2 || _params[1] != hotspot_obj.GetName()){
             return true;
         }
+        last_triggered_by = atoi(_params[2]);
 
         timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
             int soldier_id = CreateUnit(type);
@@ -296,6 +298,10 @@ void RegisterGoal(MovementObject@ _char){
 
         _char.Execute("escort_id = " + escort_id + ";");
         _char.Execute("SetGoal(_escort);");
+    }else if(goal == _goal_attack){
+        _char.Execute("attack_player_id = " + last_triggered_by + ";");
+        _char.Execute("Notice(" + last_triggered_by + ");");
+        _char.Execute("SetGoal(_attack);");
     }
 }
 

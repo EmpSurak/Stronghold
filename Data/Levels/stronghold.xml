@@ -24,6 +24,7 @@
 <AmbientSounds />
 <Script>stronghold/stronghold.as</Script>
 <LevelScriptParameters>
+    <parameter name="Achievements" type="string" val="flawless, no_injuries, no_kills" />
     <parameter name="Dialogue Colors" type="string" val="Data/Levels/og_story/character_dialogue.txt" />
     <parameter name="Fog amount" type="float" val="0" />
     <parameter name="GPU Particle Field" type="string" val="" />
@@ -46,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="130.357" t1="116.85" t2="-274.513" s0="1" s1="1" s2="1" q0="0.0355758" q1="-0.957558" q2="0.252111" q3="0.135123" euler_x="-2.62671" euler_y="-0.280372" euler_z="-3.14159" id="1">
+    <CameraObject t0="294.54" t1="143.824" t2="-46.55" s0="1" s1="1" s2="1" q0="-0.125363" q1="0.871183" q2="-0.291554" q3="-0.374594" euler_x="-2.4957" euler_y="-0.812167" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -454,7 +455,7 @@
     <Hotspot name="Start Monster Trigger (Left)" t0="89.6349" t1="36.0536" t2="-368.446" s0="1" s1="6.34306" s2="49.7148" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="97" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="1" />
-            <parameter name="Spawn Name (Prefix)" type="string" val="Start Monster Spawner" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Start Monster (Left) Spawner" />
             <parameter name="Team Only" type="string" val="" />
         </parameters>
         <Connections />
@@ -463,19 +464,19 @@
     <Hotspot name="Start Monster Trigger (Right)" t0="12.3193" t1="36.0536" t2="-368.446" s0="1" s1="6.34306" s2="49.7148" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="98" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="1" />
-            <parameter name="Spawn Name (Prefix)" type="string" val="Start Monster Spawner" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Start Monster (Right) Spawner" />
             <parameter name="Team Only" type="string" val="" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Start Monster Spawner (Right)" t0="-52.7459" t1="37.7255" t2="-259.164" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="99" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Start Monster (Right) Spawner 1" t0="-382.534" t1="20.3207" t2="-303.354" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="99" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="3" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Start Monster Trigger (Right)" />
-            <parameter name="Goal" type="string" val="go_to" />
-            <parameter name="Max. Spawn Delay" type="float" val="0" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
+            <parameter name="Max. Spawn Delay" type="float" val="4" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
             <parameter name="Number of Characters" type="int" val="1" />
             <parameter name="Team" type="string" val="Env Monster" />
@@ -485,15 +486,15 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Start Monster Spawner (Left)" t0="155.998" t1="26.7732" t2="-226.632" s0="1" s1="1" s2="1" q0="0" q1="-0.430078" q2="0" q3="0.902792" euler_x="0" euler_y="-0.889159" euler_z="0" id="100" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Start Monster (Left) Spawner" t0="439.835" t1="44.9929" t2="-364.515" s0="1" s1="1" s2="1" q0="0" q1="-0.430078" q2="0" q3="0.902792" euler_x="0" euler_y="-0.889159" euler_z="0" id="100" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="3" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Start Monster Trigger (Left)" />
-            <parameter name="Goal" type="string" val="go_to" />
-            <parameter name="Max. Spawn Delay" type="float" val="0" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
+            <parameter name="Max. Spawn Delay" type="float" val="4" />
             <parameter name="Min. Spawn Delay" type="float" val="0.5" />
-            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Number of Characters" type="int" val="2" />
             <parameter name="Team" type="string" val="Env Monster" />
             <parameter name="Team Color" type="int" val="4" />
             <parameter name="Unit Type" type="string" val="giant" />
@@ -868,8 +869,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Side Lake Target" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="1" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
             <parameter name="Number of Characters" type="int" val="5" />
@@ -880,12 +881,6 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Side Lake Target" t0="31.5407" t1="20.8507" t2="-65.817" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="182" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="182" />
-        </Connections>
-    </PlaceholderObject>
     <EnvObject t0="184.433" t1="37.6524" t2="58.3655" s0="3.01822" s1="3.01822" s2="3.01822" q0="0.0189354" q1="0" q2="0" q3="0.999821" euler_x="0.0378731" euler_y="0" euler_z="0" id="183" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Tent.xml">
         <parameters />
     </EnvObject>
@@ -1386,18 +1381,6 @@
     <Decal t0="167.519" t1="36.7914" t2="40.2745" s0="4.8351" s1="4.8351" s2="4.8351" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="346" type_file="Data/Objects/Decals/bloodspatter.xml" color_r="0.423529" color_g="0" color_b="0" overbright="0">
         <parameters />
     </Decal>
-    <PlaceholderObject name="Infront Huts Target 2" t0="111.273" t1="41.6471" t2="345.799" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="347" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="347" />
-        </Connections>
-    </PlaceholderObject>
-    <PlaceholderObject name="Infront Huts Target 1" t0="98.153" t1="40.1307" t2="336.314" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="348" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="348" />
-        </Connections>
-    </PlaceholderObject>
     <Hotspot name="Behind Huts Trigger" t0="66.6192" t1="37.4483" t2="318.237" s0="10.7464" s1="4.5463" s2="6.91169" q0="0" q1="-0.661577" q2="0" q3="0.749877" euler_x="0" euler_y="-1.44584" euler_z="0" id="350" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -1490,8 +1473,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Rich Hut Target 1" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="3" />
@@ -1537,8 +1520,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Infront Huts Target 1" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="4" />
@@ -1553,8 +1536,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Infront Huts Target 3" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1569,8 +1552,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Infront Huts Target 2" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="6" />
             <parameter name="Min. Spawn Delay" type="float" val="2" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1581,12 +1564,6 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Infront Huts Target 3" t0="118.903" t1="42.708" t2="342.925" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.668793" q2="0" q3="0.743449" euler_x="0" euler_y="-1.46517" euler_z="0" id="365" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="365" />
-        </Connections>
-    </PlaceholderObject>
     <Hotspot name="Rich Hut Trigger" t0="179.099" t1="48.5702" t2="290.388" s0="7.96522" s1="4.3065" s2="9.8809" q0="0" q1="-0.293092" q2="0" q3="0.956084" euler_x="0" euler_y="-0.594918" euler_z="0" id="368" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -1609,8 +1586,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Rich Hut Target 1" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="10" />
             <parameter name="Min. Spawn Delay" type="float" val="5" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1675,8 +1652,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Statue Platforms Target 1" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="3" />
             <parameter name="Min. Spawn Delay" type="float" val="1" />
             <parameter name="Number of Characters" type="int" val="2" />
@@ -1691,8 +1668,8 @@
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
             <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Statue Platforms Target 1" />
-            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
             <parameter name="Max. Spawn Delay" type="float" val="3" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
             <parameter name="Number of Characters" type="int" val="3" />
@@ -1703,12 +1680,6 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <PlaceholderObject name="Statue Platforms Target 1" t0="137.703" t1="57.8017" t2="301.657" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="378" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="378" />
-        </Connections>
-    </PlaceholderObject>
     <Hotspot name="Side Hole Trigger" t0="198.719" t1="28.7948" t2="131.576" s0="11.1647" s1="3.97312" s2="14.4781" q0="0" q1="-0.276507" q2="0" q3="0.961012" euler_x="0" euler_y="-0.560315" euler_z="0" id="379" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="1" />
@@ -2187,12 +2158,6 @@
     <EnvObject t0="58.8379" t1="51.0107" t2="284.337" s0="1.82723" s1="1.07327" s2="1.07327" q0="-0.0177976" q1="-0.706883" q2="0.0177975" q3="0.706883" euler_x="-1.57081" euler_y="-1.52047" euler_z="1.57081" id="458" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Stairs1.xml">
         <parameters />
     </EnvObject>
-    <PlaceholderObject name="Rich Hut Target 1" t0="171.373" t1="52.105" t2="293.704" s0="2.27136" s1="2.27136" s2="2.27136" q0="0" q1="-0.296518" q2="0" q3="0.955027" euler_x="0" euler_y="-0.602089" euler_z="0" id="459" type_file="" special_type="0">
-        <parameters />
-        <Connections>
-            <Connection id="459" />
-        </Connections>
-    </PlaceholderObject>
     <EnvObject t0="126.129" t1="36.9765" t2="65.8625" s0="2.15035" s1="2.15035" s2="2.15035" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="460" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/rope/knot.xml">
         <parameters />
     </EnvObject>
@@ -2455,12 +2420,12 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Group t0="143.679" t1="63.2405" t2="255.121" s0="0.612102" s1="2.2814" s2="1.04411" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06948" euler_z="0" id="512" version="1">
+    <Group t0="143.679" t1="63.2405" t2="255.121" s0="0.612102" s1="2.2814" s2="1.04411" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="512" version="1">
         <parameters />
-        <EnvObject t0="143.728" t1="63.0876" t2="255.157" s0="2.55642" s1="2.55642" s2="2.55642" q0="-0.163119" q1="0.500373" q2="0.0966154" q3="0.844798" euler_x="-0.381479" euler_y="1.06948" euler_z="0" id="513" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
+        <EnvObject t0="143.728" t1="63.0876" t2="255.157" s0="2.55642" s1="2.55642" s2="2.55642" q0="-0.163119" q1="0.500373" q2="0.0966154" q3="0.844798" euler_x="-0.381477" euler_y="1.06947" euler_z="0" id="513" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
-        <Group t0="143.491" t1="64.0644" t2="255.018" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06948" euler_z="0" id="514" version="1">
+        <Group t0="143.491" t1="64.0644" t2="255.018" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="514" version="1">
             <parameters />
             <Hotspot t0="143.492" t1="64.0752" t2="255.019" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.509615" q1="0.000277817" q2="-0.860402" q3="0.000469446" euler_x="-0.00199037" euler_y="-1.06947" euler_z="-3.13932" id="515" type_file="Data/Objects/Hotspots/fire_test.xml">
                 <parameters>
@@ -2472,17 +2437,17 @@
                 <Connections />
                 <ConnectionsFrom />
             </Hotspot>
-            <Decal t0="143.434" t1="63.9883" t2="254.982" s0="0.448355" s1="0.448355" s2="0.448355" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06948" euler_z="0" id="516" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+            <Decal t0="143.434" t1="63.9883" t2="254.982" s0="0.448355" s1="0.448355" s2="0.448355" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="516" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
                 <parameters />
             </Decal>
         </Group>
     </Group>
-    <Group t0="137.325" t1="63.5707" t2="264.479" s0="0.612102" s1="2.2814" s2="1.04411" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06948" euler_z="0" id="518" version="1">
+    <Group t0="137.325" t1="63.5707" t2="264.479" s0="0.612102" s1="2.2814" s2="1.04411" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="518" version="1">
         <parameters />
-        <EnvObject t0="137.374" t1="63.4177" t2="264.515" s0="2.55642" s1="2.55642" s2="2.55642" q0="-0.163119" q1="0.500373" q2="0.0966154" q3="0.844798" euler_x="-0.381479" euler_y="1.06948" euler_z="0" id="519" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
+        <EnvObject t0="137.374" t1="63.4177" t2="264.515" s0="2.55642" s1="2.55642" s2="2.55642" q0="-0.163119" q1="0.500373" q2="0.0966154" q3="0.844798" euler_x="-0.381477" euler_y="1.06947" euler_z="0" id="519" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
-        <Group t0="137.137" t1="64.3945" t2="264.376" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06948" euler_z="0" id="520" version="1">
+        <Group t0="137.137" t1="64.3945" t2="264.376" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="520" version="1">
             <parameters />
             <Hotspot t0="137.138" t1="64.4053" t2="264.377" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.509615" q1="0.000277817" q2="-0.860402" q3="0.000469446" euler_x="-0.00199037" euler_y="-1.06947" euler_z="-3.13932" id="521" type_file="Data/Objects/Hotspots/fire_test.xml">
                 <parameters>
@@ -2494,7 +2459,7 @@
                 <Connections />
                 <ConnectionsFrom />
             </Hotspot>
-            <Decal t0="137.08" t1="64.3184" t2="264.341" s0="0.448355" s1="0.448355" s2="0.448355" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06948" euler_z="0" id="522" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+            <Decal t0="137.08" t1="64.3184" t2="264.341" s0="0.448355" s1="0.448355" s2="0.448355" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="522" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
                 <parameters />
             </Decal>
         </Group>
@@ -2504,7 +2469,7 @@
         <EnvObject t0="175.621" t1="53.2977" t2="282.584" s0="2.55642" s1="2.55642" s2="2.55642" q0="-0.0505949" q1="0.946254" q2="0.182709" q3="0.262033" euler_x="2.76011" euler_y="0.540294" euler_z="3.14159" id="525" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
-        <Group t0="175.404" t1="54.2746" t2="282.93" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.963732" q2="0" q3="0.266873" euler_x="-3.14159" euler_y="0.540294" euler_z="3.14159" id="526" version="1">
+        <Group t0="175.404" t1="54.2746" t2="282.93" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.963732" q2="0" q3="0.266873" euler_x="3.14159" euler_y="0.540294" euler_z="3.14159" id="526" version="1">
             <parameters />
             <Hotspot t0="175.405" t1="54.2854" t2="282.929" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.963732" q1="0.000525802" q2="-0.266873" q3="0.000145555" euler_x="-3.14094" euler_y="-0.540294" euler_z="-0.0012724" id="527" type_file="Data/Objects/Hotspots/fire_test.xml">
                 <parameters>
@@ -2516,7 +2481,7 @@
                 <Connections />
                 <ConnectionsFrom />
             </Hotspot>
-            <Decal t0="175.366" t1="54.1985" t2="282.985" s0="0.448355" s1="0.448355" s2="0.448355" q0="0" q1="0.963732" q2="0" q3="0.266873" euler_x="-3.14159" euler_y="0.540294" euler_z="-3.14159" id="528" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+            <Decal t0="175.366" t1="54.1985" t2="282.985" s0="0.448355" s1="0.448355" s2="0.448355" q0="0" q1="0.963732" q2="0" q3="0.266873" euler_x="3.14159" euler_y="0.540294" euler_z="3.14159" id="528" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
                 <parameters />
             </Decal>
         </Group>
@@ -2524,9 +2489,25 @@
     <EnvObject t0="205.745" t1="50.996" t2="273.705" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="530" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/CaveArena/Crate_Pile1.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="131.826" t1="35.1776" t2="215.585" s0="1" s1="1" s2="1" q0="-0.0110705" q1="-0.453214" q2="0.0217658" q3="0.891067" euler_x="-0.066898" euler_y="-0.939404" euler_z="0.0828099" id="531" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/CaveArena/Crate_Pile2.xml">
+    <EnvObject t0="131.826" t1="35.1776" t2="215.585" s0="1" s1="1" s2="1" q0="-0.0110705" q1="-0.453214" q2="0.0217658" q3="0.891067" euler_x="-0.0668977" euler_y="-0.939404" euler_z="0.0828097" id="531" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/CaveArena/Crate_Pile2.xml">
         <parameters />
     </EnvObject>
+    <Hotspot name="Start Monster (Right) Spawner 2" t0="-24.3045" t1="45.2294" t2="-220.73" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="532" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="3" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
+            <parameter name="Max. Spawn Delay" type="float" val="4" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="5" />
+            <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <Hotspot t0="180.461" t1="38.5376" t2="22.9537" s0="2.89728" s1="3.38518" s2="3.43742" q0="0" q1="-0.272028" q2="0" q3="0.962289" euler_x="0" euler_y="-0.551" euler_z="0" id="540" type_file="Data/Objects/Hotspots/particle_occluder.xml">
         <parameters />
         <Connections />

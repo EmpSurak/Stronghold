@@ -33,6 +33,7 @@ int waypoint_target_id = -1;
 int old_waypoint_target_id = -1;
 bool will_throw_counter = false;
 int ground_punish_decision = -1;
+int attack_player_id = -1;
 
 float notice_target_aggression_delay = 0.0f;
 int notice_target_aggression_id = 0.0f;
@@ -1773,7 +1774,13 @@ void UpdateBrain(const Timestep &in ts) {
     }
     case _attack: {
         int old_chase_target_id = chase_target_id;
-        SetChaseTarget(GetClosestKnownThreat());
+
+        if(attack_player_id > 0){
+            SetChaseTarget(attack_player_id);
+            attack_player_id = -1;
+        }else{
+            SetChaseTarget(GetClosestKnownThreat());
+        }
 
         if(!hostile || chase_target_id == -1) {
             // Target defeated, victory
