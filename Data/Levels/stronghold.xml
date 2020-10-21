@@ -40,10 +40,10 @@
     <RayToSun r0="0.393718" r1="0.827639" r2="0.4" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="151.426" t1="71.5179" t2="71.0539" s0="1" s1="1" s2="1" q0="-0.253446" q1="-0.256305" q2="0.0698369" q3="-0.930159" euler_x="0.532036" euler_y="0.537754" euler_z="0" id="1">
+    <CameraObject t0="28.3569" t1="124.07" t2="113.792" s0="1" s1="1" s2="1" q0="0.212182" q1="0.683664" q2="-0.218756" q3="0.66312" euler_x="-2.52223" euler_y="1.54029" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
-    <ActorObject name="Player" t0="113.763" t1="51.0866" t2="47.833" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+    <ActorObject name="Player" t0="49.3884" t1="50.1197" t2="250.298" s0="1" s1="1" s2="1" q0="0" q1="0.996543" q2="0" q3="0.0830814" euler_x="3.14159" euler_y="0.166355" euler_z="3.14159" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -1426,7 +1426,7 @@
             <Connection id="352" />
         </Connections>
     </PlaceholderObject>
-    <Prefab t0="102.692" t1="53.3186" t2="225.014" s0="35.9251" s1="38.394" s2="28.4422" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="353" version="1" prefab_locked="true" prefab_path="Data/Objects/Plants/Trees/prefabs/elm_dead.xml" os0="24.0832" os1="25.7383" os2="19.0669">
+    <Prefab name="Tree Monster Target" t0="102.692" t1="53.3186" t2="225.014" s0="35.9251" s1="38.394" s2="28.4422" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="353" version="1" prefab_locked="true" prefab_path="Data/Objects/Plants/Trees/prefabs/elm_dead.xml" os0="24.0832" os1="25.7383" os2="19.0669">
         <parameters />
         <Group t0="102.692" t1="53.3186" t2="225.014" s0="35.9101" s1="38.379" s2="28.4272" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="341" version="1">
             <parameters />
@@ -1913,6 +1913,15 @@
             </EnvObject>
         </Group>
     </Prefab>
+    <Hotspot name="Tree Monster Trigger" t0="103.721" t1="38.2373" t2="225.762" s0="7.14203" s1="2.79714" s2="6.13104" q0="0" q1="0.0137295" q2="0" q3="0.999906" euler_x="0" euler_y="0.0274598" euler_z="0" id="400" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+        <parameters>
+            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Spawn Name (Prefix)" type="string" val="Tree Monster Spawner" />
+            <parameter name="Team Only" type="string" val="" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <EnvObject t0="169.166" t1="56.6963" t2="10.0073" s0="2.73911" s1="2.73911" s2="2.73911" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="403" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/MagmaArena/MagmaArenaFlag_White1.xml">
         <parameters />
     </EnvObject>
@@ -2134,10 +2143,10 @@
             <Connection id="449" />
         </Connections>
     </PlaceholderObject>
-    <EnvObject t0="122.245" t1="40.0639" t2="67.1914" s0="4.57027" s1="6.62343" s2="4.57028" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="450" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
+    <EnvObject t0="122.456" t1="40.0639" t2="67.2814" s0="4.57029" s1="6.62343" s2="5.03065" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="450" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
         <parameters />
     </EnvObject>
-    <EnvObject t0="124.563" t1="40.0639" t2="61.767" s0="4.57027" s1="6.62343" s2="4.57028" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="451" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
+    <EnvObject t0="124.841" t1="40.0639" t2="61.8859" s0="4.57028" s1="6.62343" s2="5.17863" q0="0" q1="0.550948" q2="0" q3="0.834539" euler_x="0" euler_y="1.167" euler_z="0" id="451" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/window_boxes/box_base_angled.xml">
         <parameters />
     </EnvObject>
     <EnvObject t0="188.428" t1="49.746" t2="36.2061" s0="1.41837" s1="3.10209" s2="3.5365" q0="0.43987" q1="-0.505549" q2="0.662131" q3="0.335435" euler_x="-1.30513" euler_y="-1.17234" euler_z="-3.14018" id="452" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Fence1.xml">
@@ -2146,6 +2155,38 @@
     <EnvObject t0="193.448" t1="51.2269" t2="38.3203" s0="1.41837" s1="3.10209" s2="3.5365" q0="0.43987" q1="-0.505549" q2="0.662131" q3="0.335435" euler_x="-1.30513" euler_y="-1.17234" euler_z="-3.14018" id="453" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Fence1.xml">
         <parameters />
     </EnvObject>
+    <Hotspot name="Tree Monster Spawner Enemies 1" t0="188.123" t1="37.8909" t2="8.1094" s0="1" s1="1" s2="1" q0="0" q1="-0.26783" q2="0" q3="0.963466" euler_x="0" euler_y="-0.54228" euler_z="0" id="454" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="2" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Tree Monster Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="3" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Tree Monster Spawner Enemies 2" t0="169.339" t1="35.5376" t2="131.785" s0="1" s1="1" s2="1" q0="0" q1="-0.226446" q2="0" q3="0.974024" euler_x="0" euler_y="-0.456854" euler_z="0" id="456" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="2" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Tree Monster Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="5" />
+            <parameter name="Min. Spawn Delay" type="float" val="1" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="2" />
+            <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <EnvObject t0="58.8379" t1="51.0107" t2="284.337" s0="1.82723" s1="1.07327" s2="1.07327" q0="-0.0177976" q1="-0.706883" q2="0.0177975" q3="0.706883" euler_x="-1.57081" euler_y="-1.52047" euler_z="1.57081" id="458" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Buildings/Stairs1.xml">
         <parameters />
     </EnvObject>
@@ -2161,6 +2202,22 @@
             <Connection id="470" />
         </Connections>
     </PlaceholderObject>
+    <Hotspot name="Tree Monster Spawner Support 1" t0="188.624" t1="37.708" t2="6.89064" s0="1" s1="1" s2="1" q0="0" q1="-0.27932" q2="0" q3="0.960198" euler_x="0" euler_y="-0.566171" euler_z="0" id="472" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="2" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="Tree Monster Target" />
+            <parameter name="Goal" type="string" val="go_to" />
+            <parameter name="Max. Spawn Delay" type="float" val="8" />
+            <parameter name="Min. Spawn Delay" type="float" val="4" />
+            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Team" type="string" val="attackers" />
+            <parameter name="Team Color" type="int" val="1" />
+            <parameter name="Unit Type" type="string" val="bomber" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <Decal t0="78.0389" t1="41.5106" t2="290.514" s0="1.79208" s1="1.79208" s2="1.79208" q0="-0.800036" q1="-0.0892978" q2="-0.464048" q3="0.369619" euler_x="-2.09801" euler_y="-0.941637" euler_z="-0.347067" id="485" type_file="Data/Objects/Decals/blooddropsplat.xml" color_r="0.643137" color_g="0" color_b="0" overbright="0">
         <parameters />
     </Decal>
