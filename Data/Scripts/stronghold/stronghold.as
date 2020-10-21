@@ -267,7 +267,7 @@ void RegisterCleanupJobs(){
             MovementObject@ char = ReadCharacter(i);
             Object@ char_obj = ReadObjectFromID(char.GetID());
             if(char_obj.IsExcludedFromSave()){
-                bool far_away = distance(_player.position, char.position) > _deactivation_radius;
+                bool far_away = distance(_player.position, char.position) > _char_deactivation_radius;
                 int goal = char.GetIntVar("goal");
                 bool has_goal = goal == _navigate || goal == _attack || goal == _escort;
                 if(far_away && !has_goal){

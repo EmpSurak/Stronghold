@@ -51,6 +51,9 @@ float min_spawn_delay, max_spawn_delay, difficulty;
 string team, goal, escort_name, go_to_name;
 UnitType type;
 
+int player_id = -1;
+bool is_close = false;
+
 void Init(){
     level.ReceiveLevelEvents(hotspot.GetID());
     InitJobs();
@@ -68,6 +71,10 @@ void InitJobs(){
     escort_name = params.HasParam(_escort_name_key) ? params.GetString(_escort_name_key) : _escort_name_default;
     go_to_name = params.HasParam(_go_to_name_key) ? params.GetString(_go_to_name_key) : _go_to_name_default;
     type = UnitTypeFromString(params.HasParam(_unit_type_key) ? params.GetString(_unit_type_key) : _unit_type_default);
+
+    timer.Add(AfterInitJob(function(){
+        player_id = FindPlayerID();
+    }));
 
     timer.Add(LevelEventJob("spawner_start", function(_params){
         Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
@@ -151,10 +158,19 @@ void HandleEvent(string event, MovementObject @mo){}
 
 void Update(){
     timer.Update();
+    UpdatePlayerDistance();
 }
 
 void ReceiveMessage(string msg){
-    timer.AddEvent(msg);
+    if(is_close){
+        timer.AddEvent(msg);
+    }
+}
+
+void UpdatePlayerDistance(){
+    MovementObject@ _player = ReadCharacterID(player_id);
+    Object@ _hotspot_obj = ReadObjectFromID(hotspot.GetID());
+    is_close = distance(_player.position, _hotspot_obj.GetTranslation()) < _hotspot_deactivation_radius;
 }
 
 int CreateUnit(UnitType _type){

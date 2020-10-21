@@ -50,7 +50,8 @@ const string _key_radius_5 = "5";
 const string _smoke_emitter_key = "Smoke Emitter ID";
 const string _magic_key = "STRONGHOLD";
 
-const float _deactivation_radius = 250.0f;
+const float _char_deactivation_radius = 250.0f;
+const float _hotspot_deactivation_radius = 400.0f;
 
 enum UnitType {
     _no_type,
