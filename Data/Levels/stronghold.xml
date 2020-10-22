@@ -48,7 +48,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="144.01" t1="71.7674" t2="-0.098523" s0="1" s1="1" s2="1" q0="0.136388" q1="0.857476" q2="-0.291117" q3="0.401726" euler_x="-2.487" euler_y="0.87626" euler_z="-3.14159" id="1">
+    <CameraObject t0="57.4742" t1="51.2746" t2="-234.714" s0="1" s1="1" s2="1" q0="0.0607892" q1="0.938661" q2="-0.25602" q3="0.222875" euler_x="-2.60905" euler_y="0.466244" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
@@ -3032,6 +3032,9 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <EnvObject t0="59.7596" t1="45.4954" t2="-228.249" s0="1.09173" s1="3.05623" s2="0.965303" q0="0" q1="0.27236" q2="0" q3="0.962195" euler_x="0" euler_y="0.55169" euler_z="0" id="754" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/invisibleblock.xml">
+        <parameters />
+    </EnvObject>
 </ActorObjects>
 <RecentItems>
     <SpawnerItem display_name="Raider Rabbit" path="Data/Objects/characters/raider_rabbit_actor.xml" thumbnail_path="Data/UI/spawner/thumbs/Character/raider_rabbit_actor.png" />
@@ -3124,7 +3127,6 @@
     <SpawnerItem display_name="Spire All" path="Data/Objects/Buildings/spires/spires_all.xml" thumbnail_path="Data/UI/spawner/thumbs/Prefabs/spire_all.png" />
     <SpawnerItem display_name="Large Wood Plate" path="Data/Objects/Gear/rabbit_gear/large_wood_plate.xml" thumbnail_path="" />
     <SpawnerItem display_name="Stucco Wall (ramp 2)" path="Data/Prototypes/OG/StuccoWall_Ramp2.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Invisible Block" path="Data/Objects/invisibleblock.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/invisibleblock.png" />
     <SpawnerItem display_name="Wooden Barrel" path="Data/Objects/therium/barrel.xml" thumbnail_path="" />
     <SpawnerItem display_name="Weapon Toolbox" path="Data/Objects/therium/Prefabs/weapontoolbox.xml" thumbnail_path="Data/Textures/ui/t2/spawner.jpg" />
     <SpawnerItem display_name="Carriage Prefab" path="Data/Objects/therium/carriageprefab.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
@@ -3200,4 +3202,5 @@
     <SpawnerItem display_name="victory.xml" path="Data/Objects/stronghold/hotspots/victory.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="Hatchet" path="Data/Objects/therium/hatchet.xml" thumbnail_path="" />
     <SpawnerItem display_name="Drika Hotspot" path="Data/Objects/Hotspots/drika_hotspot.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
+    <SpawnerItem display_name="Invisible Block" path="Data/Objects/invisibleblock.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/invisibleblock.png" />
 </RecentItems>
