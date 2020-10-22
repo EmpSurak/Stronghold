@@ -47,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="142.562" t1="83.6243" t2="99.3383" s0="1" s1="1" s2="1" q0="-0.469889" q1="-0.338892" q2="0.201636" q3="-0.789747" euler_x="1.07345" euler_y="0.810701" euler_z="0" id="1">
+    <CameraObject t0="56.3533" t1="55.9753" t2="-237.375" s0="1" s1="1" s2="1" q0="0.125393" q1="0.871133" q2="-0.291479" q3="0.374758" euler_x="-2.49582" euler_y="0.812527" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <ActorObject name="Player" t0="42.4305" t1="35.7268" t2="-284.989" s0="1" s1="1" s2="1" q0="0" q1="0.343819" q2="0" q3="0.939036" euler_x="0" euler_y="0.701962" euler_z="0" id="2" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
@@ -96,12 +96,7 @@
             <ItemConnection id="509" type="0" mirrored="0" attachment="" />
             <ItemConnection id="510" type="1" mirrored="0" attachment="" />
         </ItemConnections>
-        <Palette>
-            <Color label="Fur" channel="0" red="0.853881" green="0.415686" blue="1" />
-            <Color label="Leather" channel="1" red="0.313725" green="0.411838" blue="1" />
-            <Color label="Shirt" channel="2" red="0" green="0.117663" blue="0.313725" />
-            <Color label="Pants" channel="3" red="0.647059" green="0.641984" blue="0.641984" />
-        </Palette>
+        <Palette />
     </ActorObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
         <parameters />
@@ -696,9 +691,9 @@
     <EnvObject t0="58.767" t1="35.1357" t2="-284.565" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="148" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Prototypes/OG/Stump_Short1.xml">
         <parameters />
     </EnvObject>
-    <ItemObject name="Falling Spear" t0="37.3681" t1="500" t2="-284.191" s0="1" s1="1" s2="1" q0="0" q1="0" q2="-1" q3="0" euler_x="0" euler_y="0" euler_z="3.14159" id="155" type_file="Data/Items/DogWeapons/DogSpear.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+    <EnvObject t0="205.739" t1="22.4154" t2="216.23" s0="1" s1="1" s2="1" q0="0" q1="-0.50227" q2="0" q3="0.864711" euler_x="0" euler_y="-1.05244" euler_z="0" id="155" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/cicada.xml">
         <parameters />
-    </ItemObject>
+    </EnvObject>
     <Hotspot name="Late Entry Ambush Spawner Enemies 1" t0="148.377" t1="38.0211" t2="-164.186" s0="1" s1="1" s2="1" q0="0" q1="0.275766" q2="0" q3="0.961225" euler_x="0" euler_y="0.558773" euler_z="0" id="156" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="1" />
@@ -2595,6 +2590,33 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <EnvObject t0="25.2189" t1="16.8854" t2="-16.6874" s0="1" s1="1" s2="1" q0="0" q1="-0.50227" q2="0" q3="0.864711" euler_x="0" euler_y="-1.05244" euler_z="0" id="557" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/cicada.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="122.802" t1="67.5428" t2="313.88" s0="1" s1="1" s2="1" q0="-0.110359" q1="0" q2="0" q3="0.993892" euler_x="-0.221168" euler_y="0" euler_z="0" id="558" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/cicadastatue.xml">
+        <parameters />
+    </EnvObject>
+    <EnvObject t0="-356.145" t1="40.7056" t2="385.841" s0="0.170935" s1="0.170935" s2="0.170935" q0="0.0413086" q1="-0.568903" q2="0.00663087" q3="0.82134" euler_x="0.170987" euler_y="-1.20846" euler_z="-0.102048" id="559" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Custom/OpethRockr55/Objects/Environment/Statues/WhaleManStatue.xml">
+        <parameters>
+            <parameter name="Description" type="string" val="There is always a whale man. Has to. Bye." />
+        </parameters>
+    </EnvObject>
+    <Group t0="60.5066" t1="48.2869" t2="-227.86" s0="2.92095" s1="4.07413" s2="2.45701" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="560" version="1">
+        <parameters />
+        <Hotspot t0="60.5066" t1="47.9252" t2="-227.853" s0="0.635258" s1="0.767075" s2="0.608519" q0="0" q1="0" q2="-0.0607104" q3="0.998156" euler_x="0" euler_y="0" euler_z="-0.121495" id="561" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <parameters>
+                <parameter name="Fire Ribbons" type="int" val="6" />
+                <parameter name="Ignite Characters" type="int" val="1" />
+                <parameter name="Light Amplify" type="float" val="20" />
+                <parameter name="Light Distance" type="float" val="70" />
+            </parameters>
+            <Connections />
+            <ConnectionsFrom />
+        </Hotspot>
+        <Decal t0="60.629" t1="49.0232" t2="-228.14" s0="1.96989" s1="2.37865" s2="1.88697" q0="0" q1="0" q2="0.998122" q3="0.0612549" euler_x="0" euler_y="0" euler_z="3.01901" id="564" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+            <parameters />
+        </Decal>
+    </Group>
     <Hotspot name="Camp Trigger" t0="156.504" t1="36.8702" t2="66.3464" s0="8.99336" s1="2.91218" s2="5.97498" q0="0" q1="-0.16133" q2="0" q3="0.986901" euler_x="0" euler_y="-0.324076" euler_z="0" id="562" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -2604,6 +2626,15 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <EnvObject t0="67.8177" t1="42.4064" t2="-224.442" s0="0.942686" s1="1.1958" s2="1.1958" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="563" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/small_evergreen_log_bleached.xml">
+        <parameters />
+    </EnvObject>
+    <Decal t0="63.4307" t1="40.6175" t2="-225.647" s0="13.2972" s1="13.2972" s2="13.2972" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="566" type_file="Data/Objects/Decals/black_dust.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+        <parameters />
+    </Decal>
+    <Decal t0="61.3004" t1="40.4172" t2="-226.955" s0="9.56347" s1="9.56347" s2="9.56347" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="567" type_file="Data/Objects/Decals/dark_rubble.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+        <parameters />
+    </Decal>
     <Hotspot name="Burgfried Bridge Trigger" t0="31.6836" t1="49.5145" t2="229.53" s0="5.43801" s1="2.30057" s2="2.84993" q0="0" q1="-0.386791" q2="0" q3="0.922167" euler_x="0" euler_y="-0.794298" euler_z="0" id="569" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="0" />
@@ -2834,14 +2865,12 @@
     <SpawnerItem display_name="Arena Staircase Tile Wooden Roof Fancy" path="Data/Objects/Buildings/arena/arena_staircase_roof.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Arena Staircase Roof.png" />
     <SpawnerItem display_name="Banner Hanging 2Purple" path="Data/Prototypes/CaveArena/Banner_Hanging2Purple.xml" thumbnail_path="" />
     <SpawnerItem display_name="Cook Fire Tripod" path="Data/Objects/Environment/camp/cook_tripod.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/cook_tripod.png" />
-    <SpawnerItem display_name="Black Dust" path="Data/Objects/Decals/black_dust.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/black_dust.png" />
     <SpawnerItem display_name="Blob Shadow" path="Data/Objects/Decals/blob_shadow.xml" thumbnail_path="" />
     <SpawnerItem display_name="Cliff Rock 02" path="Data/Objects/Environment/Cliffs/CliffRock_02.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Cliff_Rock_02.png" />
     <SpawnerItem display_name="Coast Rock Large" path="Data/Objects/Environment/Rocks/coast_rock_large.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/coast_rock_large.png" />
     <SpawnerItem display_name="Basics Stone Stairs" path="Data/Objects/Buildings/basics/soft_stairs.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/soft_stairs.png" />
     <SpawnerItem display_name="Robed Stone Statue" path="Data/Objects/Environment/Statues/RobedStatue.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/RobedStatue.png" />
     <SpawnerItem display_name="Granite Rock Vine Boulder Overgrown Detailed" path="Data/Objects/Environment/Rocks/granite_vine_rocks/granite_vine_boulder_overgrown_detailed.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/granite_vine_boulder_overgrown_detailed.png" />
-    <SpawnerItem display_name="Dark Rubble" path="Data/Objects/Decals/dark_rubble.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/dark_rubble.png" />
     <SpawnerItem display_name="Sand" path="Data/Objects/Environment/sand.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/sand.png" />
     <SpawnerItem display_name="Plain Rock Large" path="Data/Objects/Environment/Rocks/plain_rock_large.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/plain_rock_large.png" />
     <SpawnerItem display_name="Strata Rock Slope" path="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_slope.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/strata_rock_slope.png" />
@@ -2907,11 +2936,18 @@
     <SpawnerItem display_name="Hanging Lamp 3" path="Data/Prototypes/CaveArena/HangingLamp_3.xml" thumbnail_path="" />
     <SpawnerItem display_name="Hanging Lamp 4" path="Data/Prototypes/CaveArena/HangingLamp_4.xml" thumbnail_path="" />
     <SpawnerItem display_name="Hanging Lamp 1" path="Data/Prototypes/CaveArena/HangingLamp_1.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Fire" path="Data/Objects/fire.xml" thumbnail_path="" />
     <SpawnerItem display_name="rain.xml" path="Data/Objects/Hotspots/rain.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="rain.xml" path="Data/Objects/stronghold/hotspots/rain.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="thunder.xml" path="Data/Objects/stronghold/hotspots/thunder.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="Sound Hotspot" path="Data/Objects/Hotspots/sound_hotspot.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
     <SpawnerItem display_name="Ambient Sound Hotspot" path="Data/Objects/Hotspots/ambient_sound.xml" thumbnail_path="Data/UI/spawner/thumbs/Sounds/speaker_icon.png" />
     <SpawnerItem display_name="Particle Occluder Hotspot" path="Data/Objects/Hotspots/particle_occluder.xml" thumbnail_path="Data/UI/spawner/thumbs/Hotspot/emitter_icon.png" />
+    <SpawnerItem display_name="Cicada" path="Data/Objects/therium/cicada.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
+    <SpawnerItem display_name="Cicada Statue" path="Data/Objects/therium/cicadastatue.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
+    <SpawnerItem display_name="Whale Man" path="Data/Custom/OpethRockr55/Objects/Environment/Statues/WhaleManStatue.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/Whaleman.png" />
+    <SpawnerItem display_name="Fire" path="Data/Objects/fire.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Tree Evergreen Log Mossy" path="Data/Objects/Plants/Trees/temperate/evergreen_log_mossy.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/evergreen_log_mossy.png" />
+    <SpawnerItem display_name="Tree Small Evergreen Log Bleached" path="Data/Objects/Plants/Trees/temperate/small_evergreen_log_bleached.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/small_evergreen_log_bleached.png" />
+    <SpawnerItem display_name="Black Dust" path="Data/Objects/Decals/black_dust.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/black_dust.png" />
+    <SpawnerItem display_name="Dark Rubble" path="Data/Objects/Decals/dark_rubble.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/dark_rubble.png" />
 </RecentItems>
