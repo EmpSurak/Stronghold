@@ -236,6 +236,7 @@ void RegisterCleanupJobs(){
     }
 
     timer.Add(LevelEventJob("reset", function(_params){
+        hud_gui.SetHide(false);
         end_screen.Reset();
 
         uint num_chars = GetNumCharacters();
@@ -331,6 +332,7 @@ void RegisterMusicJobs(){
 }
 
 void EndLevel(string message, bool win, float delay = 1.5f){
+    hud_gui.SetHide(true);
     end_screen.ShowMessage(message, win, current_time, casualties);
 
     timer.Add(DelayedJob(delay, function(){

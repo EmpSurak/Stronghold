@@ -18,9 +18,11 @@ const string _images_extension = ".png";
 
 class HUDGUI {
     private IMGUI@ guiHUD = CreateIMGUI();
+    private bool hide = false;
 
     HUDGUI(){
         this.Clear();
+        this.Setup();
         this.LoadImages();
         this.Update();
     }
@@ -37,20 +39,44 @@ class HUDGUI {
         IMImage@ img_reset_1 = cast<IMImage>(this.FindElement(_reset_image_1));
         IMImage@ img_reset_2 = cast<IMImage>(this.FindElement(_reset_image_2));
 
-        img_follow_1.setVisible(!GetInputDown(0, _key_follow));
-        img_follow_2.setVisible(GetInputDown(0, _key_follow));
-        img_come_1.setVisible(!GetInputDown(0, _key_come));
-        img_come_2.setVisible(GetInputDown(0, _key_come));
-        img_go_to_1.setVisible(!GetInputDown(0, _key_go_to));
-        img_go_to_2.setVisible(GetInputDown(0, _key_go_to));
-        img_reset_1.setVisible(!GetInputDown(0, _key_reset));
-        img_reset_2.setVisible(GetInputDown(0, _key_reset));
-        img_stand_down_1.setVisible(!GetInputDown(0, _key_stand_down));
-        img_stand_down_2.setVisible(GetInputDown(0, _key_stand_down));
+        if(hide){
+            img_follow_1.setVisible(false);
+            img_follow_2.setVisible(false);
+            img_come_1.setVisible(false);
+            img_come_2.setVisible(false);
+            img_go_to_1.setVisible(false);
+            img_go_to_2.setVisible(false);
+            img_reset_1.setVisible(false);
+            img_reset_2.setVisible(false);
+            img_stand_down_1.setVisible(false);
+            img_stand_down_2.setVisible(false);
+        }else{
+            img_follow_1.setVisible(!GetInputDown(0, _key_follow));
+            img_follow_2.setVisible(GetInputDown(0, _key_follow));
+            img_come_1.setVisible(!GetInputDown(0, _key_come));
+            img_come_2.setVisible(GetInputDown(0, _key_come));
+            img_go_to_1.setVisible(!GetInputDown(0, _key_go_to));
+            img_go_to_2.setVisible(GetInputDown(0, _key_go_to));
+            img_reset_1.setVisible(!GetInputDown(0, _key_reset));
+            img_reset_2.setVisible(GetInputDown(0, _key_reset));
+            img_stand_down_1.setVisible(!GetInputDown(0, _key_stand_down));
+            img_stand_down_2.setVisible(GetInputDown(0, _key_stand_down));
+        }
+    }
+
+    void SetHide(bool _hide){
+        hide = _hide;
+        if(hide){
+            SetHealth(0.0f);
+            SetDistance(0.0f);
+        }
     }
 
     void Clear(){
         this.guiHUD.clear();
+    }
+
+    void Setup(){
         this.guiHUD.setup();
     }
 
@@ -66,7 +92,11 @@ class HUDGUI {
         int rounded_health = RoundFloatPercent(_health);
         for(int i = 0; i <= 100; i += 10){
             IMImage@ img_health = cast<IMImage>(this.FindElement(_health_image + "_" + i));
-            img_health.setVisible(i == rounded_health);
+            if(hide){
+                img_health.setVisible(false);
+            }else{
+                img_health.setVisible(i == rounded_health);
+            }
         }
     }
 
@@ -74,7 +104,11 @@ class HUDGUI {
         int rounded_distance = RoundFloatPercent(_distance / _max_yell_distance);
         for(int i = 0; i <= 100; i += 10){
             IMImage@ img_distance = cast<IMImage>(this.FindElement(_distance_image + "_" + i));
-            img_distance.setVisible(i == rounded_distance);
+            if(hide){
+                img_distance.setVisible(false);
+            }else{
+                img_distance.setVisible(i == rounded_distance);
+            }
         }
     }
 
