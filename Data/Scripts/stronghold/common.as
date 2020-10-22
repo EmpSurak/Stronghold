@@ -94,6 +94,16 @@ string GetTeam(int char_id){
     return _params.GetString("Teams");
 }
 
+bool IsTriumphant(){
+    ScriptParams@ level_params = level.GetScriptParams();
+    return level_params.HasParam("triumphant") && level_params.GetInt("triumphant") == 1;
+}
+
+void SetTriumphant(bool _value){
+    ScriptParams@ level_params = level.GetScriptParams();
+    level_params.SetInt("triumphant", _value ? 1 : 0);
+}
+
 // based on (but modified) arena_level.as
 
 vec3 GetRandomFurColor(){

@@ -1,2 +1,3 @@
 sb_monomyth_8_theendurance: Scott Buckley (https://www.scottbuckley.com.au/library/the-endurance/)
 sb_fateandfortune: Scott Buckley (https://www.scottbuckley.com.au/library/fate-and-fortune/)
+sb_jubilee: Scott Buckley (https://www.scottbuckley.com.au/library/jubilee/)

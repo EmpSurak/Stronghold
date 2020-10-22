@@ -38,6 +38,7 @@
     <parameter name="Sky Brightness" type="float" val="0.2454" />
     <parameter name="Sky Rotation" type="float" val="-42" />
     <parameter name="Sky Tint" type="string" val="255, 255, 255" />
+    <parameter name="triumphant" type="int" val="0" />
 </LevelScriptParameters>
 <NavMeshParameters generate="true" cell_size="0.3" cell_height="0.2" agent_height="1.7" agent_radius="0.4" agent_max_climb="1.5" agent_max_slope="60" />
 <Sky>
@@ -47,7 +48,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="210.6" t1="39.5752" t2="-165.62" s0="1" s1="1" s2="1" q0="-0.264392" q1="0.139255" q2="-0.0386123" q3="-0.953527" euler_x="0.540965" euler_y="-0.290034" euler_z="0" id="1">
+    <CameraObject t0="49.2117" t1="40.4112" t2="-296.07" s0="1" s1="1" s2="1" q0="-0.0112235" q1="0.987776" q2="-0.13" q3="-0.0852787" euler_x="-2.87988" euler_y="-0.172241" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
@@ -2571,6 +2572,11 @@
             <Color label="Pants" channel="3" red="1" green="1" blue="1" />
         </Palette>
     </ActorObject>
+    <Hotspot t0="140.01" t1="61.5343" t2="259.661" s0="1.93692" s1="1.93692" s2="1.93692" q0="0" q1="-0.269898" q2="0" q3="0.962889" euler_x="0" euler_y="-0.546575" euler_z="0" id="555" type_file="Data/Objects/stronghold/hotspots/victory.xml">
+        <parameters />
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
     <EnvObject t0="25.2189" t1="16.8854" t2="-16.6874" s0="1" s1="1" s2="1" q0="0" q1="-0.50227" q2="0" q3="0.864711" euler_x="0" euler_y="-1.05244" euler_z="0" id="557" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/cicada.xml">
         <parameters />
     </EnvObject>
@@ -3102,4 +3108,5 @@
     <SpawnerItem display_name="Black Dust" path="Data/Objects/Decals/black_dust.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/black_dust.png" />
     <SpawnerItem display_name="Dark Rubble" path="Data/Objects/Decals/dark_rubble.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/dark_rubble.png" />
     <SpawnerItem display_name="object_remover.xml" path="Data/Objects/stronghold/hotspots/object_remover.xml" thumbnail_path="empty_placeholder.png" />
+    <SpawnerItem display_name="victory.xml" path="Data/Objects/stronghold/hotspots/victory.xml" thumbnail_path="empty_placeholder.png" />
 </RecentItems>

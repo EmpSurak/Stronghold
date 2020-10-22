@@ -52,6 +52,7 @@ const string _magic_key = "STRONGHOLD";
 
 const float _char_deactivation_radius = 250.0f;
 const float _hotspot_deactivation_radius = 400.0f;
+const float _win_radius = 100.0f;
 
 enum UnitType {
     _no_type,

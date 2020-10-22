@@ -11,6 +11,7 @@
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/timed_execution/delayed_death_job.as"
 #include "stronghold/timed_execution/defeat_job.as"
+#include "stronghold/timed_execution/victory_job.as"
 #include "stronghold/common.as"
 #include "stronghold/constants.as"
 #include "stronghold/hudgui.as"
@@ -31,10 +32,15 @@ int casualties = 0;
 void Init(string level_name){
     current_time = 0.0f;
     casualties = 0;
+    SetTriumphant(false);
 
     timer.Add(DefeatJob(function(){
         casualties++;
         EndLevel("You failed!");
+    }));
+
+    timer.Add(VictoryJob(function(){
+        EndLevel("You conquered the castle!", 5.0f);
     }));
 
     timer.Add(OnInputPressedJob(0, _key_reset, function(){
@@ -280,7 +286,7 @@ void RegisterCleanupJobs(){
 
         return true;
     }));
-    
+
     timer.Add(RepeatingDelayedJob(1.0f, function(){
         MovementObject@ _player = ReadCharacterID(player_id);
 
@@ -306,6 +312,11 @@ void RegisterCleanupJobs(){
 
 void RegisterMusicJobs(){
     timer.Add(RepeatingDelayedJob(0.2f, function(){
+        if(IsTriumphant()){
+            PlaySong("jubilee");
+            return false;
+        }
+
         MovementObject@ _char = ReadCharacterID(player_id);
 
         if(_char.HasFunction("int CombatSong()") && _char.QueryIntFunction("int CombatSong()") == 1){
@@ -329,7 +340,6 @@ void EndLevel(string message, float delay = 1.5f){
 
 void RegisterKeys(){
     timer.Add(OnInputPressedJob(0, "space", function(){
-        SetPaused(false);
         timer.Add(AfterInitJob(function(){
             level.SendMessage("reset");
         }));
