@@ -47,7 +47,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="37.445" t1="43.5247" t2="-295.308" s0="1" s1="1" s2="1" q0="0.0604859" q1="0.938935" q2="-0.255926" q3="0.221909" euler_x="-2.60938" euler_y="0.464166" euler_z="3.14159" id="1">
+    <CameraObject t0="40.733" t1="55.1582" t2="-259.008" s0="1" s1="1" s2="1" q0="0.0389125" q1="0.955682" q2="-0.251625" q3="0.147792" euler_x="-2.62669" euler_y="0.30686" euler_z="-3.14159" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
@@ -1339,48 +1339,48 @@
     </PlaceholderObject>
     <Prefab name="Tree Monster Target" t0="102.692" t1="53.3186" t2="225.014" s0="35.9251" s1="38.394" s2="28.4422" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="353" version="1" prefab_locked="true" prefab_path="Data/Objects/Plants/Trees/prefabs/elm_dead.xml" os0="24.0832" os1="25.7383" os2="19.0669">
         <parameters />
-        <Group t0="102.692" t1="53.3186" t2="225.014" s0="35.9101" s1="38.379" s2="28.4272" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="340" version="1">
+        <Group t0="102.692" t1="53.3186" t2="225.014" s0="35.9101" s1="38.379" s2="28.4272" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="339" version="1">
             <parameters />
-            <EnvObject t0="105.923" t1="50.9962" t2="225.62" s0="1.51256" s1="0.845683" s2="1.02518" q0="0.149384" q1="0.98103" q2="-0.111793" q3="-0.0526049" euler_x="-2.90372" euler_y="-0.0698707" euler_z="2.83102" id="5" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/Elm/Elm_Branch.xml">
+            <EnvObject t0="105.923" t1="50.9962" t2="225.62" s0="1.51256" s1="0.845683" s2="1.02518" q0="0.149384" q1="0.98103" q2="-0.111793" q3="-0.0526049" euler_x="-2.90372" euler_y="-0.0698707" euler_z="2.83102" id="2" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/Elm/Elm_Branch.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="103.75" t1="42.1572" t2="227.168" s0="1.69352" s1="1.26972" s2="1.49171" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="85" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/Elm/Elm_Trunk.xml">
+            <EnvObject t0="103.75" t1="42.1572" t2="227.168" s0="1.69352" s1="1.26972" s2="1.49171" q0="0.0171269" q1="0" q2="0" q3="0.999853" euler_x="0.0342555" euler_y="0" euler_z="0" id="5" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/Elm/Elm_Trunk.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="99.4536" t1="52.4646" t2="228.988" s0="1.65682" s1="0.926334" s2="1.12295" q0="0.0503989" q1="-0.226159" q2="0.372686" q3="0.898564" euler_x="-0.0871609" euler_y="-0.460061" euler_z="0.806749" id="182" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/Elm/Elm_Branch.xml">
+            <EnvObject t0="99.4536" t1="52.4646" t2="228.988" s0="1.65682" s1="0.926334" s2="1.12295" q0="0.0503989" q1="-0.226159" q2="0.372686" q3="0.898564" euler_x="-0.0871609" euler_y="-0.460061" euler_z="0.806749" id="85" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/Elm/Elm_Branch.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="102.22" t1="47.3132" t2="227.221" s0="3.35158" s1="3.35157" s2="3.35157" q0="-0.391683" q1="0.178232" q2="-0.406811" q3="0.805805" euler_x="-0.889311" euler_y="-0.0314455" euler_z="-0.920055" id="212" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="102.22" t1="47.3132" t2="227.221" s0="3.35158" s1="3.35157" s2="3.35157" q0="-0.391683" q1="0.178232" q2="-0.406811" q3="0.805805" euler_x="-0.889311" euler_y="-0.0314455" euler_z="-0.920055" id="182" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="111.856" t1="56.8462" t2="225.333" s0="2.4253" s1="2.42529" s2="2.42529" q0="-0.28079" q1="-0.362922" q2="-0.314568" q3="0.830958" euler_x="-0.390543" euler_y="-0.894348" euler_z="-0.534631" id="325" color_r="0.266667" color_g="0.258824" color_b="0.258824" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
+            <EnvObject t0="111.856" t1="56.8462" t2="225.333" s0="2.4253" s1="2.42529" s2="2.42529" q0="-0.28079" q1="-0.362922" q2="-0.314568" q3="0.830958" euler_x="-0.390543" euler_y="-0.894348" euler_z="-0.534631" id="212" color_r="0.266667" color_g="0.258824" color_b="0.258824" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="104.875" t1="54.6069" t2="221.769" s0="2.40972" s1="2.40972" s2="2.40972" q0="-0.303682" q1="0.0442489" q2="0.0448798" q3="0.950686" euler_x="-0.61509" euler_y="0.111624" euler_z="0.058858" id="327" color_r="0.266667" color_g="0.258824" color_b="0.258824" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
+            <EnvObject t0="104.875" t1="54.6069" t2="221.769" s0="2.40972" s1="2.40972" s2="2.40972" q0="-0.303682" q1="0.0442489" q2="0.0448798" q3="0.950686" euler_x="-0.61509" euler_y="0.111624" euler_z="0.058858" id="325" color_r="0.266667" color_g="0.258824" color_b="0.258824" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="107.911" t1="56.3049" t2="229.487" s0="3.03093" s1="4.14493" s2="2.80082" q0="0.0721974" q1="0.169887" q2="-0.675136" q3="0.714225" euler_x="-0.134677" euler_y="0.347088" euler_z="-1.53819" id="328" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="107.911" t1="56.3049" t2="229.487" s0="3.03093" s1="4.14493" s2="2.80082" q0="0.0721974" q1="0.169887" q2="-0.675136" q3="0.714225" euler_x="-0.134677" euler_y="0.347088" euler_z="-1.53819" id="327" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="100.216" t1="48.1407" t2="225.673" s0="3.35157" s1="3.35157" s2="3.35157" q0="0.346859" q1="-0.400176" q2="-0.316485" q3="0.78701" euler_x="1.06843" euler_y="-0.42282" euler_z="-1.01727" id="330" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="100.216" t1="48.1407" t2="225.673" s0="3.35157" s1="3.35157" s2="3.35157" q0="0.346859" q1="-0.400176" q2="-0.316485" q3="0.78701" euler_x="1.06843" euler_y="-0.42282" euler_z="-1.01727" id="328" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="104.537" t1="57.8992" t2="225.171" s0="4.73167" s1="4.73167" s2="4.73166" q0="-0.14417" q1="-0.0935548" q2="-0.0855119" q3="0.981402" euler_x="-0.276473" euler_y="-0.209822" euler_z="-0.144529" id="331" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
+            <EnvObject t0="104.537" t1="57.8992" t2="225.171" s0="4.73167" s1="4.73167" s2="4.73166" q0="-0.14417" q1="-0.0935548" q2="-0.0855119" q3="0.981402" euler_x="-0.276473" euler_y="-0.209822" euler_z="-0.144529" id="330" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="107.51" t1="52.3267" t2="229.978" s0="3.6619" s1="3.6619" s2="3.66189" q0="0.111135" q1="-0.0180824" q2="-0.225316" q3="0.967757" euler_x="0.225176" euler_y="0.0150829" euler_z="-0.455791" id="332" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
+            <EnvObject t0="107.51" t1="52.3267" t2="229.978" s0="3.6619" s1="3.6619" s2="3.66189" q0="0.111135" q1="-0.0180824" q2="-0.225316" q3="0.967757" euler_x="0.225176" euler_y="0.0150829" euler_z="-0.455791" id="331" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="97.3362" t1="50.8635" t2="231.28" s0="3.35157" s1="3.35157" s2="3.35157" q0="0.102232" q1="0.0831354" q2="-0.169907" q3="0.97661" euler_x="0.175765" euler_y="0.198421" euler_z="-0.326965" id="336" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="97.3362" t1="50.8635" t2="231.28" s0="3.35157" s1="3.35157" s2="3.35157" q0="0.102232" q1="0.0831354" q2="-0.169907" q3="0.97661" euler_x="0.175765" euler_y="0.198421" euler_z="-0.326965" id="332" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="96.8077" t1="56.8496" t2="232.933" s0="3.03092" s1="4.14493" s2="2.80082" q0="0.0727819" q1="0.109843" q2="-0.453461" q3="0.881482" euler_x="0.0297162" euler_y="0.262667" euler_z="-0.946324" id="337" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="96.8077" t1="56.8496" t2="232.933" s0="3.03092" s1="4.14493" s2="2.80082" q0="0.0727819" q1="0.109843" q2="-0.453461" q3="0.881482" euler_x="0.0297162" euler_y="0.262667" euler_z="-0.946324" id="336" color_r="0.486275" color_g="0.423529" color_b="0.278431" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="107.615" t1="46.7991" t2="227.062" s0="3.35157" s1="3.35157" s2="3.35157" q0="-0.247861" q1="0.102915" q2="-0.815583" q3="0.512637" euler_x="-0.458046" euler_y="-0.303421" euler_z="-1.94804" id="338" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="107.615" t1="46.7991" t2="227.062" s0="3.35157" s1="3.35157" s2="3.35157" q0="-0.247861" q1="0.102915" q2="-0.815583" q3="0.512637" euler_x="-0.458046" euler_y="-0.303421" euler_z="-1.94804" id="337" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="96.2598" t1="56.8396" t2="225.652" s0="3.6619" s1="3.6619" s2="3.66189" q0="-0.167174" q1="-0.0398782" q2="0.248049" q3="0.95338" euler_x="-0.345378" euler_y="0.00689681" euler_z="0.507867" id="339" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
+            <EnvObject t0="96.2598" t1="56.8396" t2="225.652" s0="3.6619" s1="3.6619" s2="3.66189" q0="-0.167174" q1="-0.0398782" q2="0.248049" q3="0.95338" euler_x="-0.345378" euler_y="0.00689681" euler_z="0.507867" id="338" color_r="0.372549" color_g="0.329412" color_b="0.235294" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/winter_bush.xml">
                 <parameters />
             </EnvObject>
         </Group>
@@ -1744,7 +1744,7 @@
     </EnvObject>
     <Prefab t0="237.107" t1="40.3263" t2="-212.42" s0="9.03897" s1="32.0927" s2="7.96274" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="399" version="1" prefab_locked="true" prefab_path="Data/Objects/Plants/Trees/prefabs/fir_dead.xml" os0="9.03896" os1="32.0927" os2="7.96273">
         <parameters />
-        <Group t0="237.107" t1="40.3263" t2="-212.42" s0="9.02896" s1="32.0827" s2="7.95274" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="347" version="1">
+        <Group t0="237.107" t1="40.3263" t2="-212.42" s0="9.02896" s1="32.0827" s2="7.95274" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="345" version="1">
             <parameters />
             <EnvObject t0="238.617" t1="37.8957" t2="-211.514" s0="0.714939" s1="0.714939" s2="0.714939" q0="0.744295" q1="0.424055" q2="0.180123" q3="-0.483485" euler_x="-2.26045" euler_y="-0.74528" euler_z="0.671232" id="406" color_r="0.698039" color_g="0.682353" color_b="0.662745" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/broken_branch_bleached.xml">
                 <parameters />
@@ -1752,10 +1752,10 @@
             <EnvObject t0="237.459" t1="39.8531" t2="-212.225" s0="1.5266" s1="1.5266" s2="1.5266" q0="-0.000252984" q1="-0.853086" q2="0.000413975" q3="0.521771" euler_x="-3.13946" euler_y="-1.09785" euler_z="3.1397" id="695" color_r="0.96" color_g="0.972549" color_b="0.991373" overbright="0" type_file="Data/Objects/Plants/simple/simple_conifer_trunk.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="237.181" t1="55.0895" t2="-212.29" s0="0.566531" s1="0.566531" s2="0.566531" q0="0.292068" q1="-0.427625" q2="-0.544588" q3="0.65974" euler_x="1.07199" euler_y="-0.248685" euler_z="-1.52836" id="341" color_r="0.65098" color_g="0.67451" color_b="0.67451" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
+            <EnvObject t0="237.181" t1="55.0895" t2="-212.29" s0="0.566531" s1="0.566531" s2="0.566531" q0="0.292068" q1="-0.427625" q2="-0.544588" q3="0.65974" euler_x="1.07199" euler_y="-0.248685" euler_z="-1.52836" id="340" color_r="0.65098" color_g="0.67451" color_b="0.67451" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
                 <parameters />
             </EnvObject>
-            <EnvObject t0="237.656" t1="46.7643" t2="-213.058" s0="0.5329" s1="0.5329" s2="0.5329" q0="-0.392298" q1="0.272018" q2="0.438294" q3="0.761582" euler_x="-0.583248" euler_y="0.860565" euler_z="0.770606" id="345" color_r="0.698039" color_g="0.682353" color_b="0.662745" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/broken_branch_bleached.xml">
+            <EnvObject t0="237.656" t1="46.7643" t2="-213.058" s0="0.5329" s1="0.5329" s2="0.5329" q0="-0.392298" q1="0.272018" q2="0.438294" q3="0.761582" euler_x="-0.583248" euler_y="0.860565" euler_z="0.770606" id="341" color_r="0.698039" color_g="0.682353" color_b="0.662745" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/broken_branch_bleached.xml">
                 <parameters />
             </EnvObject>
             <EnvObject t0="234.535" t1="44.125" t2="-211.67" s0="0.883194" s1="0.883194" s2="0.883194" q0="0" q1="0" q2="-0.230444" q3="0.973086" euler_x="0" euler_y="0" euler_z="-0.465067" id="2583" color_r="0.698039" color_g="0.682353" color_b="0.662745" overbright="0" type_file="Data/Objects/Plants/Trees/temperate/bleached_bough.xml">
@@ -2192,13 +2192,15 @@
         <ConnectionsFrom />
     </Hotspot>
     <Group t0="93.2877" t1="41.9824" t2="274.883" s0="0.369436" s1="1.37695" s2="0.630178" q0="0" q1="0.0717025" q2="0" q3="0.997426" euler_x="0" euler_y="0.143528" euler_z="0" id="482" version="1">
-        <parameters />
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Inside Castle" />
+        </parameters>
         <EnvObject t0="93.2882" t1="41.89" t2="274.92" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.189097" q1="0.0704021" q2="0.0135938" q3="0.979337" euler_x="-0.381479" euler_y="0.143528" euler_z="0" id="497" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
         <Group t0="93.2691" t1="42.4796" t2="274.754" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.0717025" q2="0" q3="0.997426" euler_x="0" euler_y="0.143528" euler_z="0" id="499" version="1">
             <parameters />
-            <Hotspot t0="93.2693" t1="42.4861" t2="274.755" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.0717025" q1="3.91006e-005" q2="-0.997426" q3="0.000544243" euler_x="-0.000157668" euler_y="-0.143528" euler_z="-3.14049" id="502" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="93.2693" t1="42.4861" t2="274.755" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.0717025" q1="3.91006e-005" q2="-0.997426" q3="0.000544243" euler_x="-0.000157668" euler_y="-0.143528" euler_z="-3.14049" id="502" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="2" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2219,13 +2221,15 @@
         <ConnectionsFrom />
     </Hotspot>
     <Group t0="83.9787" t1="41.9824" t2="275.589" s0="0.417364" s1="1.37695" s2="0.735342" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="484" version="1">
-        <parameters />
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Inside Castle" />
+        </parameters>
         <EnvObject t0="84.05" t1="41.89" t2="275.674" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.189097" q1="0.0704021" q2="0.0135938" q3="0.979337" euler_x="-0.381479" euler_y="0.143528" euler_z="0" id="503" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
         <Group t0="83.9787" t1="42.4796" t2="275.43" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.0717025" q2="0" q3="0.997426" euler_x="0" euler_y="0.143528" euler_z="0" id="505" version="1">
             <parameters />
-            <Hotspot t0="83.9788" t1="42.4861" t2="275.431" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.0717025" q1="3.91006e-005" q2="-0.997426" q3="0.000544243" euler_x="-0.000157668" euler_y="-0.143528" euler_z="-3.14049" id="506" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="83.9788" t1="42.4861" t2="275.431" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.0717025" q1="3.91006e-005" q2="-0.997426" q3="0.000544243" euler_x="-0.000157668" euler_y="-0.143528" euler_z="-3.14049" id="506" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="2" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2264,8 +2268,10 @@
         <ConnectionsFrom />
     </Hotspot>
     <Group t0="149.428" t1="37.2523" t2="62.2449" s0="2.00739" s1="2.64174" s2="1.90899" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="490" version="1">
-        <parameters />
-        <Hotspot t0="149.547" t1="37.6887" t2="62.3159" s0="0.439243" s1="0.439243" s2="0.439243" q0="0" q1="0" q2="-1" q3="0.000545621" euler_x="0" euler_y="0" euler_z="-3.1405" id="494" type_file="Data/Objects/Hotspots/fire_test.xml">
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Inside Castle" />
+        </parameters>
+        <Hotspot t0="149.547" t1="37.6887" t2="62.3159" s0="0.439243" s1="0.439243" s2="0.439243" q0="0" q1="0" q2="-1" q3="0.000545621" euler_x="0" euler_y="0" euler_z="-3.1405" id="494" type_file="Data/Objects/stronghold/hotspots/fire.xml">
             <parameters>
                 <parameter name="Fire Ribbons" type="int" val="4" />
                 <parameter name="Ignite Characters" type="int" val="1" />
@@ -2324,8 +2330,10 @@
         <parameters />
     </ItemObject>
     <Group t0="40.7994" t1="46.6117" t2="-232.488" s0="0.368812" s1="0.372465" s2="0.390866" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="511" version="1">
-        <parameters />
-        <Hotspot t0="40.8041" t1="46.6182" t2="-232.472" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="0" q1="0" q2="-1" q3="0.000545621" euler_x="0" euler_y="0" euler_z="-3.1405" id="517" type_file="Data/Objects/Hotspots/fire_test.xml">
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Start Area" />
+        </parameters>
+        <Hotspot t0="40.8041" t1="46.6182" t2="-232.472" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="0" q1="0" q2="-1" q3="0.000545621" euler_x="0" euler_y="0" euler_z="-3.1405" id="517" type_file="Data/Objects/stronghold/hotspots/fire.xml">
             <parameters>
                 <parameter name="Fire Ribbons" type="int" val="4" />
                 <parameter name="Ignite Characters" type="int" val="1" />
@@ -2349,7 +2357,7 @@
         </EnvObject>
         <Group t0="143.491" t1="64.0644" t2="255.018" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="514" version="1">
             <parameters />
-            <Hotspot t0="143.492" t1="64.0752" t2="255.019" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.509615" q1="0.000277817" q2="-0.860402" q3="0.000469446" euler_x="-0.00199037" euler_y="-1.06947" euler_z="-3.13932" id="515" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="143.492" t1="64.0752" t2="255.019" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.509615" q1="0.000277817" q2="-0.860402" q3="0.000469446" euler_x="-0.00199037" euler_y="-1.06947" euler_z="-3.13932" id="515" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2371,7 +2379,7 @@
         </EnvObject>
         <Group t0="137.137" t1="64.3945" t2="264.376" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.509615" q2="0" q3="0.860402" euler_x="0" euler_y="1.06947" euler_z="0" id="520" version="1">
             <parameters />
-            <Hotspot t0="137.138" t1="64.4053" t2="264.377" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.509615" q1="0.000277817" q2="-0.860402" q3="0.000469446" euler_x="-0.00199037" euler_y="-1.06947" euler_z="-3.13932" id="521" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="137.138" t1="64.4053" t2="264.377" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.509615" q1="0.000277817" q2="-0.860402" q3="0.000469446" euler_x="-0.00199037" euler_y="-1.06947" euler_z="-3.13932" id="521" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2387,13 +2395,15 @@
         </Group>
     </Group>
     <Group t0="175.457" t1="53.4507" t2="282.748" s0="0.933782" s1="2.27484" s2="1.19311" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="524" version="1">
-        <parameters />
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Inside Castle" />
+        </parameters>
         <EnvObject t0="175.621" t1="53.2977" t2="282.584" s0="2.55642" s1="2.55642" s2="2.55642" q0="-0.0505949" q1="0.946254" q2="0.182709" q3="0.262033" euler_x="2.76011" euler_y="0.540294" euler_z="3.14159" id="525" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
         <Group t0="175.404" t1="54.2746" t2="282.93" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="0.963732" q2="0" q3="0.266873" euler_x="3.14159" euler_y="0.540294" euler_z="3.14159" id="526" version="1">
             <parameters />
-            <Hotspot t0="175.405" t1="54.2854" t2="282.929" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.963732" q1="0.000525802" q2="-0.266873" q3="0.000145555" euler_x="-3.14094" euler_y="-0.540294" euler_z="-0.0012724" id="527" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="175.405" t1="54.2854" t2="282.929" s0="0.144587" s1="0.144587" s2="0.144587" q0="-0.963732" q1="0.000525802" q2="-0.266873" q3="0.000145555" euler_x="-3.14094" euler_y="-0.540294" euler_z="-0.0012724" id="527" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2485,8 +2495,10 @@
         </parameters>
     </EnvObject>
     <Group t0="42.2966" t1="39.3756" t2="-269.59" s0="0.707778" s1="0.714789" s2="0.750102" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="546" version="1">
-        <parameters />
-        <Hotspot t0="42.3056" t1="39.3881" t2="-269.56" s0="0.167471" s1="0.167471" s2="0.16747" q0="0" q1="0" q2="-1" q3="0.000545621" euler_x="0" euler_y="0" euler_z="-3.1405" id="547" type_file="Data/Objects/Hotspots/fire_test.xml">
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Start Area" />
+        </parameters>
+        <Hotspot t0="42.3056" t1="39.3881" t2="-269.56" s0="0.167471" s1="0.167471" s2="0.16747" q0="0" q1="0" q2="-1" q3="0.000545621" euler_x="0" euler_y="0" euler_z="-3.1405" id="547" type_file="Data/Objects/stronghold/hotspots/fire.xml">
             <parameters>
                 <parameter name="Fire Ribbons" type="int" val="4" />
                 <parameter name="Ignite Characters" type="int" val="0" />
@@ -2586,8 +2598,10 @@
         </parameters>
     </EnvObject>
     <Group t0="60.5066" t1="48.2869" t2="-227.86" s0="2.92095" s1="4.07413" s2="2.45701" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="560" version="1">
-        <parameters />
-        <Hotspot t0="60.5066" t1="47.9252" t2="-227.853" s0="0.635258" s1="0.767075" s2="0.608519" q0="0" q1="0" q2="-0.0607104" q3="0.998156" euler_x="0" euler_y="0" euler_z="-0.121496" id="561" type_file="Data/Objects/Hotspots/fire_test.xml">
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Start Area" />
+        </parameters>
+        <Hotspot t0="60.5066" t1="47.9252" t2="-227.853" s0="0.635258" s1="0.767075" s2="0.608519" q0="0" q1="0" q2="-0.0607104" q3="0.998156" euler_x="0" euler_y="0" euler_z="-0.121496" id="561" type_file="Data/Objects/stronghold/hotspots/fire.xml">
             <parameters>
                 <parameter name="Fire Ribbons" type="int" val="6" />
                 <parameter name="Ignite Characters" type="int" val="1" />
@@ -2693,7 +2707,7 @@
         </EnvObject>
         <Group t0="192.24" t1="44.686" t2="19.2117" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="-0.224713" q2="0" q3="0.974424" euler_x="0" euler_y="-0.453296" euler_z="0" id="589" version="1">
             <parameters />
-            <Hotspot t0="192.239" t1="44.6968" t2="19.2128" s0="0.144587" s1="0.144587" s2="0.144587" q0="0.224713" q1="-0.000122786" q2="-0.974423" q3="0.000531614" euler_x="0.000531933" euler_y="0.453296" euler_z="-3.14038" id="590" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="192.239" t1="44.6968" t2="19.2128" s0="0.144587" s1="0.144587" s2="0.144587" q0="0.224713" q1="-0.000122786" q2="-0.974423" q3="0.000531614" euler_x="0.000531933" euler_y="0.453296" euler_z="-3.14038" id="590" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2715,7 +2729,7 @@
         </EnvObject>
         <Group t0="178.351" t1="44.686" t2="11.3042" s0="0.595542" s1="0.617126" s2="0.597994" q0="0" q1="-0.224713" q2="0" q3="0.974424" euler_x="0" euler_y="-0.453296" euler_z="0" id="595" version="1">
             <parameters />
-            <Hotspot t0="178.35" t1="44.6968" t2="11.3052" s0="0.144587" s1="0.144587" s2="0.144587" q0="0.224713" q1="-0.000122786" q2="-0.974423" q3="0.000531614" euler_x="0.000531933" euler_y="0.453296" euler_z="-3.14038" id="596" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="178.35" t1="44.6968" t2="11.3052" s0="0.144587" s1="0.144587" s2="0.144587" q0="0.224713" q1="-0.000122786" q2="-0.974423" q3="0.000531614" euler_x="0.000531933" euler_y="0.453296" euler_z="-3.14038" id="596" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2737,7 +2751,7 @@
         </EnvObject>
         <Group t0="156.997" t1="19.3656" t2="-96.8641" s0="1.01248" s1="1.04917" s2="1.01665" q0="0.159855" q1="0.500742" q2="-0.0946815" q3="0.845421" euler_x="0.373753" euler_y="1.06947" euler_z="1.58132e-006" id="601" version="1">
             <parameters />
-            <Hotspot t0="157.004" t1="19.3819" t2="-96.8592" s0="0.245812" s1="0.245812" s2="0.245812" q0="-0.500654" q1="0.160127" q2="-0.845472" q3="-0.0942202" euler_x="-0.3756" euler_y="-1.06907" euler_z="-3.13948" id="602" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="157.004" t1="19.3819" t2="-96.8592" s0="0.245812" s1="0.245812" s2="0.245812" q0="-0.500654" q1="0.160127" q2="-0.845472" q3="-0.0942202" euler_x="-0.3756" euler_y="-1.06907" euler_z="-3.13948" id="602" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2759,7 +2773,7 @@
         </EnvObject>
         <Group t0="228.117" t1="19.9688" t2="-84.9663" s0="1.01248" s1="1.04917" s2="1.01665" q0="0.159855" q1="0.500742" q2="-0.0946815" q3="0.845421" euler_x="0.373753" euler_y="1.06947" euler_z="1.58132e-006" id="607" version="1">
             <parameters />
-            <Hotspot t0="228.125" t1="19.9851" t2="-84.9614" s0="0.245812" s1="0.245812" s2="0.245812" q0="-0.500654" q1="0.160127" q2="-0.845472" q3="-0.0942202" euler_x="-0.3756" euler_y="-1.06907" euler_z="-3.13948" id="614" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="228.125" t1="19.9851" t2="-84.9614" s0="0.245812" s1="0.245812" s2="0.245812" q0="-0.500654" q1="0.160127" q2="-0.845472" q3="-0.0942202" euler_x="-0.3756" euler_y="-1.06907" euler_z="-3.13948" id="614" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2789,7 +2803,9 @@
         </EnvObject>
     </Group>
     <Hotspot t0="40.7463" t1="47.4194" t2="-232.527" s0="0.266607" s1="0.645325" s2="0.266607" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="613" type_file="Data/Objects/Hotspots/particle_occluder.xml">
-        <parameters />
+        <parameters>
+            <parameter name="Remover Name" type="string" val="Start Area" />
+        </parameters>
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
@@ -2877,7 +2893,7 @@
         </EnvObject>
         <Group t0="138.978" t1="19.5257" t2="-46.7955" s0="1.01248" s1="1.04917" s2="1.01665" q0="0.18236" q1="0.492991" q2="-0.132858" q3="0.840268" euler_x="0.373751" euler_y="1.06947" euler_z="-0.0905735" id="619" version="1">
             <parameters />
-            <Hotspot t0="138.987" t1="19.5412" t2="-46.7907" s0="0.245812" s1="0.245812" s2="0.245812" q0="-0.49289" q1="0.182629" q2="-0.840337" q3="-0.1324" euler_x="-0.375598" euler_y="-1.06906" euler_z="3.05313" id="649" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="138.987" t1="19.5412" t2="-46.7907" s0="0.245812" s1="0.245812" s2="0.245812" q0="-0.49289" q1="0.182629" q2="-0.840337" q3="-0.1324" euler_x="-0.375598" euler_y="-1.06906" euler_z="3.05313" id="649" type_file="Data/Objects/stronghold/hotspots/fire.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="4" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -3033,7 +3049,7 @@
     <SpawnerItem display_name="Scratches" path="Data/Objects/Decals/Scratches/Scratches_01.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/Decal_Scratches.png" />
     <SpawnerItem display_name="Cave Painting Decal 1" path="Data/Objects/therium/Decals/cavepaintings/uridranvaldran.xml" thumbnail_path="" />
     <SpawnerItem display_name="Crete Impact" path="Data/Objects/Decals/crete_impact.xml" thumbnail_path="Data/UI/spawner/thumbs/Decal/crete_impact.png" />
-    <SpawnerItem display_name="Fire Hotspot" path="Data/Objects/Hotspots/fire_test.xml" thumbnail_path="" />
+    <SpawnerItem display_name="Fire Hotspot" path="Data/Objects/stronghold/hotspots/fire.xml" thumbnail_path="" />
     <SpawnerItem display_name="Fire Wood Hot" path="Data/Objects/Environment/camp/fire_wood_hot.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/fire_wood_hot.png" />
     <SpawnerItem display_name="Fire Pit" path="Data/Objects/Environment/camp/fire_pit.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/fire_pit.png" />
     <SpawnerItem display_name="Fire Ash" path="Data/Objects/Environment/camp/fire_ash.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/fire_ash.png" />
