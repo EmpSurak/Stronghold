@@ -36,11 +36,12 @@ void Init(string level_name){
 
     timer.Add(DefeatJob(function(){
         casualties++;
-        EndLevel("You failed!");
+        EndLevel("You failed!", false);
     }));
 
     timer.Add(VictoryJob(function(){
-        EndLevel("You conquered the castle!", 5.0f);
+        level.SendMessage("victory");
+        EndLevel("You conquered the castle!", true, 5.0f);
     }));
 
     timer.Add(OnInputPressedJob(0, _key_reset, function(){
@@ -329,8 +330,8 @@ void RegisterMusicJobs(){
     }));
 }
 
-void EndLevel(string message, float delay = 1.5f){
-    end_screen.ShowMessage(message, current_time, casualties);
+void EndLevel(string message, bool win, float delay = 1.5f){
+    end_screen.ShowMessage(message, win, current_time, casualties);
 
     timer.Add(DelayedJob(delay, function(){
         end_screen.ShowControls();    

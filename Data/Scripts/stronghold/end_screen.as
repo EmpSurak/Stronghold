@@ -16,6 +16,7 @@ class EndScreen : AHGUI::GUI {
     private float time = 0;
     private string message = "";
     private int casualties = 0;
+    private bool win = false;
 
     private EndScreenState current_state = agsFighting;
     private EndScreenState last_state = agsInvalidState;
@@ -56,7 +57,7 @@ class EndScreen : AHGUI::GUI {
         DisplayText(message_title, DDCenter, message, _text_color, true);
 
         AHGUI::Divider@ score_pane = main_pane.addDivider(DDTop, DOVertical, ivec2(AH_UNDEFINEDSIZE, 250));
-        DisplayText(score_pane, DDTop, "Time of Death: " + GetTime(int(time)), _text_color, true);
+        DisplayText(score_pane, DDTop, "Time of " + (win ? "Victory" : "Death") + ": " + GetTime(int(time)), _text_color, true);
         DisplayText(score_pane, DDTop, "Casualties of War: " + casualties, _text_color, true);
 
         if(current_state == agsEndScreen){
@@ -68,13 +69,27 @@ class EndScreen : AHGUI::GUI {
     private string GetTime(int seconds){
         int num_seconds = seconds % 60;
         int num_minutes = seconds / 60;
-        if(num_minutes == 0){
-            return num_seconds + " seconds";
-        }else if(num_minutes == 1){
-            return num_minutes + " minute and " + num_seconds + " seconds";
-        }else{
-            return num_minutes + " minutes and " + num_seconds + " seconds";
+        string result = "";
+
+        if(num_minutes == 1){
+            result += "1 minute";
+        }else if(num_minutes > 1){
+            result += num_minutes + " minutes";
         }
+
+        if(num_seconds == 1){
+            if(result != ""){
+                result += " and ";
+            }
+            result += "1 second";
+        }else if(num_seconds > 1){
+            if(result != ""){
+                result += " and ";
+            }
+            result += num_seconds + " seconds";
+        }
+
+        return result;
     }
 
     void Update() {
@@ -100,9 +115,10 @@ class EndScreen : AHGUI::GUI {
         single_sentence.showBorder(false);
     }
 
-    void ShowMessage(string _message, float _time, int _casualties){
+    void ShowMessage(string _message, bool _win, float _time, int _casualties){
         time = _time;
         message = _message;
+        win = _win;
         casualties = _casualties;
         current_state = agsMsgScreen;
     }

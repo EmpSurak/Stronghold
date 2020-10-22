@@ -23,5 +23,10 @@
        <Version>0.13.0</Version> 
     </ModDependency>
 
+    <ModDependency>
+       <Id>drika-hotspot</Id>
+       <Version>0.1.0</Version> 
+    </ModDependency>
+
     <Level title="Stronghold" thumbnail="UI/mainmenu/images/stronghold.png">stronghold.xml</Level>
 </Mod>
