@@ -17,10 +17,6 @@ void HandleEvent(string event, MovementObject @mo){
         return;
     }
 
-    if(event != "enter" && event != "exit"){
-        return;
-    }
-
     if(!mo.controlled){
         return;
     }
