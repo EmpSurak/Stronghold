@@ -1,7 +1,7 @@
 <?xml version="2.0" ?>
 <Type>saved</Type>
 <ActorObjects>
-    <ActorObject t0="9.20947" t1="15.0236" t2="53.7601" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="248" type_file="Data/Objects/stronghold/characters/rabbit_guard_soldier_actor.xml" is_player="0">
+    <ActorObject t0="0" t1="2" t2="16" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="50" type_file="Data/Objects/stronghold/characters/rabbit_guard_soldier_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="0.5" />
@@ -42,7 +42,7 @@
             <parameter name="Wearing Metal Armor" type="int" val="1" />
         </parameters>
         <Connections>
-            <Connection id="248" />
+            <Connection id="50" />
         </Connections>
         <ItemConnections />
         <Palette>
@@ -89,22 +89,22 @@
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
         </EnvObjectAttachments>
-        <EnvObject s0="1" s1="1" s2="1" id="249" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="51" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1" s1="1" s2="1" id="250" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="74" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.61108" s1="1.61108" s2="1.61108" id="251" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
+        <EnvObject s0="1.61108" s1="1.61108" s2="1.61108" id="75" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1.61108" s1="1.61108" s2="1.61108" id="252" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
+        <EnvObject s0="1.61108" s1="1.61108" s2="1.61108" id="76" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_lower_arm.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1" s1="1" s2="1" id="253" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/chitinarmour/chestplate.xml">
+        <EnvObject s0="1" s1="1" s2="1" id="80" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/chitinarmour/chestplate.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="1" s1="1.89437" s2="1" id="254" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/chitinarmour/backplate.xml">
+        <EnvObject s0="1" s1="1.89437" s2="1" id="81" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/chitinarmour/backplate.xml">
             <parameters />
         </EnvObject>
     </ActorObject>

@@ -167,33 +167,47 @@ int CreateUnit(UnitType _type){
                 "Data/Objects/stronghold/prefabs/characters/soldier_1.xml",
                 "Data/Objects/stronghold/prefabs/characters/soldier_2.xml",
                 "Data/Objects/stronghold/prefabs/characters/soldier_3.xml",
-                "Data/Objects/stronghold/prefabs/characters/soldier_4.xml"
+                "Data/Objects/stronghold/prefabs/characters/soldier_4.xml",
+                "Data/Objects/stronghold/prefabs/characters/soldier_5.xml",
+                "Data/Objects/stronghold/prefabs/characters/soldier_6.xml"
             };
             break;
         }
         case _tank: {
             possible_files = {
                 "Data/Objects/stronghold/prefabs/characters/tank_1.xml",
-                "Data/Objects/stronghold/prefabs/characters/tank_2.xml"
+                "Data/Objects/stronghold/prefabs/characters/tank_2.xml",
+                "Data/Objects/stronghold/prefabs/characters/tank_3.xml",
+                "Data/Objects/stronghold/prefabs/characters/tank_4.xml",
+                "Data/Objects/stronghold/prefabs/characters/tank_5.xml",
+                "Data/Objects/stronghold/prefabs/characters/tank_6.xml"
             };
             break;
         }
         case _giant: {
             possible_files = {
-                "Data/Objects/stronghold/prefabs/characters/giant_1.xml"
+                "Data/Objects/stronghold/prefabs/characters/giant_1.xml",
+                "Data/Objects/stronghold/prefabs/characters/giant_2.xml",
+                "Data/Objects/stronghold/prefabs/characters/giant_3.xml"
             };
             break;
         }
         case _bomber: {
             possible_files = {
                 "Data/Objects/stronghold/prefabs/characters/bomber_1.xml",
-                "Data/Objects/stronghold/prefabs/characters/bomber_2.xml"
+                "Data/Objects/stronghold/prefabs/characters/bomber_2.xml",
+                "Data/Objects/stronghold/prefabs/characters/bomber_3.xml",
+                "Data/Objects/stronghold/prefabs/characters/bomber_4.xml",
+                "Data/Objects/stronghold/prefabs/characters/bomber_5.xml",
+                "Data/Objects/stronghold/prefabs/characters/bomber_6.xml"
             };
             break;
         }
         case _flag_bearer: {
             possible_files = {
-                "Data/Objects/stronghold/prefabs/characters/flag_bearer_1.xml"
+                "Data/Objects/stronghold/prefabs/characters/flag_bearer_1.xml",
+                "Data/Objects/stronghold/prefabs/characters/flag_bearer_2.xml",
+                "Data/Objects/stronghold/prefabs/characters/flag_bearer_3.xml"
             };
             break;
         }

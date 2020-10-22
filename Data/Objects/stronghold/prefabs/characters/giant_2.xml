@@ -1,7 +1,7 @@
 <?xml version="2.0" ?>
 <Type>saved</Type>
 <ActorObjects>
-    <ActorObject t0="37" t1="2" t2="16" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="12" type_file="Data/Objects/stronghold/characters/wolf_giant_actor.xml" is_player="0">
+    <ActorObject t0="42" t1="2" t2="16" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="203" type_file="Data/Objects/stronghold/characters/wolf_giant_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.7" />
             <parameter name="Attack Damage" type="float" val="1" />
@@ -10,11 +10,11 @@
             <parameter name="Block Follow-up" type="float" val="0.5" />
             <parameter name="Block Skill" type="float" val="0.5" />
             <parameter name="Cannot Be Disarmed" type="int" val="0" />
-            <parameter name="Character Scale" type="float" val="1.4" />
+            <parameter name="Character Scale" type="float" val="1.2" />
             <parameter name="Damage Resistance" type="float" val="1" />
             <parameter name="Ear Size" type="float" val="1" />
             <parameter name="Fall Damage Multiplier" type="float" val="1" />
-            <parameter name="Fat" type="float" val="0.5" />
+            <parameter name="Fat" type="float" val="0.6" />
             <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
             <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
             <parameter name="Fear - Causes Fear On Sight" type="int" val="1" />
@@ -26,8 +26,8 @@
             <parameter name="Ground Aggression" type="float" val="0.5" />
             <parameter name="Knockout Shield" type="int" val="0" />
             <parameter name="Left handed" type="int" val="0" />
-            <parameter name="Movement Speed" type="float" val="1" />
-            <parameter name="Muscle" type="float" val="0.5" />
+            <parameter name="Movement Speed" type="float" val="1.1" />
+            <parameter name="Muscle" type="float" val="0.6" />
             <parameter name="No Look Around" type="int" val="0" />
             <parameter name="Peripheral FOV distance" type="float" val="4" />
             <parameter name="Peripheral FOV horizontal" type="float" val="1.39627" />
@@ -42,7 +42,7 @@
             <parameter name="Wearing Metal Armor" type="int" val="0" />
         </parameters>
         <Connections>
-            <Connection id="12" />
+            <Connection id="203" />
         </Connections>
         <ItemConnections />
         <Palette />

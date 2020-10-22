@@ -1,12 +1,12 @@
 <?xml version="2.0" ?>
 <Type>saved</Type>
 <ActorObjects>
-    <ActorObject t0="21" t1="2" t2="-5" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="108" type_file="Data/Objects/stronghold/characters/hooded_rat_bomber_actor.xml" is_player="0">
+    <ActorObject t0="21" t1="2" t2="0" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="170" type_file="Data/Objects/stronghold/characters/hooded_rat_bomber_actor.xml" is_player="0">
         <parameters>
             <parameter name="Aggression" type="float" val="0.5" />
             <parameter name="Attack Damage" type="float" val="0.05" />
             <parameter name="Attack Knockback" type="float" val="0.0565" />
-            <parameter name="Attack Speed" type="float" val="0.75" />
+            <parameter name="Attack Speed" type="float" val="0.8" />
             <parameter name="Block Follow-up" type="float" val="0" />
             <parameter name="Block Skill" type="float" val="0.05" />
             <parameter name="Cannot Be Disarmed" type="int" val="0" />
@@ -26,8 +26,8 @@
             <parameter name="Ground Aggression" type="float" val="0.6" />
             <parameter name="Knockout Shield" type="int" val="0" />
             <parameter name="Left handed" type="int" val="0" />
-            <parameter name="Movement Speed" type="float" val="1" />
-            <parameter name="Muscle" type="float" val="0.5" />
+            <parameter name="Movement Speed" type="float" val="1.05" />
+            <parameter name="Muscle" type="float" val="0.55" />
             <parameter name="No Look Around" type="int" val="1" />
             <parameter name="Peripheral FOV distance" type="float" val="4" />
             <parameter name="Peripheral FOV horizontal" type="float" val="1.39627" />
@@ -42,7 +42,7 @@
             <parameter name="Wearing Metal Armor" type="int" val="0" />
         </parameters>
         <Connections>
-            <Connection id="108" />
+            <Connection id="170" />
         </Connections>
         <ItemConnections />
         <Palette>
@@ -59,16 +59,25 @@
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
             <EnvObjectAttachment>
-                <BoneConnect bone_id="31" num_connections="1" m0="0.999996" m1="0.000495366" m2="-0.00275327" m3="0" m4="-0.00130517" m5="0.953131" m6="-0.302556" m7="0" m8="0.00247436" m9="0.302558" m10="0.953128" m11="0" m12="0.00140572" m13="0.662059" m14="0.390315" m15="1" />
+                <BoneConnect bone_id="31" num_connections="1" m0="0.999988" m1="0.00401799" m2="-0.00273768" m3="0" m4="-0.00465406" m5="0.953966" m6="-0.29988" m7="0" m8="0.00140673" m9="0.299889" m10="0.953973" m11="0" m12="-0.00266075" m13="0.657113" m14="0.396029" m15="1" />
+                <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
+                <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
+                <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
+            </EnvObjectAttachment>
+            <EnvObjectAttachment>
+                <BoneConnect bone_id="2" num_connections="1" m0="0.999147" m1="-0.00583155" m2="-0.0408724" m3="0" m4="-0.0402997" m5="0.0773756" m6="-0.996187" m7="0" m8="0.00897184" m9="0.996985" m10="0.0770746" m11="0" m12="-0.00256538" m13="0.315996" m14="0.283414" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
                 <BoneConnect bone_id="-1" num_connections="0" m0="1" m1="0" m2="0" m3="0" m4="0" m5="1" m6="0" m7="0" m8="0" m9="0" m10="1" m11="0" m12="0" m13="0" m14="0" m15="1" />
             </EnvObjectAttachment>
         </EnvObjectAttachments>
-        <EnvObject s0="2.63442" s1="2.63442" s2="2.63442" id="109" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_bag.xml">
+        <EnvObject s0="2.63442" s1="2.63442" s2="2.63442" id="171" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/Gear/dog_armor/dog_armor_bag.xml">
             <parameters />
         </EnvObject>
-        <EnvObject s0="0.0621786" s1="0.0621786" s2="0.0621786" id="160" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/shells/shell1.xml">
+        <EnvObject s0="0.0593912" s1="0.0593912" s2="0.0593912" id="172" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/shells/shell1.xml">
+            <parameters />
+        </EnvObject>
+        <EnvObject s0="0.128833" s1="0.138401" s2="0.138401" id="176" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/therium/shells/shell2.xml">
             <parameters />
         </EnvObject>
     </ActorObject>
