@@ -41,9 +41,14 @@ void HandleEvent(string event, MovementObject @mo){
         }
     }
 
-    array<string> target_hotspots = FindHotspotsByNamePrefix(params.GetString(_name_key));
-    for(uint i = 0; i < target_hotspots.length(); i++){
-        level.SendMessage(_event_name + " \"" + target_hotspots[i] + "\" " + mo.GetID());
+    array<int> all_hotspots = GetObjectIDsType(_hotspot_object);
+    for(uint i = 0; i < all_hotspots.length(); i++){
+        Object@ current_hotspot = ReadObjectFromID(all_hotspots[i]);
+        string current_name = current_hotspot.GetName();
+        if(current_name.findFirst(params.GetString(_name_key)) == 0){
+            current_hotspot.SetEnabled(true);
+            level.SendMessage(_event_name + " \"" + current_name + "\" " + mo.GetID());
+        }
     }
 }
 

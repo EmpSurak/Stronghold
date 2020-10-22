@@ -46,14 +46,10 @@ const string _fur_channel_key = "Fur Channel";
 
 TimedExecution timer;
 CommandJobStorage command_job_storage;
-int char_count, max_char_count, team_color, last_triggered_by;
+int char_count, max_char_count, team_color, last_triggered_by, player_id;
 float min_spawn_delay, max_spawn_delay, difficulty;
 string team, goal, escort_name, go_to_name;
 UnitType type;
-
-int player_id = -1;
-bool is_close = false;
-bool was_triggered = false;
 
 void Init(){
     level.ReceiveLevelEvents(hotspot.GetID());
@@ -62,8 +58,8 @@ void Init(){
 
 void InitJobs(){
     char_count = 0;
-    was_triggered = false;
     last_triggered_by = -1;
+    player_id = -1;
     max_char_count = params.HasParam(_char_count_key) ? params.GetInt(_char_count_key) : _char_count_default;
     team_color = params.HasParam(_team_color_key) ? params.GetInt(_team_color_key) : _team_color_default;
     min_spawn_delay = params.HasParam(_min_spawn_delay_key) ? params.GetFloat(_min_spawn_delay_key) : _min_spawn_delay_default;
@@ -85,7 +81,6 @@ void InitJobs(){
             return true;
         }
         last_triggered_by = atoi(_params[2]);
-        was_triggered = true;
 
         timer.Add(RepeatingDynamicDelayedJob(GetRandDelay(), function(){
             int soldier_id = CreateUnit(type);
@@ -97,22 +92,14 @@ void InitJobs(){
             char_count++;
 
             if(char_count >= max_char_count){
+                // For performance reasons the hotspot is disabled when it is finished.
+                ReadObjectFromID(hotspot.GetID()).SetEnabled(false);
                 return 0.0f;
             }
 
             return GetRandDelay();
         }));
 
-        return false;
-    }));
-
-    timer.Add(LevelEventJob("spawner_reset", function(_params){
-        Object@ hotspot_obj = ReadObjectFromID(hotspot.GetID());
-        if(_params.length() < 2 || _params[1] != hotspot_obj.GetName()){
-            return true;
-        }
-
-        Reset();
         return false;
     }));
 
@@ -130,6 +117,10 @@ void InitJobs(){
 
         return true;
     }));
+
+    // For performance reasons the hotspot is disabled by default.
+    // The spawner_start hotspots enables this hotspot automatically.
+    ReadObjectFromID(hotspot.GetID()).SetEnabled(false);
 }
 
 float GetRandDelay(){
@@ -162,29 +153,10 @@ void HandleEvent(string event, MovementObject @mo){}
 
 void Update(){
     timer.Update();
-
-    if(was_triggered){
-        return;
-    }
-
-    UpdatePlayerDistance();
 }
 
 void ReceiveMessage(string msg){
-    if(!is_close || was_triggered){
-        return;
-    }
     timer.AddEvent(msg);
-}
-
-bool WasTriggered(){
-    return char_count >= max_char_count;
-}
-
-void UpdatePlayerDistance(){
-    MovementObject@ _player = ReadCharacterID(player_id);
-    Object@ _hotspot_obj = ReadObjectFromID(hotspot.GetID());
-    is_close = distance(_player.position, _hotspot_obj.GetTranslation()) < _hotspot_deactivation_radius;
 }
 
 int CreateUnit(UnitType _type){
