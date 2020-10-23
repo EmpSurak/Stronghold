@@ -1,0 +1,63 @@
+<?xml version="2.0" ?>
+<Type>saved</Type>
+<ActorObjects>
+    <ActorObject name="Sir Purrington" t0="42.5598" t1="35.2655" t2="-284.379" s0="1" s1="1" s2="1" q0="0" q1="0.343819" q2="0" q3="0.939036" euler_x="0" euler_y="0.701962" euler_z="0" id="459" type_file="Data/Objects/characters/cats/fancy_striped_cat_actor.xml" is_player="1">
+        <parameters>
+            <parameter name="Aggression" type="float" val="0.5" />
+            <parameter name="Attack Damage" type="float" val="1" />
+            <parameter name="Attack Knockback" type="float" val="1" />
+            <parameter name="Attack Speed" type="float" val="1" />
+            <parameter name="Block Follow-up" type="float" val="0.5" />
+            <parameter name="Block Skill" type="float" val="0.5" />
+            <parameter name="Cannot Be Disarmed" type="int" val="0" />
+            <parameter name="Character Scale" type="float" val="1.06554" />
+            <parameter name="Damage Resistance" type="float" val="1" />
+            <parameter name="Ear Size" type="float" val="1" />
+            <parameter name="Fall Damage Multiplier" type="float" val="1" />
+            <parameter name="Fat" type="float" val="0.5" />
+            <parameter name="Fear - Afraid At Health Level" type="float" val="0" />
+            <parameter name="Fear - Always Afraid On Sight" type="int" val="0" />
+            <parameter name="Fear - Causes Fear On Sight" type="int" val="0" />
+            <parameter name="Fear - Never Afraid On Sight" type="int" val="0" />
+            <parameter name="Focus FOV distance" type="float" val="100" />
+            <parameter name="Focus FOV horizontal" type="float" val="0.62834" />
+            <parameter name="Focus FOV vertical" type="float" val="0.62834" />
+            <parameter name="Ground Aggression" type="float" val="0.5" />
+            <parameter name="Knockout Shield" type="int" val="0" />
+            <parameter name="Left handed" type="int" val="0" />
+            <parameter name="Movement Speed" type="float" val="0.88305" />
+            <parameter name="Muscle" type="float" val="0.57062" />
+            <parameter name="No Look Around" type="int" val="0" />
+            <parameter name="Peripheral FOV distance" type="float" val="4" />
+            <parameter name="Peripheral FOV horizontal" type="float" val="1.41376" />
+            <parameter name="Peripheral FOV vertical" type="float" val="1.41376" />
+            <parameter name="Species" type="string" val="cat" />
+            <parameter name="Static" type="int" val="0" />
+            <parameter name="Stick To Nav Mesh" type="int" val="0" />
+            <parameter name="Teams" type="string" val="attackers" />
+            <parameter name="Throw Counter Probability" type="float" val="0.31638" />
+            <parameter name="Throw Trainer" type="int" val="0" />
+            <parameter name="Weapon Catch Skill" type="float" val="0.35028" />
+            <parameter name="Wearing Metal Armor" type="int" val="0" />
+        </parameters>
+        <Connections>
+            <Connection id="459" />
+        </Connections>
+        <ItemConnections>
+            <ItemConnection id="509" type="1" mirrored="1" attachment="" />
+            <ItemConnection id="510" type="1" mirrored="0" attachment="" />
+        </ItemConnections>
+        <Palette>
+            <Color label="Fur" channel="0" red="0.573518" green="0.317647" blue="1" />
+            <Color label="Leather" channel="1" red="0.211765" green="0.380711" blue="1" />
+            <Color label="Shirt" channel="2" red="0.188235" green="0.22705" blue="1" />
+            <Color label="Pants" channel="3" red="0.588235" green="0.821099" blue="1" />
+        </Palette>
+    </ActorObject>
+    <ItemObject t0="43.1626" t1="34.8677" t2="-284.722" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="509" type_file="Data/Items/Rapier.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+        <parameters />
+    </ItemObject>
+    <ItemObject t0="42.076" t1="34.8696" t2="-284.721" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="510" type_file="Data/Items/MainGauche.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+        <parameters />
+    </ItemObject>
+</ActorObjects>

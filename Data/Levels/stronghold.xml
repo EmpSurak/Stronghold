@@ -5,7 +5,7 @@
 <Shader>post</Shader>
 <Shadows>true</Shadows>
 <LoadingScreen>
-    <Image></Image>
+    <Image>Data/Images/stronghold/thumb.jpg</Image>
 </LoadingScreen>
 <Terrain>
     <Heightmap>Data/Textures/Terrain/forest_creek/forest_creek_hm.png</Heightmap>
