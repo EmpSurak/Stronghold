@@ -6,7 +6,6 @@
 #include "timed_execution/on_input_down_job.as"
 #include "timed_execution/after_char_init_job.as"
 #include "timed_execution/char_damage_job.as"
-#include "timed_execution/level_event_job.as"
 #include "stronghold/friend_controller.as"
 #include "stronghold/timed_execution/nav_destination_job.as"
 #include "stronghold/timed_execution/delayed_death_job.as"
@@ -198,11 +197,6 @@ void Init(string level_name){
             RegisterMusicJobs();
         }));
     }));
-
-    timer.Add(LevelEventJob("stronghold_death", function(_params){
-        casualties++;
-        return true;
-    }));
 }
 
 void Update(int is_paused){
@@ -223,19 +217,17 @@ void DrawGUI(){
 }
 
 void ReceiveMessage(string msg){
-    timer.AddLevelEvent(msg);
-}
+    // The level messages are causing me problems, so I have decided to not use jobs for it.
+    TokenIterator token_iter;
+    token_iter.Init();
 
-void RegisterCleanupJobs(){
-    int num = GetNumCharacters();
-    for(int i = 0; i < num; ++i){
-        MovementObject@ char = ReadCharacter(i);
-        if(!char.controlled){
-            RegisterCharCleanUpJob(timer, char);
-        }
+    if(!token_iter.FindNextToken(msg)){
+        return;
     }
 
-    timer.Add(LevelEventJob("reset", function(_params){
+    string token = token_iter.GetToken(msg);
+
+    if(token == "reset"){
         hud_gui.SetHide(false);
         end_screen.Reset();
 
@@ -284,10 +276,22 @@ void RegisterCleanupJobs(){
         }
 
         timer.DeleteAll();
+    }else if(token == "post_reset"){
+        timer.DeleteAll();
         Init("");
+    }else if(token == "stronghold_death"){
+        casualties++;
+    }
+}
 
-        return true;
-    }));
+void RegisterCleanupJobs(){
+    int num = GetNumCharacters();
+    for(int i = 0; i < num; ++i){
+        MovementObject@ char = ReadCharacter(i);
+        if(!char.controlled){
+            RegisterCharCleanUpJob(timer, char);
+        }
+    }
 
     timer.Add(RepeatingDelayedJob(1.0f, function(){
         MovementObject@ _player = ReadCharacterID(player_id);
