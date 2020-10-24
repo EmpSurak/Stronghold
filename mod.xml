@@ -9,7 +9,7 @@
     <PreviewImage>Data/Images/stronghold/thumb.jpg</PreviewImage>
 
     <Description>October 2020 Jam</Description>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <Author>Surak</Author>
     <Tag>Scripting</Tag>
     <Tag>Level</Tag>
@@ -29,4 +29,5 @@
     </ModDependency>
 
     <Level title="Stronghold" thumbnail="UI/mainmenu/images/stronghold.png">stronghold.xml</Level>
+    <Level title="Stronghold (Light)" thumbnail="UI/mainmenu/images/stronghold_light.png">stronghold_light.xml</Level>
 </Mod>
