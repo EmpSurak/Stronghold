@@ -1,7 +1,7 @@
-#include "aschar.as"
-#include "situationawareness.as"
+#include "stronghold/characters/aschar.as"
+#include "stronghold/characters/situationawareness.as"
 // TODO: Switch to per-frame debug draw, and move path debug from enemycontroldebug.as to here?
-#include "enemycontroldebug.as"
+#include "stronghold/characters/enemycontroldebug.as"
 
 Situation situation;
 int got_hit_by_leg_cannon_count = 0;

@@ -48,7 +48,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="39.2021" t1="45.779" t2="-314.231" s0="1" s1="1" s2="1" q0="-0.0255193" q1="-0.946514" q2="0.312209" q3="-0.0773661" euler_x="-2.50437" euler_y="0.163113" euler_z="3.14159" id="1">
+    <CameraObject t0="60.1825" t1="117.211" t2="-332.59" s0="1" s1="1" s2="1" q0="0.0248587" q1="-0.941365" q2="0.328862" q3="0.0711578" euler_x="-2.46941" euler_y="-0.150893" euler_z="3.14159" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">

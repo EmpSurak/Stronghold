@@ -48,7 +48,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="118.708" t1="69.9439" t2="349.758" s0="1" s1="1" s2="1" q0="-0.0244986" q1="-0.352259" q2="-0.00922453" q3="0.935536" euler_x="-0.0523613" euler_y="-0.720226" euler_z="0" id="1">
+    <CameraObject t0="120.106" t1="56.4584" t2="158.723" s0="1" s1="1" s2="1" q0="0.0865523" q1="0.11914" q2="-0.0104261" q3="0.989043" euler_x="0.174578" euler_y="0.239764" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
@@ -2784,7 +2784,7 @@
     <EnvObject name="Play Sound Helper" t0="140.128" t1="76.2645" t2="262.157" s0="0.25" s1="0.25" s2="0.25" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="585" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/drika_hotspot_cube.xml">
         <parameters />
     </EnvObject>
-    <Hotspot t0="130.988" t1="36.1291" t2="182.796" s0="2.4649" s1="2.79856" s2="2.67343" q0="0" q1="-0.069373" q2="0" q3="0.997591" euler_x="0" euler_y="-0.138857" euler_z="0" id="586" type_file="Data/Objects/Hotspots/particle_occluder.xml">
+    <Hotspot t0="130.988" t1="36.1291" t2="182.796" s0="2.4649" s1="2.79856" s2="2.67343" q0="0" q1="-0.069373" q2="0" q3="0.997591" euler_x="0" euler_y="-0.138858" euler_z="0" id="586" type_file="Data/Objects/Hotspots/particle_occluder.xml">
         <parameters />
         <Connections />
         <ConnectionsFrom />
@@ -2833,7 +2833,7 @@
             </Decal>
         </Group>
     </Group>
-    <Hotspot t0="126.014" t1="36.8339" t2="199.292" s0="2.43526" s1="2.79856" s2="3.20915" q0="0" q1="-0.189186" q2="0" q3="0.981941" euler_x="0" euler_y="-0.380667" euler_z="0" id="598" type_file="Data/Objects/Hotspots/particle_occluder.xml">
+    <Hotspot t0="126.014" t1="36.8339" t2="199.292" s0="2.43526" s1="2.79856" s2="3.20915" q0="0" q1="-0.189186" q2="0" q3="0.981941" euler_x="0" euler_y="-0.380666" euler_z="0" id="598" type_file="Data/Objects/Hotspots/particle_occluder.xml">
         <parameters />
         <Connections />
         <ConnectionsFrom />
@@ -2882,7 +2882,7 @@
             </Decal>
         </Group>
     </Group>
-    <Hotspot t0="180.935" t1="53.7518" t2="279.456" s0="4.51164" s1="3.66285" s2="3.61407" q0="0" q1="-0.319536" q2="0" q3="0.947574" euler_x="0" euler_y="-0.65048" euler_z="0" id="608" type_file="Data/Objects/Hotspots/particle_occluder.xml">
+    <Hotspot t0="180.935" t1="53.7518" t2="279.456" s0="4.51164" s1="3.66285" s2="3.61407" q0="0" q1="-0.319536" q2="0" q3="0.947574" euler_x="0" euler_y="-0.650479" euler_z="0" id="608" type_file="Data/Objects/Hotspots/particle_occluder.xml">
         <parameters />
         <Connections />
         <ConnectionsFrom />
