@@ -81,7 +81,8 @@ void RegisterCharCleanUpJob(TimedExecution@ _timer, MovementObject@ _char){
         int num_items = GetNumItems();
         for(int i = 0; i < num_items; ++i){
             ItemObject@ item = ReadItem(i);
-            if(item.last_held_char_id_ == char_id){
+            Object@ item_obj = ReadObjectFromID(item.GetID());
+            if(item.last_held_char_id_ == char_id && item_obj.IsExcludedFromSave()){
                 QueueDeleteObjectID(item.GetID());
             }
         }
