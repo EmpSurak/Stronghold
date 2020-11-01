@@ -48,7 +48,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="120.106" t1="56.4584" t2="158.723" s0="1" s1="1" s2="1" q0="0.0865523" q1="0.11914" q2="-0.0104261" q3="0.989043" euler_x="0.174578" euler_y="0.239764" euler_z="0" id="1">
+    <CameraObject t0="2.31545" t1="152.562" t2="118.146" s0="1" s1="1" s2="1" q0="-0.236319" q1="-0.612909" q2="0.199177" q3="-0.727203" euler_x="0.628408" euler_y="1.40064" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
@@ -403,7 +403,7 @@
             <parameter name="Goal" type="string" val="go_to" />
             <parameter name="Max. Spawn Delay" type="float" val="1" />
             <parameter name="Min. Spawn Delay" type="float" val="0" />
-            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Number of Characters" type="int" val="2" />
             <parameter name="Team" type="string" val="attackers" />
             <parameter name="Team Color" type="int" val="1" />
             <parameter name="Unit Type" type="string" val="soldier" />
@@ -445,7 +445,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <Hotspot name="Start Monster (Left) Spawner" t0="200.486" t1="29.1477" t2="-182.592" s0="1" s1="1" s2="1" q0="0" q1="-0.430078" q2="0" q3="0.902792" euler_x="0" euler_y="-0.889159" euler_z="0" id="100" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+    <Hotspot name="Start Monster (Left) Spawner 1" t0="200.486" t1="29.1477" t2="-182.592" s0="1" s1="1" s2="1" q0="0" q1="-0.430078" q2="0" q3="0.902792" euler_x="0" euler_y="-0.889159" euler_z="0" id="100" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
         <parameters>
             <parameter name="Difficulty" type="float" val="3" />
             <parameter name="Escort (Name)" type="string" val="" />
@@ -796,7 +796,7 @@
             <Connection id="162" />
         </Connections>
     </PlaceholderObject>
-    <Hotspot name="River Wall of Death Trigger" t0="147.283" t1="40.6865" t2="-177.416" s0="9.14818" s1="4.05784" s2="1" q0="0" q1="0.329696" q2="0" q3="0.944087" euler_x="0" euler_y="0.671963" euler_z="0" id="163" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
+    <Hotspot name="River Wall of Death Trigger" t0="164.464" t1="40.6865" t2="-153.115" s0="9.98923" s1="4.05784" s2="1" q0="0" q1="0.329696" q2="0" q3="0.944087" euler_x="0" euler_y="0.671963" euler_z="0" id="163" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
             <parameter name="Player Only" type="int" val="1" />
             <parameter name="Spawn Name (Prefix)" type="string" val="River Wall of Death Spawner" />
@@ -1529,7 +1529,7 @@
             <parameter name="Goal" type="string" val="go_to" />
             <parameter name="Max. Spawn Delay" type="float" val="4" />
             <parameter name="Min. Spawn Delay" type="float" val="1" />
-            <parameter name="Number of Characters" type="int" val="2" />
+            <parameter name="Number of Characters" type="int" val="1" />
             <parameter name="Team" type="string" val="defenders" />
             <parameter name="Team Color" type="int" val="0" />
             <parameter name="Unit Type" type="string" val="bomber" />
@@ -1785,7 +1785,7 @@
     </Prefab>
     <Hotspot name="Tree Monster Trigger" t0="103.721" t1="38.2373" t2="225.762" s0="7.14203" s1="2.79714" s2="6.13104" q0="0" q1="0.0137295" q2="0" q3="0.999906" euler_x="0" euler_y="0.0274599" euler_z="0" id="400" type_file="Data/Objects/stronghold/hotspots/spawner_start.xml">
         <parameters>
-            <parameter name="Player Only" type="int" val="0" />
+            <parameter name="Player Only" type="int" val="1" />
             <parameter name="Spawn Name (Prefix)" type="string" val="Tree Monster Spawner" />
             <parameter name="Team Only" type="string" val="" />
         </parameters>
@@ -2204,22 +2204,6 @@
             <Connection id="470" />
         </Connections>
     </PlaceholderObject>
-    <Hotspot name="Tree Monster Spawner Support 1" t0="188.624" t1="37.708" t2="6.89064" s0="1" s1="1" s2="1" q0="0" q1="-0.27932" q2="0" q3="0.960198" euler_x="0" euler_y="-0.566172" euler_z="0" id="472" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
-        <parameters>
-            <parameter name="Difficulty" type="float" val="2" />
-            <parameter name="Escort (Name)" type="string" val="" />
-            <parameter name="Go to (Name)" type="string" val="Tree Monster Target" />
-            <parameter name="Goal" type="string" val="go_to" />
-            <parameter name="Max. Spawn Delay" type="float" val="8" />
-            <parameter name="Min. Spawn Delay" type="float" val="4" />
-            <parameter name="Number of Characters" type="int" val="2" />
-            <parameter name="Team" type="string" val="attackers" />
-            <parameter name="Team Color" type="int" val="1" />
-            <parameter name="Unit Type" type="string" val="bomber" />
-        </parameters>
-        <Connections />
-        <ConnectionsFrom />
-    </Hotspot>
     <Hotspot t0="122.97" t1="45.6768" t2="40.8151" s0="1.36834" s1="4.85398" s2="3.56544" q0="0" q1="-0.152075" q2="0" q3="0.988369" euler_x="0" euler_y="-0.305335" euler_z="0" id="473" type_file="Data/Objects/Hotspots/particle_occluder.xml">
         <parameters />
         <Connections />
@@ -2483,7 +2467,7 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
-    <ReflectionCaptureObject t0="81.0271" t1="121.832" t2="172.058" s0="23.3672" s1="23.3672" s2="23.3672" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="534" gicoeff00="0.0400009" gicoeff01="0.0550232" gicoeff02="0.0638733" gicoeff03="0.0166378" gicoeff04="0.0326805" gicoeff05="0.0525589" gicoeff06="0.035717" gicoeff07="0.0583878" gicoeff08="0.0844116" gicoeff09="0.0135307" gicoeff10="0.0200043" gicoeff11="0.0235863" gicoeff12="0.0423889" gicoeff13="0.0595016" gicoeff14="0.0699539" gicoeff15="0.0162773" gicoeff16="0.0303001" gicoeff17="0.0478058">
+    <ReflectionCaptureObject t0="85.7917" t1="121.832" t2="172.058" s0="23.3672" s1="23.3672" s2="23.3672" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="534" gicoeff00="0.0239525" gicoeff01="0.0332527" gicoeff02="0.0394363" gicoeff03="0.010479" gicoeff04="0.020359" gicoeff05="0.0328712" gicoeff06="0.0235634" gicoeff07="0.0384445" gicoeff08="0.0555115" gicoeff09="0.00698471" gicoeff10="0.0103359" gicoeff11="0.0125351" gicoeff12="0.0252571" gicoeff13="0.0358086" gicoeff14="0.0429459" gicoeff15="0.0100994" gicoeff16="0.0187359" gicoeff17="0.0299034">
         <parameters>
             <parameter name="Global" type="string" val="1" />
         </parameters>
@@ -2730,7 +2714,7 @@
             <parameter name="Debug Current Line" type="int" val="0" />
             <parameter name="Remover Name" type="string" val="Start Area" />
             <parameter name="Run in EditorMode" type="int" val="1" />
-            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier_type&quot;:10,&quot;reference_string&quot;:&quot;&quot;},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[51.114395141601563,37.95892333984375,-281.6611328125],&quot;target_camera_rotation&quot;:[-6.2914926957091666e-007,158.76797485351562,-3.3566416277608369e-006],&quot;target_camera_zoom&quot;:90},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;My army is gathering at the camp inside of the canyon.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;I should hurry up. The farmers have seen giants nearby.&quot;},{&quot;dialogue_control&quot;:false,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:-1,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
+            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier_type&quot;:10,&quot;reference_string&quot;:&quot;&quot;},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[51.114395141601563,37.95892333984375,-281.6611328125],&quot;target_camera_rotation&quot;:[-6.2914926957091666e-007,158.76797485351562,-3.3566416277608369e-006],&quot;target_camera_zoom&quot;:90},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;My army is gathering at the camp inside of the canyon.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;I should hurry up. The farmers have seen giants nearby.&quot;},{&quot;dialogue_control&quot;:false,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:-1,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
             <parameter name="Show UI Grid" type="int" val="1" />
             <parameter name="Transform Relative" type="int" val="0" />
             <parameter name="UI Snap Scale" type="int" val="20" />
@@ -2752,7 +2736,7 @@
             <parameter name="Debug Current Line" type="int" val="0" />
             <parameter name="Remover Name" type="string" val="Start Area" />
             <parameter name="Run in EditorMode" type="int" val="1" />
-            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier_type&quot;:10,&quot;reference_string&quot;:&quot;&quot;},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[36.892940521240234,51.080310821533203,-234.00595092773437],&quot;target_camera_rotation&quot;:[-23.857511520385742,-95.939796447753906,1.3660379408975132e-005],&quot;target_camera_zoom&quot;:90},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;I don&apos;t like this. It smells like an ambush. I should send my men ahead. They are expendable.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;I can send them in a certain direction by pressing &apos;G&apos;.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;If I press &apos;F&apos; they will come back to me.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;By pressing &apos;H&apos; I tell them to escort me.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;Sometimes violence is not the answer. If I press &apos;T&apos; they will stand down.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;If I press &apos;R&apos; they ignore the previous commands.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;The distance of my commands depends on how loud I shout. I can decrease the distance with &apos;N&apos; and increase it with &apos;M&apos;.\n\nIt is much more handy to use &apos;1&apos; to &apos;5&apos; though.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;That&apos;s it. Time to go!&quot;},{&quot;dialogue_control&quot;:false,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
+            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier_type&quot;:10,&quot;reference_string&quot;:&quot;&quot;},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[36.892940521240234,51.080310821533203,-234.00595092773437],&quot;target_camera_rotation&quot;:[-23.857511520385742,-95.939796447753906,1.3660379408975132e-005],&quot;target_camera_zoom&quot;:90},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;I don&apos;t like this. It smells like an ambush. I should send my men ahead. They are expendable.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;I can send them in a certain direction by pressing &apos;G&apos;.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;If I press &apos;F&apos; they will come back to me.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;By pressing &apos;H&apos; I tell them to escort me.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;Sometimes violence is not the answer. If I press &apos;T&apos; they will stand down.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;If I press &apos;R&apos; they ignore the previous commands.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;The distance of my commands depends on how loud I shout. I can decrease the distance with &apos;N&apos; and increase it with &apos;M&apos;.\n\nIt is much more handy to use &apos;1&apos; to &apos;5&apos; though.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;That&apos;s it. Time to go!&quot;},{&quot;dialogue_control&quot;:false,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
             <parameter name="Show UI Grid" type="int" val="1" />
             <parameter name="Transform Relative" type="int" val="0" />
             <parameter name="UI Snap Scale" type="int" val="20" />
@@ -2764,7 +2748,7 @@
         <parameters>
             <parameter name="Debug Current Line" type="int" val="0" />
             <parameter name="Run in EditorMode" type="int" val="1" />
-            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier_type&quot;:10,&quot;reference_string&quot;:&quot;&quot;},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[169.98492431640625,68.579795837402344,-154.3211669921875],&quot;target_camera_rotation&quot;:[-4.1848895193652424e-007,174.67039489746094,-3.8266630326688755e-006],&quot;target_camera_zoom&quot;:90},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;The castle! My men are waiting for the signal to attack. Once the flags at the gate are replaced by blue ones they will start with the offensive.&quot;},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;To conquer the castle we have to storm the tower!&quot;},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[157.53376770019531,48.538745880126953,-132.73570251464844],&quot;target_camera_rotation&quot;:[-28.001239776611328,-143.30101013183594,-9.3915095931151882e-006],&quot;target_camera_zoom&quot;:90},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;What&apos;s that? That was not part of my plan...&quot;},{&quot;dialogue_control&quot;:false,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
+            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier_type&quot;:10,&quot;reference_string&quot;:&quot;&quot;},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[169.98492431640625,68.579795837402344,-154.3211669921875],&quot;target_camera_rotation&quot;:[-4.1848895193652424e-007,174.67039489746094,-3.8266630326688755e-006],&quot;target_camera_zoom&quot;:90},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;The castle! My men are waiting for the signal to attack. Once the flags at the gate are replaced by blue ones they will start with the offensive.&quot;},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;To conquer the castle we have to storm the tower!&quot;},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[157.53376770019531,48.538745880126953,-132.73570251464844],&quot;target_camera_rotation&quot;:[-28.001239776611328,-143.30101013183594,-9.3915095931151882e-006],&quot;target_camera_zoom&quot;:90},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;say_text&quot;:&quot;What&apos;s that? That was not part of my plan...&quot;},{&quot;dialogue_control&quot;:false,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
             <parameter name="Show UI Grid" type="int" val="1" />
             <parameter name="Transform Relative" type="int" val="0" />
             <parameter name="UI Snap Scale" type="int" val="20" />
@@ -2887,6 +2871,28 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <Group t0="122.071" t1="40.1585" t2="48.2815" s0="0.417364" s1="1.37695" s2="0.735342" q0="0" q1="0.982293" q2="0" q3="0.187352" euler_x="3.14159" euler_y="0.376931" euler_z="3.14159" id="610" version="1">
+        <parameters />
+        <EnvObject t0="122.036" t1="40.0661" t2="48.1762" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.0220746" q1="0.975186" q2="0.188295" q3="0.114325" euler_x="2.76011" euler_y="0.233403" euler_z="-3.14159" id="611" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
+            <parameters />
+        </EnvObject>
+        <Group t0="122.012" t1="40.6557" t2="48.4294" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.993198" q2="0" q3="0.116437" euler_x="3.14159" euler_y="0.233403" euler_z="3.14159" id="622" version="1">
+            <parameters />
+            <Hotspot t0="122.012" t1="40.6622" t2="48.4284" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.993198" q1="0.000541955" q2="-0.116437" q3="6.35982e-005" euler_x="-3.14133" euler_y="-0.233403" euler_z="-0.00112176" id="623" type_file="Data/Objects/Hotspots/fire_test.xml">
+                <parameters>
+                    <parameter name="Fire Ribbons" type="int" val="2" />
+                    <parameter name="Ignite Characters" type="int" val="0" />
+                    <parameter name="Light Amplify" type="float" val="1" />
+                    <parameter name="Light Distance" type="float" val="2" />
+                </parameters>
+                <Connections />
+                <ConnectionsFrom />
+            </Hotspot>
+            <Decal t0="122" t1="40.6098" t2="48.4678" s0="0.270606" s1="0.270606" s2="0.270606" q0="0" q1="0.993198" q2="0" q3="0.116437" euler_x="3.14159" euler_y="0.233403" euler_z="3.14159" id="624" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+                <parameters />
+            </Decal>
+        </Group>
+    </Group>
     <Group t0="123.668" t1="40.0639" t2="64.6016" s0="7.45044" s1="8.09421" s2="8.30317" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="612" version="1">
         <parameters>
             <parameter name="Remover Name" type="string" val="Inside Castle" />
@@ -3017,6 +3023,28 @@
         <Connections />
         <ConnectionsFrom />
     </Hotspot>
+    <Group t0="171.535" t1="56.0951" t2="18.5365" s0="0.417364" s1="1.37695" s2="0.735342" q0="0" q1="0.498404" q2="0" q3="0.866945" euler_x="0" euler_y="1.04351" euler_z="0" id="626" version="1">
+        <parameters />
+        <EnvObject t0="171.645" t1="56.0027" t2="18.5176" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.157161" q1="0.54914" q2="0.106032" q3="0.813942" euler_x="-0.381475" euler_y="1.18704" euler_z="2.74617e-006" id="627" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
+            <parameters />
+        </EnvObject>
+        <Group t0="171.398" t1="56.5923" t2="18.4565" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.559283" q2="0" q3="0.828977" euler_x="0" euler_y="1.18704" euler_z="0" id="631" version="1">
+            <parameters />
+            <Hotspot t0="171.399" t1="56.5988" t2="18.4569" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.559283" q1="0.000305116" q2="-0.828976" q3="0.000452399" euler_x="-0.0027027" euler_y="-1.18704" euler_z="-3.13868" id="632" type_file="Data/Objects/Hotspots/fire_test.xml">
+                <parameters>
+                    <parameter name="Fire Ribbons" type="int" val="2" />
+                    <parameter name="Ignite Characters" type="int" val="0" />
+                    <parameter name="Light Amplify" type="float" val="1" />
+                    <parameter name="Light Distance" type="float" val="2" />
+                </parameters>
+                <Connections />
+                <ConnectionsFrom />
+            </Hotspot>
+            <Decal t0="171.362" t1="56.5464" t2="18.4392" s0="0.270606" s1="0.270606" s2="0.270606" q0="0" q1="0.559283" q2="0" q3="0.828976" euler_x="0" euler_y="1.18704" euler_z="0" id="633" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+                <parameters />
+            </Decal>
+        </Group>
+    </Group>
     <Hotspot name="Change Flag (Right)" t0="169.287" t1="52.0849" t2="11.3774" s0="1.3455" s1="1.3455" s2="1.3455" q0="0" q1="-0.263914" q2="0" q3="0.964546" euler_x="0" euler_y="-0.534155" euler_z="0" id="628" type_file="Data/Objects/Hotspots/drika_hotspot.xml">
         <parameters>
             <parameter name="Debug Current Line" type="int" val="0" />
@@ -3045,10 +3073,42 @@
         <parameters>
             <parameter name="Debug Current Line" type="int" val="0" />
             <parameter name="Run in EditorMode" type="int" val="1" />
-            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;function&quot;:1,&quot;message&quot;:&quot;victory&quot;},{&quot;after_color&quot;:[0.19117647409439087,0.3115571141242981,1],&quot;color_type&quot;:0,&quot;function&quot;:17,&quot;identifier&quot;:&quot;Burgfried Flag&quot;,&quot;identifier_type&quot;:3,&quot;palette_slot&quot;:0},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[137.37147521972656,183.25860595703125,-72.326438903808594],&quot;target_camera_rotation&quot;:[-37.092502593994141,-179.99998474121094,6.0838933677587193e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:2000,&quot;function&quot;:2},{&quot;ai_sound&quot;:false,&quot;function&quot;:6,&quot;gain&quot;:1,&quot;max_range&quot;:5,&quot;placeholder_id&quot;:584,&quot;play_sound_method&quot;:0,&quot;priority&quot;:0,&quot;sound_path&quot;:&quot;Data/Sounds/stronghold/surak.wav&quot;,&quot;sound_type&quot;:0},{&quot;duration&quot;:5000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[137.47161865234375,54.087188720703125,17.293148040771484],&quot;target_camera_rotation&quot;:[9.5102138519287109,-167.74736022949219,-1.6288645267486572],&quot;target_camera_zoom&quot;:90},{&quot;ai_sound&quot;:false,&quot;function&quot;:6,&quot;gain&quot;:1,&quot;max_range&quot;:5,&quot;placeholder_id&quot;:585,&quot;play_sound_method&quot;:0,&quot;priority&quot;:0,&quot;sound_path&quot;:&quot;Data/Sounds/stronghold/stronghold.wav&quot;,&quot;sound_type&quot;:0},{&quot;duration&quot;:5000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[101.71954345703125,77.667869567871094,276.97958374023437],&quot;target_camera_rotation&quot;:[-27.083150863647461,-61.831645965576172,-5.9764147408714052e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:10000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[137.20866394042969,37.98089599609375,36.598621368408203],&quot;target_camera_rotation&quot;:[6.3729419252922526e-007,-158.48985290527344,-3.3551050364621915e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:10000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[133.58871459960937,60.728073120117188,122.10911560058594],&quot;target_camera_rotation&quot;:[-5.6396708488464355,-93.730155944824219,9.5782725111348554e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:10000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[-357.9461669921875,44.495922088623047,396.0235595703125],&quot;target_camera_rotation&quot;:[0,-44.628978729248047,0],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:5000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[194.11213684082031,41.096759796142578,-0.055333316326141357],&quot;target_camera_rotation&quot;:[24.411632537841797,151.84567260742187,-1.5956656932830811],&quot;target_camera_zoom&quot;:90},{&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:&quot;Surak&quot;,&quot;identifier_type&quot;:3,&quot;say_text&quot;:&quot;Thanks for playing! If you liked it please consider upvoting Stronghold in the Steam Workshop.\nDon&apos;t forget to check out the other levels of the October 2020 Jam!&quot;},{&quot;function&quot;:7,&quot;line&quot;:21},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
+            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;function&quot;:1,&quot;message&quot;:&quot;victory&quot;},{&quot;after_color&quot;:[0.19117647409439087,0.3115571141242981,1],&quot;color_type&quot;:0,&quot;function&quot;:17,&quot;identifier&quot;:&quot;Burgfried Flag&quot;,&quot;identifier_type&quot;:3,&quot;palette_slot&quot;:0},{&quot;dialogue_function&quot;:11,&quot;function&quot;:33,&quot;use_fade&quot;:true},{&quot;dialogue_control&quot;:true,&quot;dialogue_function&quot;:13,&quot;function&quot;:33,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[137.37147521972656,183.25860595703125,-72.326438903808594],&quot;target_camera_rotation&quot;:[-37.092502593994141,-179.99998474121094,6.0838933677587193e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:2000,&quot;function&quot;:2},{&quot;ai_sound&quot;:false,&quot;function&quot;:6,&quot;gain&quot;:1,&quot;max_range&quot;:5,&quot;placeholder_id&quot;:584,&quot;play_sound_method&quot;:0,&quot;priority&quot;:0,&quot;sound_path&quot;:&quot;Data/Sounds/stronghold/surak.wav&quot;,&quot;sound_type&quot;:0},{&quot;duration&quot;:5000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[137.47161865234375,54.087188720703125,17.293148040771484],&quot;target_camera_rotation&quot;:[9.5102138519287109,-167.74736022949219,-1.6288645267486572],&quot;target_camera_zoom&quot;:90},{&quot;ai_sound&quot;:false,&quot;function&quot;:6,&quot;gain&quot;:1,&quot;max_range&quot;:5,&quot;placeholder_id&quot;:585,&quot;play_sound_method&quot;:0,&quot;priority&quot;:0,&quot;sound_path&quot;:&quot;Data/Sounds/stronghold/stronghold.wav&quot;,&quot;sound_type&quot;:0},{&quot;duration&quot;:5000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[101.71954345703125,77.667869567871094,276.97958374023437],&quot;target_camera_rotation&quot;:[-27.083150863647461,-61.831645965576172,-5.9764147408714052e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:10000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[137.20866394042969,37.98089599609375,36.598621368408203],&quot;target_camera_rotation&quot;:[6.3729419252922526e-007,-158.48985290527344,-3.3551050364621915e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:10000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[133.58871459960937,60.728073120117188,122.10911560058594],&quot;target_camera_rotation&quot;:[-5.6396708488464355,-93.730155944824219,9.5782725111348554e-006],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:10000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[-357.9461669921875,44.495922088623047,396.0235595703125],&quot;target_camera_rotation&quot;:[0,-44.628978729248047,0],&quot;target_camera_zoom&quot;:90},{&quot;duration&quot;:5000,&quot;function&quot;:2},{&quot;camera_transition&quot;:0,&quot;dialogue_function&quot;:8,&quot;dof_settings&quot;:[0,0,0,0,0,0],&quot;enable_look_at_target&quot;:false,&quot;enable_move_with_target&quot;:false,&quot;function&quot;:33,&quot;target_camera_position&quot;:[194.11213684082031,41.096759796142578,-0.055333316326141357],&quot;target_camera_rotation&quot;:[24.411632537841797,151.84567260742187,-1.5956656932830811],&quot;target_camera_zoom&quot;:90},{&quot;auto_continue&quot;:false,&quot;dialogue_function&quot;:0,&quot;function&quot;:33,&quot;identifier&quot;:&quot;Surak&quot;,&quot;identifier_type&quot;:3,&quot;say_text&quot;:&quot;Thanks for playing! If you liked it please consider upvoting Stronghold in the Steam Workshop.\nDon&apos;t forget to check out the other levels of the October 2020 Jam!&quot;},{&quot;function&quot;:7,&quot;line&quot;:21},{&quot;dialogue_function&quot;:12,&quot;function&quot;:33,&quot;use_fade&quot;:true}]}&#x0A;' />
             <parameter name="Show UI Grid" type="int" val="1" />
             <parameter name="Transform Relative" type="int" val="0" />
             <parameter name="UI Snap Scale" type="int" val="20" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Start Monster (Left) Spawner 2" t0="180.968" t1="36.7587" t2="-439.936" s0="1" s1="1" s2="1" q0="0" q1="-0.430078" q2="0" q3="0.902792" euler_x="0" euler_y="-0.889159" euler_z="0" id="634" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="3" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
+            <parameter name="Max. Spawn Delay" type="float" val="3" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="4" />
+            <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot name="Start Monster (Right) Spawner 2" t0="-90.463" t1="38.5384" t2="-436.733" s0="1" s1="1" s2="1" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="635" type_file="Data/Objects/stronghold/hotspots/unit_spawner.xml">
+        <parameters>
+            <parameter name="Difficulty" type="float" val="3" />
+            <parameter name="Escort (Name)" type="string" val="" />
+            <parameter name="Go to (Name)" type="string" val="" />
+            <parameter name="Goal" type="string" val="attack" />
+            <parameter name="Max. Spawn Delay" type="float" val="3" />
+            <parameter name="Min. Spawn Delay" type="float" val="0.5" />
+            <parameter name="Number of Characters" type="int" val="1" />
+            <parameter name="Team" type="string" val="Env Monster" />
+            <parameter name="Team Color" type="int" val="5" />
+            <parameter name="Unit Type" type="string" val="giant" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
@@ -3196,7 +3256,6 @@
     <SpawnerItem display_name="Cat Gauche" path="Data/Items/MainGauche.xml" thumbnail_path="Data/UI/spawner/thumbs/Object/wcatknife.png" />
     <SpawnerItem display_name="Global Reflection" path="Data/Objects/global_reflection_capture.xml" thumbnail_path="" />
     <SpawnerItem display_name="Cave Plants Liverwort 1" path="Data/Prototypes/WaterfallArena/CavePlants_Liverwort1.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Dynamic Light" path="Data/Objects/default_light.xml" thumbnail_path="" />
     <SpawnerItem display_name="Cave Plants Fern 1" path="Data/Prototypes/WaterfallArena/CavePlants_Fern1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Cave Plants Fern Wall 1" path="Data/Prototypes/WaterfallArena/CavePlants_FernWall1.xml" thumbnail_path="" />
     <SpawnerItem display_name="Cave Plants Fern 2" path="Data/Prototypes/WaterfallArena/CavePlants_Fern2.xml" thumbnail_path="" />
@@ -3224,4 +3283,5 @@
     <SpawnerItem display_name="Drika Hotspot" path="Data/Objects/Hotspots/drika_hotspot.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
     <SpawnerItem display_name="Invisible Block" path="Data/Objects/invisibleblock.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/invisibleblock.png" />
     <SpawnerItem display_name="Particle Occluder Hotspot" path="Data/Objects/Hotspots/particle_occluder.xml" thumbnail_path="Data/UI/spawner/thumbs/Hotspot/emitter_icon.png" />
+    <SpawnerItem display_name="Dynamic Light" path="Data/Objects/default_light.xml" thumbnail_path="" />
 </RecentItems>
