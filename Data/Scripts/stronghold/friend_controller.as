@@ -98,8 +98,9 @@ class FriendController {
 
             bool is_player = char.GetID() == _player_id;
             bool is_same_team = player_team == char_team;
+            bool is_dead = char.GetIntVar("knocked_out") != _awake;
 
-            if(is_player || !is_same_team){
+            if(is_player || is_dead || !is_same_team){
                 continue;
             }
 
