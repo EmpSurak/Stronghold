@@ -48,7 +48,7 @@
     <RayToSun r0="0.607507" r1="0.5" r2="0.6172" />
 </Sky>
 <ActorObjects>
-    <CameraObject t0="29.1241" t1="157.558" t2="104.058" s0="1" s1="1" s2="1" q0="-0.0234291" q1="-0.974783" q2="0.124165" q3="-0.183935" euler_x="-2.8882" euler_y="0.373002" euler_z="-3.14159" id="1">
+    <CameraObject t0="77.4542" t1="56.2207" t2="238.587" s0="1" s1="1" s2="1" q0="0.307887" q1="0.478153" q2="-0.183611" q3="0.801787" euler_x="0.733277" euler_y="1.07548" euler_z="0" id="1">
         <parameters />
     </CameraObject>
     <EnvObject t0="29.885" t1="42.9814" t2="-228.735" s0="2.0085" s1="2.0085" s2="2.0085" q0="-0.3282" q1="0.00460249" q2="0.94438" q3="0.0202965" euler_x="-0.0059011" euler_y="0.668842" euler_z="3.09657" id="3" color_r="0.992157" color_g="0.663406" color_b="0.501915" overbright="0" type_file="Data/Objects/Environment/Rocks/strata_rocks/strata_rock_capital_mossy.xml">
@@ -2108,12 +2108,12 @@
             <Connection id="470" />
         </Connections>
     </PlaceholderObject>
-    <Group t0="122.135" t1="40.2162" t2="48.2863" s0="0.417364" s1="1.37695" s2="0.735342" q0="0" q1="0.987536" q2="0" q3="0.157392" euler_x="3.14159" euler_y="0.316097" euler_z="3.14159" id="472" version="1">
+    <Group t0="122.135" t1="40.2162" t2="48.2863" s0="0.417364" s1="1.37695" s2="0.735342" q0="0" q1="0.987536" q2="0" q3="0.157392" euler_x="3.14159" euler_y="0.316098" euler_z="3.14159" id="472" version="1">
         <parameters />
         <EnvObject t0="122.093" t1="40.1238" t2="48.1833" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.0163379" q1="0.978211" q2="0.18888" q3="0.0846148" euler_x="2.76011" euler_y="0.172569" euler_z="3.14159" id="556" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
-        <Group t0="122.085" t1="40.7134" t2="48.4374" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.99628" q2="0" q3="0.0861776" euler_x="3.14159" euler_y="0.172569" euler_z="-3.14159" id="565" version="1">
+        <Group t0="122.085" t1="40.7134" t2="48.4374" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.99628" q2="0" q3="0.0861776" euler_x="3.14159" euler_y="0.172569" euler_z="3.14159" id="565" version="1">
             <parameters />
             <Hotspot t0="122.086" t1="40.7199" t2="48.4364" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.996279" q1="0.000543542" q2="-0.0861776" q3="4.70281e-005" euler_x="-3.1414" euler_y="-0.172569" euler_z="-0.0011076" id="577" type_file="Data/Objects/Hotspots/fire_test.xml">
                 <parameters>
@@ -2125,7 +2125,7 @@
                 <Connections />
                 <ConnectionsFrom />
             </Hotspot>
-            <Decal t0="122.076" t1="40.6675" t2="48.4764" s0="0.270606" s1="0.270606" s2="0.270606" q0="0" q1="0.996279" q2="0" q3="0.0861776" euler_x="3.14159" euler_y="0.172569" euler_z="-3.14159" id="592" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
+            <Decal t0="122.076" t1="40.6675" t2="48.4764" s0="0.270606" s1="0.270606" s2="0.270606" q0="0" q1="0.996279" q2="0" q3="0.0861776" euler_x="3.14159" euler_y="0.172569" euler_z="3.14159" id="592" type_file="Data/Objects/Decals/flame_base.xml" color_r="1" color_g="1" color_b="1" overbright="0">
                 <parameters />
             </Decal>
         </Group>
@@ -2799,12 +2799,12 @@
     </Hotspot>
     <Group t0="171.628" t1="56.0709" t2="18.5855" s0="0.417364" s1="1.37695" s2="0.735342" q0="0" q1="0.50859" q2="0" q3="0.861009" euler_x="0" euler_y="1.06709" euler_z="0" id="609" version="1">
         <parameters />
-        <EnvObject t0="171.737" t1="55.9785" t2="18.5641" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.155901" q1="0.558697" q2="0.107877" q3="0.807412" euler_x="-0.381479" euler_y="1.21062" euler_z="0" id="610" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
+        <EnvObject t0="171.737" t1="55.9785" t2="18.5641" s0="1.54294" s1="1.54294" s2="1.54294" q0="-0.155901" q1="0.558697" q2="0.107877" q3="0.807412" euler_x="-0.38148" euler_y="1.21062" euler_z="-1.31068e-006" id="610" color_r="1" color_g="1" color_b="1" overbright="0" type_file="Data/Objects/torch.xml">
             <parameters />
         </EnvObject>
         <Group t0="171.489" t1="56.5681" t2="18.5088" s0="0.359442" s1="0.372469" s2="0.360922" q0="0" q1="0.569017" q2="0" q3="0.822326" euler_x="0" euler_y="1.21062" euler_z="0" id="611" version="1">
             <parameters />
-            <Hotspot t0="171.49" t1="56.5746" t2="18.5092" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.569017" q1="0.000310421" q2="-0.822326" q3="0.000448823" euler_x="-0.00289782" euler_y="-1.21062" euler_z="-3.1385" id="622" type_file="Data/Objects/Hotspots/fire_test.xml">
+            <Hotspot t0="171.49" t1="56.5746" t2="18.5092" s0="0.0872662" s1="0.0872662" s2="0.0872662" q0="-0.569017" q1="0.000310421" q2="-0.822326" q3="0.000448823" euler_x="-0.00289783" euler_y="-1.21062" euler_z="-3.1385" id="622" type_file="Data/Objects/Hotspots/fire_test.xml">
                 <parameters>
                     <parameter name="Fire Ribbons" type="int" val="2" />
                     <parameter name="Ignite Characters" type="int" val="0" />
@@ -2977,6 +2977,18 @@
             <parameter name="Team" type="string" val="Env Monster" />
             <parameter name="Team Color" type="int" val="5" />
             <parameter name="Unit Type" type="string" val="giant" />
+        </parameters>
+        <Connections />
+        <ConnectionsFrom />
+    </Hotspot>
+    <Hotspot t0="103.609" t1="36.3062" t2="225.732" s0="7.1695" s1="4.94116" s2="5.89846" q0="0" q1="0" q2="0" q3="1" euler_x="0" euler_y="0" euler_z="0" id="627" type_file="Data/Objects/Hotspots/drika_hotspot.xml">
+        <parameters>
+            <parameter name="Debug Current Line" type="int" val="0" />
+            <parameter name="Run in EditorMode" type="int" val="1" />
+            <parameter name="Script Data" type="string" val='{&quot;functions&quot;:[{&quot;external_hotspot&quot;:false,&quot;function&quot;:8,&quot;hotspot_trigger_type&quot;:0,&quot;identifier&quot;:459,&quot;identifier_type&quot;:4,&quot;reference_string&quot;:&quot;&quot;},{&quot;ai_sound&quot;:false,&quot;function&quot;:6,&quot;gain&quot;:1,&quot;max_range&quot;:5,&quot;play_sound_method&quot;:0,&quot;priority&quot;:0,&quot;sound_path&quot;:&quot;Data/Sounds/voice/animal2/voice_wolf_groan_1.wav&quot;,&quot;sound_type&quot;:0}]}&#x0A;' />
+            <parameter name="Show UI Grid" type="int" val="1" />
+            <parameter name="Transform Relative" type="int" val="0" />
+            <parameter name="UI Snap Scale" type="int" val="20" />
         </parameters>
         <Connections />
         <ConnectionsFrom />
@@ -3185,7 +3197,7 @@
     <SpawnerItem display_name="object_remover.xml" path="Data/Objects/stronghold/hotspots/object_remover.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="victory.xml" path="Data/Objects/stronghold/hotspots/victory.xml" thumbnail_path="empty_placeholder.png" />
     <SpawnerItem display_name="Hatchet" path="Data/Objects/therium/hatchet.xml" thumbnail_path="" />
-    <SpawnerItem display_name="Drika Hotspot" path="Data/Objects/Hotspots/drika_hotspot.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
     <SpawnerItem display_name="Invisible Block" path="Data/Objects/invisibleblock.xml" thumbnail_path="Data/UI/spawner/thumbs/Static Objects/invisibleblock.png" />
     <SpawnerItem display_name="Particle Occluder Hotspot" path="Data/Objects/Hotspots/particle_occluder.xml" thumbnail_path="Data/UI/spawner/thumbs/Hotspot/emitter_icon.png" />
+    <SpawnerItem display_name="Drika Hotspot" path="Data/Objects/Hotspots/drika_hotspot.xml" thumbnail_path="Data/UI/spawner/thumbs/Utility/empty_placeholder.png" />
 </RecentItems>
