@@ -23,6 +23,7 @@ string tutorial = "";
 bool fall_death = false;
 int roll_count = 0;
 float dialogue_stop_time = 0.0;
+bool no_fire_damage = false;
 
 int num_hit_on_ground = 0;
 int num_strikes = 0;
@@ -2888,7 +2889,9 @@ void Update(int num_frames) {
         }
 
         if(knocked_out == _awake) {
-            TakeBloodDamage(ts.step() * 0.5);
+            if(!no_fire_damage){
+                TakeBloodDamage(ts.step() * 0.5);
+            }
 
             if(knocked_out != _awake) {
                 Ragdoll(_RGDL_INJURED);

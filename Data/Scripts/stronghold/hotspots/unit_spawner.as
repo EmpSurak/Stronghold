@@ -232,6 +232,10 @@ int CreateUnit(UnitType _type){
 
     if(_type == _bomber){
         AddBomberJob(unit_id);
+
+        MovementObject@ _char = ReadCharacterID(unit_id);
+        _char.Execute("no_fire_damage = true;");
+        _char.Execute("SetOnFire(true);");
     }else if(_type == _flag_bearer){
         AddFlagBearerJob(unit_id);
     }
