@@ -1,5 +1,4 @@
 #include "timed_execution/timer_job_interface.as"
-#include "stronghold/friend_controller.as"
 
 class DelayedFriendControllerJob : TimerJobInterface {
     protected float wait;
